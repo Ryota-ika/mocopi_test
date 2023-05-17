@@ -14,6 +14,8 @@ public class MultiPlaySanple : MonoBehaviourPunCallbacks
     [Header("Scene上にあるMocopiレシーバー")]
     [SerializeField]
     MocopiSimpleReceiver receiver;
+    [SerializeField]
+    GameObject MyAvatar;
     const int PortNum=12351;
     void Start()
     {
@@ -27,12 +29,13 @@ public class MultiPlaySanple : MonoBehaviourPunCallbacks
 	public override void OnJoinedRoom()
 	{
         //部屋に入室したらインスタンスを生成し、receiverにインスタンスのアバター情報を取得し、トラッキング開始
-		GameObject MyInstance=PhotonNetwork.Instantiate("MocopiAvatar",Vector3.zero,Quaternion.identity);
-        receiver.AddAvatar(MyInstance.GetComponent<MocopiAvatar>(),PortNum);
-        Transform CameraPos = MyInstance.transform.GetChild(3);
+		GameObject MyInstance=PhotonNetwork.Instantiate("Photonview",Vector3.zero,Quaternion.identity);
+        MyAvatar.transform.parent = MyInstance.transform;
+        //receiver.AddAvatar(MyInstance.GetComponent<MocopiAvatar>(),PortNum);
+        //Transform CameraPos = MyInstance.transform.GetChild(3);
         //カメラをプレイヤーの頭の位置に置き、子オブジェクト化
-        OVRcamera.transform.position = CameraPos.position;
-        OVRcamera.transform.parent = MyInstance.transform;
+        //OVRcamera.transform.position = CameraPos.position;
+        //OVRcamera.transform.parent = CameraPos.transform;
 	}
 	// Update is called once per frame
 	void Update()
