@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.XR;
 using Mocopi.Receiver;
 
 public class MultiPlaySanple : MonoBehaviourPunCallbacks
