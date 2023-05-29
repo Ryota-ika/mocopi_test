@@ -30,7 +30,7 @@ public class MultiPlaySanple : MonoBehaviourPunCallbacks
 	public override void OnJoinedRoom()
 	{
         //部屋に入室したらインスタンスを生成し、receiverにインスタンスのアバター情報を取得し、トラッキング開始
-		GameObject MyInstance=PhotonNetwork.Instantiate("Photonview",Vector3.zero,Quaternion.identity);
+		GameObject MyInstance=PhotonNetwork.Instantiate("MocopiAvatar",Vector3.zero,Quaternion.identity);
         MyAvatar.transform.parent = MyInstance.transform;
         //receiver.AddAvatar(MyInstance.GetComponent<MocopiAvatar>(),PortNum);
         //Transform CameraPos = MyInstance.transform.GetChild(3);
