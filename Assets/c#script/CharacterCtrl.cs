@@ -1,4 +1,4 @@
-//2023”N5ŒŽ29“ú
+//2023”N5ŒŽ30“ú
 
 using System.Collections;
 using System.Collections.Generic;
@@ -6,35 +6,23 @@ using UnityEngine;
 
 public class CharacterCtrl : MonoBehaviour
 {
-    public Transform target;
-    public float distance = 1f;
-    public float speed = 0.5f;
 
-    private Vector3 velocity= Vector3.zero;
+    [SerializeField] 
+    private Transform target_player;
+    [SerializeField]
+    float smoothTime = 0.5f;
+    Vector3 velocity= Vector3.zero;
     // Start is called before the first frame update
     void Start()
     {
-        
+        target_player = GameObject.FindGameObjectWithTag("player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target !=null)
-        {
-            Vector3 targetPosition=target.position-target.forward*distance;
+        Vector3 target_pos = target_player.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
 
-            Vector3 direction=target.position - transform.position;
-
-            float currentDistance= targetPosition.magnitude;
-            targetPosition.Normalize();
-
-            if (currentDistance > distance)
-            {
-                transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, speed);
-                /*Vector3 move_vector = targetPosition * (currentDistance - distance);
-                transform.Translate(move_vector,Space.World);*/
-            }
-        }
+        transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
     }
 }
