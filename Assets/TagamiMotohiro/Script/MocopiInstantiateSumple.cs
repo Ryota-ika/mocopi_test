@@ -13,7 +13,7 @@ public class MocopiInstantiateSumple : MonoBehaviour
     void Start()
     {
         GameObject g = Instantiate(avatar,Vector3.zero,Quaternion.identity);
-        receiver.AddAvatar(g.GetComponent<MocopiAvatar>(),12351);
+        receiver.AddAvatar(g.GetComponent<MocopiAvatar>(),12352);
     }
 
     // Update is called once per frame

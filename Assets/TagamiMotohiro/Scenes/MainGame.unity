@@ -220,6 +220,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32496774}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
 --- !u!114 &59183002 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6463157910761033637, guid: ffbf9d61ca167504cbb65912025f4337,
@@ -232,6 +233,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238345459e3cc47b99543f30eaacf14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+--- !u!1001 &105666221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463157910761033562, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_Name
+      value: MocopiAvatar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520166179240814129, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ffbf9d61ca167504cbb65912025f4337, type: 3}
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
 --- !u!1 &109487258
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +406,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109487258}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &119836283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6463157910761033637, guid: ffbf9d61ca167504cbb65912025f4337,
+    type: 3}
+  m_PrefabInstance: {fileID: 105666221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238345459e3cc47b99543f30eaacf14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &173691161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,12 +479,100 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
+=======
+--- !u!1001 &174923106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979213831733941728, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463157910761033562, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_Name
+      value: MocopiAvatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463157910761033562, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520166179240814129, guid: ffbf9d61ca167504cbb65912025f4337,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7520166179240814129, guid: ffbf9d61ca167504cbb65912025f4337, type: 3}
+    - {fileID: 561275067783490811, guid: ffbf9d61ca167504cbb65912025f4337, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ffbf9d61ca167504cbb65912025f4337, type: 3}
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
 --- !u!1001 &236420504
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
     m_TransformParent: {fileID: 1386721262}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
     m_Modifications:
     - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_Name
@@ -403,10 +580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
       value: 0.035999894
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
@@ -416,6 +594,17 @@ PrefabInstance:
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.050235644
+=======
+      value: 1.336
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.736
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -818,6 +1007,170 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542824103}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!43 &602734211
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh29374
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 1.9488318, y: -0.643787, z: -2.5269597}
+      m_Extent: {x: 4.9706707, y: 2.1005006, z: 2.5269597}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 0200030001000200010000000600070005000600050004000a000b0009000a00090008000e000f000d000e000d000c00120013001100120011001000160017001500160015001400
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: ce6541c068a22fc0000080330000000000000000000080bf0000803f0000000000000000000080bfce6541c068a22fc0906cdd4068a22fc0000080330000000000000000000080bf0000803f0000000000000000000080bf906cdd4068a22fc0ce6541c09675ba3f000080330000000000000000000080bf0000803f0000000000000000000080bfce6541c09675ba3f906cdd409675ba3f000080330000000000000000000080bf0000803f0000000000000000000080bf906cdd409675ba3f906cdd4068a22fc000008033000080bf00000000000000000000000000000000000080bf000080bf000080b368a22fc0906cdd4068a22fc0b5b9a1c0000080bf00000000000000000000000000000000000080bf000080bfb5b9a14068a22fc0906cdd409675ba3f00008033000080bf00000000000000000000000000000000000080bf000080bf000080b39675ba3f906cdd409675ba3fb5b9a1c0000080bf00000000000000000000000000000000000080bf000080bfb5b9a1409675ba3f906cdd4068a22fc0b5b9a1c000000000000000000000803f000080bf0000000000000000000080bf906cddc068a22fc0ce6541c068a22fc0b5b9a1c000000000000000000000803f000080bf0000000000000000000080bfce65414068a22fc0906cdd409675ba3fb5b9a1c000000000000000000000803f000080bf0000000000000000000080bf906cddc09675ba3fce6541c09675ba3fb5b9a1c000000000000000000000803f000080bf0000000000000000000080bfce6541409675ba3fce6541c068a22fc0b5b9a1c00000803f000000000000000000000000000000000000803f000080bfb5b9a1c068a22fc0ce6541c068a22fc0000080330000803f000000000000000000000000000000000000803f000080bf0000803368a22fc0ce6541c09675ba3fb5b9a1c00000803f000000000000000000000000000000000000803f000080bfb5b9a1c09675ba3fce6541c09675ba3f000080330000803f000000000000000000000000000000000000803f000080bf000080339675ba3fce6541c09675ba3f0000803300000000000080bf00000000000080bf0000000000000000000080bfce65414000008033906cdd409675ba3f0000803300000000000080bf00000000000080bf0000000000000000000080bf906cddc000008033ce6541c09675ba3fb5b9a1c000000000000080bf00000000000080bf0000000000000000000080bfce654140b5b9a1c0906cdd409675ba3fb5b9a1c000000000000080bf00000000000080bf0000000000000000000080bf906cddc0b5b9a1c0ce6541c068a22fc0b5b9a1c0000000000000803f000000000000803f0000000000000000000080bfce6541c0b5b9a1c0906cdd4068a22fc0b5b9a1c0000000000000803f000000000000803f0000000000000000000080bf906cdd40b5b9a1c0ce6541c068a22fc000008033000000000000803f000000000000803f0000000000000000000080bfce6541c000008033906cdd4068a22fc000008033000000000000803f000000000000803f0000000000000000000080bf906cdd4000008033
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 1.9488318, y: -0.643787, z: -2.5269597}
+    m_Extent: {x: 4.9706707, y: 2.1005006, z: 2.5269597}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!850595691 &813575021
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1432,6 +1785,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956114506}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
 --- !u!1001 &991552804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1506,6 +1860,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbf9d61ca167504cbb65912025f4337, type: 3}
+=======
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
 --- !u!1 &997465559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2634,11 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
   m_Mesh: {fileID: 872448478}
+=======
+  m_Mesh: {fileID: 602734211}
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
 --- !u!33 &1362208981
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -2286,7 +2646,11 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362208979}
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
   m_Mesh: {fileID: 872448478}
+=======
+  m_Mesh: {fileID: 602734211}
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
 --- !u!23 &1362208982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2567,7 +2931,11 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
+<<<<<<< HEAD:Assets/TagamiMotohiro/Scenes/MainGame.unity
   m_Mesh: {fileID: 872448478}
+=======
+  m_Mesh: {fileID: 602734211}
+>>>>>>> origin/main:Assets/TagamiMotohiro/Scenes/ReceiverSample 1.unity
   m_VersionIndex: 2550
   m_IsSelectable: 1
   m_SelectedFaces: 
@@ -4135,4 +4503,6 @@ MonoBehaviour:
   AvatarSettings:
   - MocopiAvatar: {fileID: 59183002}
     Port: 12351
+  - MocopiAvatar: {fileID: 119836283}
+    Port: 12352
   IsReceivingOnEnable: 1
