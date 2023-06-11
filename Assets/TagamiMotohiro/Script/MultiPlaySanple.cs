@@ -30,11 +30,11 @@ public class MultiPlaySanple : MonoBehaviourPunCallbacks
         //部屋に入室したらインスタンスを生成し、receiverにインスタンスのアバター情報を取得し、トラッキング開始
 		GameObject MyInstance=PhotonNetwork.Instantiate("MocopiAvatar",Vector3.zero,Quaternion.identity);
 		receiver.AddAvatar(MyInstance.GetComponent<MocopiAvatar>(), PortNum+PhotonNetwork.LocalPlayer.ActorNumber);
-        DontDestroyOnLoad(MyInstance);
-		Transform CameraPos = MyInstance.transform.GetChild(3);
-		//カメラをプレイヤーの頭の位置に置き、子オブジェクト化
-		OVRcamera.transform.position = CameraPos.position;
-		OVRcamera.transform.parent = CameraPos.transform;
+        receiver.StartReceiving();
+		//Transform CameraPos = MyInstance.transform.GetChild(3);
+		////カメラをプレイヤーの頭の位置に置き、子オブジェクト化
+		//OVRcamera.transform.position = CameraPos.position;
+		//OVRcamera.transform.parent = CameraPos.transform;
 	}
 	//public override void OnPlayerEnteredRoom(Player newPlayer)
 	//{
