@@ -3932,9 +3932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fc20efc3506ac4eae06d0b2388bf2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AvatarSettings:
-  - MocopiAvatar: {fileID: 0}
-    Port: 12351
+  AvatarSettings: []
   IsReceivingOnEnable: 0
 --- !u!114 &8608051796787704079
 MonoBehaviour:
