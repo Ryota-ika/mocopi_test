@@ -123,6 +123,162 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12026866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100256, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &12026868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12026866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
+--- !u!1001 &13913086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100338, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_Name
+      value: unitychan_dynamic
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400328, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49f2055d53eeb4e5a92af590a44bddee, type: 3}
+--- !u!1 &104968107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100048, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &104968109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104968107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
+--- !u!1 &146327885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100056, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &146327887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146327885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1001 &231744179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,6 +338,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4414602350458860533, guid: 126d619cf4daa52469682f85c1378b4a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
 --- !u!4 &400305318 stripped
@@ -190,6 +351,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 231744179}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &489773187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100152, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &489773189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489773187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1001 &590192396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264,6 +458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cccbbdb3cbdde464ba23dc13bf813538,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cccbbdb3cbdde464ba23dc13bf813538,
+        type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -330,6 +529,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+--- !u!1 &896570808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100254, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &896570810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896570808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
+--- !u!4 &933243733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400318, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &954360205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100264, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &954360207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954360205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &966633276
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,12 +685,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 66.009, z: 0}
+--- !u!1 &1264078321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100294, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1264078323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264078321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!4 &1275065199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3243369280410623155, guid: cccbbdb3cbdde464ba23dc13bf813538,
     type: 3}
   m_PrefabInstance: {fileID: 590192396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1312568517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100186, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312568519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312568517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &1355838411
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +851,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1403921947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1403921949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403921947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1001 &1449119252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -817,6 +1187,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+--- !u!1 &1820995096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100046, guid: 49f2055d53eeb4e5a92af590a44bddee,
+    type: 3}
+  m_PrefabInstance: {fileID: 13913086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1820995098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820995096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fa69245f54fd4682def05dc105c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &1878606070 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cccbbdb3cbdde464ba23dc13bf813538,
@@ -836,6 +1239,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MotionSmoothness: 0
+--- !u!1001 &1932160782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 933243733}
+    m_Modifications:
+    - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_Name
+      value: OVRCameraRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414602350448879707, guid: 126d619cf4daa52469682f85c1378b4a,
+        type: 3}
+      propertyPath: m_controller
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
 --- !u!1001 &1986853306
 PrefabInstance:
   m_ObjectHideFlags: 0
