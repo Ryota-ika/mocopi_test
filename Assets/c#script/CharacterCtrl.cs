@@ -21,8 +21,8 @@ public class CharacterCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 target_pos = target_player.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
+        //Vector3 target_pos = target_player.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
 
-        transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
+        //transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
     }
 }
