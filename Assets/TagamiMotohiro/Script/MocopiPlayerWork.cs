@@ -9,6 +9,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     [SerializeField]
     Transform avater;
     [Header("Ž©•ª‚ÌRigidBody")]
+    [SerializeField]
     Rigidbody myRigidBody;
     [Header("‰E‘«")]
     [SerializeField]
@@ -36,31 +37,30 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     // Update is called once per frame
     void Update()
     {
-        if (!isStart) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
-        float footVelocity = lateFootPos.y - leftFoot.position.y;//‘«‚Ì“®‚«‚Ì‘¬‚³‚ðŽæ‚é(¡‚Í¶‚Ì‚Ý)
-        if (Mathf.Abs(footVelocity) > stepThresHold&&!isStepping)
-        {
-            isStepping = true;
-            Debug.Log("•à‚¢‚½");
-            StartCoroutine(Step());
-        }
-        lateFootPos = leftFoot.position;
-    }
+		if (!isStart) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
+		float footVelocity = lateFootPos.y - leftFoot.position.y;//‘«‚Ì“®‚«‚Ì‘¬‚³‚ðŽæ‚é(¡‚Í¶‚Ì‚Ý)
+		if (Mathf.Abs(footVelocity) > stepThresHold && !isStepping)
+		{
+			isStepping = true;
+			Debug.Log("•à‚¢‚½");
+			StartCoroutine(Step());
+		}
+		lateFootPos = leftFoot.position;
+	}
     IEnumerator Step()
     {
         Vector3 avaterfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ðŽæ‚é
         avaterfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avaterfoward = avaterfoward.normalized;//0‚É‚µ‚½’l‚ð³‹K‰»
-        Vector3 targetPosition = transform.position + (avaterfoward * stepLenge);
-        float t=0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
-        while (Vector3.Distance(transform.position,targetPosition)>0.1f)
-        {
+		Vector3 targetPosition = transform.position + (avaterfoward * stepLenge);
+		float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
+		while (Vector3.Magnitude(targetPosition-transform.position)>0.1f&&t<stepLenge)
+		{
             Vector3 nowPos = Vector3.Lerp(transform.position,targetPosition,t);
-            transform.position = nowPos;
-            t+=Time.deltaTime;
-            yield return null;
-        }
-        yield return new WaitForSeconds(0.5f);
+            this.myRigidBody.MovePosition(nowPos);
+			t += Time.deltaTime;
+			yield return null;
+		}
         isStepping = false;
     }
 }
