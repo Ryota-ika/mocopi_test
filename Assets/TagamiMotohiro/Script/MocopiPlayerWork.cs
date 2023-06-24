@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚é
 {
+    public enum FootState { //•às‘Ò‹@’†‚ª‰E‘«‚©¶‘«‚©
+        RIGHT,
+        LEFT
+    };
+    [SerializeField]
+    FootState state;
     [Header("ƒAƒoƒ^[")]
     [SerializeField]
     Transform avater;
@@ -28,6 +34,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     bool isStart = false;
     Vector3 lateFootPos;
     bool isStepping=false;
+    bool workWeigting=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +45,39 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     void Update()
     {
 		if (!isStart) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
-		float footVelocity = lateFootPos.y - leftFoot.position.y;//‘«‚Ì“®‚«‚Ì‘¬‚³‚ğæ‚é(¡‚Í¶‚Ì‚İ)
-		if (Mathf.Abs(footVelocity) > stepThresHold && !isStepping)
-		{
-			isStepping = true;
-			Debug.Log("•à‚¢‚½");
-			StartCoroutine(Step());
-		}
-		lateFootPos = leftFoot.position;
+        if (workWeigting) {
+            if (state == FootState.RIGHT)
+            {
+                StartCoroutine(WorkControll(rightFoot, "‰E‘«"));
+                workWeigting = false;
+                state = FootState.LEFT;
+            }
+            else if (state==FootState.LEFT) {
+                StartCoroutine(WorkControll(leftFoot, "¶‘«"));
+                workWeigting = false;
+                state = FootState.RIGHT;
+            }
+        }
+		
 	}
+    IEnumerator WorkControll(Transform foot,string logtext)//‘«‚Ì“®‚«‚ğŒ©‚Ä•à‚¢‚½‚©”»’è‚·‚é
+    {
+        lateFootPos = foot.position;
+        Debug.Log(logtext+"‘Ò‹@’†");
+        while (!isStepping) {
+            float footvelocity = lateFootPos.y - foot.position.y;
+            if (Mathf.Abs(footvelocity) > stepThresHold && !isStepping)
+            {
+                isStepping = true;
+                StartCoroutine(Step());
+            }
+            lateFootPos = foot.position;
+            yield return null;
+        }
+        workWeigting = true;
+        isStepping = false;
+        Debug.Log(logtext + "Š®—¹"); 
+    }
     IEnumerator Step()
     {
         Vector3 avaterfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ğæ‚é
