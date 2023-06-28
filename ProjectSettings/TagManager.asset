@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - player
   - Avatar
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
