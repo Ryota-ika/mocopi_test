@@ -20,7 +20,10 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
                 //ˆê‚Â‚¸‚Âposition‚Ìî•ñ‚ğstream‚É‘—‚é
                 stream.SendNext(child.position);
                 stream.SendNext(child.rotation);
-                Debug.Log("‘—‚é‘¤ "+i.ToString() + " Position:" + child.position);
+                if (i == 108)
+                {
+                    Debug.Log("‘—‚é‘¤ " + i.ToString() + " Position:" + child.position);
+                }
                 //Debug.Log(i.ToString() + " Rotation:" + child.rotation);
                 i++;
             }
@@ -34,7 +37,10 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
                 //ˆê‚Â‚¸‚Âstream‚©‚ç•ÏŠ·ƒf[ƒ^‚ğæ“¾
                 Vector3 position = (Vector3)stream.ReceiveNext();
                 Quaternion rotation = (Quaternion)stream.ReceiveNext();
-                Debug.Log("ó‚¯‚é‘¤ "+i.ToString()+"Position:");
+                if (i == 108)
+                {
+                    Debug.Log("ó‚¯‚é‘¤ " + i.ToString() + "Position:" + position);
+                }
                 //•ÏŠ·‚ğ”½‰f
                 Transform child = childAnchorList[i];
                 child.position = position;
