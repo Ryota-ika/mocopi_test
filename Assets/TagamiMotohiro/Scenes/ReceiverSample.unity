@@ -691,7 +691,6 @@ GameObject:
   m_Component:
   - component: {fileID: 458129437}
   - component: {fileID: 458129438}
-  - component: {fileID: 458129440}
   m_Layer: 0
   m_Name: Onlinemanager
   m_TagString: Untagged
@@ -731,18 +730,6 @@ MonoBehaviour:
   startPosList:
   - {fileID: 1534748598}
   - {fileID: 1867764114}
---- !u!114 &458129440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458129436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a07a57c210409c4e8b88561b695ff94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &542824103
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,11 +19,12 @@ public class MultiPlaySanple : MonoBehaviourPunCallbacks
     MocopiSimpleReceiver receiver;
     [SerializeField]
     List<Transform> startPosList=new List<Transform>();
+    Transform cameraPos;
     const int PortNum=12350;
+    bool isTrakkingStart = false;
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
-        
+        PhotonNetwork.ConnectUsingSettings(); 
     }
 	public override void OnConnectedToMaster()
 	{
@@ -48,19 +49,27 @@ public class MultiPlaySanple : MonoBehaviourPunCallbacks
             receiver.StartReceiving();
             break;
         }
-        Transform CameraPos = GetObjectChild(MyInstance.transform,"CameraPos");
-        Debug.Log(CameraPos.gameObject.name);
-		////カメラをプレイヤーの頭の位置に置き、子オブジェクト化
-		OVRcamera.transform.position = CameraPos.position;
-		OVRcamera.transform.parent = CameraPos.transform;
+        cameraPos = GetObjectChild(MyInstance.transform,"CameraPos");
+        ////カメラをプレイヤーの頭の位置に置く
+        StartCoroutine(StartOVRTrakking());
 	}
+    IEnumerator StartOVRTrakking()
+    {
+        while (!isTrakkingStart)
+        {
+            if (Input.GetKey(KeyCode.Space)) {
+                isTrakkingStart=true;
+            }
+            yield return null;
+        }
+        OVRcamera.transform.position = cameraPos.position;
+        transform.rotation = cameraPos.rotation;
+    }
 	// Update is called once per frame
 	void Update()
     {
-        if (Input.GetKey(KeyCode.Space)&&PhotonNetwork.IsMasterClient)
-        {
-            PhotonNetwork.LoadLevel("MainGame");
-        }
+        if (!isTrakkingStart) { return; }
+        OVRcamera.transform.position = cameraPos.position;
     }
     Transform GetObjectChild(Transform parent,string name)//カメラ参照用の再帰子オブジェクト探索メソッド
     {
