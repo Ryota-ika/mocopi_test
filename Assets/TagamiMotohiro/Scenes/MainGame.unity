@@ -787,7 +787,7 @@ PrefabInstance:
     - target: {fileID: 1751811721084492776, guid: 1e38cf3fda1b081408c101d4bf849304,
         type: 3}
       propertyPath: AvatarSettings.Array.data[0].Port
-      value: 12352
+      value: 12351
       objectReference: {fileID: 0}
     - target: {fileID: 1751811721084492776, guid: 1e38cf3fda1b081408c101d4bf849304,
         type: 3}
