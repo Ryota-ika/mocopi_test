@@ -22,7 +22,7 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
                 stream.SendNext(child.rotation);
                 if (i == 108)
                 {
-                    Debug.Log("送る側 " + i.ToString() + " Position:" + child.position);
+                    //Debug.Log("送る側 " + i.ToString() + " Position:" + child.position);
                 }
                 //Debug.Log(i.ToString() + " Rotation:" + child.rotation);
                 i++;
@@ -31,7 +31,6 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
         else
         {//受信側の場合
             int childCount = (int)stream.ReceiveNext();
-            Debug.Log(childCount);
             for (int i = 0; i < childCount; i++)
             {
                 //一つずつstreamから変換データを取得
@@ -39,7 +38,7 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
                 Quaternion rotation = (Quaternion)stream.ReceiveNext();
                 if (i == 108)
                 {
-                    Debug.Log("受ける側 " + i.ToString() + "Position:" + position);
+                    //Debug.Log("受ける側 " + i.ToString() + "Position:" + position);
                 }
                 //変換を反映
                 Transform child = childAnchorList[i];
@@ -47,6 +46,8 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
                 child.rotation = rotation;
             }
         }
+        string logtext = PhotonNetwork.NetworkStatisticsToString();
+        Debug.Log(logtext);
     }
     public void addAnchorList(Transform item)
     {
