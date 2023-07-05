@@ -1,0 +1,6 @@
+Mountains: https://assetstore.unity.com/packages/3d/environments/fantasy/dreamscape-nature-mountains-stylized-open-world-environment-201674
+Meadows: https://assetstore.unity.com/packages/3d/environments/fantasy/dreamscape-nature-meadows-stylized-open-world-environment-186894
+Campsite: https://assetstore.unity.com/packages/3d/environments/fantasy/dreamscape-nature-campsite-stylized-open-world-environment-205065
+Tower: https://assetstore.unity.com/packages/3d/environments/fantasy/dreamscape-nature-tower-stylized-open-world-environment-226552
+Tower HDRP: https://assetstore.unity.com/packages/3d/environments/fantasy/dreamscape-nature-tower-hdrp-stylized-open-world-environment-228617
+Tower URP: https://assetstore.unity.com/packages/3d/environments/fantasy/dreamscape-nature-tower-urp-stylized-open-world-environment-227412

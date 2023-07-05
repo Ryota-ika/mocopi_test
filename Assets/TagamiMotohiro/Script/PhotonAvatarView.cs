@@ -13,30 +13,41 @@ public class PhotonAvatarView : MonoBehaviour, IPunObservable
         if (stream.IsWriting)//送信側の場合
         {
             stream.SendNext(childAnchorList.Count);
+            int i = 0;
             //アンカーの要素数をstreamに送る
             foreach (Transform child in childAnchorList)
             {
                 //一つずつpositionの情報をstreamに送る
                 stream.SendNext(child.position);
                 stream.SendNext(child.rotation);
+                if (i == 108)
+                {
+                    //Debug.Log("送る側 " + i.ToString() + " Position:" + child.position);
+                }
+                //Debug.Log(i.ToString() + " Rotation:" + child.rotation);
+                i++;
             }
         }
         else
         {//受信側の場合
             int childCount = (int)stream.ReceiveNext();
-            Debug.Log(childCount);
             for (int i = 0; i < childCount; i++)
             {
                 //一つずつstreamから変換データを取得
                 Vector3 position = (Vector3)stream.ReceiveNext();
                 Quaternion rotation = (Quaternion)stream.ReceiveNext();
-                Debug.Log(position);
+                if (i == 108)
+                {
+                    //Debug.Log("受ける側 " + i.ToString() + "Position:" + position);
+                }
                 //変換を反映
                 Transform child = childAnchorList[i];
                 child.position = position;
                 child.rotation = rotation;
             }
         }
+        string logtext = PhotonNetwork.NetworkStatisticsToString();
+        Debug.Log(logtext);
     }
     public void addAnchorList(Transform item)
     {

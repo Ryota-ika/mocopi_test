@@ -17,6 +17,7 @@ public class AvatarRefarence : MonoBehaviour
             view.addAnchorList(item);
             if (item.childCount > 0) {
                 SetChild(item,view);
+                item.gameObject.AddComponent<Photon.Pun.PhotonTransformView>();
             }
         }
         EditorUtility.SetDirty(view);
