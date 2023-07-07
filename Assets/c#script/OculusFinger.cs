@@ -1,4 +1,4 @@
-using UnityEngine;
+using UnityEngine; //ì¬“ú 6/29
 using System.Collections.Generic;
 
 public class OculusFinger : MonoBehaviour
