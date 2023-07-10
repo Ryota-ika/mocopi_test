@@ -49,7 +49,12 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     }
 	public override void OnConnectedToMaster()
 	{
-        PhotonNetwork.JoinOrCreateRoom("ROOM",new RoomOptions(),TypedLobby.Default);
+        RoomOptions roomProps=new RoomOptions();
+        roomProps.MaxPlayers = 2;
+        roomProps.CleanupCacheOnLeave = true;
+        PhotonNetwork.JoinOrCreateRoom("ROOM",roomProps,TypedLobby.Default);
+        PhotonNetwork.SendRate = 60;
+        PhotonNetwork.SerializationRate = 30;
 	}
 	public override void OnPlayerEnteredRoom(Player newPlayer)
     //ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション

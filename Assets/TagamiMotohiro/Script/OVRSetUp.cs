@@ -17,15 +17,15 @@ public class OVRSetUp : MonoBehaviour
 
     public void CameraSetUp()
     {
-        OVRCamera.transform.position = Head.position;
-        OVRCamera.transform.rotation = Head.rotation;
+        //OVRCamera.transform.position = Head.position;
+        //OVRCamera.transform.rotation = Head.rotation;
         isTrakkingStart = true;
     }
 	private void FixedUpdate()
 	{
-        if (isTrakkingStart)
-        {
-            OVRCamera.transform.position = Head.position;
-        }
+        //if (isTrakkingStart)
+        //{
+        //    OVRCamera.transform.position = Head.position;
+        //}
 	}
 }
