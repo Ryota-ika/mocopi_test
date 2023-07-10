@@ -6,12 +6,22 @@ PluginImporter:
   iconMap: {}
   executionOrder: {}
   defineConstraints: []
+<<<<<<< HEAD
+  isPreloaded: 0
+  isOverridable: 0
+=======
   isPreloaded: 1
   isOverridable: 1
+>>>>>>> main
   isExplicitlyReferenced: 0
   validateReferences: 1
   platformData:
   - first:
+<<<<<<< HEAD
+      Any: 
+    second:
+      enabled: 1
+=======
       : Any
     second:
       enabled: 0
@@ -34,10 +44,16 @@ PluginImporter:
       Any: 
     second:
       enabled: 0
+>>>>>>> main
       settings: {}
   - first:
       Editor: Editor
     second:
+<<<<<<< HEAD
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+=======
       enabled: 1
       settings:
         CPU: x86_64
@@ -91,6 +107,7 @@ PluginImporter:
       enabled: 1
       settings:
         CPU: AnyCPU
+>>>>>>> main
   userData: 
   assetBundleName: 
   assetBundleVariant: 
