@@ -11,6 +11,8 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     };
     [SerializeField]
     FootState state;
+    [SerializeField]
+    GameObject wallHitEffect;
     [Header("ƒAƒoƒ^[")]
     [SerializeField]
     Transform avater;
@@ -35,6 +37,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     Vector3 lateFootPos;
     bool isStepping=false;
     bool workWeigting=true;
+    bool isCollisionWall = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,9 +66,11 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     IEnumerator WorkControll(Transform foot,string logtext)//‘«‚Ì“®‚«‚ðŒ©‚Ä•à‚¢‚½‚©”»’è‚·‚é
     {
         lateFootPos = foot.position;
+        float footvelocity = 0;
         Debug.Log(logtext+"‘Ò‹@’†");
         while (!isStepping) {
-            float footvelocity = lateFootPos.y - foot.position.y;
+
+            footvelocity = lateFootPos.y - foot.position.y;
             if (Mathf.Abs(footvelocity) > stepThresHold && !isStepping)
             {
                 isStepping = true;
@@ -87,11 +92,27 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
 		float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
 		while (Vector3.Magnitude(targetPosition-transform.position)>0.1f&&t<stepLenge)
 		{
+            if (isCollisionWall)
+            {
+                //CollisinEnter‚Å•Ï”‚ð•ÏX
+                isCollisionWall = false;
+                Instantiate(wallHitEffect,transform.position,Quaternion.identity);
+                yield break;
+            }
             Vector3 nowPos = Vector3.Lerp(transform.position,targetPosition,t);
             this.myRigidBody.MovePosition(nowPos);
 			t += Time.deltaTime;
 			yield return null;
 		}
         isStepping = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            isCollisionWall = false;
+
+
+         }
     }
 }
