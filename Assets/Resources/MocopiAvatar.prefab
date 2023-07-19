@@ -231,6 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7405136786272553421}
+  - component: {fileID: 6049337585260198022}
   m_Layer: 0
   m_Name: human_low:_root
   m_TagString: Untagged
@@ -256,6 +257,20 @@ Transform:
   m_Father: {fileID: 3818404734667785174}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6049337585260198022
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875507512094560125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.09}
 --- !u!1 &1993708017331728943
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +664,6 @@ GameObject:
   - component: {fileID: 4590964950859209106}
   - component: {fileID: 4590964950859209107}
   - component: {fileID: 4060346958129722476}
-  - component: {fileID: 3186052804878184519}
   - component: {fileID: 3043567876863044520}
   m_Layer: 0
   m_Name: MocopiAvatar
@@ -722,27 +736,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  wallHitEffect: {fileID: 0}
   avater: {fileID: 7405136786272553421}
   myRigidBody: {fileID: 3043567876863044520}
   rightFoot: {fileID: 6680417776716650743}
   leftFoot: {fileID: 4799255326043857806}
   stepLenge: 0.5
-  stepThresHold: 0.01
+  stepThreshold: 0
   isStart: 1
---- !u!136 &3186052804878184519
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4590964950859209068}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.29
-  m_Height: 2.2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.91, z: 0}
+  rayOfset: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &3043567876863044520
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -757,7 +762,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 2
 --- !u!1 &4613180210779101088
 GameObject:

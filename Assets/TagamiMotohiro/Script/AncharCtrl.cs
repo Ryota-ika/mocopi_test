@@ -39,6 +39,8 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     [Header("各プレイヤーごとのスタート地点")]
     [SerializeField]
     List<Transform> startPoint;
+    [SerializeField]
+    LayerMask layer;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
     //自分のアバターの一時保存に使う
     GameObject myAvatar;
@@ -93,6 +95,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     IEnumerator GetPlayerAnchar(int playerNum)
     {
         GameObject avatar = Instantiate(avatarList[0], Vector3.zero, Quaternion.identity);
+        avatar.layer = layer;
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Anchar"))

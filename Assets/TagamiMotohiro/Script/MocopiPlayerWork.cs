@@ -30,14 +30,18 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     float stepLenge;
     [Header("•à‚­”»’è‚Ìè‡’l")]
     [SerializeField]
-    float stepThresHold;
+    float stepThreshold;
     [Header("€”õŠ®—¹")]
     [SerializeField]
     bool isStart = false;
+    [SerializeField]
+    float rayOfset;
     Vector3 lateFootPos;
     bool isStepping=false;
     bool workWeigting=true;
     bool isCollisionWall = false;
+    [SerializeField]
+    LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +75,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
         while (!isStepping) {
 
             footvelocity = lateFootPos.y - foot.position.y;
-            if (Mathf.Abs(footvelocity) > stepThresHold && !isStepping)
+            if (Mathf.Abs(footvelocity) > stepThreshold && !isStepping)
             {
                 isStepping = true;
                 StartCoroutine(Step());
@@ -85,34 +89,28 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     }
     IEnumerator Step()
     {
-        Vector3 avaterfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ðŽæ‚é
-        avaterfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
-        avaterfoward = avaterfoward.normalized;//0‚É‚µ‚½’l‚ð³‹K‰»
-		Vector3 targetPosition = transform.position + (avaterfoward * stepLenge);
-		float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
-		while (Vector3.Magnitude(targetPosition-transform.position)>0.1f&&t<stepLenge)
+        isCollisionWall = false;
+        Vector3 avatarfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ðŽæ‚é
+        avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
+        avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ð³‹K‰»
+        Vector3 targetPoint = transform.position+(avatarfoward*stepLenge);
+        float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
+		while ((Vector3.Magnitude(targetPoint-transform.position)>0.1f||t<stepLenge)&&!isCollisionWall)
 		{
-            if (isCollisionWall)
-            {
-                //CollisinEnter‚Å•Ï”‚ð•ÏX
-                isCollisionWall = false;
-                Instantiate(wallHitEffect,transform.position,Quaternion.identity);
-                yield break;
-            }
-            Vector3 nowPos = Vector3.Lerp(transform.position,targetPosition,t);
+            Vector3 nowPos = Vector3.Lerp(transform.position,targetPoint,t);
             this.myRigidBody.MovePosition(nowPos);
 			t += Time.deltaTime;
 			yield return null;
 		}
         isStepping = false;
+        isCollisionWall = false;
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            isCollisionWall = false;
-
-
-         }
-    }
+    
+	private void OnCollisionEnter(Collision collision)
+	{
+        if (collision.gameObject.tag == "Wall") {
+            isCollisionWall = true;
+            Debug.Log("•Ç‚É“–‚½‚Á‚½‚Ì‚Å’âŽ~‚µ‚½"+collision.gameObject.name);
+        }
+	}
 }
