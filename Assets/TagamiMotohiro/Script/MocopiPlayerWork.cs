@@ -89,7 +89,6 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     }
     IEnumerator Step()
     {
-        isCollisionWall = false;
         Vector3 avatarfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ğæ‚é
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ğ³‹K‰»
@@ -105,12 +104,15 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         isStepping = false;
         isCollisionWall = false;
     }
-    
-	private void OnCollisionEnter(Collision collision)
+
+	private void OnTriggerStay(Collider other)
 	{
-        if (collision.gameObject.tag == "Wall") {
+        if (other.gameObject.tag=="Wall") {
             isCollisionWall = true;
-            Debug.Log("•Ç‚É“–‚½‚Á‚½‚Ì‚Å’â~‚µ‚½"+collision.gameObject.name);
         }
+	}
+	private void OnTriggerExit(Collider other)
+	{
+        isCollisionWall = false;
 	}
 }
