@@ -3283,11 +3283,11 @@ MonoBehaviour:
     leftShoulder: {fileID: 400260}
     leftUpperArm: {fileID: 400230}
     leftForearm: {fileID: 400224}
-    leftHand: {fileID: 400152}
+    leftHand: {fileID: 400002}
     rightShoulder: {fileID: 400282}
     rightUpperArm: {fileID: 400214}
     rightForearm: {fileID: 400186}
-    rightHand: {fileID: 400164}
+    rightHand: {fileID: 400178}
     leftThigh: {fileID: 400162}
     leftCalf: {fileID: 400058}
     leftFoot: {fileID: 400068}

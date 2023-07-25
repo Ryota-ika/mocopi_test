@@ -27,7 +27,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     Transform leftFoot;
     [Header("ˆê•à‚Ì‹——£")]
     [SerializeField]
-    float stepLenge;
+    float stepLength;
     [Header("•à‚­ƒXƒs[ƒh")]
     [SerializeField]
     float stepSpeed;
@@ -95,15 +95,15 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
         Vector3 avatarfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ðŽæ‚é
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ð³‹K‰»
-        Vector3 targetPoint = transform.position+(avatarfoward*stepLenge);
+        Vector3 targetPoint = transform.position+(avatarfoward*stepLength);
         float distanceToTarget = Vector3.Magnitude(targetPoint - transform.position);
         float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
-		while ((distanceToTarget>0.1f||t<stepLenge)&&!isCollisionWall)
+		while ((distanceToTarget>0.1f||t<stepLength)&&!isCollisionWall)
 		{
-            float stepDistance = Mathf.MoveTowards(0,distanceToTarget,Time.deltaTime*stepLenge);
-            Vector3 nowPos = Vector3.MoveTowards(transform.position,targetPoint,stepDistance);
+            float stepDistance = Mathf.MoveTowards(0,distanceToTarget,Time.deltaTime*stepLength);
+            Vector3 nowPos = Vector3.MoveTowards(transform.position,targetPoint,stepDistance*stepSpeed);
             myRigidBody.MovePosition(nowPos);
-			t += Time.deltaTime*stepSpeed;
+			t += Time.deltaTime;
 			yield return null;
             distanceToTarget= Vector3.Magnitude(targetPoint - transform.position);
         }
