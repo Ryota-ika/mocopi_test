@@ -35,6 +35,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     Vector3 lateFootPos;
     bool isStepping=false;
     bool workWeigting=true;
+
     // Start is called before the first frame update
     void Start()
     {
