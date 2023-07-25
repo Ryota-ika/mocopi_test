@@ -1,6 +1,6 @@
 // Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "Dreamscape_WorldAlignedBlend"
+Shader "Polyart/Dreamscape Surface World Aligned Blend"
 {
 	Properties
 	{
@@ -172,46 +172,46 @@ Shader "Dreamscape_WorldAlignedBlend"
 	Fallback "Diffuse"
 }
 /*ASEBEGIN
-Version=18800
-882;203;2845;1556;2968.116;302.2629;1;True;True
+Version=18912
+623;1020;2305;441;2698.116;-255.2371;1;True;False
 Node;AmplifyShaderEditor.RangedFloatNode;29;-2227.72,25.63428;Inherit;False;Property;_StoneDirtSharpness;Stone Dirt Sharpness;3;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;30;-2182.728,101.5227;Inherit;False;Property;_StoneDirtBias;Stone Dirt Bias;4;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.TexturePropertyNode;41;-1779.408,776.223;Inherit;True;Property;_SmoothnessTexture;Smoothness Texture;9;0;Create;True;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.RangedFloatNode;36;-1903.741,286.7571;Inherit;False;Property;_GrassSharpness;Grass Sharpness;5;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;37;-1863.749,399.6456;Inherit;False;Property;_GrassBias;Grass Bias;6;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FunctionNode;31;-1978.748,28.09131;Inherit;False;PolyartWorldAlignedBlend;-1;;3;2c0b2e018c1710b44867976bd3691e95;0;3;1;FLOAT3;0,0,1;False;67;FLOAT;1;False;68;FLOAT;-1;False;2;FLOAT;25;FLOAT;55
-Node;AmplifyShaderEditor.SamplerNode;15;-1846.079,-164.8248;Inherit;True;Property;_DirtTexture;Dirt Texture;1;0;Create;True;0;0;0;False;0;False;-1;16c8b94f60a47124ea195518467ad3cf;db2385b3790267144af08a3bb4d8a92b;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;15;-1846.079,-164.8248;Inherit;True;Property;_DirtTexture;Dirt Texture;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;14;-1846.92,-358.905;Inherit;True;Property;_StoneTexture;Stone Texture;0;0;Create;True;0;0;0;False;0;False;-1;21a72e9bfc1f0594fba8d2535f24fa37;21a72e9bfc1f0594fba8d2535f24fa37;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;42;-1520.777,779.173;Inherit;True;Property;_TextureSample3;Texture Sample 3;11;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Instance;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;43;-1506.477,974.5735;Inherit;False;Property;_SmoothnessMultiplier;Smoothness Multiplier;10;0;Create;True;0;0;0;False;0;False;1;0;-2;2;0;1;FLOAT;0
-Node;AmplifyShaderEditor.SamplerNode;32;-1779.531,492.6242;Inherit;True;Property;_NormalTexture;Normal Texture;7;0;Create;True;0;0;0;False;0;False;-1;66d3b8c174ac6d0448d6cb2d00f9d659;db2385b3790267144af08a3bb4d8a92b;True;0;True;bump;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;35;-1446.437,132.9181;Inherit;True;Property;_GrassTexture;Grass Texture;2;0;Create;True;0;0;0;False;0;False;-1;db2385b3790267144af08a3bb4d8a92b;db2385b3790267144af08a3bb4d8a92b;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.LerpOp;13;-1443.355,-109.5932;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.RangedFloatNode;40;-1757.244,682.2127;Inherit;False;Property;_Normal;Normal;8;0;Create;True;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;33;-1579.572,321.9863;Inherit;False;PolyartWorldAlignedBlend;-1;;4;2c0b2e018c1710b44867976bd3691e95;0;3;1;FLOAT3;0,0,1;False;67;FLOAT;1;False;68;FLOAT;-1;False;2;FLOAT;25;FLOAT;55
 Node;AmplifyShaderEditor.OneMinusNode;45;-1214.953,784.6169;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.FunctionNode;33;-1579.572,321.9863;Inherit;False;PolyartWorldAlignedBlend;-1;;4;2c0b2e018c1710b44867976bd3691e95;0;3;1;FLOAT3;0,0,1;False;67;FLOAT;1;False;68;FLOAT;-1;False;2;FLOAT;25;FLOAT;55
+Node;AmplifyShaderEditor.RangedFloatNode;40;-1757.244,682.2127;Inherit;False;Property;_Normal;Normal;8;0;Create;True;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;43;-1506.477,974.5735;Inherit;False;Property;_SmoothnessMultiplier;Smoothness Multiplier;10;0;Create;True;0;0;0;False;0;False;1;0;-2;2;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SamplerNode;35;-1446.437,132.9181;Inherit;True;Property;_GrassTexture;Grass Texture;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;32;-1779.531,492.6242;Inherit;True;Property;_NormalTexture;Normal Texture;7;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;True;bump;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.LerpOp;13;-1443.355,-109.5932;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.LerpOp;34;-928.192,113.4975;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.UnpackScaleNormalNode;39;-1386.544,499.4127;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;44;-1045.009,785.7229;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.LerpOp;34;-928.192,113.4975;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-631.3055,115.9967;Float;False;True;-1;2;;0;0;Standard;Dreamscape_WorldAlignedBlend;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-631.3055,115.9967;Float;False;True;-1;2;;0;0;Standard;Polyart/Dreamscape Surface World Aligned Blend;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;18;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;31;67;29;0
 WireConnection;31;68;30;0
 WireConnection;42;0;41;0
+WireConnection;45;0;42;0
+WireConnection;33;67;36;0
+WireConnection;33;68;37;0
 WireConnection;13;0;14;0
 WireConnection;13;1;15;0
 WireConnection;13;2;31;25
-WireConnection;33;67;36;0
-WireConnection;33;68;37;0
-WireConnection;45;0;42;0
+WireConnection;34;0;13;0
+WireConnection;34;1;35;0
+WireConnection;34;2;33;25
 WireConnection;39;0;32;0
 WireConnection;39;1;40;0
 WireConnection;44;0;45;0
 WireConnection;44;1;43;0
-WireConnection;34;0;13;0
-WireConnection;34;1;35;0
-WireConnection;34;2;33;25
 WireConnection;0;0;34;0
 WireConnection;0;1;39;0
 WireConnection;0;4;44;0
 ASEEND*/
-//CHKSM=D625EF07F1CE50521FDD7186682F2576DED667BE
+//CHKSM=7D479A0FB86220133A4BB4EB2A960C5ECB59D86D

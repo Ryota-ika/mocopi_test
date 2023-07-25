@@ -22,7 +22,7 @@ Shader "Polyart/Dreamscape Simple Foliage"
 
 	SubShader
 	{
-		Tags{ "RenderType" = "Opaque"  "Queue" = "AlphaTest+0" "IgnoreProjector" = "True" }
+		Tags{ "RenderType" = "Opaque"  "Queue" = "AlphaTest+0" "IgnoreProjector" = "True"}
 		Cull Off
 		AlphaToMask On
 		CGINCLUDE
@@ -177,7 +177,7 @@ Shader "Polyart/Dreamscape Simple Foliage"
 		Pass
 		{
 			Name "ShadowCaster"
-			Tags{ "LightMode" = "ShadowCaster" }
+			Tags{ "LightMode" = "ShadowCaster"  "NatureRendererInstancing"="True" }
 			ZWrite On
 			AlphaToMask Off
 			CGPROGRAM
@@ -186,7 +186,9 @@ Shader "Polyart/Dreamscape Simple Foliage"
 			#pragma target 4.0
 			#pragma multi_compile_shadowcaster
 			#pragma multi_compile UNITY_PASS_SHADOWCASTER
-			#pragma skip_variants FOG_LINEAR FOG_EXP FOG_EXP2
+			#pragma multi_compile_instancing
+
+		#pragma skip_variants FOG_LINEAR FOG_EXP FOG_EXP2
 			#include "HLSLSupport.cginc"
 			#if ( SHADER_API_D3D11 || SHADER_API_GLCORE || SHADER_API_GLES || SHADER_API_GLES3 || SHADER_API_METAL || SHADER_API_VULKAN )
 				#define CAN_SKIP_VPOS

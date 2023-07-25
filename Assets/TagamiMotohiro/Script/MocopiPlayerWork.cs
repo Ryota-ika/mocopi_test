@@ -93,14 +93,17 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ð³‹K‰»
         Vector3 targetPoint = transform.position+(avatarfoward*stepLenge);
+        float distanceToTarget = Vector3.Magnitude(targetPoint - transform.position);
         float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
-		while ((Vector3.Magnitude(targetPoint-transform.position)>0.1f||t<stepLenge)&&!isCollisionWall)
+		while ((distanceToTarget>0.1f||t<stepLenge)&&!isCollisionWall)
 		{
-            Vector3 nowPos = Vector3.Lerp(transform.position,targetPoint,t);
-            this.myRigidBody.MovePosition(nowPos);
+            float stepDistance = Mathf.MoveTowards(0,distanceToTarget,Time.deltaTime*stepLenge);
+            Vector3 nowPos = Vector3.MoveTowards(transform.position,targetPoint,stepDistance);
+            myRigidBody.MovePosition(nowPos);
 			t += Time.deltaTime;
 			yield return null;
-		}
+            distanceToTarget= Vector3.Magnitude(targetPoint - transform.position);
+        }
         isStepping = false;
         isCollisionWall = false;
     }
