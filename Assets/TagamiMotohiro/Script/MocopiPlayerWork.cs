@@ -28,6 +28,9 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     [Header("ˆê•à‚Ì‹——£")]
     [SerializeField]
     float stepLenge;
+    [Header("•à‚­ƒXƒs[ƒh")]
+    [SerializeField]
+    float stepSpeed;
     [Header("•à‚­”»’è‚Ìè‡’l")]
     [SerializeField]
     float stepThreshold;
@@ -100,7 +103,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
             float stepDistance = Mathf.MoveTowards(0,distanceToTarget,Time.deltaTime*stepLenge);
             Vector3 nowPos = Vector3.MoveTowards(transform.position,targetPoint,stepDistance);
             myRigidBody.MovePosition(nowPos);
-			t += Time.deltaTime;
+			t += Time.deltaTime*stepSpeed;
 			yield return null;
             distanceToTarget= Vector3.Magnitude(targetPoint - transform.position);
         }
