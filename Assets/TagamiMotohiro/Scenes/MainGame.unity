@@ -2688,6 +2688,7 @@ Transform:
   - {fileID: 502654060}
   - {fileID: 813579094}
   - {fileID: 1047097593}
+  - {fileID: 1569851769}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8639,7 +8640,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1854794974}
+    m_TransformParent: {fileID: 621412347}
     m_Modifications:
     - target: {fileID: 435064220544225263, guid: 4db6f309a63f70f428b1e18b46b5045e,
         type: 3}
@@ -8654,22 +8655,37 @@ PrefabInstance:
     - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.536791
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.536791
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.536791
       objectReference: {fileID: 0}
     - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.76
+      value: 13.332592
       objectReference: {fileID: 0}
     - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.93270016
       objectReference: {fileID: 0}
     - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.85
+      value: -13.595588
       objectReference: {fileID: 0}
     - target: {fileID: 1328382606966143154, guid: 4db6f309a63f70f428b1e18b46b5045e,
         type: 3}
@@ -8829,8 +8845,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1569851769}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10031,54 +10046,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 462429143}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2028998929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7832563673178201720, guid: d4f583a22b785844e97c291b54878b0e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2044381085}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2028998931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028998929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b16a3d337aa5cc479f258e26adfbd4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setUp: {fileID: 0}
-  _head: {fileID: 0}
-  _body: {fileID: 0}
-  _rightHand: {fileID: 0}
-  _leftHand: {fileID: 0}
-  _rightFoot: {fileID: 0}
-  _leftFoot: {fileID: 0}
-  myMocopiAvatar: {fileID: 0}
-  controller: {fileID: 0}
-  anchar: {fileID: 0}
-  avatarList: []
-  startPoint: []
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  settings:
-    scaleMlp: 1
-    headTrackerForward: {x: 0, y: 0, z: 1}
-    headTrackerUp: {x: 0, y: 1, z: 0}
-    handTrackerForward: {x: 0, y: 0, z: 1}
-    handTrackerUp: {x: 0, y: 1, z: 0}
-    footTrackerForward: {x: 0, y: 0, z: 1}
-    footTrackerUp: {x: 0, y: 1, z: 0}
-    headOffset: {x: 0, y: 0, z: 0}
-    handOffset: {x: 0, y: 0, z: 0}
-    footForwardOffset: 0
-    footInwardOffset: 0
-    footHeadingOffset: 0
-    pelvisPositionWeight: 1
-    pelvisRotationWeight: 1
 --- !u!1 &2042916496 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8563006572355520934, guid: 42a6a0733bf7e08489aa58d4c7867156,
