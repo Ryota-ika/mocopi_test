@@ -8,12 +8,8 @@ public class DoorControll : MonoBehaviour//制作担当　田上
     [Header("ドアのアニメーター")]
     [SerializeField]
     Animator animator;
-    [Header("プレイヤー")]
     [SerializeField]
-    Transform player;
-    [Header("判定の半径")]
-    [SerializeField]
-    float radius;
+    List<KeyObject> keyObjects = new List<KeyObject>();
     bool isOpen = false;
     // Start is called before the first frame update
     void Start()
@@ -24,10 +20,19 @@ public class DoorControll : MonoBehaviour//制作担当　田上
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position,player.position)<=radius&&!isOpen) {
+        if (OpenDerection())
+        {
             animator.SetTrigger("Open");
-            isOpen = false;
-            this.GetComponent<BoxCollider>().enabled = false;
         }
+    }
+    bool OpenDerection()
+    {
+        bool result=true;
+        foreach (KeyObject item in keyObjects) {
+            if (!item.GetIsCleard()) {
+                result = false;
+            }
+        }
+        return result;
     }
 }

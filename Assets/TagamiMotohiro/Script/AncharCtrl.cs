@@ -9,9 +9,6 @@ using System.Linq;
 public class AncharCtrl : MonoBehaviourPunCallbacks
     //アンカーだけ生成してアバターはオフラインで管理するやり方
 {
-    [Header("カメラセットアップ用")]
-    [SerializeField]
-    OVRSetUp setUp;
     [Header("アンカー一覧")]
     [SerializeField]
     Transform _head;
@@ -54,7 +51,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         RoomOptions roomProps = new RoomOptions();
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
-        PhotonNetwork.JoinOrCreateRoom("ROOM", roomProps, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("ROOM.", roomProps, TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
@@ -118,7 +115,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         VRIK ik = avatar.GetComponent<VRIK>();
         //3秒後にキャリブレーション
         yield return new WaitForSeconds(3);
-        setUp.CameraSetUp();
         VRIKCalibrator.Calibrate(ik,settings,head,body,lefthand,righthand,leftFoot,rightFoot);
     }
 }
