@@ -8,6 +8,7 @@ TagManager:
   - Anchar
   - Wall
   - torch
+  - Key
   layers:
   - Default
   - TransparentFX
