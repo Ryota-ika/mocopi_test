@@ -39,12 +39,11 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     bool isStart = false;
     [SerializeField]
     float rayOfset;
+    RaycastHit hit;
     Vector3 lateFootPos;
     bool isStepping=false;
     bool workWeigting=true;
     bool isCollisionWall = false;
-    [SerializeField]
-    LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +67,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 state = FootState.RIGHT;
             }
         }
-		
+        CollisionDirection();
 	}
     IEnumerator WorkControll(Transform foot,string logtext)//‘«‚Ì“®‚«‚ğŒ©‚Ä•à‚¢‚½‚©”»’è‚·‚é
     {
@@ -110,7 +109,23 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         isStepping = false;
         isCollisionWall = false;
     }
-
+    void CollisionDirection()
+	{
+        Ray ray = new Ray(transform.position,avater.forward);
+        if (Physics.Raycast(ray, out hit, rayOfset))
+        {
+            if (hit.collider.tag == "Wall")
+            {
+                isCollisionWall = true;
+            }
+            else {
+                isCollisionWall = false;
+            }
+        }
+        else {
+            isCollisionWall = false;
+        }
+	}
 	private void OnTriggerStay(Collider other)
 	{
         if (other.gameObject.tag=="Wall") {

@@ -79,6 +79,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BlendBias: -2.37
     - _BlendBias1: -1
@@ -96,3 +97,4 @@ Material:
     - _StoneDirtSharpness: 14.9
     - __dirty: 0
     m_Colors: []
+  m_BuildTextureStacks: []

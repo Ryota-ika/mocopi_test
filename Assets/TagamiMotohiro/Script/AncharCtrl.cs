@@ -51,7 +51,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         RoomOptions roomProps = new RoomOptions();
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
-        PhotonNetwork.JoinOrCreateRoom("ROOM.", roomProps, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("ROOM", roomProps, TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
@@ -65,6 +65,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	{
         myMocopiAvatar.position = startPoint[PhotonNetwork.LocalPlayer.ActorNumber-1].position;
         //ÉAÉìÉJÅ[ê∂ê¨
+        Debug.Log(PhotonNetwork.CurrentRoom.MaxPlayers);
         Transform head = AncharInstantiete(_head, anchar);
         Transform body = AncharInstantiete(_body, anchar);
         Transform leftHand = AncharInstantiete(_leftHand, anchar);
