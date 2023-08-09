@@ -1,3 +1,4 @@
+//2023.8.9
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class PickUpAndRelease : MonoBehaviour
 {
     public GameObject rightHandAnchor;
 
-    [SerializeField] GameObject leftController;
+    [SerializeField] GameObject leftHandAnchor;
     [SerializeField] LineRenderer rayObject;
     // Start is called before the first frame update
     void Start()
@@ -21,20 +22,21 @@ public class PickUpAndRelease : MonoBehaviour
     }
     private void LateUpdate()
     {
-        rayObject.SetVertexCount(2);
-        rayObject.SetPosition(0,leftController.transform.position);
-        rayObject.SetPosition(1,leftController.transform.position+leftController.transform.forward*100.0f);
+        rayObject.SetVertexCount(2); //始点と終点設定
+        rayObject.SetPosition(0,leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
+        //1番目の頂点を左手コントローラの位置から100m先に設定
+        rayObject.SetPosition(1,leftHandAnchor.transform.position+leftHandAnchor.transform.forward*100.0f);
 
-        rayObject.SetWidth(0.01f, 0.01f);
-        if (OVRInput.GetDown(OVRInput.RawButton.Y))
+        rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger,OVRInput.Controller.LTouch))
         {
             RaycastHit[] hits;
-            hits = Physics.RaycastAll(leftController.transform.position, leftController.transform.forward, 100.0f);
+            hits = Physics.RaycastAll(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, 100.0f);
             foreach (var hit in hits)
             {
                 if (hit.collider.tag == "Key")
                 {
-                    hit.collider.transform.parent = leftController.transform;
+                    hit.collider.transform.parent = leftHandAnchor.transform;
                     hit.collider.transform.position = rayObject.transform.position;
                     break;
                 }
@@ -62,7 +64,7 @@ public class PickUpAndRelease : MonoBehaviour
         }*/
 
         //離した時の処理
-        if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger,OVRInput.Controller.Touch))
+        /*if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger,OVRInput.Controller.Touch))
         {
             for (int i = 0; i < rightHandAnchor.transform.childCount; i++)
             {
@@ -74,6 +76,6 @@ public class PickUpAndRelease : MonoBehaviour
                     child.GetComponent <Rigidbody>().isKinematic = false;
                 }
             }
-        }
+        }*/
     }
 }

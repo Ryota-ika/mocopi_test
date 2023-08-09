@@ -8,20 +8,20 @@ public class CharacterCtrl : MonoBehaviour
 {
 
     [SerializeField] 
-    private Transform target_player;
+    private Transform targetPlayer;
     [SerializeField]
     float smoothTime = 0.5f;
     Vector3 velocity= Vector3.zero;
     // Start is called before the first frame update
     void Start()
     {
-        target_player = GameObject.FindGameObjectWithTag("player").transform;
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 target_pos = target_player.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
+        Vector3 target_pos = targetPlayer.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
 
         transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
     }
