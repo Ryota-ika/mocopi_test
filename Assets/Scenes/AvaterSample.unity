@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c6e11a6edca9341a597c17dc9fc140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target_player: {fileID: 0}
+  targetPlayer: {fileID: 0}
   smoothTime: 0.5
 --- !u!4 &1735641600 stripped
 Transform:
