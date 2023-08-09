@@ -10,6 +10,8 @@ public class DoorControll : MonoBehaviour//制作担当　田上
     Animator animator;
     [SerializeField]
     List<KeyObject> keyObjects = new List<KeyObject>();
+    [SerializeField]
+    BoxCollider doorCollider;
     bool isOpen = false;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class DoorControll : MonoBehaviour//制作担当　田上
         if (OpenDerection())
         {
             animator.SetTrigger("Open");
+            doorCollider.enabled = false;
         }
     }
     bool OpenDerection()
