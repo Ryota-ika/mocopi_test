@@ -10,6 +10,8 @@ public class TorchControll : KeyObject
     Transform torch;
     [SerializeField]
     GameObject[] setActiveObject;
+    [SerializeField]
+    float colliderRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,7 @@ public class TorchControll : KeyObject
     }
 	protected override void CrearDirection()
 	{
-		if (!isCleard&&Vector3.Distance(transform.position,torch.position)<=0.6f) {
+		if (!isCleard&&Vector3.Distance(transform.position,torch.position)<=colliderRange) {
             foreach (GameObject item in setActiveObject)
             {
                 item.SetActive(true);
