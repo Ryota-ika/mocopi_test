@@ -17,12 +17,19 @@ public class Destroy : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Key“–‚½‚Á‚½");
         if (collision.gameObject.tag == "Key")
         {
             Destroy(this.gameObject,0.2f);
+        }
+    }*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Key")
+        {
+            Destroy(this.gameObject, 0.2f);
         }
     }
 }
