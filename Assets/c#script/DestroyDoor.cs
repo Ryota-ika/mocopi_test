@@ -18,7 +18,7 @@ public class DestroyDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Key")
         {
             Destroy(this.gameObject,0.2f);
         }
