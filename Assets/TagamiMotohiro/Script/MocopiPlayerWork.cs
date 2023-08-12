@@ -34,9 +34,9 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     [Header("•à‚­”»’è‚Ìè‡’l")]
     [SerializeField]
     float stepThreshold;
-    [Header("€”õŠ®—¹")]
+    [Header("•às‰Â”\‚©‚Ç‚¤‚©")]
     [SerializeField]
-    bool isStart = false;
+    bool isCanWark=false;
     [SerializeField]
     float rayOfset;
     RaycastHit hit;
@@ -53,7 +53,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     // Update is called once per frame
     void Update()
     {
-		if (!isStart) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
+		if (!isCanWark) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
         if (workWeigting) {
             if (state == FootState.RIGHT)
             {
@@ -126,14 +126,11 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
             isCollisionWall = false;
         }
 	}
-	private void OnTriggerStay(Collider other)
-	{
-        if (other.gameObject.tag=="Wall") {
-            isCollisionWall = true;
-        }
-	}
-	private void OnTriggerExit(Collider other)
-	{
-        isCollisionWall = false;
-	}
+    public bool GetIsCanWalk() { 
+        return isCanWark;
+    }
+    public void SetIsCanWalk(bool value)
+    {
+        isCanWark = value;
+    }
 }
