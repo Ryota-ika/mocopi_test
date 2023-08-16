@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy : MonoBehaviour
+public class DestroyWall : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Destroy : MonoBehaviour
     }*/
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Key")
+        if (other.gameObject.tag == "Axe")
         {
             Destroy(this.gameObject, 0.2f);
         }
