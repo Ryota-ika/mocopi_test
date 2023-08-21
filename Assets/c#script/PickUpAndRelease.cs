@@ -34,7 +34,7 @@ public class PickUpAndRelease : MonoBehaviour
             hits = Physics.RaycastAll(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, 100.0f);
             foreach (var hit in hits)
             {
-                if (hit.collider.tag == "Key")
+                if (hit.collider.tag == "Key" ||hit.collider.tag == "Axe")
                 {
                     hit.collider.transform.parent = leftHandAnchor.transform;
                     hit.collider.transform.position = rayObject.transform.position;
