@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 688220081762948305}
   keyObjects: []
-  doorColider: {fileID: 0}
+  doorColider: {fileID: 6164671479131237821}
 --- !u!1 &2083576533253088496
 GameObject:
   m_ObjectHideFlags: 0
