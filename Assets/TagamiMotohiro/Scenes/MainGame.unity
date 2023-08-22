@@ -6057,7 +6057,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1206120707
 PrefabInstance:
@@ -9294,7 +9294,7 @@ MonoBehaviour:
   controller: {fileID: 112276, guid: f710eeb9c0760a5439c11f9619c77fae, type: 3}
   anchar: {fileID: 497800500577854957, guid: 27ab35af3f4169945842e96353e9c250, type: 3}
   avatarList:
-  - {fileID: 100096, guid: b7f0be2591bb2494da76b4573bb6e8a4, type: 3}
+  - {fileID: 3872320412760938450, guid: 5630773e1c9658042a1102440c74a733, type: 3}
   - {fileID: 5811189823327366073, guid: b179e75b25cc96d43bc25c77f67a3c1d, type: 3}
   startPoint:
   - {fileID: 1729998352}
