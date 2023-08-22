@@ -7,11 +7,11 @@ public class Key : MonoBehaviour
     public float actionDistance = 1f; //ƒvƒŒƒCƒ„[‚ª•ó” ‚Æ‚Ì‹——£‚ğ‚Æ‚é
 
     private bool isNearTreasureChest=false;
+    [SerializeField]
     private TresureChest treasureChest; //•ó” ‚ÌŠW‚Ìscript
     // Start is called before the first frame update
     void Start()
     {
-        treasureChest = FindObjectOfType<TresureChest>();
     }
 
     // Update is called once per frame

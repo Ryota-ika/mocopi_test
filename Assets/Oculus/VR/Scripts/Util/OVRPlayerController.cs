@@ -458,7 +458,7 @@ public class OVRPlayerController : MonoBehaviour
 
 			if (SnapRotation)
 			{
-				if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
+				/*if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
 					(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
 				{
 					if (ReadyToSnapTurn)
@@ -467,7 +467,7 @@ public class OVRPlayerController : MonoBehaviour
 						ReadyToSnapTurn = false;
 					}
 				}
-				else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight) ||
+				else */if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickRight) ||
 					(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickRight)))
 				{
 					if (ReadyToSnapTurn)
