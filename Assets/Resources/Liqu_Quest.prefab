@@ -41,6 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7666099082264464301}
+  - component: {fileID: 5018717681909267765}
   m_Layer: 3
   m_Name: LeftHandPinky1
   m_TagString: Untagged
@@ -64,6 +65,33 @@ Transform:
   m_Father: {fileID: 5027806045295805935}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5018717681909267765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123521465901905300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 0, z: 1}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &176228460922223514
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7911663786821686060}
+  - component: {fileID: 8423620452129445136}
   m_Layer: 3
   m_Name: RightHandIndex1
   m_TagString: Untagged
@@ -662,6 +691,33 @@ Transform:
   m_Father: {fileID: 7465526849163389868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8423620452129445136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081548314912978133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &1107557461301223101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3013200070876985504}
+  - component: {fileID: 6501825809046518663}
   m_Layer: 3
   m_Name: LeftHandThumb1
   m_TagString: Untagged
@@ -1784,6 +1841,33 @@ Transform:
   m_Father: {fileID: 5027806045295805935}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6501825809046518663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476247350946020554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 0, z: 1}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &3579724044495900395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,7 +1920,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -9170695344152410619, guid: 02aca54162f00d844a1982f8cd14f977, type: 3}
+  - {fileID: 2100000, guid: f4a1155736ccf76479873d00161d32c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2518,6 +2602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646964763306044394}
+  - component: {fileID: 6677872725392872867}
   m_Layer: 3
   m_Name: RightHandRing1
   m_TagString: Untagged
@@ -2541,6 +2626,33 @@ Transform:
   m_Father: {fileID: 7465526849163389868}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6677872725392872867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3938694289160908564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &3975067476151461092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,6 +3076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3440865432620385090}
+  - component: {fileID: 2191659641459805340}
   m_Layer: 3
   m_Name: RightHandPinky1
   m_TagString: Untagged
@@ -2987,6 +3100,33 @@ Transform:
   m_Father: {fileID: 7465526849163389868}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2191659641459805340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5128234703725423406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &5246986007974896251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,6 +3737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3851521168771661234}
+  - component: {fileID: 178999495659434573}
   m_Layer: 3
   m_Name: LeftHandMiddle1
   m_TagString: Untagged
@@ -3620,6 +3761,33 @@ Transform:
   m_Father: {fileID: 5027806045295805935}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &178999495659434573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886671821440604737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 0, z: 1}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &5971508302527906138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4203281376302287898}
+  - component: {fileID: 7717298608872940798}
   m_Layer: 3
   m_Name: RightHandMiddle1
   m_TagString: Untagged
@@ -3652,6 +3821,33 @@ Transform:
   m_Father: {fileID: 7465526849163389868}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7717298608872940798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971508302527906138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &6037409740762027058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,6 +4145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7694455759552690678}
+  - component: {fileID: 8030532971710720969}
   m_Layer: 3
   m_Name: LeftHandRing1
   m_TagString: Untagged
@@ -3972,6 +4169,33 @@ Transform:
   m_Father: {fileID: 5027806045295805935}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8030532971710720969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723895289002131235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 0, z: 1}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &6735652508872904437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,6 +4631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4663281142211235712}
+  - component: {fileID: 1649250950938913196}
   m_Layer: 3
   m_Name: LeftHandIndex1
   m_TagString: Untagged
@@ -4430,6 +4655,33 @@ Transform:
   m_Father: {fileID: 5027806045295805935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649250950938913196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766318042604080289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 0, z: 1}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &7866398137496074865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,6 +5172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1255504167717892619}
+  - component: {fileID: 2945322306864364515}
   m_Layer: 3
   m_Name: RightHandThumb1
   m_TagString: Untagged
@@ -4943,6 +5196,33 @@ Transform:
   m_Father: {fileID: 7465526849163389868}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2945322306864364515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852061929016487760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55721bb82f63fa4ba31a5cb61f22eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAwakeAutoSetup: 1
+  isEnableTouchControl: 1
+  fingerType: 1
+  touchButtonPool: 
+  trigger: 0
+  triggerStart: 0
+  relatedTouchButton: 0
+  jointPool: []
+  jointLevelPool: []
+  axis: {x: 0, y: 1, z: 0}
+  angle: 0
+  maxAngle: 90
+  openLerpLevel: 0.3
+  closeLerpLevel: 0.15
+  isThumb: 0
 --- !u!1 &8940113839872330462
 GameObject:
   m_ObjectHideFlags: 0

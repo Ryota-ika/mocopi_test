@@ -1671,7 +1671,7 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: -0.1, y: 0.8, z: -0.4}
   angle: 0
   maxAngle: 90
   openLerpLevel: 0.3
@@ -4401,7 +4401,7 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: 0.1, y: 1, z: 0}
   angle: 0
   maxAngle: 90
   openLerpLevel: 0.3
