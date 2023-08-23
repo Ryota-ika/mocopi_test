@@ -12,29 +12,29 @@ public class PickUpAndRelease : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void LateUpdate()
     {
         rayObject.SetVertexCount(2); //始点と終点設定
-        rayObject.SetPosition(0,leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
+        rayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
         //1番目の頂点を左手コントローラの位置から100m先に設定
-        rayObject.SetPosition(1,leftHandAnchor.transform.position+leftHandAnchor.transform.forward*100.0f);
+        rayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 100.0f);
 
         rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger,OVRInput.Controller.LTouch))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         {
             RaycastHit[] hits;
             hits = Physics.RaycastAll(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, 100.0f);
             foreach (var hit in hits)
             {
-                if (hit.collider.tag == "Key" ||hit.collider.tag == "Axe")
+                if (hit.collider.tag == "Key" /*|| hit.collider.tag == "Axe"*/)
                 {
                     hit.collider.transform.parent = leftHandAnchor.transform;
                     hit.collider.transform.position = rayObject.transform.position;
