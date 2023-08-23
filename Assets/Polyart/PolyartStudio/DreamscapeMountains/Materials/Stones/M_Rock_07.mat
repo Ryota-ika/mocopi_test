@@ -21,7 +21,7 @@ Material:
     m_TexEnvs:
     - _AlbedoTexture:
         m_Texture: {fileID: 2800000, guid: dea2050c83a583d4d8c73a6db0842851, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.01, y: 0.04}
         m_Offset: {x: 0, y: 0}
     - _EmissiveTexture:
         m_Texture: {fileID: 0}
@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
         m_Texture: {fileID: 2800000, guid: 6a1e857cab43ff84388c4be80d62ec1f, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.01, y: 0.04}
         m_Offset: {x: 0, y: 0}
     - _SmoothnessTexture:
         m_Texture: {fileID: 2800000, guid: 8c19f39c7dbadfe40914c9a17e46f7eb, type: 3}
@@ -51,6 +51,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _DetailColorIntensity: 1
     - _DetailSmoothIntensity: 0.924
@@ -62,3 +63,5 @@ Material:
     - __dirty: 1
     m_Colors:
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissiveTint: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
