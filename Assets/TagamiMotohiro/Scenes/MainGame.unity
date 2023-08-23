@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 300  
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -1015,6 +1015,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 209698323}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1001 &229891693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11637,7 +11638,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1206120707
 PrefabInstance:
@@ -15304,7 +15305,7 @@ MonoBehaviour:
   controller: {fileID: 112276, guid: f710eeb9c0760a5439c11f9619c77fae, type: 3}
   anchar: {fileID: 497800500577854957, guid: 27ab35af3f4169945842e96353e9c250, type: 3}
   avatarList:
-  - {fileID: 100096, guid: b7f0be2591bb2494da76b4573bb6e8a4, type: 3}
+  - {fileID: 3872320412760938450, guid: 5630773e1c9658042a1102440c74a733, type: 3}
   - {fileID: 5811189823327366073, guid: b179e75b25cc96d43bc25c77f67a3c1d, type: 3}
   startPoint:
   - {fileID: 1729998352}

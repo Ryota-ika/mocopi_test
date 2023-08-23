@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ChangeNight : MonoBehaviour
 {
+    [SerializeField]
+    Light directionalLight;
+    [SerializeField]
+    Material nightSky;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +19,10 @@ public class ChangeNight : MonoBehaviour
     {
         
     }
+	private void OnTriggerEnter(Collider other)
+	{
+        directionalLight.color = Color.black;
+        directionalLight.transform.rotation=Quaternion.AngleAxis(-90f,Vector3.right);
+        RenderSettings.skybox = nightSky;
+	}
 }

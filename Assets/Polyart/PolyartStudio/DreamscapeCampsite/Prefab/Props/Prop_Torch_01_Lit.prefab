@@ -117,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1877615254183757843
 Transform:
   m_ObjectHideFlags: 0
@@ -231,6 +231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TorchSmoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552329143184161630, guid: bb75e3a7bb754ed4694bc5e892051419,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8788388987730240516, guid: bb75e3a7bb754ed4694bc5e892051419,
         type: 3}
@@ -390,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 7150841258172674693, guid: a9c199292ca4a8249abe0489e19c3a8f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7150841258190352877, guid: a9c199292ca4a8249abe0489e19c3a8f,
         type: 3}
