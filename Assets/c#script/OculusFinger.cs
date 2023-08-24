@@ -200,7 +200,7 @@ public class OculusFinger : MonoBehaviour
                 trigger = OVRInput.RawAxis1D.LIndexTrigger;
                 triggerStart = 0.5f;
                 relatedTouchButton = OVRInput.RawTouch.LIndexTrigger;
-                axis = new Vector3(0.1f, 1, 0)+transform.forward;
+                axis = new Vector3(0.1f, 1, 0);
                 break;
             case FingerType.L_Middle:
                 trigger = OVRInput.RawAxis1D.LHandTrigger;
