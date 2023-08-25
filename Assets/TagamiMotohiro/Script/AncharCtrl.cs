@@ -58,7 +58,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	public override void OnPlayerEnteredRoom(Player newPlayer)
     //ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション
 	{
-        int playerNum = newPlayer.ActorNumber;
+        int playerNum = 2;
         StartCoroutine(GetPlayerAnchar(playerNum));
     }
 	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する

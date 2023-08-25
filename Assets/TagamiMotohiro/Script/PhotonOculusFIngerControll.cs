@@ -6,6 +6,8 @@ using Photon.Pun;
 public class PhotonOculusFIngerControll : MonoBehaviourPunCallbacks,IPunObservable
 {
     OculusFinger[] fingers=new OculusFinger[5];
+    float handTriggerValue;
+    float indexTriggerValue;
     // Start is called before the first frame update
     void Start()
     {
