@@ -150,7 +150,6 @@ public class OculusFinger : MonoBehaviour
         if (touchLevel > 0.0f && touchButtonPool.Count > 0 && OVRInput.Get(trigger) < 0.1f) { lerpLevel *= 0.5f; } // ‚¿‚å‚Á‚Æ‹ßÚƒZƒ“ƒT[‚ÉG‚ê‚½‚¾‚¯‚Ì‚Æ‚«‚Í‚ä‚Á‚­‚è•âŠÔ‚·‚é
         angle = Mathf.Lerp(angle, maxAngle * touchLevel, lerpLevel);
     }
-
     void LateUpdate()
     {
         if (jointPool.Count != jointBaseRotPool.Count && jointPool.Count != jointBaseRotPool.Count)

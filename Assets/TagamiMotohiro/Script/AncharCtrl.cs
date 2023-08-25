@@ -51,14 +51,14 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         RoomOptions roomProps = new RoomOptions();
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
-        PhotonNetwork.JoinOrCreateRoom("ROOM.", roomProps, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("ROOM", roomProps, TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
 	public override void OnPlayerEnteredRoom(Player newPlayer)
     //ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション
 	{
-        int playerNum = 2;
+        int playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
         StartCoroutine(GetPlayerAnchar(playerNum));
     }
 	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
@@ -118,4 +118,9 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         yield return new WaitForSeconds(3);
         VRIKCalibrator.Calibrate(ik,settings,head,body,lefthand,righthand,leftFoot,rightFoot);
     }
+	private void OnApplicationQuit()
+	{
+        Debug.Log("プレイヤーが退室した");
+        PhotonNetwork.LeaveRoom();
+	}
 }
