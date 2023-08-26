@@ -88,7 +88,7 @@ MonoBehaviour:
   jointLevelPool: []
   axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -712,9 +712,9 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   jointLevelPool: []
   axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -2647,9 +2647,9 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -3121,9 +3121,9 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   jointLevelPool: []
   axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -3842,9 +3842,9 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -4192,7 +4192,7 @@ MonoBehaviour:
   jointLevelPool: []
   axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -4678,7 +4678,7 @@ MonoBehaviour:
   jointLevelPool: []
   axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0
@@ -5217,9 +5217,9 @@ MonoBehaviour:
   relatedTouchButton: 0
   jointPool: []
   jointLevelPool: []
-  axis: {x: 0, y: 1, z: 0}
+  axis: {x: 0, y: 0, z: 1}
   angle: 0
-  maxAngle: 90
+  maxAngle: -90
   openLerpLevel: 0.3
   closeLerpLevel: 0.15
   isThumb: 0

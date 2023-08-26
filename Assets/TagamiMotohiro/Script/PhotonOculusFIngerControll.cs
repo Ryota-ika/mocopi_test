@@ -18,6 +18,8 @@ public class PhotonOculusFIngerControll : MonoBehaviourPunCallbacks,IPunObservab
     {
        
     }
+    //送信側で指の情報を送信
+    //受信側で指の情報を受信
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
         if (stream.IsWriting) {
             foreach (OculusFinger item in fingers) {
