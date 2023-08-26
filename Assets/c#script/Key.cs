@@ -9,6 +9,7 @@ public class Key : MonoBehaviour
     private bool isNearTreasureChest=false;
     [SerializeField]
     private TresureChest treasureChest; //•ó” ‚ÌŠW‚Ìscript
+    private PickUpAndRelease pickUpAndRelease;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,8 @@ public class Key : MonoBehaviour
             {
                 treasureChest.OpenLid();
                 isNearTreasureChest = true;
+                pickUpAndRelease.isBoxOpened = true;
+                this.gameObject.SetActive(false);
             }
         }
         else
