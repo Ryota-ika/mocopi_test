@@ -31,6 +31,7 @@ public class Key : MonoBehaviour
                 isNearTreasureChest = true;
                 //pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
+                //Destroy(this.gameObject);
             }
         }
         else

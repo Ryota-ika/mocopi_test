@@ -13852,6 +13852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8980036612987391299, guid: da382795e60d6a0459194a8e274d3ca8,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980036612987391299, guid: da382795e60d6a0459194a8e274d3ca8,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -17634,6 +17639,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2417999744663699394, guid: d45ab43dfd6bd054e9453f2fa715d640,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417999744663699394, guid: d45ab43dfd6bd054e9453f2fa715d640,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2482155407028086948, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
       propertyPath: m_Name
@@ -18129,6 +18144,7 @@ MonoBehaviour:
   rightHandAnchor: {fileID: 0}
   leftHandAnchor: {fileID: 663826685}
   rayObject: {fileID: 1227802418}
+  tresureChest: {fileID: 0}
   isBoxOpened: 0
 --- !u!4 &2009539340 stripped
 Transform:

@@ -91,18 +91,22 @@ public class PickUpAndRelease : MonoBehaviour
                     else if (hit.collider.tag=="Box")
                     {
                         isBoxOpened = true;
+
+                        hit.collider.enabled = false;
                     }
                 }
                 else
                 {
-                    if (grabbedObject != null && grabbedObject.tag == "Key")
+                    if (grabbedObject != null /*&& grabbedObject.tag == "Key"*/)
                     {
                         if (hit.collider.tag == "Axe")
                         {
+                            //grabbedObject = null;
                             hit.collider.transform.parent = leftHandAnchor.transform;
                             hit.collider.transform.position = rayObject.transform.position;
                             //grabbedObject = null;//Ç‡Ç§àÍìxåÆÇíÕÇﬁÇΩÇﬂÇÃèÄîı
                         }
+                            Debug.Log(hit.collider.tag);
 
                     }
                 }
