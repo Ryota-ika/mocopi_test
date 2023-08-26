@@ -29,7 +29,7 @@ public class Key : MonoBehaviour
             {
                 treasureChest.OpenLid();
                 isNearTreasureChest = true;
-                pickUpAndRelease.isBoxOpened = true;
+                //pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
             }
         }

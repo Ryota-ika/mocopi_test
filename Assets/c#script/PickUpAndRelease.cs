@@ -10,6 +10,7 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] GameObject leftHandAnchor;
     [SerializeField] LineRenderer rayObject;
 
+    public TresureChest tresureChest;
     private bool canGrabKey = true;
     public bool isBoxOpened = false;
 
@@ -30,13 +31,54 @@ public class PickUpAndRelease : MonoBehaviour
 
         rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
 
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
+        //{
+        //    if (!isBoxOpened)
+        //    {
+        //        RaycastHit hit;
+        //        //レイキャストを発射してヒットしたオブジェクトを取得
+        //        if (Physics.Raycast(leftHandAnchor.transform.position,leftHandAnchor.transform.forward,out hit,100.0f))
+        //        {
+        //            if (hit.collider.tag == "Key" && canGrabKey)
+        //            {
+        //                canGrabKey = false;
+        //                grabbedObject = hit.collider.gameObject;
+        //                grabbedObject.transform.parent = leftHandAnchor.transform;
+        //                grabbedObject.transform.position = rayObject.transform.position;
+        //                //isBoxOpened = true;
+        //            }
+        //            else if (isBoxOpened == true)
+        //            {
+        //                isBoxOpened = true;
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (grabbedObject != null && grabbedObject.tag == "Key")
+        //        {
+        //            RaycastHit hit;
+        //            //ボックスが開かれた後、、別のオブジェクトに対してレイキャスト
+        //            if (Physics.Raycast(leftHandAnchor.transform.position,leftHandAnchor.transform.forward,out hit,100.0f))
+        //            {
+        //                if (hit.collider.tag == "Axe")
+        //                {
+        //                    hit.collider.transform.parent = leftHandAnchor.transform;
+        //                    hit.collider.transform.position = rayObject.transform.position;
+        //                    //grabbedObject = null;//もう一度鍵を掴むための準備
+        //                }
+        //            }
+
+        //    }
+        //}
+        //}
         if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         {
-            if (!isBoxOpened)
+            RaycastHit hit;
+            //レイキャストを発射してヒットしたオブジェクトを取得
+            if (Physics.Raycast(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, out hit, 100.0f))
             {
-                RaycastHit hit;
-                //レイキャストを発射してヒットしたオブジェクトを取得
-                if (Physics.Raycast(leftHandAnchor.transform.position,leftHandAnchor.transform.forward,out hit,100.0f))
+                if (!isBoxOpened)
                 {
                     if (hit.collider.tag == "Key" && canGrabKey)
                     {
@@ -46,19 +88,14 @@ public class PickUpAndRelease : MonoBehaviour
                         grabbedObject.transform.position = rayObject.transform.position;
                         //isBoxOpened = true;
                     }
-                    /*else if (hit.collider.tag == "Box")
+                    else if (hit.collider.tag=="Box")
                     {
                         isBoxOpened = true;
-                    }*/
+                    }
                 }
-            }
-            else
-            {
-                if (grabbedObject != null && grabbedObject.tag == "Key")
+                else
                 {
-                    RaycastHit hit;
-                    //ボックスが開かれた後、、別のオブジェクトに対してレイキャスト
-                    if (Physics.Raycast(leftHandAnchor.transform.position,leftHandAnchor.transform.forward,out hit,100.0f))
+                    if (grabbedObject != null && grabbedObject.tag == "Key")
                     {
                         if (hit.collider.tag == "Axe")
                         {
@@ -66,11 +103,13 @@ public class PickUpAndRelease : MonoBehaviour
                             hit.collider.transform.position = rayObject.transform.position;
                             //grabbedObject = null;//もう一度鍵を掴むための準備
                         }
+
                     }
-                    
+                }
+
             }
         }
-        }
+
     }
     private void LateUpdate()
     {
