@@ -9,6 +9,8 @@ public class GestureArea : MonoBehaviour
      MocopiPlayerWork Player;
     [SerializeField]
     float radius;
+    [SerializeField]
+    KeyObject keyItem;
     // Start is called before the first frame update
     void Start()
     {
