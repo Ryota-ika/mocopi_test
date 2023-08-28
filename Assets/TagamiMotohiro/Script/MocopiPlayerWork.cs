@@ -39,6 +39,9 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     bool isCanWark=false;
     [SerializeField]
     float rayOfset;
+    [SerializeField]
+    float lastEffectTime;
+    float effectTime=0;
     RaycastHit hit;
     Vector3 lateFootPos;
     bool isStepping=false;
@@ -109,7 +112,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         isStepping = false;
         isCollisionWall = false;
     }
-    void CollisionDirection()
+    void CollisionDirection()//•Ç‚É“–‚½‚Á‚½‚©‚Ç‚¤‚©”»’è
 	{
         Ray ray = new Ray(transform.position,avater.forward);
         if (Physics.Raycast(ray, out hit, rayOfset))
@@ -117,12 +120,21 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
             if (hit.collider.tag == "Wall")
             {
                 isCollisionWall = true;
+                Vector3 point = new Vector3(hit.point.x,hit.point.y+1.6f,hit.point.z);
+                effectTime -= Time.deltaTime;
+                if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
+                    Instantiate(wallHitEffect, point, Quaternion.identity);
+                    effectTime = lastEffectTime;
+                }
+                
             }
             else {
+                effectTime = 0;
                 isCollisionWall = false;
             }
         }
         else {
+            effectTime = 0;
             isCollisionWall = false;
         }
 	}
