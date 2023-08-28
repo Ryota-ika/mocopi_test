@@ -87,12 +87,16 @@ public class PickUpAndRelease : MonoBehaviour
                         grabbedObject.transform.parent = leftHandAnchor.transform;
                         grabbedObject.transform.position = rayObject.transform.position;
                         //isBoxOpened = true;
-                    }
-                    else if (hit.collider.tag=="Box")
-                    {
+                        //hit.collider.enabled = false;
                         isBoxOpened = true;
-
+                    }
+                    else if (hit.collider.tag == "Box")
+                    {
                         hit.collider.enabled = false;
+                        if (hit.collider.enabled == false)
+                        {
+                            
+                        }
                     }
                 }
                 else
