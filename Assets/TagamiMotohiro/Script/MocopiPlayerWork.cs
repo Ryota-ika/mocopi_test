@@ -123,7 +123,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 Vector3 point = new Vector3(hit.point.x,hit.point.y+1.6f,hit.point.z);
                 effectTime -= Time.deltaTime;
                 if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
-                    Instantiate(wallHitEffect, point, Quaternion.identity);
+                    Instantiate(wallHitEffect, point, Quaternion.FromToRotation(hit.point,transform.position));
                     effectTime = lastEffectTime;
                 }
                 
