@@ -45,7 +45,6 @@ public class OculusFinger : MonoBehaviour
     [SerializeField, TooltipAttribute("各関節が根本の角度に対してどの割合で曲がるかを設定（未指定のときAwakeで自動設定）")]
     private List<float> jointLevelPool;
     private List<Quaternion> jointBaseRotPool; // 各関節の初期姿勢（Awake時に自動記憶）
-
     [HeaderAttribute("Finger Angle")]
     [TooltipAttribute("指関節の回転軸")]
     public Vector3 axis = Vector3.up;
@@ -150,7 +149,6 @@ public class OculusFinger : MonoBehaviour
         if (touchLevel > 0.0f && touchButtonPool.Count > 0 && OVRInput.Get(trigger) < 0.1f) { lerpLevel *= 0.5f; } // ちょっと近接センサーに触れただけのときはゆっくり補間する
         angle = Mathf.Lerp(angle, maxAngle * touchLevel, lerpLevel);
     }
-
     void LateUpdate()
     {
         if (jointPool.Count != jointBaseRotPool.Count && jointPool.Count != jointBaseRotPool.Count)
@@ -182,7 +180,7 @@ public class OculusFinger : MonoBehaviour
         touchButtonPool.Clear();
         relatedTouchButton = OVRInput.RawTouch.None;
         triggerStart = 0.0f;
-        axis = new Vector3(0, 1, 0);
+        //axis = new Vector3(0, 1, 0);
         isThumb = false;
 
         switch (fingerType)
@@ -193,14 +191,14 @@ public class OculusFinger : MonoBehaviour
                 touchButtonPool.Add(OVRInput.RawTouch.X);
                 touchButtonPool.Add(OVRInput.RawTouch.Y);
                 trigger = OVRInput.RawAxis1D.LHandTrigger;
-                axis = new Vector3(-0.1f,0.8f,-0.4f);
+                //axis = new Vector3(-0.1f,0.8f,-0.4f);
                 isThumb = true;
                 break;
             case FingerType.L_Index:
                 trigger = OVRInput.RawAxis1D.LIndexTrigger;
                 triggerStart = 0.5f;
                 relatedTouchButton = OVRInput.RawTouch.LIndexTrigger;
-                axis = new Vector3(0.1f, 1, 0);
+                //axis = new Vector3(0.1f, 1, 0);
                 break;
             case FingerType.L_Middle:
                 trigger = OVRInput.RawAxis1D.LHandTrigger;
@@ -213,7 +211,7 @@ public class OculusFinger : MonoBehaviour
                 break;
             case FingerType.L_Pinky:
                 trigger = OVRInput.RawAxis1D.LHandTrigger;
-                axis = new Vector3(0, 1, -0.1f);
+                //axis = new Vector3(0, 1, -0.1f);
                 break;
 
             case FingerType.R_Thumb:
@@ -222,14 +220,14 @@ public class OculusFinger : MonoBehaviour
                 touchButtonPool.Add(OVRInput.RawTouch.A);
                 touchButtonPool.Add(OVRInput.RawTouch.B);
                 trigger = OVRInput.RawAxis1D.RHandTrigger;
-                axis = new Vector3(0.1f, 0.5f, 0.4f);
+                //axis = new Vector3(0.1f, 0.5f, 0.4f);
                 isThumb = true;
                 break;
             case FingerType.R_Index:
                 trigger = OVRInput.RawAxis1D.RIndexTrigger;
                 triggerStart = 0.1f;
                 relatedTouchButton = OVRInput.RawTouch.RIndexTrigger;
-                axis = new Vector3(-0.1f, 1, 0);
+                //axis = new Vector3(-0.1f, 1, 0);
                 break;
             case FingerType.R_Middle:
                 trigger = OVRInput.RawAxis1D.RHandTrigger;
@@ -242,7 +240,7 @@ public class OculusFinger : MonoBehaviour
                 break;
             case FingerType.R_Pinky:
                 trigger = OVRInput.RawAxis1D.RHandTrigger;
-                axis = new Vector3(0, 1, 0.1f);
+                //axis = new Vector3(0, 1, 0.1f);
                 break;
         }
 
