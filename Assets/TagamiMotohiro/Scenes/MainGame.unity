@@ -10948,7 +10948,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26990
+  m_Name: pb_Mesh30680
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12598,6 +12598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1791971356}
   radius: 1
+  keyItem: {fileID: 0}
 --- !u!23 &1163370081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16215,6 +16216,7 @@ MonoBehaviour:
   stepThreshold: 0.03
   isCanWark: 1
   rayOfset: 0.2
+  lastEffectTime: 0.5
 --- !u!114 &1791971359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18160,6 +18162,9 @@ MonoBehaviour:
   rayObject: {fileID: 1227802418}
   tresureChest: {fileID: 0}
   isBoxOpened: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &2009539340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 335247538947528048, guid: e1d0b69a131154b498ef88578adbca89,
