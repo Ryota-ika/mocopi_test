@@ -744,10 +744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159374627b8d82642849730362074d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crackedWall: {fileID: 0}
   maxDurability: 100
   currentDurability: 0
-  minRequireForce: 50
 --- !u!1001 &174810789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10639,10 +10637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159374627b8d82642849730362074d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crackedWall: {fileID: 1667989123}
   maxDurability: 100
   currentDurability: 0
-  minRequireForce: 50
 --- !u!4 &963469356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6959798319599725257, guid: eeae5b10d9dcf5240b2f98e64e5b56c3,
@@ -15517,12 +15513,41 @@ PrefabInstance:
       objectReference: {fileID: 1965275340}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1d0b69a131154b498ef88578adbca89, type: 3}
---- !u!1 &1667989123 stripped
+--- !u!1 &1686599442 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5603098696198634479, guid: 38bac2e73938b2546bb799311c5f57fa,
+  m_CorrespondingSourceObject: {fileID: 1134505435606471748, guid: da382795e60d6a0459194a8e274d3ca8,
     type: 3}
-  m_PrefabInstance: {fileID: 961781714}
+  m_PrefabInstance: {fileID: 1446881913}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1686599447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686599442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adceebd89b811764faee9b0da339adb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minRequiredSpeed: 5
+--- !u!54 &1686599448
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686599442}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1001 &1708285526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17656,7 +17681,7 @@ PrefabInstance:
     - target: {fileID: 2417999744663699394, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2417999744663699394, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
@@ -18156,9 +18181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHandAnchor: {fileID: 0}
+  minRequiredSpeed: 5
   leftHandAnchor: {fileID: 663826685}
   rayObject: {fileID: 1227802418}
-  tresureChest: {fileID: 0}
+  tresureChest: {fileID: 1046722157}
   isBoxOpened: 0
 --- !u!4 &2009539340 stripped
 Transform:

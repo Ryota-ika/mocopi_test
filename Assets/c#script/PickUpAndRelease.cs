@@ -2,23 +2,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class PickUpAndRelease : MonoBehaviour
 {
     public GameObject rightHandAnchor;
-
+    public float minRequiredSpeed = 5.0f;
     [SerializeField] GameObject leftHandAnchor;
     [SerializeField] LineRenderer rayObject;
 
-    public TresureChest tresureChest;
+    [SerializeField] private TresureChest tresureChest;
     private bool canGrabKey = true;
     public bool isBoxOpened = false;
 
     private GameObject grabbedObject = null;
+    private GameObject chestHinge;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        chestHinge = GameObject.Find("Chest_Hinge");
+        animator = chestHinge.GetComponent<Animator>();
+    }
 
+    private IEnumerator DelaydMethodCoroutine(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        tresureChest.OpenLid();
     }
 
     // Update is called once per frame
@@ -27,7 +38,7 @@ public class PickUpAndRelease : MonoBehaviour
         rayObject.SetVertexCount(2); //始点と終点設定
         rayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
         //1番目の頂点を左手コントローラの位置から100m先に設定
-        rayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 100.0f);
+        rayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 3.0f);
 
         rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
 
@@ -72,11 +83,12 @@ public class PickUpAndRelease : MonoBehaviour
         //    }
         //}
         //}
+
         if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         {
             RaycastHit hit;
             //レイキャストを発射してヒットしたオブジェクトを取得
-            if (Physics.Raycast(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, out hit, 100.0f))
+            if (Physics.Raycast(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, out hit, 3.0f))
             {
                 if (!isBoxOpened)
                 {
@@ -88,20 +100,26 @@ public class PickUpAndRelease : MonoBehaviour
                         grabbedObject.transform.position = rayObject.transform.position;
                         //isBoxOpened = true;
                         //hit.collider.enabled = false;
-                        isBoxOpened = true;
                     }
-                    else if (hit.collider.tag == "Box")
+                    else if (hit.collider.tag == "Box" &&canGrabKey == false)
                     {
-                        hit.collider.enabled = false;
+                        /*hit.collider.enabled = false;
                         if (hit.collider.enabled == false)
                         {
-                            
-                        }
+
+                        }*/
+                        //Destroy(hit.collider.gameObject);
+                        animator.SetBool("Open", true);
+                        tresureChest.OpenLid();
+                        //hit.collider.gameObject.SetActive(false);
+                        //float delayTime = 3.0f;
+                        //StartCoroutine(DelaydMethodCoroutine(delayTime));
+                        isBoxOpened = true;
                     }
                 }
                 else
                 {
-                    if (grabbedObject != null /*&& grabbedObject.tag == "Key"*/)
+                    if (grabbedObject != null && grabbedObject.tag == "Key")
                     {
                         if (hit.collider.tag == "Axe")
                         {
@@ -110,71 +128,12 @@ public class PickUpAndRelease : MonoBehaviour
                             hit.collider.transform.position = rayObject.transform.position;
                             //grabbedObject = null;//もう一度鍵を掴むための準備
                         }
-                            Debug.Log(hit.collider.tag);
+                        Debug.Log(hit.collider.tag);
 
                     }
                 }
 
             }
         }
-
-    }
-    private void LateUpdate()
-    {
-        /*rayObject.SetVertexCount(2); //始点と終点設定
-        rayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
-        //1番目の頂点を左手コントローラの位置から100m先に設定
-        rayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 100.0f);
-
-        rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
-        {
-            RaycastHit[] hits;
-            hits = Physics.RaycastAll(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, 100.0f);
-            foreach (var hit in hits)
-            {
-                if (hit.collider.tag == "Key" *//*|| hit.collider.tag == "Axe"*//*)
-                {
-                    hit.collider.transform.parent = leftHandAnchor.transform;
-                    hit.collider.transform.position = rayObject.transform.position;
-                    break;
-                }
-            }
-        }*/
-
-
-        //引いた時の処理
-        /*if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger, OVRInput.Controller.Touch))
-        {
-            RaycastHit[] hits;
-            //右手の位置から前方に0.01半径の球体キャストを行い、当たったオブジェクトをRaycastHit配列で取得
-            hits = Physics.SphereCastAll(rightHandAnchor.transform.position, 0.01f, Vector3.forward);
-            //球体キャストで当たったオブジェクトの処理
-            foreach(var hit in hits)
-            {
-                if (hit.collider.CompareTag("Key"))
-                {
-                    hit.collider.transform.parent = rightHandAnchor.transform;
-                    hit.collider.transform.GetComponent<Rigidbody>().useGravity = false;
-                    hit.collider.transform.GetComponent<Rigidbody>().isKinematic = true;
-                    break;
-                }
-            }
-        }*/
-
-        //離した時の処理
-        /*if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger,OVRInput.Controller.Touch))
-        {
-            for (int i = 0; i < rightHandAnchor.transform.childCount; i++)
-            {
-                var child = rightHandAnchor.transform.GetChild(i);
-                if (child.CompareTag("Key"))
-                {
-                    child.parent = null;
-                    child.GetComponent<Rigidbody>().useGravity = true;
-                    child.GetComponent <Rigidbody>().isKinematic = false;
-                }
-            }
-        }*/
-    }
+    }  
 }
