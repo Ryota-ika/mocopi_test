@@ -14,7 +14,8 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] private TresureChest tresureChest;
     private bool canGrabKey = true;
     public bool isBoxOpened = false;
-
+    [Header("Rayが反応するレイヤー")]
+    [SerializeField] LayerMask mask;
     private GameObject grabbedObject = null;
     private GameObject chestHinge;
     private Animator animator;
@@ -42,6 +43,7 @@ public class PickUpAndRelease : MonoBehaviour
 
         rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
 
+<<<<<<< HEAD
         //if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         //{
         //    if (!isBoxOpened)
@@ -84,12 +86,21 @@ public class PickUpAndRelease : MonoBehaviour
         //}
         //}
 
+=======
+        
+>>>>>>> origin/Tagami
         if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         {
             RaycastHit hit;
             //レイキャストを発射してヒットしたオブジェクトを取得
+<<<<<<< HEAD
             if (Physics.Raycast(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, out hit, 3.0f))
+=======
+            Ray ray = new Ray(leftHandAnchor.transform.position, leftHandAnchor.transform.forward);
+            if (Physics.Raycast(ray, out hit, 100.0f,mask))
+>>>>>>> origin/Tagami
             {
+                Debug.Log(hit.collider.name);
                 if (!isBoxOpened)
                 {
                     if (hit.collider.tag == "Key" && canGrabKey)
