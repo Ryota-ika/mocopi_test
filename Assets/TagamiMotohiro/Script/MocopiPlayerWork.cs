@@ -115,15 +115,16 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     void CollisionDirection()//•Ç‚É“–‚½‚Á‚½‚©‚Ç‚¤‚©”»’è
 	{
         Vector3 rayDirection=new Vector3(avater.forward.x,0,avater.forward.z).normalized;
-        Ray ray = new Ray(transform.position,rayDirection);
+        Vector3 rayPosition = transform.position;
+        Ray ray = new Ray(rayPosition+new Vector3(0,1.6f,0),rayDirection);
         Debug.DrawRay(transform.position,rayDirection,Color.black,rayOfset);
         if (Physics.Raycast(ray, out hit, rayOfset))
         {
-            
+            Debug.Log(hit.collider.tag);
             if (hit.collider.tag == "Wall")
             {
                 isCollisionWall = true;
-                Vector3 point = new Vector3(hit.point.x,hit.point.y+1.6f,hit.point.z);
+                Vector3 point = hit.point;
                 effectTime -= Time.deltaTime;
                 if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
                     Instantiate(wallHitEffect, point, Quaternion.FromToRotation(hit.point,transform.position));

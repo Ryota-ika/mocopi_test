@@ -36,6 +36,10 @@ public class PhotonOculusFIngerControll : MonoBehaviourPunCallbacks,IPunObservab
                     
                 }
             }
-        }
+        }else{
+            //î•ñ‚ğóM
+            float jyouhou = 0.5f;
+            
+		}
     }
 }
