@@ -43,62 +43,11 @@ public class PickUpAndRelease : MonoBehaviour
 
         rayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
 
-<<<<<<< HEAD
-        //if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
-        //{
-        //    if (!isBoxOpened)
-        //    {
-        //        RaycastHit hit;
-        //        //レイキャストを発射してヒットしたオブジェクトを取得
-        //        if (Physics.Raycast(leftHandAnchor.transform.position,leftHandAnchor.transform.forward,out hit,100.0f))
-        //        {
-        //            if (hit.collider.tag == "Key" && canGrabKey)
-        //            {
-        //                canGrabKey = false;
-        //                grabbedObject = hit.collider.gameObject;
-        //                grabbedObject.transform.parent = leftHandAnchor.transform;
-        //                grabbedObject.transform.position = rayObject.transform.position;
-        //                //isBoxOpened = true;
-        //            }
-        //            else if (isBoxOpened == true)
-        //            {
-        //                isBoxOpened = true;
-        //            }
-        //        }
-        //    }
-        //    else
-        //    {
-        //        if (grabbedObject != null && grabbedObject.tag == "Key")
-        //        {
-        //            RaycastHit hit;
-        //            //ボックスが開かれた後、、別のオブジェクトに対してレイキャスト
-        //            if (Physics.Raycast(leftHandAnchor.transform.position,leftHandAnchor.transform.forward,out hit,100.0f))
-        //            {
-        //                if (hit.collider.tag == "Axe")
-        //                {
-        //                    hit.collider.transform.parent = leftHandAnchor.transform;
-        //                    hit.collider.transform.position = rayObject.transform.position;
-        //                    //grabbedObject = null;//もう一度鍵を掴むための準備
-        //                }
-        //            }
-
-        //    }
-        //}
-        //}
-
-=======
-        
->>>>>>> origin/Tagami
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
+      if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
         {
             RaycastHit hit;
             //レイキャストを発射してヒットしたオブジェクトを取得
-<<<<<<< HEAD
             if (Physics.Raycast(leftHandAnchor.transform.position, leftHandAnchor.transform.forward, out hit, 3.0f))
-=======
-            Ray ray = new Ray(leftHandAnchor.transform.position, leftHandAnchor.transform.forward);
-            if (Physics.Raycast(ray, out hit, 100.0f,mask))
->>>>>>> origin/Tagami
             {
                 Debug.Log(hit.collider.name);
                 if (!isBoxOpened)
