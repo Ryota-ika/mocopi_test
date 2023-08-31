@@ -18,19 +18,26 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] LayerMask mask;
     private GameObject grabbedObject = null;
     private GameObject chestHinge;
+    private GameObject key;
+    private GameObject Animated_Chest_01;
     private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
+
+        key = GameObject.Find("Key");
+        Animated_Chest_01 = GameObject.Find("Animated_Chest_01");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
-        tresureChest.OpenLid();
+        key.SetActive(false);
+        Destroy(Animated_Chest_01);
+        Animated_Chest_01.SetActive(false);
     }
 
     // Update is called once per frame
@@ -70,10 +77,10 @@ public class PickUpAndRelease : MonoBehaviour
                         }*/
                         //Destroy(hit.collider.gameObject);
                         animator.SetBool("Open", true);
-                        tresureChest.OpenLid();
+                        //tresureChest.OpenLid();
                         //hit.collider.gameObject.SetActive(false);
-                        //float delayTime = 3.0f;
-                        //StartCoroutine(DelaydMethodCoroutine(delayTime));
+                        float delayTime = 3.0f;
+                        StartCoroutine(DelaydMethodCoroutine(delayTime));
                         isBoxOpened = true;
                     }
                 }
