@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class QuizStone : KeyObject
 {
+    [SerializeField]
     DestroyWall wall;
+    [Header("このオブジェクトが正解かどうか")]
+    [SerializeField]
+    bool isCorrect;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,9 @@ public class QuizStone : KeyObject
     }
 	protected override void CrearDirection()
 	{
-		
+		if (wall == null)
+		{
+            isCleard = true;
+		}
 	}
 }

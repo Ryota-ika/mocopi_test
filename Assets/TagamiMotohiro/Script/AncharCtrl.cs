@@ -81,9 +81,8 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Transform rightFoot = AncharInstantiete(_rightFoot, anchar);
         
         myAvatar=Instantiate(avatarList[0]);
-        StartCoroutine(StartCaliblation(myAvatar,head,body,leftHand,rightHand,leftFoot,rightFoot));
-        if (PhotonNetwork.CurrentRoom.PlayerCount!=1)//
-        {
+        StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot));
+        if (PhotonNetwork.LocalPlayer.ActorNumber!=1) {
             StartCoroutine(GetPlayerAnchar(1));
         }
     }
