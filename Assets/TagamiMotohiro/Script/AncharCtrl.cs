@@ -63,7 +63,14 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     }
 	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
 	{
-        myMocopiAvatar.position = startPoint[PhotonNetwork.LocalPlayer.ActorNumber-1].position;
+        int posnum=0;
+        if (PhotonNetwork.LocalPlayer.ActorNumber==1) {
+            posnum = 0;
+        }else
+        {
+            posnum = 1;
+        }
+        myMocopiAvatar.position = startPoint[posnum].position;
         //アンカー生成
         Debug.Log(PhotonNetwork.CurrentRoom.MaxPlayers);
         Transform head = AncharInstantiete(_head, anchar);
@@ -75,7 +82,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         
         myAvatar=Instantiate(avatarList[0]);
         StartCoroutine(StartCaliblation(myAvatar,head,body,leftHand,rightHand,leftFoot,rightFoot));
-        if (PhotonNetwork.CurrentRoom.PlayerCount==2)
+        if (PhotonNetwork.CurrentRoom.PlayerCount!=1)//
         {
             StartCoroutine(GetPlayerAnchar(1));
         }
