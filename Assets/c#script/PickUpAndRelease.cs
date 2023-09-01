@@ -31,7 +31,7 @@ public class PickUpAndRelease : MonoBehaviour
         Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
-    private IEnumerator DelaydMethodCoroutine(float delayTime)
+    public IEnumerator DelaydMethodCoroutine(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
@@ -76,6 +76,7 @@ public class PickUpAndRelease : MonoBehaviour
                         }*/
                         //Destroy(hit.collider.gameObject);
                         animator.SetBool("Open", true);
+                        //Destroy(key);
                         key.SetActive(false);
                         //tresureChest.OpenLid();
                         //hit.collider.gameObject.SetActive(false);
@@ -91,9 +92,14 @@ public class PickUpAndRelease : MonoBehaviour
                         if (hit.collider.tag == "Axe")
                         {
                             //grabbedObject = null;
-                            hit.collider.transform.parent = leftHandAnchor.transform;
-                            hit.collider.transform.position = rayObject.transform.position;
+                            /*hit.collider.transform.parent = leftHandAnchor.transform;
+                            hit.collider.transform.position = rayObject.transform.position;*/
                             //grabbedObject = null;//もう一度鍵を掴むための準備
+                            grabbedObject = hit.collider.gameObject;
+                            //leftanchorを親として子object（斧）を参照
+                            grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
+                            grabbedObject.transform.localPosition = Vector3.zero;
+                            grabbedObject.transform.localRotation = Quaternion.identity;
                         }
                         Debug.Log(hit.collider.tag);
 
