@@ -27,15 +27,14 @@ public class PickUpAndRelease : MonoBehaviour
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
 
-        key = GameObject.Find("Key");
-        Animated_Chest_01 = GameObject.Find("Animated_Chest_01");
+        key = GameObject.Find("Key (1)");
+        Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
-        key.SetActive(false);
         Destroy(Animated_Chest_01);
         Animated_Chest_01.SetActive(false);
     }
@@ -77,6 +76,7 @@ public class PickUpAndRelease : MonoBehaviour
                         }*/
                         //Destroy(hit.collider.gameObject);
                         animator.SetBool("Open", true);
+                        key.SetActive(false);
                         //tresureChest.OpenLid();
                         //hit.collider.gameObject.SetActive(false);
                         float delayTime = 3.0f;

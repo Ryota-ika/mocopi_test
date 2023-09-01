@@ -29318,6 +29318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482155407028086948, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482155407028086948, guid: d45ab43dfd6bd054e9453f2fa715d640,
+        type: 3}
       propertyPath: m_TagString
       value: Box
       objectReference: {fileID: 0}
