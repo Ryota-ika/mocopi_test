@@ -31,8 +31,9 @@ public class PickUpAndRelease : MonoBehaviour
         Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
-    public IEnumerator DelaydMethodCoroutine(float delayTime)
+    private IEnumerator DelaydMethodCoroutine(float delayTime)
     {
+        //ÇRïbå„Ç…ï‘Ç∑
         yield return new WaitForSeconds(delayTime);
 
         Destroy(Animated_Chest_01);

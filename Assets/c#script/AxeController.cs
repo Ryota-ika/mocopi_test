@@ -15,7 +15,7 @@ public class AxeController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (/*isGrabbed && */other.gameObject.CompareTag("Wall"))
+        if (isGrabbed && other.gameObject.CompareTag("Wall"))
         {
             float hitSpeed = axeRigidbody.velocity.magnitude;
             Debug.Log(hitSpeed);
@@ -28,6 +28,16 @@ public class AxeController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Grab()
+    {
+        isGrabbed = true;
+    }
+
+    public void Release()
+    {
+        isGrabbed = false;
     }
 
     // Update is called once per frame
