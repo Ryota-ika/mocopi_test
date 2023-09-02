@@ -6,7 +6,7 @@ using UnityEngine;
 public class DestroyWall : MonoBehaviour
 {
     //public GameObject crackedWall;  
-    public float maxDurability = 100.0f;  //壁の最大耐久度
+    public float maxDurability = 700.0f;  //壁の最大耐久度
     public float currentDurability;　　//現在の耐久度
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     
