@@ -82,7 +82,7 @@ public class PickUpAndRelease : MonoBehaviour
                         //hit.collider.gameObject.SetActive(false);
                         float delayTime = 3.0f;
                         StartCoroutine(DelaydMethodCoroutine(delayTime));
-                        isBoxOpened = true;
+                        //isBoxOpened = true;
                     }
                 }
                 else

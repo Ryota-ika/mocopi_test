@@ -17792,6 +17792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 1046722157}
+  pickUpAndRelease: {fileID: 1988585259}
 --- !u!65 &1052059031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23546,6 +23547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 606216996}
+  pickUpAndRelease: {fileID: 1988585259}
 --- !u!65 &1705653456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25201,6 +25203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 2084958584}
+  pickUpAndRelease: {fileID: 1988585259}
 --- !u!54 &1802232145
 Rigidbody:
   m_ObjectHideFlags: 0
