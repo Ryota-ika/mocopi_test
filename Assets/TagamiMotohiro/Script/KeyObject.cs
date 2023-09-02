@@ -14,4 +14,8 @@ public class KeyObject : MonoBehaviour
 	{
 		return isCleard;
 	}
+	public void SetIsCleard()
+	{
+		isCleard = true;
+	}
 }

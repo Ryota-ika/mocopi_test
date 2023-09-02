@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class QuizStone : KeyObject
+using Photon.Pun;
+public class QuizStone : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     DestroyWall wall;
+	[SerializeField]
+	KeyObject key;
     [Header("このオブジェクトが正解かどうか")]
     [SerializeField]
     bool isCorrect;
@@ -18,13 +20,26 @@ public class QuizStone : KeyObject
     // Update is called once per frame
     void Update()
     {
-        CrearDirection();
+        if (wall==null) {
+            if (isCorrect)
+            {
+                photonView.RPC(nameof(CrearObject),RpcTarget.All);
+            }
+            else {
+                photonView.RPC(nameof(StopPlayer),RpcTarget.All);
+            }
+        }
     }
-	protected override void CrearDirection()
+
+    [PunRPC]
+	void CrearObject()
 	{
-		if (wall == null)
-		{
-            isCleard = true;
-		}
+        key.SetIsCleard();
+        Debug.Log("正解オブジェクトが破壊された");
+	}
+    [PunRPC]
+	void StopPlayer()
+	{
+
 	}
 }

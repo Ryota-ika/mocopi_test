@@ -31,11 +31,19 @@ public class DoorControll : MonoBehaviour//êßçÏíSìñÅ@ìcè„
     bool OpenDerection()
     {
         bool result=true;
-        foreach (KeyObject item in keyObjects) {
-            if (!item.GetIsCleard()) {
-                result = false;
+        if (keyObjects != null)
+        {
+            foreach (KeyObject item in keyObjects)
+            {
+                if (!item.GetIsCleard())
+                {
+                    result = false;
+                }
             }
-        }
+        }else
+		{
+            result = true;
+		}
         return result;
     }
 }

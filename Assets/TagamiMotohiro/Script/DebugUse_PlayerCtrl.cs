@@ -18,7 +18,7 @@ public class DebugUse_PlayerCtrl : MonoBehaviour
     {
         Move();
     }
-    [Conditional("UNITY_EDITOR")]
+    //[Conditional("UNITY_EDITOR")]
     void Move() {
         transform.position += new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime, 0f, Input.GetAxis("Vertical") * Time.deltaTime) * speed;
     }
