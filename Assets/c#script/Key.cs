@@ -23,7 +23,7 @@ public class Key : MonoBehaviour
         float distanceToTreasureChest = Vector3.Distance(transform.position,treasureChest.transform.position);
 
         //ƒvƒŒƒCƒ„[‚ª•ó” ‚É‹ß‚Ã‚¢‚½ê‡
-        if (distanceToTreasureChest<=actionDistance)
+        /*if (distanceToTreasureChest<=actionDistance)
         {
             if (!isNearTreasureChest)
             {
@@ -31,6 +31,8 @@ public class Key : MonoBehaviour
                 isNearTreasureChest = true;
                 //pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
+                float delayTime = 3.0f;
+                pickUpAndRelease.StartCoroutine(pickUpAndRelease.DelaydMethodCoroutine(delayTime));
                 //Destroy(this.gameObject);
             }
         }
@@ -41,6 +43,6 @@ public class Key : MonoBehaviour
                 treasureChest.CloseLid();
                 isNearTreasureChest = false;
             }
-        }
+        }*/
     }
 }

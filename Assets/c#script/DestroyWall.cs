@@ -53,11 +53,11 @@ public class DestroyWall : MonoBehaviour
 
         if (currentDurability <= 0)
         {
-            Destroy();
+            DestroyWallObject();
         }
     }
 
-    void Destroy()
+    void DestroyWallObject()
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更）
         Destroy(gameObject);

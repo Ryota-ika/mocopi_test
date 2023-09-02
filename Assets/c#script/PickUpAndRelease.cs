@@ -17,19 +17,26 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] LayerMask mask;
     private GameObject grabbedObject = null;
     private GameObject chestHinge;
+    private GameObject key;
+    private GameObject Animated_Chest_01;
     private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
+
+        key = GameObject.Find("Key (1)");
+        Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)
     {
+        //３秒後に返す
         yield return new WaitForSeconds(delayTime);
 
-        tresureChest.OpenLid();
+        Destroy(Animated_Chest_01);
+        Animated_Chest_01.SetActive(false);
     }
 
     // Update is called once per frame
@@ -69,10 +76,12 @@ public class PickUpAndRelease : MonoBehaviour
                         }*/
                         //Destroy(hit.collider.gameObject);
                         animator.SetBool("Open", true);
-                        tresureChest.OpenLid();
+                        //Destroy(key);
+                        key.SetActive(false);
+                        //tresureChest.OpenLid();
                         //hit.collider.gameObject.SetActive(false);
-                        //float delayTime = 3.0f;
-                        //StartCoroutine(DelaydMethodCoroutine(delayTime));
+                        float delayTime = 3.0f;
+                        StartCoroutine(DelaydMethodCoroutine(delayTime));
                         isBoxOpened = true;
                     }
                 }
@@ -83,9 +92,14 @@ public class PickUpAndRelease : MonoBehaviour
                         if (hit.collider.tag == "Axe")
                         {
                             //grabbedObject = null;
-                            hit.collider.transform.parent = leftHandAnchor.transform;
-                            hit.collider.transform.position = rayObject.transform.position;
+                            /*hit.collider.transform.parent = leftHandAnchor.transform;
+                            hit.collider.transform.position = rayObject.transform.position;*/
                             //grabbedObject = null;//もう一度鍵を掴むための準備
+                            grabbedObject = hit.collider.gameObject;
+                            //leftanchorを親として子object（斧）を参照
+                            grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
+                            grabbedObject.transform.localPosition = Vector3.zero;
+                            grabbedObject.transform.localRotation = Quaternion.identity;
                         }
                         Debug.Log(hit.collider.tag);
 
