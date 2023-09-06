@@ -42,7 +42,7 @@ public class AxeController : MonoBehaviour
         if (/*isGrabbed &&*/ other.gameObject.CompareTag("Wall"))
         {
             Vector3 currentPosition = transform.position;
-            Vector3 velocity = (currentPosition - previousPosition);
+            Vector3 velocity = (currentPosition - previousPosition) / Time.deltaTime;
             previousPosition = currentPosition;
 
             hitSpeed = velocity.magnitude;
