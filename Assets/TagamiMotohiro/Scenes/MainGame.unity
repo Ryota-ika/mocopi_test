@@ -3133,7 +3133,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh214538
+  m_Name: pb_Mesh413506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6012,7 +6012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310114216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.47286987, y: 1.33, z: 0.6275177}
+  m_LocalPosition: {x: 0.47286987, y: -0.06, z: 0.6275177}
   m_LocalScale: {x: 1.078328, y: 4.477955, z: 3.2881918}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12933,7 +12933,7 @@ PrefabInstance:
     - target: {fileID: 5603098696198634479, guid: 38bac2e73938b2546bb799311c5f57fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5603098696198634479, guid: 38bac2e73938b2546bb799311c5f57fa,
         type: 3}
@@ -19301,7 +19301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 1046722157}
-  pickUpAndRelease: {fileID: 0}
+  pickUpAndRelease: {fileID: 1988585259}
 --- !u!65 &1052059031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20555,7 +20555,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121270001}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.03, y: 0.62, z: 0.25}
@@ -23403,7 +23403,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh213650
+  m_Name: pb_Mesh412516
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24257,7 +24257,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh214900
+  m_Name: pb_Mesh413838
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26142,7 +26142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 606216996}
-  pickUpAndRelease: {fileID: 0}
+  pickUpAndRelease: {fileID: 1988585259}
 --- !u!65 &1705653456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27649,11 +27649,11 @@ MonoBehaviour:
   myRigidBody: {fileID: 1791971355}
   rightFoot: {fileID: 269891370}
   leftFoot: {fileID: 1625905186}
-  stepLength: 1.5
-  stepSpeed: 10
+  stepLength: 0.2
+  stepSpeed: 5
   stepThreshold: 0.03
   isCanWark: 1
-  rayOfset: 0.5
+  rayOfset: 0.2
   lastEffectTime: 0.5
   mask:
     serializedVersion: 2
@@ -27665,7 +27665,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791971353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8f0d4f0021b72b4aa094943e76e2b83, type: 3}
   m_Name: 
@@ -28404,7 +28404,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh220184
+  m_Name: pb_Mesh418708
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35924,7 +35924,7 @@ PrefabInstance:
     - target: {fileID: 7163347172190563875, guid: db455a7c5b14e1344920baee6a61ac3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7163347172190563877, guid: db455a7c5b14e1344920baee6a61ac3e,
         type: 3}

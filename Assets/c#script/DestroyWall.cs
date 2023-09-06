@@ -65,8 +65,8 @@ public class DestroyWall : MonoBehaviour
         //壁を壊す処理（アニメーションの再生やモデルの変更）
         Destroy(gameObject);
         this.gameObject.SetActive(false);
-        Axe.SetActive(false);
-        Destroy(Axe);
+        //Axe.SetActive(false);
+        //Destroy(Axe);
     }
 
     // Update is called once per frame

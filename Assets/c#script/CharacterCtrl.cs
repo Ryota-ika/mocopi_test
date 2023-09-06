@@ -15,7 +15,7 @@ public class CharacterCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        //targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class CharacterCtrl : MonoBehaviour
         Vector3 target_pos = targetPlayer.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
 
         transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
-        transform.LookAt(target_pos);
+        transform.rotation = Quaternion.FromToRotation(transform.forward,new Vector3(targetPlayer.position.x,transform.position.y,targetPlayer.position.z));
     }
 }

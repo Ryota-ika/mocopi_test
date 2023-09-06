@@ -127,6 +127,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 isCollisionWall = true;
                 Vector3 point = hit.point;
                 effectTime -= Time.deltaTime;
+                stepPos.position = hit.point;
                 if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
                     Instantiate(wallHitEffect, point, Quaternion.FromToRotation(Vector3.forward,hit.normal));
                     effectTime = lastEffectTime;
@@ -148,7 +149,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         //@Capsule‚ÌƒŒƒC‚ğ‹^—“I‚É‹Šo‰»
         Gizmos.color = Color.red;
         Vector3 rayPosition = transform.position;
-        Gizmos.DrawWireSphere(rayPosition + (new Vector3(0, 1.6f, 0)+avater.forward) * rayOfset,0.5f);
+        Gizmos.DrawWireSphere(rayPosition + new Vector3(avater.forward.x, 0, avater.forward.z).normalized * rayOfset,0.5f);
     }
     public bool GetIsCanWalk() { 
         return isCanWark;
