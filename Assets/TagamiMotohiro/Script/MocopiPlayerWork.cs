@@ -1,7 +1,7 @@
 using System.Collections; //ì¬“úŽž@5/27 
 using System.Collections.Generic;
 using UnityEngine;
-//using UniRx;
+using UniRx;
 
 public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚é
 {
@@ -9,6 +9,8 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
         RIGHT,
         LEFT
     };
+    [SerializeField]
+    Transform stepPos;
     [SerializeField]
     FootState state;
     [SerializeField]
@@ -59,7 +61,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
     void Update()
     {
 		if (!isCanWark) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
-        if (workWeigting) {
+        if (workWeigting||Input.GetKey(KeyCode.LeftShift)) {
             if (state == FootState.RIGHT)
             {
                 StartCoroutine(WorkControll(rightFoot, "‰E‘«"));
@@ -100,19 +102,19 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ð³‹K‰»
         Vector3 targetPoint = transform.position+(avatarfoward*stepLength);
-        float distanceToTarget = Vector3.Magnitude(targetPoint - transform.position);
         float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŽžŠÔt•Ï”
-		while ((distanceToTarget>0.1f||t<stepLength)&&!isCollisionWall)
+		while (t<stepLength&&!isCollisionWall)
 		{
-            float stepDistance = Mathf.MoveTowards(0,distanceToTarget,Time.deltaTime*stepLength);
-            Vector3 nowPos = Vector3.MoveTowards(transform.position,targetPoint,stepDistance*stepSpeed);
-            myRigidBody.MovePosition(nowPos);
+            transform.position+=(avatarfoward*stepSpeed)*Time.deltaTime;
+			//float stepDistance = Mathf.MoveTowards(0, distanceToTarget, Time.deltaTime * stepLength);
+			//Vector3 nowPos = Vector3.MoveTowards(transform.position, targetPoint, stepDistance * stepSpeed);
+			//stepPos.position = targetPoint;
+            //transform.position = nowPos;
 			t += Time.deltaTime;
 			yield return null;
-            distanceToTarget= Vector3.Magnitude(targetPoint - transform.position);
-        }
+			
+		}
         isStepping = false;
-        isCollisionWall = false;
     }
     void CollisionDirection()//•Ç‚É“–‚½‚Á‚½‚©‚Ç‚¤‚©”»’è
 	{

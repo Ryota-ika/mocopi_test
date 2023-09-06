@@ -19301,6 +19301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 1046722157}
+  pickUpAndRelease: {fileID: 0}
 --- !u!65 &1052059031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25421,6 +25422,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7668067750683286606, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1d0b69a131154b498ef88578adbca89, type: 3}
@@ -26136,6 +26142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 606216996}
+  pickUpAndRelease: {fileID: 0}
 --- !u!65 &1705653456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26215,6 +26222,103 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &1707726359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1707726363}
+  - component: {fileID: 1707726362}
+  - component: {fileID: 1707726361}
+  - component: {fileID: 1707726360}
+  m_Layer: 0
+  m_Name: StepPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1707726360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707726359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1707726361
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707726359}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1707726362
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707726359}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1707726363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707726359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.638543, y: -0.23311341, z: 69.524124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1708285526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27537,6 +27641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e282d9b2b5e148047ad054932be490e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stepPos: {fileID: 1707726363}
   state: 0
   wallHitEffect: {fileID: 8460667080445658512, guid: a3e2c3406e02f2c4ba86cfb1604277bd,
     type: 3}
@@ -27548,7 +27653,7 @@ MonoBehaviour:
   stepSpeed: 10
   stepThreshold: 0.03
   isCanWark: 1
-  rayOfset: 1
+  rayOfset: 0.5
   lastEffectTime: 0.5
   mask:
     serializedVersion: 2
@@ -27774,6 +27879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionDistance: 1
   treasureChest: {fileID: 2084958584}
+  pickUpAndRelease: {fileID: 0}
 --- !u!54 &1802232145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32686,7 +32792,7 @@ MonoBehaviour:
   isBoxOpened: 0
   mask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 511
 --- !u!4 &1991542687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7096177191515348561, guid: b8f403b4517ddd844988838750e9a72a,

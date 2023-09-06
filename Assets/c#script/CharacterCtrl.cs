@@ -24,5 +24,6 @@ public class CharacterCtrl : MonoBehaviour
         Vector3 target_pos = targetPlayer.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
 
         transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
+        transform.LookAt(target_pos);
     }
 }
