@@ -15,6 +15,7 @@ public class TresureChest : MonoBehaviour
 
     public GameObject chestHinge;
     private Animator animator;
+    private GameObject Animated_Chest_01;
     // Start is called before the first frame update
 
     private void Start()
@@ -23,8 +24,17 @@ public class TresureChest : MonoBehaviour
 
         targetRotation = Quaternion.Euler(0f, openAngle, 0f);*/
         animator = chestHinge.GetComponent<Animator>();
+        Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
+    private IEnumerator DelaydMethodCoroutine(float delayTime)
+    {
+        //ÇRïbå„Ç…ï‘Ç∑
+        yield return new WaitForSeconds(delayTime);
+
+        Destroy(Animated_Chest_01);
+        Animated_Chest_01.SetActive(false);
+    }
     private void Update()
     {
         /*timer += Time.deltaTime;
@@ -39,6 +49,8 @@ public class TresureChest : MonoBehaviour
         timer = 0f;*/
         /*transform.rotation = targetRotation;*/
         animator.SetBool("Open", true);
+        float delayTime = 3.0f;
+        StartCoroutine(DelaydMethodCoroutine(delayTime));
     }
 
     public void CloseLid()

@@ -41,6 +41,8 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     float rayOfset;
     [SerializeField]
     float lastEffectTime;
+    [SerializeField]
+    LayerMask mask;
     float effectTime=0;
     RaycastHit hit;
     Vector3 lateFootPos;
@@ -115,10 +117,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     void CollisionDirection()//•Ç‚É“–‚½‚Á‚½‚©‚Ç‚¤‚©”»’è
 	{
         Vector3 rayDirection=new Vector3(avater.forward.x,0,avater.forward.z).normalized;
-        Vector3 rayPosition = transform.position;
-        Ray ray = new Ray(rayPosition+new Vector3(0,1.6f,0),rayDirection);
-        Debug.DrawRay(transform.position,rayDirection,Color.black,rayOfset);
-        if (Physics.Raycast(ray, out hit, rayOfset))
+        if (Physics.SphereCast(transform.position+new Vector3(0,1.6f,0),0.5f,rayDirection,out hit,rayOfset,mask))
         {
             Debug.Log(hit.collider.tag);
             if (hit.collider.tag == "Wall")
@@ -127,7 +126,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 Vector3 point = hit.point;
                 effectTime -= Time.deltaTime;
                 if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
-                    Instantiate(wallHitEffect, point, Quaternion.FromToRotation(hit.point,transform.position));
+                    Instantiate(wallHitEffect, point, Quaternion.FromToRotation(Vector3.forward,hit.normal));
                     effectTime = lastEffectTime;
                 }
                 
@@ -142,6 +141,13 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
             isCollisionWall = false;
         }
 	}
+    void OnDrawGizmos()
+    {
+        //@Capsule‚ÌƒŒƒC‚ğ‹^—“I‚É‹Šo‰»
+        Gizmos.color = Color.red;
+        Vector3 rayPosition = transform.position;
+        Gizmos.DrawWireSphere(rayPosition + (new Vector3(0, 1.6f, 0)+avater.forward) * rayOfset,0.5f);
+    }
     public bool GetIsCanWalk() { 
         return isCanWark;
     }

@@ -51,7 +51,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         RoomOptions roomProps = new RoomOptions();
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
-        PhotonNetwork.JoinOrCreateRoom("ROOM", roomProps, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("ROOM.", roomProps, TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
@@ -82,6 +82,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         
         myAvatar=Instantiate(avatarList[0]);
         StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot));
+        //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
         if (PhotonNetwork.LocalPlayer.ActorNumber!=1) {
             StartCoroutine(GetPlayerAnchar(1));
         }

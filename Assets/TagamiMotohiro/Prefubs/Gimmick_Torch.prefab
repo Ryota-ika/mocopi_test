@@ -216,7 +216,7 @@ MonoBehaviour:
   setActiveObject:
   - {fileID: 4189918815458213955}
   - {fileID: 7347249073681154677}
-  colliderRange: 0.5
+  colliderRange: 0.1
 --- !u!1 &7347249073681154677
 GameObject:
   m_ObjectHideFlags: 0

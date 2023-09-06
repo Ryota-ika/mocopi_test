@@ -6,13 +6,15 @@ using UnityEngine;
 public class DestroyWall : MonoBehaviour
 {
     //public GameObject crackedWall;  
-    public float maxDurability = 100.0f;  //壁の最大耐久度
+    public float maxDurability = 700.0f;  //壁の最大耐久度
     public float currentDurability;　　//現在の耐久度
+    private GameObject Axe;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     
     // Start is called before the first frame update
     void Start()
     {
+        Axe = GameObject.Find("SM_Woodaxe_Unity");
         currentDurability = maxDurability;  //初期化
     }
 
@@ -49,6 +51,7 @@ public class DestroyWall : MonoBehaviour
     private void DecreaseDurability(float damage)
 
     {
+        Debug.Log(damage);
         currentDurability -= damage;
 
         if (currentDurability <= 0)
@@ -61,6 +64,9 @@ public class DestroyWall : MonoBehaviour
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更）
         Destroy(gameObject);
+        this.gameObject.SetActive(false);
+        Axe.SetActive(false);
+        Destroy(Axe);
     }
 
     // Update is called once per frame
@@ -68,20 +74,23 @@ public class DestroyWall : MonoBehaviour
     {
         
     }
-
-   /* private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Key当たった");
-        if (collision.gameObject.tag == "Key")
-        {
-            Destroy(this.gameObject,0.2f);
-        }
-    }*/
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == "Axe")
-    //    {
-    //        Destroy(this.gameObject, 0.2f);
-    //    }
-    //}
+	private void OnTriggerEnter(Collider other)
+	{
+        Debug.Log("当たった");
+	}
+	/* private void OnCollisionEnter(Collision collision)
+	 {
+		 Debug.Log("Key当たった");
+		 if (collision.gameObject.tag == "Key")
+		 {
+			 Destroy(this.gameObject,0.2f);
+		 }
+	 }*/
+	//private void OnTriggerEnter(Collider other)
+	//{
+	//    if (other.gameObject.tag == "Axe")
+	//    {
+	//        Destroy(this.gameObject, 0.2f);
+	//    }
+	//}
 }

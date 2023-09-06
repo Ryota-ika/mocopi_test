@@ -8,6 +8,10 @@ public class ChangeNight : MonoBehaviour
     Light directionalLight;
     [SerializeField]
     Material nightSky;
+    [SerializeField]
+    float radius;
+    [SerializeField]
+    Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +21,14 @@ public class ChangeNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Vector3.Distance(player.position,transform.position)<radius)
+		{
+            ChangeSky();
+		}
     }
-	private void OnTriggerEnter(Collider other)
+	private void ChangeSky()
 	{
-        directionalLight.color = Color.black;
+        RenderSettings.ambientSkyColor = Color.black;
         directionalLight.transform.rotation=Quaternion.AngleAxis(-90f,Vector3.right);
         RenderSettings.skybox = nightSky;
 	}

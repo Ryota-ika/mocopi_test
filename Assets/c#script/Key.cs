@@ -9,6 +9,7 @@ public class Key : MonoBehaviour
     private bool isNearTreasureChest=false;
     [SerializeField]
     private TresureChest treasureChest; //•ó” ‚ÌŠW‚Ìscript
+    [SerializeField]
     private PickUpAndRelease pickUpAndRelease;
     // Start is called before the first frame update
     void Start()
@@ -23,16 +24,16 @@ public class Key : MonoBehaviour
         float distanceToTreasureChest = Vector3.Distance(transform.position,treasureChest.transform.position);
 
         //ƒvƒŒƒCƒ„[‚ª•ó” ‚É‹ß‚Ã‚¢‚½ê‡
-        /*if (distanceToTreasureChest<=actionDistance)
+        if (distanceToTreasureChest <= actionDistance)
         {
             if (!isNearTreasureChest)
             {
                 treasureChest.OpenLid();
                 isNearTreasureChest = true;
-                //pickUpAndRelease.isBoxOpened = true;
+                pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
                 float delayTime = 3.0f;
-                pickUpAndRelease.StartCoroutine(pickUpAndRelease.DelaydMethodCoroutine(delayTime));
+                //pickUpAndRelease.StartCoroutine(pickUpAndRelease.DelaydMethodCoroutine(delayTime));
                 //Destroy(this.gameObject);
             }
         }
@@ -43,6 +44,6 @@ public class Key : MonoBehaviour
                 treasureChest.CloseLid();
                 isNearTreasureChest = false;
             }
-        }*/
+        }
     }
 }
