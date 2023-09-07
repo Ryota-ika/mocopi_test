@@ -2,10 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class PickUpAndRelease : MonoBehaviour
 {
-    public GameObject rightHandAnchor;
+    [SerializeField] GameObject rightHandAnchor;
     public float minRequiredSpeed = 5.0f;
     [SerializeField] GameObject leftHandAnchor;
     [SerializeField] LineRenderer rayObject;
@@ -87,7 +88,7 @@ public class PickUpAndRelease : MonoBehaviour
                 }
                 else
                 {
-                    if (grabbedObject != null && grabbedObject.tag == "Key")
+                    if (grabbedObject != null/* && grabbedObject.tag == "Key"*/)
                     {
                         if (hit.collider.tag == "Axe")
                         {
@@ -101,9 +102,15 @@ public class PickUpAndRelease : MonoBehaviour
                             grabbedObject.transform.localPosition = Vector3.zero;
                             grabbedObject.transform.localRotation = Quaternion.identity;
                         }
-                        Debug.Log(hit.collider.tag);
-
-                    }
+                        /*Debug.Log(hit.collider.tag);*/
+                        
+                    }else if(hit.collider.tag == "torch")
+                        {
+                            grabbedObject = hit.collider.gameObject;
+                            grabbedObject.transform.SetParent(leftHandAnchor.transform,true);
+                            grabbedObject.transform.localPosition= Vector3.zero;
+                            grabbedObject.transform.localRotation= Quaternion.identity;
+                        }
                 }
 
             }

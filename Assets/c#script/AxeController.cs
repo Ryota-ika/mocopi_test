@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AxeController : MonoBehaviour
 {
-    public float minRequiredSpeed = 650.0f;
+    public float minRequiredSpeed = 5f;
     private bool isGrabbed = false;
     private Rigidbody axeRigidbody;
     private GameObject Axe;
@@ -42,7 +42,7 @@ public class AxeController : MonoBehaviour
         if (/*isGrabbed &&*/ other.gameObject.CompareTag("Wall"))
         {
             Vector3 currentPosition = transform.position;
-            Vector3 velocity = (currentPosition - previousPosition) / Time.deltaTime;
+            Vector3 velocity = (currentPosition - previousPosition)/* / Time.deltaTime*/;
             previousPosition = currentPosition;
 
             hitSpeed = velocity.magnitude;
