@@ -88,7 +88,7 @@ public class PickUpAndRelease : MonoBehaviour
                 }
                 else
                 {
-                    if (grabbedObject != null/* && grabbedObject.tag == "Key"*/)
+                    if (grabbedObject != null && grabbedObject.tag == "Key")
                     {
                         if (hit.collider.tag == "Axe")
                         {
