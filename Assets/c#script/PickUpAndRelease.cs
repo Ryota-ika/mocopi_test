@@ -238,10 +238,11 @@ public class PickUpAndRelease : MonoBehaviour
 
             }
         }*/
-
+        //左手コントローラーのレイキャスト
         Ray leftRay = new Ray(leftHandAnchor.transform.position, leftHandAnchor.transform.forward);
         RaycastHit leftHit;
 
+        //右手コントローラーのレイキャスト
         Ray rightRay = new Ray(rightHandAnchor.transform.position, rightHandAnchor.transform.forward);
         RaycastHit rightHit;
 

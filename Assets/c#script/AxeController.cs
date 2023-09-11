@@ -5,49 +5,40 @@ using UnityEngine;
 
 public class AxeController : MonoBehaviour
 {
-    public float minRequiredSpeed = 5f;
+    public float minRequiredSpeed = 2f;
     private bool isGrabbed = false;
     private Rigidbody axeRigidbody;
     private GameObject Axe;
 
     private Vector3 previousPosition;
     private float hitSpeed;
+    private bool firstFrame = true;
     // Start is called before the first frame update
     void Start()
     {
-        /*Axe = GameObject.Find("SM_Woodaxe_Unity");
-        axeRigidbody = Axe.GetComponent<Rigidbody>();*/
-        previousPosition = transform.position;
-        
+        //previousPosition = transform.position;   
     }
-
-    /*private void OnTriggerEnter(Collider other)
+    private void LateUpdate()
     {
-        if (*//*isGrabbed && *//*other.gameObject.CompareTag("Wall"))
-        {
-            float hitSpeed = axeRigidbody.velocity.magnitude;
+        //現在の位置と前フレームの位置の差から速度を計算
+            Vector3 currentPosition = transform.position;
+            Vector3 velocity = (currentPosition - previousPosition) / Time.deltaTime;
+            //速度ベクトルの大きさを計算
+            hitSpeed = velocity.magnitude;
+
+            //現在の位置を前フレームの位置として保存
+            previousPosition = currentPosition;
             Debug.Log(hitSpeed);
-            if (hitSpeed > minRequiredSpeed)
-            {
-                DestroyWall wall = other.gameObject.GetComponent<DestroyWall>();
-                if (wall != null)
-                {
-                    wall.OnAxeHit(hitSpeed);
-                }
-            }
-        }
-    }*/
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (/*isGrabbed &&*/ other.gameObject.CompareTag("Wall"))
         {
-            Vector3 currentPosition = transform.position;
-            Vector3 velocity = (currentPosition - previousPosition)/* / Time.deltaTime*/;
-            previousPosition = currentPosition;
-
-            hitSpeed = velocity.magnitude;
-            Debug.Log(hitSpeed);
+            
+            LateUpdate();
+           
+            //速度が条件を満たす場合、壁を破壊
             if (hitSpeed > minRequiredSpeed)
             {
                 DestroyWall wall = other.gameObject.GetComponent<DestroyWall>();

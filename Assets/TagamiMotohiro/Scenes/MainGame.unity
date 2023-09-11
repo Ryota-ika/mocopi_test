@@ -2034,7 +2034,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh413506
+  m_Name: pb_Mesh27058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20280,7 +20280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adceebd89b811764faee9b0da339adb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRequiredSpeed: 5
+  minRequiredSpeed: 15
 --- !u!54 &1206180087
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22608,7 +22608,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh412516
+  m_Name: pb_Mesh26944
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23462,7 +23462,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh413838
+  m_Name: pb_Mesh27160
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27581,7 +27581,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh418708
+  m_Name: pb_Mesh28060
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35188,7 +35188,7 @@ PrefabInstance:
     - target: {fileID: 3362894655621961162, guid: db455a7c5b14e1344920baee6a61ac3e,
         type: 3}
       propertyPath: maxDurability
-      value: 2
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 7163347171756468519, guid: db455a7c5b14e1344920baee6a61ac3e,
         type: 3}
