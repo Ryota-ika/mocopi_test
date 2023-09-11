@@ -72,8 +72,8 @@ public class DestroyWall : MonoBehaviour
             item.constraints = FreezeCancellation(); 
         }
         StartCoroutine(InvokeDestroy(3));
-        //Axe.SetActive(false);
-        //Destroy(Axe);
+        Axe.SetActive(false);
+        Destroy(Axe);
     }
     IEnumerator InvokeDestroy( float time)
     {
