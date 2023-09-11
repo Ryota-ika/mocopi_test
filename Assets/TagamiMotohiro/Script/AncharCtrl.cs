@@ -51,7 +51,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         RoomOptions roomProps = new RoomOptions();
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
-        PhotonNetwork.JoinOrCreateRoom("ROOM", roomProps, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("ROOM.", roomProps, TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
