@@ -1,4 +1,4 @@
-//‚XŒŽ‚V“ú
+//‚XŒŽ‚P‚P“ú
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +12,7 @@ public class AxeController : MonoBehaviour
 
     private Vector3 previousPosition;
     private float hitSpeed;
-    private bool firstFrame = true;
+    
     // Start is called before the first frame update
     void Start()
     {
