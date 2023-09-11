@@ -10,7 +10,11 @@ public class CharacterCtrl : MonoBehaviour
     [SerializeField] 
     private Transform targetPlayer;
     [SerializeField]
+    private Transform naviPos;
+    [SerializeField]
     float smoothTime = 0.5f;
+    [SerializeField]
+    float rotateTime;
     Vector3 velocity= Vector3.zero;
     // Start is called before the first frame update
     void Start()
@@ -21,9 +25,14 @@ public class CharacterCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 target_pos = targetPlayer.TransformPoint(new Vector3(0.5f, 1.0f, -1.0f));
-
+        Vector3 target_pos = naviPos.position;
         transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
-        transform.rotation = Quaternion.FromToRotation(transform.forward,new Vector3(targetPlayer.position.x,transform.position.y,targetPlayer.position.z));
+        Vector3 loockPos = targetPlayer.position - transform.position;
+        loockPos.y = 0;
+        if (loockPos != Vector3.zero)
+		{
+            Quaternion rotation = Quaternion.LookRotation(loockPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation,rotation,Time.deltaTime*rotateTime);
+		}
     }
 }

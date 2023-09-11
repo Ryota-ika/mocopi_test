@@ -177,7 +177,6 @@ public class PickUpAndRelease : MonoBehaviour
             //レイキャストを発射してヒットしたオブジェクトを取得
             if (rightRay)
             {
-                Debug.Log(hit.collider.name);
                 if (!isBoxOpened)
                 {
                     if (hit.collider.tag == "Key" && canGrabKey)

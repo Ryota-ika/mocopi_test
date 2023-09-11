@@ -62,6 +62,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     {
 		if (!isCanWark) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
         if (workWeigting||Input.GetKey(KeyCode.LeftShift)) {
+            //‰E‘«‚Æ¶‘«‚ÅŒğŒİ‚É‘«“¥‚İ‚ğŒŸ’m‚·‚éŠÖ”‚ğ‹N“®
             if (state == FootState.RIGHT)
             {
                 StartCoroutine(WorkControll(rightFoot, "‰E‘«"));
@@ -119,9 +120,10 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     void CollisionDirection()//•Ç‚É“–‚½‚Á‚½‚©‚Ç‚¤‚©”»’è
 	{
         Vector3 rayDirection=new Vector3(avater.forward.x,0,avater.forward.z).normalized;
-        if (Physics.SphereCast(transform.position+new Vector3(0,1.6f,0),0.5f,rayDirection,out hit,rayOfset,mask))
+        //avatarƒIƒuƒWƒFƒNƒg‚Ì³–Ê
+        if (Physics.SphereCast(transform.position+new Vector3(0,1.6f,0),0.15f,rayDirection,out hit,rayOfset,mask))
         {
-            Debug.Log(hit.collider.tag);
+            Debug.Log(hit.collider.name);
             if (hit.collider.tag == "Wall")
             {
                 isCollisionWall = true;
@@ -149,7 +151,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         //@Capsule‚ÌƒŒƒC‚ğ‹^—“I‚É‹Šo‰»
         Gizmos.color = Color.red;
         Vector3 rayPosition = transform.position;
-        Gizmos.DrawWireSphere(rayPosition + new Vector3(avater.forward.x, 0, avater.forward.z).normalized * rayOfset,0.5f);
+        Gizmos.DrawWireSphere(rayPosition + new Vector3(avater.forward.x, 0, avater.forward.z).normalized * rayOfset,0.15f);
     }
     public bool GetIsCanWalk() { 
         return isCanWark;

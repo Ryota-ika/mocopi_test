@@ -28,7 +28,7 @@ public class ChangeNight : MonoBehaviour
     }
 	private void ChangeSky()
 	{
-        RenderSettings.ambientSkyColor = Color.black;
+        RenderSettings.ambientSkyColor = new Color(60/255f, 60/255f, 60/255f, 1);
         directionalLight.transform.rotation=Quaternion.AngleAxis(-90f,Vector3.right);
         RenderSettings.skybox = nightSky;
 	}

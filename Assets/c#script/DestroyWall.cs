@@ -10,6 +10,7 @@ public class DestroyWall : MonoBehaviour
     public float maxDurability = 700.0f;  //壁の最大耐久度
     public float currentDurability;　　//現在の耐久度
     private GameObject Axe;
+    public Rigidbody[] pieces;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     
     // Start is called before the first frame update
@@ -63,13 +64,30 @@ public class DestroyWall : MonoBehaviour
 
     void DestroyWallObject()
     {
-        //壁を壊す処理（アニメーションの再生やモデルの変更）
-        Destroy(gameObject);
-        this.gameObject.SetActive(false);
+        //壁を壊す処理（アニメーションの再生やモデルの変更
+        //this.gameObject.SetActive(false);
+        transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+        foreach (Rigidbody item in pieces) {
+            item.freezeRotation = false;
+            item.constraints = FreezeCancellation(); 
+        }
+        StartCoroutine(InvokeDestroy(3));
         Axe.SetActive(false);
         Destroy(Axe);
     }
-
+    IEnumerator InvokeDestroy( float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+    }
+    RigidbodyConstraints FreezeCancellation()
+    {
+        RigidbodyConstraints c = RigidbodyConstraints.None;
+        c = RigidbodyConstraints.FreezePositionX;
+        c = RigidbodyConstraints.FreezePositionY;
+        c = RigidbodyConstraints.FreezePositionZ;
+        return c;
+    }
     // Update is called once per frame
     void Update()
     {
