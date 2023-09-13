@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/BreakableAsteroids/Asteroids/zasteroids.dae
+Assets/BreakableAsteroids/Asteroids/zasteroids.dae.meta
+Assets/BreakableAsteroids/Textures/The Void 8k.hdr
+Assets/BreakableAsteroids/Textures/The Void 8k.hdr.meta

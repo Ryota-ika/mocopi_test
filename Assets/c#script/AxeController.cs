@@ -1,18 +1,18 @@
-//‚XŒŽ‚V“ú
+//‚XŒŽ‚P‚P“ú
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AxeController : MonoBehaviour
 {
-    public float minRequiredSpeed = 2f;
+    public float minRequiredSpeed = 2.0f;
     private bool isGrabbed = false;
     private Rigidbody axeRigidbody;
     private GameObject Axe;
 
     private Vector3 previousPosition;
     private float hitSpeed;
-    private bool firstFrame = true;
+    
     // Start is called before the first frame update
     void Start()
     {
