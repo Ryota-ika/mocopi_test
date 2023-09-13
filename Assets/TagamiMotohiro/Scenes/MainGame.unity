@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adceebd89b811764faee9b0da339adb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRequiredSpeed: 2
+  minRequiredSpeed: 1
 --- !u!54 &28846715
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9077,7 +9077,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh258766
+  m_Name: pb_Mesh38446
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

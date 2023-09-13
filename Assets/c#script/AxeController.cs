@@ -38,7 +38,7 @@ public class AxeController : MonoBehaviour
             
             LateUpdate();
            
-            //速度が条件を満たす場合、壁を破壊
+            //速度が条件を満たす場合、壁にダメージ
             if (hitSpeed > minRequiredSpeed)
             {
                 DestroyWall wall = other.gameObject.GetComponent<DestroyWall>();
