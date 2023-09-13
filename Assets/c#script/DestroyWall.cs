@@ -9,40 +9,16 @@ public class DestroyWall : MonoBehaviour
     //public GameObject crackedWall;  
     public float maxDurability = 10.0f;  //•Ç‚ÌÅ‘å‘Ï‹v“x
     public float currentDurability;@@//Œ»Ý‚Ì‘Ï‹v“x
-    private GameObject Axe;
+    [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     //public float minRequireForce = 50.0f; //•Ç‚ð‰ó‚·Å’áŒÀ‚Ì—Í
     
     // Start is called before the first frame update
     void Start()
     {
-        Axe = GameObject.Find("FantasyHammer");
+        //Axe = GameObject.Find("FantasyHammer");
         currentDurability = maxDurability;  //‰Šú‰»
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Axe")
-        {
-            *//*float hitForce = other.attachedRigidbody.velocity.magnitude;
-
-            if (hitForce >= minRequireForce)
-            {
-                DecreaseDurability(hitForce);
-            }*//*
-            Rigidbody axeRigidBody = other.attachedRigidbody;
-
-            if (axeRigidBody != null)
-            {
-                float hitSpeed = axeRigidBody.velocity.magnitude;
-
-                if (hitSpeed >= minRequireForce)
-                {
-                    DecreaseDurability(hitSpeed);
-                }
-            }
-        }
-    }*/
 
     public void OnAxeHit(float hitSpeed)
     {
@@ -52,16 +28,6 @@ public class DestroyWall : MonoBehaviour
 
     private void DecreaseDurability(float damage)
     {
-        /*bool leftController = OVRInput.Get(OVRInput.Button.One,OVRInput.Controller.LTouch);
-        bool rightController = OVRInput.Get(OVRInput.Button.One,OVRInput.Controller.RTouch);
-        if (leftController)
-        {
-        }
-        else if (rightController)
-        {
-            OVRInput.SetControllerVibration(0.1f,0.1f,OVRInput.Controller.RTouch);
-        }
-            OVRInput.SetControllerVibration(0.1f,0.1f,OVRInput.Controller.LTouch);*/
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
         Debug.Log(damage);
@@ -92,8 +58,8 @@ public class DestroyWall : MonoBehaviour
             item.constraints = FreezeCancellation(); 
         }
         StartCoroutine(InvokeDestroy(3));
-        Axe.SetActive(false);
-        Destroy(Axe);
+        //Axe.SetActive(false);
+        //Destroy(Axe);
     }
     IEnumerator InvokeDestroy( float time)
     {
@@ -118,19 +84,4 @@ public class DestroyWall : MonoBehaviour
 	{
         Debug.Log("“–‚½‚Á‚½");
 	}
-	/* private void OnCollisionEnter(Collision collision)
-	 {
-		 Debug.Log("Key“–‚½‚Á‚½");
-		 if (collision.gameObject.tag == "Key")
-		 {
-			 Destroy(this.gameObject,0.2f);
-		 }
-	 }*/
-	//private void OnTriggerEnter(Collider other)
-	//{
-	//    if (other.gameObject.tag == "Axe")
-	//    {
-	//        Destroy(this.gameObject, 0.2f);
-	//    }
-	//}
 }

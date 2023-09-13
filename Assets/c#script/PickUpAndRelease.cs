@@ -19,8 +19,8 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] LayerMask mask;
     private GameObject grabbedObject = null;
     private GameObject chestHinge;
-    private GameObject key;
-    private GameObject Animated_Chest_01;
+    [SerializeField] private GameObject key;
+    [SerializeField] private GameObject Animated_Chest_01;
     private Animator animator;
 
     // Start is called before the first frame update
@@ -29,8 +29,8 @@ public class PickUpAndRelease : MonoBehaviour
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
 
-        key = GameObject.Find("Key (1)");
-        Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
+        //key = GameObject.Find("Key (1)");
+        //Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)
