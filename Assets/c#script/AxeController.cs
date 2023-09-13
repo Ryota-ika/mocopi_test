@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AxeController : MonoBehaviour
 {
-    public float minRequiredSpeed = 2f;
+    public float minRequiredSpeed = 2.0f;
     private bool isGrabbed = false;
     private Rigidbody axeRigidbody;
     private GameObject Axe;
