@@ -561,7 +561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adceebd89b811764faee9b0da339adb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   minRequiredSpeed: 2
+=======
+  minRequiredSpeed: 1
+>>>>>>> origin/main
 --- !u!54 &28846715
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9076,7 +9080,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh28250
+=======
+  m_Name: pb_Mesh38446
+>>>>>>> origin/main
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32425,10 +32433,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRequiredSpeed: 5
+<<<<<<< HEAD
   rightHandAnchor: {fileID: 1456885922}
   leftHandAnchor: {fileID: 1337095131}
   leftRayObject: {fileID: 1227802418}
   rightRayObject: {fileID: 1227802418}
+=======
+  rightHandAnchor: {fileID: 1508952101}
+  leftHandAnchor: {fileID: 895119461}
+  leftRayObject: {fileID: 985336751}
+  rightRayObject: {fileID: 70328437}
+>>>>>>> origin/main
   tresureChest: {fileID: 1046722157}
   isBoxOpened: 0
   mask:

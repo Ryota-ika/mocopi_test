@@ -16,7 +16,7 @@ public class DestroyWall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Axe = GameObject.Find("SM_Woodaxe_Unity");
+        Axe = GameObject.Find("FantasyHammer");
         currentDurability = maxDurability;  //èâä˙âª
     }
 
@@ -51,8 +51,19 @@ public class DestroyWall : MonoBehaviour
     }
 
     private void DecreaseDurability(float damage)
-
     {
+        /*bool leftController = OVRInput.Get(OVRInput.Button.One,OVRInput.Controller.LTouch);
+        bool rightController = OVRInput.Get(OVRInput.Button.One,OVRInput.Controller.RTouch);
+        if (leftController)
+        {
+        }
+        else if (rightController)
+        {
+            OVRInput.SetControllerVibration(0.1f,0.1f,OVRInput.Controller.RTouch);
+        }
+            OVRInput.SetControllerVibration(0.1f,0.1f,OVRInput.Controller.LTouch);*/
+        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
+        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
         Debug.Log(damage);
         currentDurability -= damage;
 
@@ -60,6 +71,15 @@ public class DestroyWall : MonoBehaviour
         {
             DestroyWallObject();
         }
+    }
+
+    private static IEnumerator Vibrate(float duration = 0.1f,float frequency = 0.5f,float amplitude = 0.1f,OVRInput.Controller controller = OVRInput.Controller.Active)
+    {
+        OVRInput.SetControllerVibration(frequency,amplitude,controller);
+
+        yield return new WaitForSeconds(duration);
+
+        OVRInput.SetControllerVibration(0,0,controller);
     }
 
     void DestroyWallObject()
@@ -79,6 +99,7 @@ public class DestroyWall : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
     RigidbodyConstraints FreezeCancellation()
     {
