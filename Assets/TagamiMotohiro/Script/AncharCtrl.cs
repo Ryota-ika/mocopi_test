@@ -93,6 +93,10 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         g.transform.SetParent(anchar);
         return g.transform;
     }
+	public override void OnJoinRoomFailed(short returnCode, string message)
+	{
+        Debug.LogError("•”‰®‚É“üŽº‚Å‚«‚Ë‚¥"+message);
+	}
 	// Update is called once per frame
 	void Update()
     {

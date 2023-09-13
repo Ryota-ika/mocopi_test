@@ -1,7 +1,6 @@
 using System.Collections; //作成日時　5/27 
 using System.Collections.Generic;
 using UnityEngine;
-using UniRx;
 
 public class MocopiPlayerWork : MonoBehaviour//足のボーンの上下を検知して前進する
 {

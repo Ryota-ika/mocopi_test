@@ -28,7 +28,6 @@ public class AxeController : MonoBehaviour
 
             //現在の位置を前フレームの位置として保存
             previousPosition = currentPosition;
-            Debug.Log(hitSpeed);
     }
 
     private void OnTriggerEnter(Collider other)

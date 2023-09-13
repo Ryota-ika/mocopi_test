@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159374627b8d82642849730362074d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDurability: 700
+  maxDurability: 1
   currentDurability: 0
   pieces:
   - {fileID: 7174980504038735032}
