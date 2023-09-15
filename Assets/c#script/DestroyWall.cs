@@ -11,6 +11,7 @@ public class DestroyWall : MonoBehaviour
     public float currentDurability;Å@Å@//åªç›ÇÃëœãvìx
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
+    private OVRInput.Controller controller;
     //public float minRequireForce = 50.0f; //ï«ÇâÛÇ∑ç≈í·å¿ÇÃóÕ
     
     // Start is called before the first frame update
@@ -20,16 +21,27 @@ public class DestroyWall : MonoBehaviour
         currentDurability = maxDurability;  //èâä˙âª
     }
 
-    public void OnAxeHit(float hitSpeed)
+    public void OnAxeHit(float hitSpeed/*, OVRInput.Controller controller*/)
     {
+        //this.controller = controller;
         float damage = hitSpeed;
         DecreaseDurability(damage);
     }
 
     private void DecreaseDurability(float damage)
     {
-        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
-        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
+        if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+        {
+            StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
+
+        }
+        else if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+        {
+            StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
+
+        }
+
+        //StartCoroutine(Vibrate(duration: 0.5f, controller: controller));
         Debug.Log(damage);
         currentDurability -= damage;
 

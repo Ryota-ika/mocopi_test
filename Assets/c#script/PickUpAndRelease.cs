@@ -1,4 +1,5 @@
 //2023.8.9
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,9 +24,20 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] private GameObject Animated_Chest_01;
     private Animator animator;
 
+    [SerializeField] private bool leftTriggerReleased = true;
+    [SerializeField] private bool rightTriggerReleased = true;
+
+    private enum selectController
+    {
+        LEFT,
+        RIGHT
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        //selectController leftController = selectController.LEFT;
+        //selectController rightController = selectController.RIGHT;
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
 
@@ -66,25 +78,37 @@ public class PickUpAndRelease : MonoBehaviour
         Ray rightRay = new Ray(rightHandAnchor.transform.position, rightHandAnchor.transform.forward);
         RaycastHit rightHit;
 
-        bool leftTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
-        bool rightTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
+        //bool leftTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
+        //bool rightTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
+        bool leftTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger,OVRInput.Controller.LTouch);
+        bool rightTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger,OVRInput.Controller.RTouch);
 
         bool leftRayHit = Physics.Raycast(leftRay, out leftHit, 3.0f);
         bool rightRayHit = Physics.Raycast(rightRay, out rightHit, 3.0f);
 
+        if (leftTriggerReleased && rightTriggerReleased && grabbedObject != null)
+        {
+            ReleaseObject(grabbedObject);
+        }
+
+        if (rightTriggerPressed && !rightTriggerPressed && grabbedObject != null)
+        {
+            ReleaseObject(grabbedObject);
+        }
+
         if (!isBoxOpened)
         {
-            if (leftRayHit && leftHit.collider.tag == "Key" && canGrabKey && leftTouchController)
+            if (leftRayHit && leftHit.collider.tag == "Key" && canGrabKey && leftTriggerPressed)
             {
-                canGrabKey = false;
+                //canGrabKey = false;
                 grabbedObject = leftHit.collider.gameObject;
                 grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
                 grabbedObject.transform.localPosition = Vector3.zero;
                 grabbedObject.transform.localRotation = Quaternion.identity;
             }
-            else if (rightRayHit && rightHit.collider.tag == "Key" && canGrabKey && rightTouchController)
+            else if (rightRayHit && rightHit.collider.tag == "Key" && canGrabKey && rightTriggerPressed)
             {
-                canGrabKey = false;
+                //canGrabKey = false;
                 grabbedObject = rightHit.collider.gameObject;
                 grabbedObject.transform.SetParent(rightHandAnchor.transform, true);
                 grabbedObject.transform.localPosition = Vector3.zero;
@@ -95,7 +119,7 @@ public class PickUpAndRelease : MonoBehaviour
         {
             if (grabbedObject != null && grabbedObject.tag == "Key")
             {
-                if (leftRayHit && leftHit.collider.tag == "Axe" && leftTouchController)
+                if (leftRayHit && leftHit.collider.tag == "Axe" && leftTriggerPressed)
                 {
                     grabbedObject = leftHit.collider.gameObject;
                     grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
@@ -103,7 +127,7 @@ public class PickUpAndRelease : MonoBehaviour
                     grabbedObject.transform.localRotation = Quaternion.identity;
 
                 }
-                else if (rightRayHit && rightHit.collider.tag == "Axe" && rightTouchController)
+                else if (rightRayHit && rightHit.collider.tag == "Axe" && rightTriggerPressed)
                 {
                     grabbedObject = rightHit.collider.gameObject;
                     grabbedObject.transform.SetParent(rightHandAnchor.transform, true);
@@ -111,14 +135,14 @@ public class PickUpAndRelease : MonoBehaviour
                     grabbedObject.transform.localRotation = Quaternion.identity;
                 }
             }
-            else if (leftRayHit && leftHit.collider.tag == "torch" && leftTouchController)
+            else if (leftRayHit && leftHit.collider.tag == "torch" && leftTriggerPressed)
             {
                 grabbedObject = leftHit.collider.gameObject;
                 grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
                 grabbedObject.transform.localPosition = Vector3.zero;
                 grabbedObject.transform.localRotation = Quaternion.identity;
             }
-            else if (rightRayHit && rightHit.collider.tag == "torch" && rightTouchController)
+            else if (rightRayHit && rightHit.collider.tag == "torch" && rightTriggerPressed)
             {
                 grabbedObject = rightHit.collider.gameObject;
                 grabbedObject.transform.SetParent(rightHandAnchor.transform, true);
@@ -126,5 +150,14 @@ public class PickUpAndRelease : MonoBehaviour
                 grabbedObject.transform.localRotation = Quaternion.identity;
             }
         }
+
+        leftTriggerReleased = !leftTriggerReleased;
+        rightTriggerReleased = !rightTriggerReleased;
+    }
+
+    void ReleaseObject(GameObject obj)
+    {
+        obj.transform.SetParent(null);
+        grabbedObject = null;
     }
 }
