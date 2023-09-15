@@ -61,15 +61,17 @@ public class PickUpAndRelease : MonoBehaviour
         leftRayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
         //1番目の頂点を左手コントローラの位置から100m先に設定
         leftRayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 3.0f);
-
         leftRayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
+        leftRayObject.material.color = Color.red;
+
 
         rightRayObject.SetVertexCount(2);
         rightRayObject.SetPosition(0, rightHandAnchor.transform.position);
         rightRayObject.SetPosition(1, rightHandAnchor.transform.position + rightHandAnchor.transform.forward * 3.0f);
         rightRayObject.SetWidth(0.01f, 0.01f);
+        rightRayObject.material.color = Color.red;
 
-        
+
         //左手コントローラーのレイキャスト
         Ray leftRay = new Ray(leftHandAnchor.transform.position, leftHandAnchor.transform.forward);
         RaycastHit leftHit;
@@ -80,11 +82,20 @@ public class PickUpAndRelease : MonoBehaviour
 
         //bool leftTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
         //bool rightTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
-        bool leftTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger,OVRInput.Controller.LTouch);
-        bool rightTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger,OVRInput.Controller.RTouch);
+        bool leftTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
+        bool rightTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
 
         bool leftRayHit = Physics.Raycast(leftRay, out leftHit, 3.0f);
         bool rightRayHit = Physics.Raycast(rightRay, out rightHit, 3.0f);
+
+        if (leftRayHit && (leftHit.collider.tag == "Key" || leftHit.collider.tag == "Axe" || leftHit.collider.tag == "touch"))
+        {
+            leftRayObject.material.color = Color.blue;
+        }
+        if (rightRayHit && (rightHit.collider.tag == "Key" || rightHit.collider.tag == "Axe" || rightHit.collider.tag == "touch"))
+        {
+            rightRayObject.material.color = Color.blue;
+        }
 
         if (leftTriggerReleased && rightTriggerReleased && grabbedObject != null)
         {
