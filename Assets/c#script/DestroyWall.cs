@@ -30,7 +30,7 @@ public class DestroyWall : MonoBehaviour
 
     private void DecreaseDurability(float damage)
     {
-        if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+        if (PickUpAndRelease.selectController.Left== PickUpAndRelease.selectController.Right)
         {
             StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
 

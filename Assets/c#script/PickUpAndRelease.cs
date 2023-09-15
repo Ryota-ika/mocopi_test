@@ -27,20 +27,18 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] private bool leftTriggerReleased = true;
     [SerializeField] private bool rightTriggerReleased = true;
 
-    private enum selectController
+    public enum selectController
     {
-        LEFT,
-        RIGHT
+        Left,
+        Right
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //selectController leftController = selectController.LEFT;
-        //selectController rightController = selectController.RIGHT;
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
-
+        
         //key = GameObject.Find("Key (1)");
         //Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
@@ -57,9 +55,16 @@ public class PickUpAndRelease : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        selectController leftAxeController = selectController.Left;
+        selectController rightAxeController = selectController.Right;
+
+        if (leftAxeController == selectController.Left)
+        {
+            
+        }
         leftRayObject.SetVertexCount(2); //始点と終点設定
         leftRayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
-        //1番目の頂点を左手コントローラの位置から100m先に設定
+        //1番目の頂点を左手コントローラの位置から3m先に設定
         leftRayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 3.0f);
         leftRayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
         leftRayObject.material.color = Color.red;
@@ -87,6 +92,8 @@ public class PickUpAndRelease : MonoBehaviour
 
         bool leftRayHit = Physics.Raycast(leftRay, out leftHit, 3.0f);
         bool rightRayHit = Physics.Raycast(rightRay, out rightHit, 3.0f);
+
+        
 
         if (leftRayHit && (leftHit.collider.tag == "Key" || leftHit.collider.tag == "Axe" || leftHit.collider.tag == "touch"))
         {

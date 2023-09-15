@@ -32449,6 +32449,8 @@ MonoBehaviour:
     m_Bits: 511
   key: {fileID: 1705653452}
   Animated_Chest_01: {fileID: 897540734}
+  leftTriggerReleased: 1
+  rightTriggerReleased: 1
 --- !u!4 &1991542687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7096177191515348561, guid: b8f403b4517ddd844988838750e9a72a,
