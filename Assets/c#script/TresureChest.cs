@@ -1,4 +1,4 @@
-//6ŒŽ22“ú
+//9ŒŽ13“ú
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +15,7 @@ public class TresureChest : MonoBehaviour
 
     public GameObject chestHinge;
     private Animator animator;
+    [SerializeField]
     private GameObject Animated_Chest_01;
     // Start is called before the first frame update
 
@@ -24,7 +25,7 @@ public class TresureChest : MonoBehaviour
 
         targetRotation = Quaternion.Euler(0f, openAngle, 0f);*/
         animator = chestHinge.GetComponent<Animator>();
-        Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
+        //Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)

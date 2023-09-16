@@ -6,9 +6,9 @@ using UnityEngine;
 public class AxeController : MonoBehaviour
 {
     public float minRequiredSpeed = 2.0f;
-    private bool isGrabbed = false;
     private Rigidbody axeRigidbody;
     private GameObject Axe;
+    private OVRInput.Controller controller;
 
     private Vector3 previousPosition;
     private float hitSpeed;
@@ -43,7 +43,7 @@ public class AxeController : MonoBehaviour
                 DestroyWall wall = other.gameObject.GetComponent<DestroyWall>();
                 if (wall != null)
                 {
-                    wall.OnAxeHit(hitSpeed);
+                    wall.OnAxeHit(hitSpeed/*, controller*/);
                 }
             }
         }
