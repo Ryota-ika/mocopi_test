@@ -35,7 +35,7 @@ public class QuizStone : MonoBehaviourPunCallbacks
 	void CrearObject()
 	{
         key.SetIsCleard();
-        Debug.Log("正解オブジェクトが破壊された");
+        Debug.Log("正解オブジェクトがインタラクトされた");
 	}
     [PunRPC]
 	void StopPlayer()

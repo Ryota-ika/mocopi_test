@@ -50,10 +50,15 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     bool isStepping=false;
     bool workWeigting=true;
     bool isCollisionWall = false;
+    [Header("ƒvƒŒƒCƒ„[ŠÖ˜A‚ÌŒø‰Ê‰¹")]
+    [SerializeField]
+    AudioClip wallHitSE;
+    AudioSource myAS;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAS = this.GetComponent<AudioSource>();    
     }
 
     // Update is called once per frame
@@ -130,6 +135,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 effectTime -= Time.deltaTime;
                 stepPos.position = hit.point;
                 if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
+                    myAS.PlayOneShot(wallHitSE);
                     Instantiate(wallHitEffect, point, Quaternion.FromToRotation(Vector3.forward,hit.normal));
                     effectTime = lastEffectTime;
                 }
