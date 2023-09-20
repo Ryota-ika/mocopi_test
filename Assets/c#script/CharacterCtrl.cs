@@ -1,4 +1,4 @@
-//2023”N5ŒŽ30“ú
+//2023”N9ŒŽ16“ú
 
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +11,10 @@ public class CharacterCtrl : MonoBehaviour
     private Transform targetPlayer;
     [SerializeField]
     private Transform naviPos;
+    [SerializeField]
+    private Transform ovrCameraRig;
+    [SerializeField]
+    private Vector3 offSet = new Vector3 (-0.5f, 0.5f, 0.0f);
     [SerializeField]
     float smoothTime = 0.5f;
     [SerializeField]
@@ -25,9 +29,9 @@ public class CharacterCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 target_pos = naviPos.position;
+        Vector3 target_pos = ovrCameraRig.position + offSet;
         transform.position=Vector3.SmoothDamp(transform.position,target_pos,ref velocity,smoothTime);
-        Vector3 loockPos = targetPlayer.position - transform.position;
+        Vector3 loockPos = ovrCameraRig.position - transform.position;
         loockPos.y = 0;
         if (loockPos != Vector3.zero)
 		{

@@ -55,13 +55,9 @@ public class PickUpAndRelease : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        selectController leftAxeController = selectController.Left;
-        selectController rightAxeController = selectController.Right;
+        //selectController leftAxeController = selectController.Left;
+        //selectController rightAxeController = selectController.Right;
 
-        if (leftAxeController == selectController.Left)
-        {
-            
-        }
         leftRayObject.SetVertexCount(2); //始点と終点設定
         leftRayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
         //1番目の頂点を左手コントローラの位置から3m先に設定
@@ -104,7 +100,7 @@ public class PickUpAndRelease : MonoBehaviour
             rightRayObject.material.color = Color.blue;
         }
 
-        if (leftTriggerReleased && rightTriggerReleased && grabbedObject != null)
+       /* if (leftTriggerReleased && rightTriggerReleased && grabbedObject != null)
         {
             ReleaseObject(grabbedObject);
         }
@@ -112,7 +108,7 @@ public class PickUpAndRelease : MonoBehaviour
         if (rightTriggerPressed && !rightTriggerPressed && grabbedObject != null)
         {
             ReleaseObject(grabbedObject);
-        }
+        }*/
 
         if (!isBoxOpened)
         {
@@ -123,6 +119,7 @@ public class PickUpAndRelease : MonoBehaviour
                 grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
                 grabbedObject.transform.localPosition = Vector3.zero;
                 grabbedObject.transform.localRotation = Quaternion.identity;
+                
             }
             else if (rightRayHit && rightHit.collider.tag == "Key" && canGrabKey && rightTriggerPressed)
             {
@@ -169,13 +166,13 @@ public class PickUpAndRelease : MonoBehaviour
             }
         }
 
-        leftTriggerReleased = !leftTriggerReleased;
-        rightTriggerReleased = !rightTriggerReleased;
+        /*leftTriggerReleased = !leftTriggerReleased;
+        rightTriggerReleased = !rightTriggerReleased;*/
     }
 
-    void ReleaseObject(GameObject obj)
+    /*void ReleaseObject(GameObject obj)
     {
         obj.transform.SetParent(null);
         grabbedObject = null;
-    }
+    }*/
 }
