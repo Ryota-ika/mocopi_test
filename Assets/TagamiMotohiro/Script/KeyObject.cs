@@ -6,6 +6,7 @@ public class KeyObject : MonoBehaviour
 	//制作担当　田上
 	//条件を達成したらオンになる系オブジェクトの基底クラス
 {
+	[SerializeField]
     protected bool isCleard = false;
 	protected virtual void CrearDirection()
 	{
