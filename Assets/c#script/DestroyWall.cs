@@ -13,7 +13,7 @@ public class DestroyWall : MonoBehaviour
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +30,9 @@ public class DestroyWall : MonoBehaviour
 
     private void DecreaseDurability(float damage)
     {
-        if (PickUpAndRelease.selectController.Left== PickUpAndRelease.selectController.Right)
-        {
-            StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
 
-        }
-        else if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
-        {
-            StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
-
-        }
+        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
+        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
 
         //StartCoroutine(Vibrate(duration: 0.5f, controller: controller));
         Debug.Log(damage);
@@ -51,29 +44,30 @@ public class DestroyWall : MonoBehaviour
         }
     }
 
-    private static IEnumerator Vibrate(float duration = 0.1f,float frequency = 0.5f,float amplitude = 0.1f,OVRInput.Controller controller = OVRInput.Controller.Active)
+    private static IEnumerator Vibrate(float duration = 0.1f, float frequency = 0.5f, float amplitude = 0.1f, OVRInput.Controller controller = OVRInput.Controller.Active)
     {
-        OVRInput.SetControllerVibration(frequency,amplitude,controller);
+        OVRInput.SetControllerVibration(frequency, amplitude, controller);
 
         yield return new WaitForSeconds(duration);
 
-        OVRInput.SetControllerVibration(0,0,controller);
+        OVRInput.SetControllerVibration(0, 0, controller);
     }
 
     void DestroyWallObject()
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更
         //this.gameObject.SetActive(false);
-        transform.localScale = new Vector3(0.5f,0.5f,0.5f);
-        foreach (Rigidbody item in pieces) {
+        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        foreach (Rigidbody item in pieces)
+        {
             item.freezeRotation = false;
-            item.constraints = FreezeCancellation(); 
+            item.constraints = FreezeCancellation();
         }
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
-    IEnumerator InvokeDestroy( float time)
+    IEnumerator InvokeDestroy(float time)
     {
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
@@ -90,10 +84,10 @@ public class DestroyWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-	private void OnTriggerEnter(Collider other)
-	{
+    private void OnTriggerEnter(Collider other)
+    {
         Debug.Log("当たった");
-	}
+    }
 }
