@@ -44,6 +44,7 @@ public class AxeController : MonoBehaviour
                 if (wall != null)
                 {
                     wall.OnAxeHit(hitSpeed/*, controller*/);
+                    GetComponent<AudioSource>().Play();
                 }
             }
         }
