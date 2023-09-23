@@ -19,8 +19,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
         timer -= Time.deltaTime;
         int minutes = Mathf.FloorToInt(timer / 60);
         int seconds = Mathf.FloorToInt(timer % 60);
-        TimerText.text = (minutes.ToString("00")+(":")+seconds.ToString("00"));
-        //Debug.Log("残り時間:" + minutes.ToString("00") + (":") + seconds.ToString("00"));
+        TimerText.text = minutes.ToString("00")+(":")+seconds.ToString("00");
         if (timer<=0) {
             Debug.Log("ゲームオーバー");
         }
@@ -32,7 +31,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
             stream.SendNext(timer);
         }
         else {
-            stream.ReceiveNext();
+            timer=(float)stream.ReceiveNext();
         }
 	}
 }

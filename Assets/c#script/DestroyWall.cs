@@ -30,18 +30,8 @@ public class DestroyWall : MonoBehaviour
 
     private void DecreaseDurability(float damage)
     {
-        if (PickUpAndRelease.selectController.Left== PickUpAndRelease.selectController.Right)
-        {
-            StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
-
-        }
-        else if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
-        {
-            StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
-
-        }
-
-        //StartCoroutine(Vibrate(duration: 0.5f, controller: controller));
+        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
+        StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
         Debug.Log(damage);
         currentDurability -= damage;
 
@@ -69,7 +59,7 @@ public class DestroyWall : MonoBehaviour
             item.freezeRotation = false;
             item.constraints = FreezeCancellation(); 
         }
-        StartCoroutine(InvokeDestroy(3));
+        StartCoroutine(InvokeDestroy(2));
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
