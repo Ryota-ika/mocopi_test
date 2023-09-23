@@ -40,6 +40,7 @@ public class AxeController : MonoBehaviour
             //速度が条件を満たす場合、壁にダメージ
             if (hitSpeed > minRequiredSpeed)
             {
+                GetComponent<AudioSource>().Play();
                 DestroyWall wall = other.gameObject.GetComponent<DestroyWall>();
                 if (wall != null)
                 {

@@ -52,6 +52,7 @@ public class TresureChest : MonoBehaviour
         animator.SetBool("Open", true);
         float delayTime = 3.0f;
         StartCoroutine(DelaydMethodCoroutine(delayTime));
+        GetComponent<AudioSource>().Play();
     }
 
     public void CloseLid()
