@@ -58,7 +58,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	public override void OnPlayerEnteredRoom(Player newPlayer)
     //ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション
 	{
-        int playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
+        int playerNum = newPlayer.ActorNumber;
         StartCoroutine(GetPlayerAnchar(playerNum));
     }
 	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
@@ -80,7 +80,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Transform leftFoot = AncharInstantiete(_leftFoot, anchar);
         Transform rightFoot = AncharInstantiete(_rightFoot, anchar);
         
-        myAvatar=Instantiate(avatarList[0]);
+        myAvatar=Instantiate(avatarList[posnum]);
         StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot));
         //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
         if (PhotonNetwork.LocalPlayer.ActorNumber!=1) {
@@ -103,7 +103,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     }
     IEnumerator GetPlayerAnchar(int playerNum)
     {
-        GameObject avatar = Instantiate(avatarList[0], Vector3.zero, Quaternion.identity);
+        GameObject avatar = Instantiate(avatarList[playerNum-1], Vector3.zero, Quaternion.identity);
         avatar.layer = layer;
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();
