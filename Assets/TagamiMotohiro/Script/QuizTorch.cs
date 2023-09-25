@@ -8,6 +8,8 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     List<KeyObject> torch_list;
     [SerializeField]
     int collectNum;
+    [SerializeField]
+    List<Animator> openDoor; 
     
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,10 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     [PunRPC]
     void Clere()
     {
-        Destroy(this.gameObject);
+        foreach (Animator item in openDoor)
+		{
+            item.SetTrigger("Rock_move");
+		}
     }
     [PunRPC]
     void StopPlayer()
