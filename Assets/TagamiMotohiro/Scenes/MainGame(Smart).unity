@@ -5801,6 +5801,7 @@ MonoBehaviour:
   actionDistance: 1
   treasureChest: {fileID: 1290177250}
   pickUpAndRelease: {fileID: 1988585259}
+  naviTextVoiceCtrl: {fileID: 0}
 --- !u!65 &215713872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29796,6 +29797,7 @@ MonoBehaviour:
   actionDistance: 1
   treasureChest: {fileID: 1046722157}
   pickUpAndRelease: {fileID: 1988585259}
+  naviTextVoiceCtrl: {fileID: 0}
 --- !u!65 &1052059031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32023,6 +32025,7 @@ MonoBehaviour:
   actionDistance: 1
   treasureChest: {fileID: 1290177250}
   pickUpAndRelease: {fileID: 1988585259}
+  naviTextVoiceCtrl: {fileID: 0}
 --- !u!65 &1133974089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43098,7 +43101,7 @@ PrefabInstance:
     - target: {fileID: 4576272172102058595, guid: 0a7f617b0a50ada4fbddebf7f392be13,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4576272172102058595, guid: 0a7f617b0a50ada4fbddebf7f392be13,
         type: 3}
@@ -50428,6 +50431,7 @@ MonoBehaviour:
   actionDistance: 1
   treasureChest: {fileID: 1986245529}
   pickUpAndRelease: {fileID: 1988585259}
+  naviTextVoiceCtrl: {fileID: 0}
 --- !u!65 &1841687407
 BoxCollider:
   m_ObjectHideFlags: 0

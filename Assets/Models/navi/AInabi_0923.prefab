@@ -7776,7 +7776,7 @@ MonoBehaviour:
   targetPlayer: {fileID: 0}
   naviPos: {fileID: 0}
   smoothTime: 0.5
-  rotateTime: 0
+  rotateTime: 1
 --- !u!95 &1197899589570184122
 Animator:
   serializedVersion: 4
@@ -7790,7 +7790,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 896d1c45dbc8fb4469804734f23558ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
