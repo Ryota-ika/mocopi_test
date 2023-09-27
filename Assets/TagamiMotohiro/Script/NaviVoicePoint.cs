@@ -6,8 +6,8 @@ public class NaviVoicePoint : MonoBehaviour//ƒvƒŒƒCƒ„[‚ª‹ß‚Ã‚¢‚½‚çƒiƒr‚Ìƒ{ƒCƒX‚
 {
     [SerializeField]
     Transform player;
-    [SerializeField]
-    NaviVoiceCtrl navi;
+    /*[SerializeField]
+    NaviVoiceCtrl navi;*/
     [SerializeField]
     int voiceNum;
     // Start is called before the first frame update
@@ -19,9 +19,9 @@ public class NaviVoicePoint : MonoBehaviour//ƒvƒŒƒCƒ„[‚ª‹ß‚Ã‚¢‚½‚çƒiƒr‚Ìƒ{ƒCƒX‚
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) > 1f) {
+        /*if (Vector3.Distance(transform.position, player.position) > 1f) {
             navi.PlayVoice(voiceNum);
             this.gameObject.SetActive(false);
-        } 
+        }*/ 
     }
 }

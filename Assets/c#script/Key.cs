@@ -12,6 +12,8 @@ public class Key : MonoBehaviour
     private TresureChest treasureChest; //ïÛî†ÇÃäWÇÃscript
     [SerializeField]
     private PickUpAndRelease pickUpAndRelease;
+    [SerializeField]
+    private NaviTextVoiceCtrl naviTextVoiceCtrl;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class Key : MonoBehaviour
                 pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
                 float delayTime = 3.0f;
+                naviTextVoiceCtrl.text.text = "Ç±ÇÍÇÕâΩÇ©Ç…Ç¬Ç©Ç¶ÇÈÇ©Ç‡ÅI\néùÇ¡ÇƒÇ¢Ç¡Ç∆Ç±ÅI";
+                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); ;
                 //pickUpAndRelease.StartCoroutine(pickUpAndRelease.DelaydMethodCoroutine(delayTime));
                 //Destroy(this.gameObject);
             }

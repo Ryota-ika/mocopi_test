@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class NaviVoiceCtrl : MonoBehaviour
+public class NaviTextVoiceCtrl1 : MonoBehaviour
 {
     [Header("ナビ自身のオーディオソース")]
     [SerializeField]
@@ -10,6 +11,10 @@ public class NaviVoiceCtrl : MonoBehaviour
     [Header("ボイス一覧")]
     [SerializeField]
     AudioClip[] voiceList;
+    [Header("テキスト一覧")]
+    [SerializeField]
+    TextMeshProUGUI[] textList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +26,10 @@ public class NaviVoiceCtrl : MonoBehaviour
     {
         
     }
-    public void PlayVoice(int voicePatternNum)//ボイスパターン一覧の中からボイスを取得して再生
+    public void PlayTextVoice(int voicePatternNum,int textPatternNum)//ボイスパターン一覧とテキストパターン一覧の中からボイスを取得して再生
     {
         //naviAS.PlayOneShot(voiceList[voicePatternNum]);
         Debug.Log(voicePatternNum.ToString()+"番のボイスを再生した");
+        Debug.Log(textPatternNum.ToString()+"番のテキストを再生した");
     }
 }
