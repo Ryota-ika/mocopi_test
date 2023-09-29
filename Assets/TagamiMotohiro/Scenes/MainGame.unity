@@ -1836,6 +1836,7 @@ MonoBehaviour:
   currentDurability: 0
   Axe: {fileID: 0}
   pieces: []
+  naviTextVoiceCtrl: {fileID: 0}
 --- !u!1 &162350178
 GameObject:
   m_ObjectHideFlags: 0
@@ -9386,6 +9387,7 @@ MonoBehaviour:
   currentDurability: 0
   Axe: {fileID: 0}
   pieces: []
+  naviTextVoiceCtrl: {fileID: 0}
 --- !u!4 &459060327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 335247538947528048, guid: e1d0b69a131154b498ef88578adbca89,
@@ -28042,7 +28044,7 @@ MonoBehaviour:
   actionDistance: 1
   treasureChest: {fileID: 2084958584}
   pickUpAndRelease: {fileID: 0}
-  naviTextVoiceCtrl: {fileID: 0}
+  naviTextVoiceCtrl: {fileID: 739769054}
 --- !u!54 &1802232145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36457,6 +36459,11 @@ PrefabInstance:
       propertyPath: maxDurability
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3362894655621961162, guid: db455a7c5b14e1344920baee6a61ac3e,
+        type: 3}
+      propertyPath: naviTextVoiceCtrl
+      value: 
+      objectReference: {fileID: 739769054}
     - target: {fileID: 7163347171756468519, guid: db455a7c5b14e1344920baee6a61ac3e,
         type: 3}
       propertyPath: m_IsTrigger

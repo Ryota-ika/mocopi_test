@@ -13,7 +13,7 @@ public class DestroyWall : MonoBehaviour
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
     //public float minRequireForce = 50.0f; //•Ç‚ğ‰ó‚·Å’áŒÀ‚Ì—Í
-
+    [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
 
     // Start is called before the first frame update
