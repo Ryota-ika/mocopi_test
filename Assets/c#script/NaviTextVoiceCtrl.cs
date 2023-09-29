@@ -22,7 +22,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     private GameObject textObject;
     [Header("宝箱の蓋")]
     [SerializeField]
-    private TresureChest tresureChest;
+    private GameObject tresureChest;
     [Header("鍵")]
     [SerializeField]
     private GameObject key;
@@ -38,7 +38,12 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     [Header("ひび割れた壁発見")]
     [SerializeField]
     private GameObject crackedWall;
-
+    [Header("ジェスチャー発見")]
+    [SerializeField]
+    private GameObject gestureDiscovery;
+    /*[Header("ひび割れた壁発見")]
+    [SerializeField]
+    private GameObject crackedWall1;*/
 
     private float targetDistance = 1f;
     private bool hasTalkingTresureChest = false; //宝箱の話をしたかどうかのフラグ
@@ -47,6 +52,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     private bool hasTalkingCandlestick = false;//燭台の話をしたかどうかのフラグ
     private bool hasTalkingCave = false;//洞窟の話をしたかどうかのフラグ
     private bool hasTalkingCrackedWall = false;//ひび割れた壁の話をしたかどうかのフラグ
+    private bool hasTalkingGestureDiscovery = false;//ジェスチャー発見の話をしたかどうかのフラグ
     // Start is called before the first frame update
     void Start()
     {
@@ -111,14 +117,24 @@ public class NaviTextVoiceCtrl : MonoBehaviour
             StartCoroutine(DelateText(5));
             hasTalkingCrackedWall = true;
         }
-        //ひび割れた壁発見
-        /*float distance6 = Vector3.Distance(transform.position, crackedWall.transform.position);
-        if (distance6 <= targetDistance && !hasTalkingCrackedWall)
+        //ジェスチャー発見
+        float distance6 = Vector3.Distance(transform.position, gestureDiscovery.transform.position);
+        if (distance6 <= targetDistance && !hasTalkingGestureDiscovery)
         {
-            text.text = "よし！これで先に進めそう！";
+            PlayTextVoice(0,6);
+            //text.text = "よし！これで先に進めそう！";
             StartCoroutine(DelateText(5));
-            hasTalkingCrackedWall = true;
-        }*/
+            hasTalkingGestureDiscovery = true;
+        }
+        //ジェスチャー発見
+        float distance7 = Vector3.Distance(transform.position, gestureDiscovery.transform.position);
+        if (distance7 <= targetDistance && !hasTalkingGestureDiscovery)
+        {
+            PlayTextVoice(0, 6);
+            //text.text = "よし！これで先に進めそう！";
+            StartCoroutine(DelateText(5));
+            hasTalkingGestureDiscovery = true;
+        }
 
     }
 

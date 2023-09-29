@@ -36,7 +36,8 @@ public class Key : MonoBehaviour
                 pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
                 float delayTime = 3.0f;
-                naviTextVoiceCtrl.text.text = "これは何かにつかえるかも！\n持っていっとこ！";
+                naviTextVoiceCtrl.PlayTextVoice(0,8);
+                //naviTextVoiceCtrl.text.text = "これは何かにつかえるかも！\n持っていっとこ！";
                 naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); ;
                 //pickUpAndRelease.StartCoroutine(pickUpAndRelease.DelaydMethodCoroutine(delayTime));
                 //Destroy(this.gameObject);

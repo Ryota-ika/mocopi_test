@@ -14,6 +14,8 @@ public class DestroyWall : MonoBehaviour
     private OVRInput.Controller controller;
     //public float minRequireForce = 50.0f; //ï«ÇâÛÇ∑ç≈í·å¿ÇÃóÕ
 
+    private NaviTextVoiceCtrl naviTextVoiceCtrl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +65,8 @@ public class DestroyWall : MonoBehaviour
             item.freezeRotation = false;
             item.constraints = FreezeCancellation();
         }
+        naviTextVoiceCtrl.PlayTextVoice(0,7);
+        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
