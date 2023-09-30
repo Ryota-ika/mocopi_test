@@ -43,13 +43,13 @@ public class Key : MonoBehaviour
                 //Destroy(this.gameObject);
             }
         }
-        else
+        /*else
         {
             if (isNearTreasureChest)
             {
                 treasureChest.CloseLid();
                 isNearTreasureChest = false;
             }
-        }
+        }*/
     }
 }
