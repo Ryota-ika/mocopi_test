@@ -1,4 +1,4 @@
-//2023.9.27
+//2023.9.27Å@çÇã¥ó¡ëæ
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;

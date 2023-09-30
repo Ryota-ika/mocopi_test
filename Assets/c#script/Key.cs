@@ -1,19 +1,20 @@
-//‚WŒ‚R‚O“ú
+//‚WŒ‚R‚O“ú@ûü‹´—Á‘¾
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public float actionDistance = 1f; //ƒvƒŒƒCƒ„[‚ª•ó” ‚Æ‚Ì‹——£‚ğ‚Æ‚é
-
-    private bool isNearTreasureChest=false;
+    [SerializeField]
+    float actionDistance = 1f; //ƒvƒŒƒCƒ„[‚ª•ó” ‚Æ‚Ì‹——£‚ğ‚Æ‚é
     [SerializeField]
     private TresureChest treasureChest; //•ó” ‚ÌŠW‚Ìscript
     [SerializeField]
     private PickUpAndRelease pickUpAndRelease;
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
+
+    private bool isNearTreasureChest = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,6 @@ public class Key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*treasureChest.OpenLid();*/
         //ƒvƒŒƒCƒ„[‚Æ•ó” ‚Ì‹——£‚ğŒvZ
         float distanceToTreasureChest = Vector3.Distance(transform.position,treasureChest.transform.position);
 
@@ -43,13 +43,5 @@ public class Key : MonoBehaviour
                 //Destroy(this.gameObject);
             }
         }
-        /*else
-        {
-            if (isNearTreasureChest)
-            {
-                treasureChest.CloseLid();
-                isNearTreasureChest = false;
-            }
-        }*/
     }
 }

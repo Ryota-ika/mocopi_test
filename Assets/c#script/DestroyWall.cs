@@ -1,4 +1,4 @@
-//９月１日
+//９月１日　髙橋涼太
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
-    //public GameObject crackedWall;  
-    public float maxDurability = 10.0f;  //壁の最大耐久度
-    public float currentDurability;　　//現在の耐久度
+    [SerializeField]
+    private float maxDurability = 10.0f;  //壁の最大耐久度
+    [SerializeField]
+    private float currentDurability;　　//現在の耐久度
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
@@ -19,13 +20,11 @@ public class DestroyWall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Axe = GameObject.Find("FantasyHammer");
         currentDurability = maxDurability;  //初期化
     }
 
-    public void OnAxeHit(float hitSpeed/*, OVRInput.Controller controller*/)
+    public void OnAxeHit(float hitSpeed)
     {
-        //this.controller = controller;
         float damage = hitSpeed;
         DecreaseDurability(damage);
     }
@@ -36,7 +35,6 @@ public class DestroyWall : MonoBehaviour
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
 
-        //StartCoroutine(Vibrate(duration: 0.5f, controller: controller));
         Debug.Log(damage);
         currentDurability -= damage;
 
@@ -58,7 +56,6 @@ public class DestroyWall : MonoBehaviour
     void DestroyWallObject()
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更
-        //this.gameObject.SetActive(false);
         transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         foreach (Rigidbody item in pieces)
         {
