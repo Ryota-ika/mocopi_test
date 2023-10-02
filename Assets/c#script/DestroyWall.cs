@@ -13,6 +13,7 @@ public class DestroyWall : MonoBehaviour
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
+    bool isCanDestroy=true;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
@@ -31,7 +32,7 @@ public class DestroyWall : MonoBehaviour
 
     private void DecreaseDurability(float damage)
     {
-
+        if (!isCanDestroy) { return; }
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
 
@@ -52,7 +53,6 @@ public class DestroyWall : MonoBehaviour
 
         OVRInput.SetControllerVibration(0, 0, controller);
     }
-
     void DestroyWallObject()
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更
@@ -68,6 +68,13 @@ public class DestroyWall : MonoBehaviour
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
+    //指定の秒数自分を破壊できなくする
+    public IEnumerator bannedDestroy(int bannedTime)
+	{
+        isCanDestroy = false;
+        yield return new WaitForSeconds(bannedTime);
+        isCanDestroy = true;
+	}
     IEnumerator InvokeDestroy(float time)
     {
         yield return new WaitForSeconds(time);
@@ -86,9 +93,5 @@ public class DestroyWall : MonoBehaviour
     void Update()
     {
 
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("当たった");
     }
 }
