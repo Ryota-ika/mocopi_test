@@ -62,8 +62,8 @@ public class DestroyWall : MonoBehaviour
             item.freezeRotation = false;
             item.constraints = FreezeCancellation();
         }
-        naviTextVoiceCtrl.PlayTextVoice(0,7);
-        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        //naviTextVoiceCtrl.PlayTextVoice(0,7);
+        //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
