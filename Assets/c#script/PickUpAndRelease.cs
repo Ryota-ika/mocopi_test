@@ -1,9 +1,7 @@
-//2023.8.9
-using Newtonsoft.Json.Bson;
+//2023.8.9 髙橋涼太
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 public class PickUpAndRelease : MonoBehaviour
 {
@@ -27,20 +25,11 @@ public class PickUpAndRelease : MonoBehaviour
     [SerializeField] private bool leftTriggerReleased = true;
     [SerializeField] private bool rightTriggerReleased = true;
 
-    public enum selectController
-    {
-        Left,
-        Right
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         chestHinge = GameObject.Find("Chest_Hinge");
         animator = chestHinge.GetComponent<Animator>();
-        
-        //key = GameObject.Find("Key (1)");
-        //Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)
@@ -55,16 +44,12 @@ public class PickUpAndRelease : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //selectController leftAxeController = selectController.Left;
-        //selectController rightAxeController = selectController.Right;
-
         leftRayObject.SetVertexCount(2); //始点と終点設定
         leftRayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
         //1番目の頂点を左手コントローラの位置から3m先に設定
         leftRayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 3.0f);
         leftRayObject.SetWidth(0.01f, 0.01f); //線の太さを0.01に設定
         leftRayObject.material.color = Color.red;
-
 
         rightRayObject.SetVertexCount(2);
         rightRayObject.SetPosition(0, rightHandAnchor.transform.position);
@@ -81,8 +66,6 @@ public class PickUpAndRelease : MonoBehaviour
         Ray rightRay = new Ray(rightHandAnchor.transform.position, rightHandAnchor.transform.forward);
         RaycastHit rightHit;
 
-        //bool leftTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
-        //bool rightTouchController = OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
         bool leftTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
         bool rightTriggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
 
@@ -99,16 +82,6 @@ public class PickUpAndRelease : MonoBehaviour
         {
             rightRayObject.material.color = Color.blue;
         }
-
-       /* if (leftTriggerReleased && rightTriggerReleased && grabbedObject != null)
-        {
-            ReleaseObject(grabbedObject);
-        }
-
-        if (rightTriggerPressed && !rightTriggerPressed && grabbedObject != null)
-        {
-            ReleaseObject(grabbedObject);
-        }*/
 
         if (!isBoxOpened)
         {
@@ -165,14 +138,5 @@ public class PickUpAndRelease : MonoBehaviour
                 grabbedObject.transform.localRotation = Quaternion.identity;
             }
         }
-
-        /*leftTriggerReleased = !leftTriggerReleased;
-        rightTriggerReleased = !rightTriggerReleased;*/
     }
-
-    /*void ReleaseObject(GameObject obj)
-    {
-        obj.transform.SetParent(null);
-        grabbedObject = null;
-    }*/
 }

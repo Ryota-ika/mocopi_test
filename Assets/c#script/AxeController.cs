@@ -1,4 +1,4 @@
-//‚XŒŽ‚P‚P“ú
+//‚XŒŽ‚P‚P“ú@‚‹´—Á‘¾
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,18 +6,9 @@ using UnityEngine;
 public class AxeController : MonoBehaviour
 {
     public float minRequiredSpeed = 2.0f;
-    private Rigidbody axeRigidbody;
-    private GameObject Axe;
-    private OVRInput.Controller controller;
-
     private Vector3 previousPosition;
     private float hitSpeed;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        //previousPosition = transform.position;   
-    }
     private void LateUpdate()
     {
         //Œ»Ý‚ÌˆÊ’u‚Æ‘OƒtƒŒ[ƒ€‚ÌˆÊ’u‚Ì·‚©‚ç‘¬“x‚ðŒvŽZ
@@ -32,7 +23,7 @@ public class AxeController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (/*isGrabbed &&*/ other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Wall"))
         {
             
             LateUpdate();
@@ -48,34 +39,5 @@ public class AxeController : MonoBehaviour
                 }
             }
         }
-    }
-
-    /*public void Grab()
-    {
-        isGrabbed = true;
-    }
-
-    public void Release()
-    {
-        isGrabbed = false;
-    }*/
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*Vector3 velocity = (controllerTransform.position - transform.position) / Time.deltaTime;
-        axeRigidbody.velocity = velocity * velocityMultiplier;*/
-
-        /*Vector3 currentPosition = transform.position;
-        Vector3 velocity = (currentPosition - previousPosition)/Time.deltaTime;
-
-        hitSpeed = velocity.magnitude;
-
-        previousPosition = currentPosition;
-
-        if (hitSpeed >= minRequiredSpeed)
-        {
-            Destroy(this.gameObject);
-        }*/
-    }
+    }  
 }

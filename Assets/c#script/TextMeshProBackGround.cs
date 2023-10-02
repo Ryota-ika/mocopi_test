@@ -1,3 +1,4 @@
+//9.30 çÇã¥ó¡ëæ
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;

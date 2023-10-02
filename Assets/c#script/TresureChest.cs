@@ -1,17 +1,17 @@
-//9åé13ì˙
+//9åé13ì˙ çÇã¥ó¡ëæ
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TresureChest : MonoBehaviour
 {
-    public float openAngle = 90f; //ïÛî†ÇÃäWÇäJÇ≠äpìx
-    public float openTime = 2f;
+    [SerializeField] private
+    float openAngle = 90f; //ïÛî†ÇÃäWÇäJÇ≠äpìx
+    [SerializeField] private
+    float openTime = 2f;
 
     private Quaternion initialRotation;
     private Quaternion targetRotation;
-    private float timer = 0f;
-    private bool isOpen = false;
 
     public GameObject chestHinge;
     private Animator animator;
@@ -21,11 +21,7 @@ public class TresureChest : MonoBehaviour
 
     private void Start()
     {
-        /*initialRotation = transform.rotation;
-
-        targetRotation = Quaternion.Euler(0f, openAngle, 0f);*/
         animator = chestHinge.GetComponent<Animator>();
-        //Animated_Chest_01 = GameObject.Find("Animated_Chest_01 (1)");
     }
 
     private IEnumerator DelaydMethodCoroutine(float delayTime)
@@ -36,31 +32,12 @@ public class TresureChest : MonoBehaviour
         Destroy(Animated_Chest_01);
         Animated_Chest_01.SetActive(false);
     }
-    private void Update()
-    {
-        /*timer += Time.deltaTime;
-        float t = Mathf.Clamp01(timer / openTime);
-        transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, t); */
-        /*animator.SetBool("Open", true);*/
-    }
 
     public void OpenLid()
     {
-        /*isOpen = true;
-        timer = 0f;*/
-        /*transform.rotation = targetRotation;*/
         animator.SetBool("Open", true);
         float delayTime = 3.0f;
         StartCoroutine(DelaydMethodCoroutine(delayTime));
         GetComponent<AudioSource>().Play();
-    }
-
-    public void CloseLid()
-    {
-        /*isOpen = false;
-        timer = 0f;
-        transform.rotation = initialRotation;*/
-        /*Quaternion targetRotation = Quaternion.Euler(0f, 0f, 0f);
-        transform.rotation = targetRotation;*/
     }
 }

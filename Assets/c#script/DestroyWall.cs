@@ -1,4 +1,4 @@
-//９月１日
+//９月１日　髙橋涼太
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,35 +6,36 @@ using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
-    //public GameObject crackedWall;  
-    public float maxDurability = 10.0f;  //壁の最大耐久度
-    public float currentDurability;　　//現在の耐久度
+    [SerializeField]
+    private float maxDurability = 10.0f;  //壁の最大耐久度
+    [SerializeField]
+    private float currentDurability;　　//現在の耐久度
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
+    bool isCanDestroy=true;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
+    [SerializeField]
+    private NaviTextVoiceCtrl naviTextVoiceCtrl;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Axe = GameObject.Find("FantasyHammer");
         currentDurability = maxDurability;  //初期化
     }
 
-    public void OnAxeHit(float hitSpeed/*, OVRInput.Controller controller*/)
+    public void OnAxeHit(float hitSpeed)
     {
-        //this.controller = controller;
         float damage = hitSpeed;
         DecreaseDurability(damage);
     }
 
     private void DecreaseDurability(float damage)
     {
-
+        if (!isCanDestroy) { return; }
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
 
-        //StartCoroutine(Vibrate(duration: 0.5f, controller: controller));
         Debug.Log(damage);
         currentDurability -= damage;
 
@@ -52,21 +53,28 @@ public class DestroyWall : MonoBehaviour
 
         OVRInput.SetControllerVibration(0, 0, controller);
     }
-
     void DestroyWallObject()
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更
-        //this.gameObject.SetActive(false);
         transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         foreach (Rigidbody item in pieces)
         {
             item.freezeRotation = false;
             item.constraints = FreezeCancellation();
         }
+        naviTextVoiceCtrl.PlayTextVoice(0,7);
+        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
+    //指定の秒数自分を破壊できなくする
+    public IEnumerator bannedDestroy(int bannedTime)
+	{
+        isCanDestroy = false;
+        yield return new WaitForSeconds(bannedTime);
+        isCanDestroy = true;
+	}
     IEnumerator InvokeDestroy(float time)
     {
         yield return new WaitForSeconds(time);
@@ -85,9 +93,5 @@ public class DestroyWall : MonoBehaviour
     void Update()
     {
 
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("当たった");
     }
 }
