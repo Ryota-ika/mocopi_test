@@ -160,5 +160,21 @@ public class NaviTextVoiceCtrl : MonoBehaviour
         {
             text.text = naviTextList[textPatternNum];
         }
+        StartCoroutine( FlowsText(textPatternNum));
+    }
+    private IEnumerator FlowsText(int textPatternNum)
+    {
+        var delay = new WaitForSeconds(0.1f);
+        var length = naviTextList[textPatternNum].Length;
+        //１文字ずつ表示する演出
+        for (var i = 0; i < length; i++)
+        {
+            //徐々に表示文字数を増やしていく
+            text.maxVisibleCharacters = i;
+            //一定時間待機
+            yield return delay;
+        }
+        //演出が終わったら全ての文字を表示する
+        text.maxVisibleCharacters = length;
     }
 }
