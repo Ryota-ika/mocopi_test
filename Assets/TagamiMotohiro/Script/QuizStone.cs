@@ -43,7 +43,7 @@ public class QuizStone : MonoBehaviourPunCallbacks
 	{
         for (int i = 0; i < wall.Length; i++)
 		{
-            wall[i].setIsCanblake(true);
+            wall[i].SetIsCanblake(true);
 		}
 	}
     [PunRPC]

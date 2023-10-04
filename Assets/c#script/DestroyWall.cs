@@ -13,6 +13,7 @@ public class DestroyWall : MonoBehaviour
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
+    [SerializeField]
     bool isCanDestroy=true;
     //public float minRequireForce = 50.0f; //ï«ÇâÛÇ∑ç≈í·å¿ÇÃóÕ
     [SerializeField]
@@ -62,8 +63,8 @@ public class DestroyWall : MonoBehaviour
             item.freezeRotation = false;
             item.constraints = FreezeCancellation();
         }
-        naviTextVoiceCtrl.PlayTextVoice(0,7);
-        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        //naviTextVoiceCtrl.PlayTextVoice(0,7);
+        //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
@@ -74,6 +75,10 @@ public class DestroyWall : MonoBehaviour
         isCanDestroy = false;
         yield return new WaitForSeconds(bannedTime);
         isCanDestroy = true;
+	}
+    public void SetIsCanblake(bool value)
+	{
+        isCanDestroy = value;
 	}
     IEnumerator InvokeDestroy(float time)
     {
