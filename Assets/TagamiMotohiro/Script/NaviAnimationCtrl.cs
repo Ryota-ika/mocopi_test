@@ -19,8 +19,8 @@ public class NaviAnimationCtrl : MonoBehaviour
     {
         Debug.Log("ナビが喜んだ");
     }
-    public void PlayAngryMotion() 
+    public void PlaySadMotion() 
     {
-        Debug.Log("ナビが怒った");
+        Debug.Log("ナビが悲しんだ");
     }
 }

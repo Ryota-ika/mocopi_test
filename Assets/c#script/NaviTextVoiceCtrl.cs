@@ -8,6 +8,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
 {
     [Header("テキスト一覧")]
     [SerializeField]
+    [Multiline]  //改行コード
     List<string> naviTextList=new List<string>();
     [Header("ナビ自身のオーディオソース")]
     [SerializeField]
@@ -43,6 +44,8 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     /*[Header("ひび割れた壁発見")]
     [SerializeField]
     private GameObject crackedWall1;*/
+    [SerializeField]
+    private NaviAnimationCtrl naviAnimationCtrl;
 
     private float targetDistance = 1f;
     private bool hasTalkingTresureChest = false; //宝箱の話をしたかどうかのフラグ
@@ -61,11 +64,13 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //鍵付き宝箱を見つける。
         if (tresureChest != null)
         {
         float distance = Vector3.Distance(transform.position, tresureChest.transform.position);
         if (distance <= targetDistance && !hasTalkingTresureChest)
         {
+            
             PlayTextVoice(0,0);
             //text.text = "宝箱みつけた！\nでも鍵がついてるみたい...\n鍵を探しに行こ！";
             //text.text = naviTextList[0];
@@ -73,11 +78,11 @@ public class NaviTextVoiceCtrl : MonoBehaviour
             hasTalkingTresureChest = true;
         }
         }
-        //鍵付き宝箱を見つける。
         //鍵を発見
         float distance1 = Vector3.Distance(transform.position, key.transform.position);
         if (distance1 <= targetDistance && !hasTalkingKey)
         {
+            naviAnimationCtrl.PlayFunnyMotion();
             PlayTextVoice(0,1);
             //text.text = "あそこに鍵があるね！\nどこの鍵だろう？";
             StartCoroutine(DelateText(5));
@@ -155,5 +160,21 @@ public class NaviTextVoiceCtrl : MonoBehaviour
         {
             text.text = naviTextList[textPatternNum];
         }
+        StartCoroutine( FlowsText(textPatternNum));
+    }
+    private IEnumerator FlowsText(int textPatternNum)
+    {
+        var delay = new WaitForSeconds(0.1f);
+        var length = naviTextList[textPatternNum].Length;
+        //１文字ずつ表示する演出
+        for (var i = 0; i < length; i++)
+        {
+            //徐々に表示文字数を増やしていく
+            text.maxVisibleCharacters = i;
+            //一定時間待機
+            yield return delay;
+        }
+        //演出が終わったら全ての文字を表示する
+        text.maxVisibleCharacters = length;
     }
 }
