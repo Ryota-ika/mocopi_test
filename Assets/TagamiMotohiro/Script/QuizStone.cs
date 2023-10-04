@@ -39,7 +39,13 @@ public class QuizStone : MonoBehaviourPunCallbacks
 			}
 	    }
     }
-
+	public void StartQuiz()
+	{
+        for (int i = 0; i < wall.Length; i++)
+		{
+            wall[i].setIsCanblake(true);
+		}
+	}
     [PunRPC]
 	void CrearObject(int objectNum)
 	{
@@ -57,5 +63,9 @@ public class QuizStone : MonoBehaviourPunCallbacks
 		{
             StartCoroutine(wall[i].bannedDestroy(10));
 		}
+	}
+    public bool isQuizCollected()
+	{
+        return key[collectNum].GetIsCleard();
 	}
 }

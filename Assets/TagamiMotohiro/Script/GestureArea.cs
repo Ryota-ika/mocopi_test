@@ -10,8 +10,11 @@ public class GestureArea : MonoBehaviourPunCallbacks
      MocopiPlayerWork Player;
     [SerializeField]
     float radius;
+    bool collected=false;
     [SerializeField]
     KeyObject keyItem;
+    [SerializeField]
+    QuizStone quizStone;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +24,27 @@ public class GestureArea : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position,Player.transform.position)<radius&&Player.GetIsCanWalk()==true) {
+        //ジェスチャーエリアの範囲内に入ったらプレイヤーを特定の位置に固定して正解するまで動けなくする
+        if (Vector3.Distance(transform.position,Player.transform.position)<radius&&Player.GetIsCanWalk()&&!collected)
+        {
             Player.transform.position = transform.position;
+            photonView.RPC(nameof(StartGestureQuiz),RpcTarget.All);
             Player.SetIsCanWalk(false);
             Debug.Log("ジェスチャー待機状態に入った");
-        }  
+        }
+    }
+    [PunRPC]
+	void StartGestureQuiz()
+	{
+        StartCoroutine(CheckQuizCleard());
+	}
+    IEnumerator CheckQuizCleard()
+	{
+        quizStone.StartQuiz();
+        while (quizStone.isQuizCollected())
+		{
+            yield return null;
+		}
+        Debug.Log("クイズがクリアされた");
     }
 }
