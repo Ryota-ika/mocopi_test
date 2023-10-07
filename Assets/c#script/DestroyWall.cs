@@ -61,6 +61,7 @@ public class DestroyWall : MonoBehaviour
         foreach (Rigidbody item in pieces)
         {
             item.freezeRotation = false;
+            item.isKinematic = false;
             item.constraints = FreezeCancellation();
         }
         //naviTextVoiceCtrl.PlayTextVoice(0,7);

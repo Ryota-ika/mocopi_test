@@ -36,11 +36,8 @@ public class Key : MonoBehaviour
                 pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
                 float delayTime = 3.0f;
-                naviTextVoiceCtrl.PlayTextVoice(0,8);
-                //naviTextVoiceCtrl.text.text = "Ç±ÇÍÇÕâΩÇ©Ç…Ç¬Ç©Ç¶ÇÈÇ©Ç‡ÅI\néùÇ¡ÇƒÇ¢Ç¡Ç∆Ç±ÅI";
-                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); ;
-                //pickUpAndRelease.StartCoroutine(pickUpAndRelease.DelaydMethodCoroutine(delayTime));
-                //Destroy(this.gameObject);
+                //naviTextVoiceCtrl.PlayTextVoice(0,8);
+                //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); 
             }
         }
     }
