@@ -22,14 +22,14 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     {
         if (torch_list[collectNum].GetIsCleard())
 		{
-            photonView.RPC(nameof(Clere),RpcTarget.All);
+            photonView.RPC(nameof(Clear),RpcTarget.All);
 		}else
 		{
             photonView.RPC(nameof(StopPlayer), RpcTarget.All);
 		}
     }
     [PunRPC]
-    void Clere()
+    void Clear()
     {
         foreach (Animator item in openDoor)
 		{
