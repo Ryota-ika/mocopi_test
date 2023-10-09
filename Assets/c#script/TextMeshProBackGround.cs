@@ -29,11 +29,11 @@ public class TextMeshProBackGround : MonoBehaviour
         this.background = new GameObject("background");
         this.background.transform.Rotate(-90, 0, 0);
         this.background.transform.SetParent(this.transform);
-
+        var meshrenderer = background.AddComponent<MeshRenderer>();
         var renderer = this.background.GetComponent<MeshRenderer>();
         if (material != null)
         {
-            renderer.material = material;
+            meshrenderer.material = material;
         }
 
     }
