@@ -104,7 +104,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     IEnumerator GetPlayerAnchar(int playerNum)
     {
         GameObject avatar = Instantiate(avatarList[playerNum-1], Vector3.zero, Quaternion.identity);
-        avatar.layer = layer;
+        avatar.layer = 1;
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Anchar"))
@@ -116,7 +116,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
                 anchar.Add(item.transform);
             }
         }
-        Debug.Log(anchar.Count);
         StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5]));
     }
     IEnumerator StartCaliblation(GameObject avatar,Transform head,Transform body,Transform lefthand,Transform righthand,Transform leftFoot,Transform rightFoot)

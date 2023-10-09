@@ -12,6 +12,11 @@ public class TorchControll : KeyObject
     GameObject[] setActiveObject;
     [SerializeField]
     float colliderRange;
+    bool isCanFire=true;
+    [SerializeField]
+    AudioSource myAS;
+    [SerializeField]
+    AudioClip fireSE;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,7 @@ public class TorchControll : KeyObject
                 item.SetActive(true);
             }
             isCleard = true;
+            myAS.PlayOneShot(fireSE);
             Debug.Log("“_‰Î‚µ‚½");
         }
 	}
@@ -33,4 +39,10 @@ public class TorchControll : KeyObject
     {
         CrearDirection();
     }
+    public IEnumerator BanedTorchFire(float banedTime)
+	{
+        isCanFire = false;
+        yield return new WaitForSeconds(banedTime);
+        isCanFire = true;
+	}
 }

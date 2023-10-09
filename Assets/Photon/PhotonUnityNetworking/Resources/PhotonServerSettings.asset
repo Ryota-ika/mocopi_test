@@ -44,6 +44,7 @@ MonoBehaviour:
   - Clere
   - StartGestureQuiz
   - StartQuiz
+  - Clear
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
