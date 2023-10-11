@@ -18,16 +18,22 @@ public class DestroyWall : MonoBehaviour
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
-
+    [SerializeField]
+    AudioClip damageSE;
+    [SerializeField]
+    AudioClip breakSE;
+    AudioSource myAS;
     // Start is called before the first frame update
     void Start()
     {
+        myAS = GetComponent<AudioSource>();
         currentDurability = maxDurability;  //初期化
     }
 
     public void OnAxeHit(float hitSpeed)
     {
         float damage = hitSpeed;
+        myAS.PlayOneShot(damageSE);
         DecreaseDurability(damage);
     }
 
@@ -58,6 +64,7 @@ public class DestroyWall : MonoBehaviour
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更
         transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        myAS.PlayOneShot(breakSE);
         foreach (Rigidbody item in pieces)
         {
             item.freezeRotation = false;

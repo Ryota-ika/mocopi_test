@@ -36,6 +36,7 @@ public class QuizTorch : MonoBehaviourPunCallbacks
                     isCleard = true;
                 }else if(!isPenaltyTime)
 				{
+                    Debug.Log("不正解(たいまつ)");
                     photonView.RPC(nameof(StopPlayer),RpcTarget.All);
                     isPenaltyTime = true;
 				}
@@ -58,8 +59,10 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     }
     IEnumerator durationPlaySE(float durationTime,AudioClip SE)
 	{
+        //火をつけてしばらくたったらSE再生
         yield return new WaitForSeconds(durationTime);
         myAS.PlayOneShot(SE);
+        //クリアしていたら出口をふさぐ岩を動かす
         if (isCleard)
 		{
             foreach (Animator item in openDoor)
