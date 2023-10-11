@@ -13,19 +13,24 @@ public class DoorControll : MonoBehaviour//êßçÏíSìñÅ@ìcè„
     bool isOpen = false;
     [SerializeField]
     BoxCollider doorColider;
+    AudioSource myAS;
+    [SerializeField]
+    AudioClip doorOpenSE;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (OpenDerection())
+        if (OpenDerection()&& !isOpen)
         {
             animator.SetTrigger("Open");
+            isOpen = true;
             doorColider.enabled = false;
+            myAS.PlayOneShot(doorOpenSE);
         }
     }
     bool OpenDerection()

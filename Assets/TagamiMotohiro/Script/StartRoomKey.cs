@@ -19,8 +19,7 @@ public class StartRoomKey : KeyObject
     }
 	protected override void CrearDirection()
 	{
-        if ((OVRInput.Get(OVRInput.RawButton.RHandTrigger)&&OVRInput.Get(OVRInput.RawButton.LHandTrigger))||
-            Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             isCleard = true;
             player.SetIsCanWalk(true) ;
         }

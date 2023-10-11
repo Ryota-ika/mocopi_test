@@ -9,36 +9,66 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     [SerializeField]
     int collectNum;
     [SerializeField]
-    List<Animator> openDoor; 
+    List<Animator> openDoor;
+    bool isCleard = false;
+    bool isPenaltyTime = false;
+    [SerializeField]
+    AudioClip collectVoice;
+    [SerializeField]
+    AudioClip unCollectVoice;
+    AudioSource myAS;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (torch_list[collectNum].GetIsCleard())
-		{
-            photonView.RPC(nameof(Clere),RpcTarget.All);
-		}else
-		{
-            photonView.RPC(nameof(StopPlayer), RpcTarget.All);
-		}
+        for(int i=0; i<torch_list.Count; i++) {
+            if (torch_list[i].GetIsCleard())
+            {
+                if (i == collectNum&&!isCleard)
+                {
+                    photonView.RPC(nameof(Clear), RpcTarget.All);
+                    isCleard = true;
+                }else if(!isPenaltyTime)
+				{
+                    Debug.Log("不正解(たいまつ)");
+                    photonView.RPC(nameof(StopPlayer),RpcTarget.All);
+                    isPenaltyTime = true;
+				}
+            }
+        }
     }
     [PunRPC]
-    void Clere()
+    void Clear()
     {
-        foreach (Animator item in openDoor)
-		{
-            item.SetTrigger("Rock_move");
-		}
+        StartCoroutine(durationPlaySE(2,collectVoice));
     }
     [PunRPC]
     void StopPlayer()
     {
-
+        StartCoroutine(durationPlaySE(2,unCollectVoice));
+        foreach (TorchControll torch in torch_list)
+		{
+            StartCoroutine(torch.BanedTorchFire(10f));
+		}
     }
+    IEnumerator durationPlaySE(float durationTime,AudioClip SE)
+	{
+        //火をつけてしばらくたったらSE再生
+        yield return new WaitForSeconds(durationTime);
+        myAS.PlayOneShot(SE);
+        //クリアしていたら出口をふさぐ岩を動かす
+        if (isCleard)
+		{
+            foreach (Animator item in openDoor)
+		    {
+                item.SetTrigger("Rock_move");
+		    }
+		}
+	}
 }

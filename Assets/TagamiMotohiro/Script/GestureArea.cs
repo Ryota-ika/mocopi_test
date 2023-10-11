@@ -46,5 +46,6 @@ public class GestureArea : MonoBehaviourPunCallbacks
             yield return null;
 		}
         Debug.Log("クイズがクリアされた");
+        collected = true;
     }
 }

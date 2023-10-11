@@ -13,20 +13,27 @@ public class DestroyWall : MonoBehaviour
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     private OVRInput.Controller controller;
+    [SerializeField]
     bool isCanDestroy=true;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
-
+    [SerializeField]
+    AudioClip damageSE;
+    [SerializeField]
+    AudioClip breakSE;
+    AudioSource myAS;
     // Start is called before the first frame update
     void Start()
     {
+        myAS = GetComponent<AudioSource>();
         currentDurability = maxDurability;  //初期化
     }
 
     public void OnAxeHit(float hitSpeed)
     {
         float damage = hitSpeed;
+        myAS.PlayOneShot(damageSE);
         DecreaseDurability(damage);
     }
 
@@ -57,13 +64,15 @@ public class DestroyWall : MonoBehaviour
     {
         //壁を壊す処理（アニメーションの再生やモデルの変更
         transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        myAS.PlayOneShot(breakSE);
         foreach (Rigidbody item in pieces)
         {
             item.freezeRotation = false;
+            item.isKinematic = false;
             item.constraints = FreezeCancellation();
         }
-        naviTextVoiceCtrl.PlayTextVoice(7,7);
-        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        //naviTextVoiceCtrl.PlayTextVoice(0,7);
+        //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
@@ -74,6 +83,10 @@ public class DestroyWall : MonoBehaviour
         isCanDestroy = false;
         yield return new WaitForSeconds(bannedTime);
         isCanDestroy = true;
+	}
+    public void SetIsCanblake(bool value)
+	{
+        isCanDestroy = value;
 	}
     IEnumerator InvokeDestroy(float time)
     {
