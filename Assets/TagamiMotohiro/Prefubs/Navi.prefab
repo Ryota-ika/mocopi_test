@@ -1837,8 +1837,8 @@ GameObject:
   - component: {fileID: 2881371432691399828}
   - component: {fileID: 2339067433160048127}
   - component: {fileID: 2339067433160048124}
-  - component: {fileID: 2339067433160048125}
   - component: {fileID: 2339067433160048114}
+  - component: {fileID: 2468027533897117059}
   m_Layer: 0
   m_Name: Navi
   m_TagString: Untagged
@@ -2016,20 +2016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb7a982b4fd4db409e2e53afac1906e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2339067433160048125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3222150306724259374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086be6933aa4e1f43b74560865017b3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  naviAS: {fileID: 2339067433160048127}
-  voiceList: []
 --- !u!114 &2339067433160048114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,7 +2029,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 0}
+  naviPos: {fileID: 0}
   smoothTime: 0.5
+  rotateTime: 0
+--- !u!114 &2468027533897117059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222150306724259374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a295e3fcdeb899419c678a0cee2238c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naviTextList: []
+  naviAS: {fileID: 0}
+  voiceList: []
+  text: {fileID: 0}
+  textObject: {fileID: 0}
+  tresureChest: {fileID: 0}
+  key: {fileID: 0}
+  torch: {fileID: 0}
+  candlestick: {fileID: 0}
+  cave: {fileID: 0}
+  crackedWall: {fileID: 0}
+  gestureDiscovery: {fileID: 0}
+  naviAnimationCtrl: {fileID: 0}
 --- !u!1 &3353692336069600157
 GameObject:
   m_ObjectHideFlags: 0
