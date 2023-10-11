@@ -60,7 +60,7 @@ public class QuizStone : MonoBehaviourPunCallbacks
     [PunRPC]
 	void StopPlayer()
 	{
-        myAS.PlayOneShot(incollectSE);
+        //myAS.PlayOneShot(incollectSE);
         key[objectNum].SetIsCleard();
         Debug.Log("不正解オブジェクトがインタラクトされた");
         for (int i=0;i<wall.Length;i++)
