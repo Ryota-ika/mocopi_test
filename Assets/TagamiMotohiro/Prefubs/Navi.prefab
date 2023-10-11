@@ -1838,7 +1838,10 @@ GameObject:
   - component: {fileID: 2339067433160048127}
   - component: {fileID: 2339067433160048124}
   - component: {fileID: 2339067433160048114}
-  - component: {fileID: 2468027533897117059}
+  - component: {fileID: 1454932036}
+  - component: {fileID: 1454932035}
+  - component: {fileID: 1454932034}
+  - component: {fileID: 1454932033}
   m_Layer: 0
   m_Name: Navi
   m_TagString: Untagged
@@ -1853,10 +1856,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3222150306724259374}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 66.4}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2678395390526273267}
   - {fileID: 1187137784292130486}
@@ -1928,7 +1931,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9380615
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -2031,8 +2034,57 @@ MonoBehaviour:
   targetPlayer: {fileID: 0}
   naviPos: {fileID: 0}
   smoothTime: 0.5
-  rotateTime: 0
---- !u!114 &2468027533897117059
+  rotateTime: 1
+--- !u!54 &1454932036
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222150306724259374}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 2
+--- !u!65 &1454932035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222150306724259374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &1454932034
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222150306724259374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 896d1c45dbc8fb4469804734f23558ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1454932033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2044,9 +2096,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a295e3fcdeb899419c678a0cee2238c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  naviTextList: []
-  naviAS: {fileID: 0}
-  voiceList: []
+  naviTextList:
+  - "\u5B9D\u7BB1\u307F\u3064\u3051\u305F\uFF01\n\u3067\u3082\u9375\u304C\u3064\u3044\u3066\u308B\u307F\u305F\u3044...\n\u9375\u3092\u63A2\u3057\u306B\u884C\u3053\uFF01"
+  - "\u3042\u305D\u3053\u306B\u9375\u304C\u3042\u308B\u306D\uFF01\n\u3069\u3053\u306E\u9375\u3060\u308D\u3046\uFF1F"
+  - "\u3053\u306E\u677E\u660E\u4F55\u304B\u306B\u4F7F\u3048\u308B\u304B\u3082\uFF01\n\u6301\u3063\u3066\u3044\u3063\u3068\u3053\uFF01"
+  - "\u677E\u660E\u3092\u4F7F\u3048\u3070\u71ED\u53F0\u306B\u706B\u3092\u4ED8\u3051\u308C\u305D\u3046\uFF01"
+  - "\u6D1E\u7A9F\u306E\u4E2D\u3060\u304B\u3089\u771F\u3063\u6697\u3060\u306D\uFF5E\n\u677E\u660E\u306E\u660E\u304B\u308A\u3092\u983C\u308A\u306B\u9032\u3082\u3046\uFF01"
+  - "\u3053\u306E\u58C1\u4F55\u304B\u3067\u58CA\u305B\u306A\u3044\u304B\u306A\uFF1F\n\u8FBA\u308A\u3092\u63A2\u3057\u3066\u307F\u3088\u3046\uFF01"
+  - "\u30B8\u30A7\u30B9\u30C1\u30E3\u30FC\u306B\u6B63\u89E3\u3057\u306A\u3044\u3068\u5148\u306B\u9032\u3081\u306A\u3044\u307F\u305F\u3044\u30FB\u30FB\u30FB"
+  - "\u3088\u3057\uFF01\n\u3053\u308C\u3067\u5148\u306B\u9032\u3081\u305D\u3046\uFF01"
+  - "\u3053\u308C\u306F\u4F55\u304B\u306B\u3064\u304B\u3048\u308B\u304B\u3082\uFF01\n\u6301\u3063\u3066\u3044\u3063\u3068\u3053\uFF01"
+  naviAS: {fileID: 2339067433160048127}
+  voiceList:
+  - {fileID: 8300000, guid: a6386f1e3e99ef74d9cdcb488f0318fe, type: 3}
+  - {fileID: 8300000, guid: eaf73cea39f558740adf4f86efee234d, type: 3}
+  - {fileID: 8300000, guid: eb640ba58c6e33345abbc38439fb81a1, type: 3}
+  - {fileID: 8300000, guid: f8b726636be107542aea8c5658e07030, type: 3}
+  - {fileID: 8300000, guid: 41b57b7cf01467545bd5dffad733bbc4, type: 3}
+  - {fileID: 8300000, guid: 41b57b7cf01467545bd5dffad733bbc4, type: 3}
+  - {fileID: 8300000, guid: e8164cc7520df6e40b9ad211b3a39f61, type: 3}
+  - {fileID: 8300000, guid: e8164cc7520df6e40b9ad211b3a39f61, type: 3}
+  - {fileID: 8300000, guid: 09e28bda19f6b6b4b9257d14d5edfb4c, type: 3}
   text: {fileID: 0}
   textObject: {fileID: 0}
   tresureChest: {fileID: 0}
@@ -2056,7 +2126,7 @@ MonoBehaviour:
   cave: {fileID: 0}
   crackedWall: {fileID: 0}
   gestureDiscovery: {fileID: 0}
-  naviAnimationCtrl: {fileID: 0}
+  naviAnimationCtrl: {fileID: 2339067433160048124}
 --- !u!1 &3353692336069600157
 GameObject:
   m_ObjectHideFlags: 0
