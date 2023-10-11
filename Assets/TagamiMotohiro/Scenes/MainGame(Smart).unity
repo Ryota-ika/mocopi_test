@@ -39487,11 +39487,15 @@ MonoBehaviour:
   - "\u3053\u308C\u306F\u4F55\u304B\u306B\u3064\u304B\u3048\u308B\u304B\u3082\uFF01\n\u6301\u3063\u3066\u3044\u3063\u3068\u3053\uFF01"
   naviAS: {fileID: 1454932038}
   voiceList:
-  - {fileID: 8300000, guid: ce2d69f75c5426647b24bc98b1ab3bad, type: 3}
-  - {fileID: 8300000, guid: f05123de270b0ff4cbaa5b336e565333, type: 3}
-  - {fileID: 8300000, guid: cb2997ecb8fa7174189a2d9ff7bebb81, type: 3}
-  - {fileID: 8300000, guid: a6dabdaa1463ad849923ec08ebd2d7ef, type: 3}
-  - {fileID: 8300000, guid: a1a81d5181a50d84f8e544ba88828591, type: 3}
+  - {fileID: 8300000, guid: a6386f1e3e99ef74d9cdcb488f0318fe, type: 3}
+  - {fileID: 8300000, guid: 09e28bda19f6b6b4b9257d14d5edfb4c, type: 3}
+  - {fileID: 8300000, guid: eb640ba58c6e33345abbc38439fb81a1, type: 3}
+  - {fileID: 8300000, guid: f8b726636be107542aea8c5658e07030, type: 3}
+  - {fileID: 8300000, guid: 41b57b7cf01467545bd5dffad733bbc4, type: 3}
+  - {fileID: 8300000, guid: 41b57b7cf01467545bd5dffad733bbc4, type: 3}
+  - {fileID: 8300000, guid: e8164cc7520df6e40b9ad211b3a39f61, type: 3}
+  - {fileID: 8300000, guid: e8164cc7520df6e40b9ad211b3a39f61, type: 3}
+  - {fileID: 8300000, guid: eaf73cea39f558740adf4f86efee234d, type: 3}
   text: {fileID: 1257135278}
   textObject: {fileID: 1724603616}
   tresureChest: {fileID: 1707742448}

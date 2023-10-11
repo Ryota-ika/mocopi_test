@@ -110,7 +110,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
         float distance4 = Vector3.Distance(transform.position, cave.transform.position);
         if (distance4 <= targetDistance && !hasTalkingCave)
         {
-            PlayTextVoice(0, 4);
+            PlayTextVoice(4, 4);
             //text.text = "“´ŒA‚Ì’†‚¾‚©‚ç^‚ÁˆÃ‚¾‚Ë`\n¼–¾‚Ì–¾‚©‚è‚ð—Š‚è‚Éi‚à‚¤I";
             StartCoroutine(DelateText(5));
             hasTalkingCave = true;
@@ -121,7 +121,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
             float distance5 = Vector3.Distance(transform.position, crackedWall.transform.position);
             if (distance5 <= targetDistance && !hasTalkingCrackedWall)
             {
-                PlayTextVoice(0, 5);
+                PlayTextVoice(5, 5);
                 //text.text = "‚±‚Ì•Ç‰½‚©‚Å‰ó‚¹‚È‚¢‚©‚ÈH•Ó‚è‚ð’T‚µ‚Ä‚Ý‚æ‚¤I";
                 StartCoroutine(DelateText(5));
                 hasTalkingCrackedWall = true;
