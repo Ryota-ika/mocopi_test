@@ -9,7 +9,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     [Header("テキスト一覧")]
     [SerializeField]
     [Multiline]  //改行コード
-    List<string> naviTextList=new List<string>();
+    List<string> naviTextList = new List<string>();
     [Header("ナビ自身のオーディオソース")]
     [SerializeField]
     AudioSource naviAS;
@@ -67,32 +67,32 @@ public class NaviTextVoiceCtrl : MonoBehaviour
         //鍵付き宝箱を見つける。
         if (tresureChest != null)
         {
-        float distance = Vector3.Distance(transform.position, tresureChest.transform.position);
-        if (distance <= targetDistance && !hasTalkingTresureChest)
-        {
-            
-            PlayTextVoice(0,0);
-            //text.text = "宝箱みつけた！\nでも鍵がついてるみたい...\n鍵を探しに行こ！";
-            //text.text = naviTextList[0];
-            StartCoroutine(DelateText(5));
-            hasTalkingTresureChest = true;
-        }
+            float distance = Vector3.Distance(transform.position, tresureChest.transform.position);
+            if (distance <= targetDistance && !hasTalkingTresureChest)
+            {
+
+                PlayTextVoice(0, 0);
+                //text.text = "宝箱みつけた！\nでも鍵がついてるみたい...\n鍵を探しに行こ！";
+                //text.text = naviTextList[0];
+                StartCoroutine(DelateText(5));
+                hasTalkingTresureChest = true;
+            }
         }
         //鍵を発見
         float distance1 = Vector3.Distance(transform.position, key.transform.position);
         if (distance1 <= targetDistance && !hasTalkingKey)
         {
             naviAnimationCtrl.PlayFunnyMotion();
-            PlayTextVoice(0,1);
+            PlayTextVoice(1, 1);
             //text.text = "あそこに鍵があるね！\nどこの鍵だろう？";
             StartCoroutine(DelateText(5));
             hasTalkingKey = true;
         }
         //松明発見
-        float distance2 = Vector3.Distance(transform.position,torch.transform.position);
-        if(distance2 <= targetDistance && !hasTalkingTorch)
+        float distance2 = Vector3.Distance(transform.position, torch.transform.position);
+        if (distance2 <= targetDistance && !hasTalkingTorch)
         {
-            PlayTextVoice(0,2);
+            PlayTextVoice(2, 2);
             //text.text = "この松明何かに使えるかも！\n持っていっとこ！";
             StartCoroutine(DelateText(5));
             hasTalkingTorch = true;
@@ -101,7 +101,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
         float distance3 = Vector3.Distance(transform.position, candlestick.transform.position);
         if (distance3 <= targetDistance && !hasTalkingCandlestick)
         {
-            PlayTextVoice(0,3);
+            PlayTextVoice(3, 3);
             //text.text = "松明を使えば燭台に火を付けれそう！";
             StartCoroutine(DelateText(5));
             hasTalkingCandlestick = true;
@@ -110,21 +110,25 @@ public class NaviTextVoiceCtrl : MonoBehaviour
         float distance4 = Vector3.Distance(transform.position, cave.transform.position);
         if (distance4 <= targetDistance && !hasTalkingCave)
         {
-            PlayTextVoice(0,4);
+            PlayTextVoice(4, 4);
             //text.text = "洞窟の中だから真っ暗だね～\n松明の明かりを頼りに進もう！";
             StartCoroutine(DelateText(5));
             hasTalkingCave = true;
         }
         //ひび割れた壁発見
-        float distance5 = Vector3.Distance(transform.position, crackedWall.transform.position);
-        if (distance5 <= targetDistance && !hasTalkingCrackedWall)
+        if (crackedWall != null)
         {
-            PlayTextVoice(0,5);
-            //text.text = "この壁何かで壊せないかな？辺りを探してみよう！";
-            StartCoroutine(DelateText(5));
-            hasTalkingCrackedWall = true;
+            float distance5 = Vector3.Distance(transform.position, crackedWall.transform.position);
+            if (distance5 <= targetDistance && !hasTalkingCrackedWall)
+            {
+                PlayTextVoice(5, 5);
+                //text.text = "この壁何かで壊せないかな？辺りを探してみよう！";
+                StartCoroutine(DelateText(5));
+                hasTalkingCrackedWall = true;
+            }
         }
-        //ジェスチャー発見
+
+        /*//ジェスチャー発見
         float distance6 = Vector3.Distance(transform.position, gestureDiscovery.transform.position);
         if (distance6 <= targetDistance && !hasTalkingGestureDiscovery)
         {
@@ -141,7 +145,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
             //text.text = "よし！これで先に進めそう！";
             StartCoroutine(DelateText(5));
             hasTalkingGestureDiscovery = true;
-        }
+        }*/
 
     }
 
@@ -154,13 +158,13 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     }
     public void PlayTextVoice(int voicePatternNum, int textPatternNum)//ボイスパターン一覧の中からボイスを取得して再生
     {
-        //naviAS.PlayOneShot(voiceList[voicePatternNum]);
+        naviAS.PlayOneShot(voiceList[voicePatternNum]);
         Debug.Log(voicePatternNum.ToString() + "番のボイスを再生した");
         for (int i = 0; i < naviTextList.Count; i++)
         {
             text.text = naviTextList[textPatternNum];
         }
-        StartCoroutine( FlowsText(textPatternNum));
+        StartCoroutine(FlowsText(textPatternNum));
     }
     private IEnumerator FlowsText(int textPatternNum)
     {
