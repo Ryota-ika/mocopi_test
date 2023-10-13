@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2482155407028086948}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000004371139}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 15.848274, y: 0, z: 14.279261}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 2482155407028450458}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &2482155407035341684
 Animator:
   serializedVersion: 4
@@ -233,7 +233,10 @@ MonoBehaviour:
   openAngle: 90
   openTime: 2
   chestHinge: {fileID: 2482155407028086966}
-  Animated_Chest_01: {fileID: 0}
+  Animated_Chest_01: {fileID: 2482155407028086948}
+  navi: {fileID: 0}
+  naviTextVoiceCtrl: {fileID: 0}
+  targetDistance: 1
 --- !u!82 &8059603777111070969
 AudioSource:
   m_ObjectHideFlags: 0

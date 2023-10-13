@@ -64,7 +64,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //鍵付き宝箱を見つける。
+        /*//鍵付き宝箱を見つける。
         if (tresureChest != null)
         {
             float distance = Vector3.Distance(transform.position, tresureChest.transform.position);
@@ -126,7 +126,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
                 StartCoroutine(DelateText(5));
                 hasTalkingCrackedWall = true;
             }
-        }
+        }*/
 
         /*//ジェスチャー発見
         float distance6 = Vector3.Distance(transform.position, gestureDiscovery.transform.position);

@@ -12,12 +12,14 @@ public class DestroyWall : MonoBehaviour
     private float currentDurability;Å@Å@//åªç›ÇÃëœãvìx
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
-    private OVRInput.Controller controller;
     [SerializeField]
     bool isCanDestroy=true;
     //public float minRequireForce = 50.0f; //ï«ÇâÛÇ∑ç≈í·å¿ÇÃóÕ
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
+    [SerializeField]
+    private float targetDistance = 5f;
+    private bool hasTalkingCrackedWall = false;
     [SerializeField]
     AudioClip damageSE;
     [SerializeField]
@@ -105,6 +107,12 @@ public class DestroyWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float distance = Vector3.Distance(transform.position,naviTextVoiceCtrl.transform.position);
+        if (distance <= targetDistance && !hasTalkingCrackedWall)
+        {
+            naviTextVoiceCtrl.PlayTextVoice(5,5);
+            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+            hasTalkingCrackedWall = true;
+        }
     }
 }

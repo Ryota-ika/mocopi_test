@@ -13,8 +13,11 @@ public class Key : MonoBehaviour
     private PickUpAndRelease pickUpAndRelease;
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
-
+    [SerializeField]
+    private float targetDistace = 1f;
     private bool isNearTreasureChest = false;
+
+    private bool hasTalkingKey = false; //Œ®‚Ì˜b‚ð‚µ‚½‚©‚Ç‚¤‚©‚Ìƒtƒ‰ƒO
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,14 @@ public class Key : MonoBehaviour
                 //naviTextVoiceCtrl.PlayTextVoice(0,8);
                 //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); 
             }
+        }
+        //Œ®”­Œ©
+        float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+        if (distance <= targetDistace && !hasTalkingKey)
+        {
+            naviTextVoiceCtrl.PlayTextVoice(1, 1);
+            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+            hasTalkingKey = true;
         }
     }
 }
