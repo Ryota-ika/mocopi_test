@@ -1,4 +1,4 @@
-//９月１日　髙橋涼太
+//2023.10.13　髙橋涼太
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ public class DestroyWall : MonoBehaviour
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
     [SerializeField]
     private float targetDistance = 5f;
-    private bool hasTalkingCrackedWall = false;
+    private bool hasTalkingCrackedWall = false;//ひび割れた壁の話をしたかどうかのフラグ
     [SerializeField]
     AudioClip damageSE;
     [SerializeField]
@@ -73,7 +73,7 @@ public class DestroyWall : MonoBehaviour
             item.isKinematic = false;
             item.constraints = FreezeCancellation();
         }
-        //naviTextVoiceCtrl.PlayTextVoice(0,7);
+        //naviTextVoiceCtrl.PlayTextVoice(7,7);
         //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);

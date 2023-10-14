@@ -1,4 +1,4 @@
-//2023.9.27@‚‹´—Á‘¾
+//2023.10.13@‚‹´—Á‘¾
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
