@@ -13,9 +13,9 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     bool isCleard = false;
     bool isPenaltyTime = false;
     [SerializeField]
-    AudioClip collectVoice;
+    AudioClip collectSE;
     [SerializeField]
-    AudioClip unCollectVoice;
+    AudioClip unCollectSE;
     AudioSource myAS;
     
     // Start is called before the first frame update
@@ -46,12 +46,12 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     [PunRPC]
     void Clear()
     {
-        StartCoroutine(durationPlaySE(2,collectVoice));
+        StartCoroutine(durationPlaySE(2,collectSE));
     }
     [PunRPC]
     void StopPlayer()
     {
-        StartCoroutine(durationPlaySE(2,unCollectVoice));
+        StartCoroutine(durationPlaySE(2,unCollectSE));
         foreach (TorchControll torch in torch_list)
 		{
             StartCoroutine(torch.BanedTorchFire(10f));
