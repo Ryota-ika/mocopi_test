@@ -1,4 +1,4 @@
-//９月１日　髙橋涼太
+//2023.10.13　髙橋涼太
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,12 +12,14 @@ public class DestroyWall : MonoBehaviour
     private float currentDurability;　　//現在の耐久度
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
-    private OVRInput.Controller controller;
     [SerializeField]
     bool isCanDestroy=true;
     //public float minRequireForce = 50.0f; //壁を壊す最低限の力
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
+    [SerializeField]
+    private float targetDistance = 5f;
+    private bool hasTalkingCrackedWall = false;//ひび割れた壁の話をしたかどうかのフラグ
     [SerializeField]
     AudioClip damageSE;
     [SerializeField]
@@ -71,8 +73,8 @@ public class DestroyWall : MonoBehaviour
             item.isKinematic = false;
             item.constraints = FreezeCancellation();
         }
-        //naviTextVoiceCtrl.PlayTextVoice(0,7);
-        //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        naviTextVoiceCtrl.PlayTextVoice(7,7);
+        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
@@ -105,6 +107,12 @@ public class DestroyWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float distance = Vector3.Distance(transform.position,naviTextVoiceCtrl.transform.position);
+        if (distance <= targetDistance && !hasTalkingCrackedWall)
+        {
+            naviTextVoiceCtrl.PlayTextVoice(5,5);
+            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+            hasTalkingCrackedWall = true;
+        }
     }
 }

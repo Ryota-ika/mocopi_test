@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class TresureChest : MonoBehaviour
 {
-    [SerializeField] private
+    [SerializeField]
+    private
     float openAngle = 90f; //•ó” ‚ÌŠW‚ðŠJ‚­Šp“x
-    [SerializeField] private
+    [SerializeField]
+    private
     float openTime = 2f;
 
     private Quaternion initialRotation;
@@ -17,6 +19,13 @@ public class TresureChest : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private GameObject Animated_Chest_01;
+
+    [SerializeField]
+    private NaviTextVoiceCtrl naviTextVoiceCtrl;
+    private bool hasTalkingTresureChst = false;
+    [SerializeField]
+    private float targetDistance = 1f;
+
     // Start is called before the first frame update
 
     private void Start()
@@ -39,5 +48,20 @@ public class TresureChest : MonoBehaviour
         float delayTime = 3.0f;
         StartCoroutine(DelaydMethodCoroutine(delayTime));
         GetComponent<AudioSource>().Play();
+    }
+    private void Update()
+    {
+        if (Animated_Chest_01 != null)
+        {
+            float distace = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+            if (distace <= targetDistance && !hasTalkingTresureChst)
+            {
+                naviTextVoiceCtrl.PlayTextVoice(0, 0);
+                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+                hasTalkingTresureChst = true;
+            }
+        }
+            
+
     }
 }
