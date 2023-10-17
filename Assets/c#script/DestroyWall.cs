@@ -25,6 +25,8 @@ public class DestroyWall : MonoBehaviour
     [SerializeField]
     AudioClip breakSE;
     AudioSource myAS;
+    [SerializeField]
+    private MocopiPlayerWork mocopiPlayerWork;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,8 +75,12 @@ public class DestroyWall : MonoBehaviour
             item.isKinematic = false;
             item.constraints = FreezeCancellation();
         }
-        naviTextVoiceCtrl.PlayTextVoice(7,7);
-        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        if (!mocopiPlayerWork.GetIsCanWalk())
+        {
+            naviTextVoiceCtrl.PlayTextVoice(7,7);
+            naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+
+        }
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);

@@ -2756,6 +2756,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: mocopiPlayerWork
+      value: 
+      objectReference: {fileID: 1791971356}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: naviTextVoiceCtrl
       value: 
       objectReference: {fileID: 1454932033}
@@ -4131,6 +4135,7 @@ MonoBehaviour:
   targetDistance: 5
   damageSE: {fileID: 0}
   breakSE: {fileID: 0}
+  mocopiPlayerWork: {fileID: 0}
 --- !u!4 &135428034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7509113746887659639, guid: 4f5679062df37624093e32781f8d3372,
@@ -16059,6 +16064,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: mocopiPlayerWork
+      value: 
+      objectReference: {fileID: 1791971356}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: naviTextVoiceCtrl
       value: 
       objectReference: {fileID: 1454932033}
@@ -20205,7 +20214,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29512
+  m_Name: pb_Mesh29544
   serializedVersion: 10
   m_SubMeshes: []
   m_Shapes:
@@ -23499,6 +23508,10 @@ PrefabInstance:
       propertyPath: maxDurability
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: mocopiPlayerWork
+      value: 
+      objectReference: {fileID: 1791971356}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: naviTextVoiceCtrl
       value: 
@@ -31055,6 +31068,10 @@ PrefabInstance:
       propertyPath: maxDurability
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: mocopiPlayerWork
+      value: 
+      objectReference: {fileID: 1791971356}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: naviTextVoiceCtrl
       value: 
@@ -42266,6 +42283,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: mocopiPlayerWork
+      value: 
+      objectReference: {fileID: 1791971356}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: naviTextVoiceCtrl
       value: 
       objectReference: {fileID: 1454932033}
@@ -42603,7 +42624,7 @@ PrefabInstance:
         type: 3}
       propertyPath: treasureChest
       value: 
-      objectReference: {fileID: 1986245529}
+      objectReference: {fileID: 1290177250}
     - target: {fileID: 98443710550364484, guid: 9d5ff63906a62634c9e103d5352e57f5,
         type: 3}
       propertyPath: pickUpAndRelease
@@ -42677,7 +42698,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28550
+  m_Name: pb_Mesh28568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58728,12 +58749,12 @@ PrefabInstance:
     - target: {fileID: 6106747860753617473, guid: a20452c3af566e542aa85afe77c22b46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 145.28
+      value: 150.54
       objectReference: {fileID: 0}
     - target: {fileID: 6106747860753617473, guid: a20452c3af566e542aa85afe77c22b46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.73
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 6106747860753617473, guid: a20452c3af566e542aa85afe77c22b46,
         type: 3}
