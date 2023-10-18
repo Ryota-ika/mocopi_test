@@ -72,10 +72,11 @@ public class DestroyWall : MonoBehaviour
             item.freezeRotation = false;
             item.isKinematic = false;
             item.constraints = FreezeCancellation();
-        }
+        } 
+        StartCoroutine(InvokeDestroy(3));
+        if (naviTextVoiceCtrl == null) { return; }
         naviTextVoiceCtrl.PlayTextVoice(7,7);
         naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-        StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
@@ -107,12 +108,14 @@ public class DestroyWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (naviTextVoiceCtrl == null) { return; }
         float distance = Vector3.Distance(transform.position,naviTextVoiceCtrl.transform.position);
         if (distance <= targetDistance && !hasTalkingCrackedWall)
         {
+            hasTalkingCrackedWall = true;
             naviTextVoiceCtrl.PlayTextVoice(5,5);
             StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            hasTalkingCrackedWall = true;
+            
         }
     }
 }

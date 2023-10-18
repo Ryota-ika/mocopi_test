@@ -16,7 +16,7 @@ public class QuizStone : MonoBehaviourPunCallbacks
     [SerializeField]
     AudioClip incollectSE;
     AudioSource myAS;
-    int objectNum=0;
+    int objectNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +33,13 @@ public class QuizStone : MonoBehaviourPunCallbacks
 			{
                 key[i].SetIsCleard();
                 objectNum = i;
-                photonView.RPC(nameof(CrearObject),RpcTarget.All);
+                photonView.RPC(nameof(CrearObject),RpcTarget.All,i);
 			}
             else
 			{
                 Debug.Log("不正解(岩)");
                 objectNum = i;
-                photonView.RPC(nameof(StopPlayer),RpcTarget.All);
+                photonView.RPC(nameof(StopPlayer),RpcTarget.All,i);
 			}
 	    }
     }
@@ -51,14 +51,14 @@ public class QuizStone : MonoBehaviourPunCallbacks
 		}
 	}
     [PunRPC]
-	void CrearObject()
+	void CrearObject(int objectNum)
 	{
         myAS.PlayOneShot(collectSE);
         Debug.Log("正解オブジェクトがインタラクトされた");
         key[objectNum].SetIsCleard();
 	}
     [PunRPC]
-	void StopPlayer()
+	void StopPlayer(int objectNun)
 	{
         //myAS.PlayOneShot(incollectSE);
         key[objectNum].SetIsCleard();

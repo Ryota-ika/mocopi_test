@@ -45,4 +45,8 @@ public class TorchControll : KeyObject
         yield return new WaitForSeconds(banedTime);
         isCanFire = true;
 	}
+    public void setIsCanFire(bool value)
+	{
+        isCanFire = value;
+	}
 }

@@ -19,7 +19,14 @@ public class DebugUse_PlayerCtrl : MonoBehaviour
         Move();
     }
     //[Conditional("UNITY_EDITOR")]
-    void Move() {
-        transform.position += new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime, 0f, Input.GetAxis("Vertical") * Time.deltaTime) * speed;
+    void Move()
+    {
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        Vector3 cameraFowerd = Camera.main.transform.forward;
+        Vector3 cameraRight = Camera.main.transform.right;
+        cameraFowerd.y = 0; // yŽ²‚ÌˆÚ“®‚Í–³Ž‹
+        cameraRight.y = 0;
+        Vector3 moveVec = (cameraFowerd * movement.z + cameraRight * movement.x);
+        transform.position += moveVec;
     }
 }

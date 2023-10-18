@@ -11,10 +11,11 @@ public class GestureArea : MonoBehaviourPunCallbacks
     [SerializeField]
     float radius;
     bool collected=false;
-    [SerializeField]
-    KeyObject keyItem;
+
     [SerializeField]
     QuizStone quizStone;
+    [SerializeField]
+    QuizTorch quizTorch;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,12 +39,24 @@ public class GestureArea : MonoBehaviourPunCallbacks
 	{
         StartCoroutine(CheckQuizCleard());
 	}
+    //対応するクイズ用のスクリプトがクリア状態になっているか監視
     IEnumerator CheckQuizCleard()
 	{
-        quizStone.StartQuiz();
-        while (quizStone.isQuizCollected())
+        if (quizStone != null)
+        {
+            quizStone.StartQuiz();
+            while (quizStone.isQuizCollected())
+            {
+                yield return null;
+            }
+        }
+        if (quizTorch != null)
 		{
-            yield return null;
+            quizTorch.StartQuiz();
+            while (quizTorch.getIsCleard())
+			{
+                yield return null;
+			}
 		}
         Debug.Log("クイズがクリアされた");
         collected = true;

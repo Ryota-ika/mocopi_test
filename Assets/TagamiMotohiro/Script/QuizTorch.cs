@@ -4,8 +4,11 @@ using UnityEngine;
 using Photon.Pun;
 public class QuizTorch : MonoBehaviourPunCallbacks
 {
+    //田上　エリア２のたいまつを使う問題のスクリプト
+    //note
+    //QuizStoneとQuizTorchはいずれ統合させたい
     [SerializeField]
-    List<KeyObject> torch_list;
+    List<TorchControll> torch_list;
     [SerializeField]
     int collectNum;
     [SerializeField]
@@ -71,4 +74,15 @@ public class QuizTorch : MonoBehaviourPunCallbacks
 		    }
 		}
 	}
+    public bool getIsCleard()
+	{
+        return isCleard;
+	}
+    public void StartQuiz()
+    {
+        for (int i = 0; i < torch_list.Count; i++)
+        {
+            torch_list[i].setIsCanFire(true);
+        }
+    }
 }

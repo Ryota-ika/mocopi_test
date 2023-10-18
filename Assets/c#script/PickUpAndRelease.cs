@@ -112,7 +112,7 @@ public class PickUpAndRelease : MonoBehaviour
                     grabbedObject = leftHit.collider.gameObject;
                     grabbedObject.transform.SetParent(leftHandAnchor.transform, true);
                     grabbedObject.transform.localPosition = Vector3.zero;
-                    grabbedObject.transform.localRotation = Quaternion.identity;
+                    grabbedObject.transform.localRotation = Quaternion.identity*Quaternion.AngleAxis(90f,transform.up);
 
                 }
                 else if (rightRayHit && rightHit.collider.tag == "Axe" && rightTriggerPressed)
@@ -120,7 +120,8 @@ public class PickUpAndRelease : MonoBehaviour
                     grabbedObject = rightHit.collider.gameObject;
                     grabbedObject.transform.SetParent(rightHandAnchor.transform, true);
                     grabbedObject.transform.localPosition = Vector3.zero;
-                    grabbedObject.transform.localRotation = Quaternion.identity;
+                    grabbedObject.transform.localRotation = Quaternion.identity * Quaternion.AngleAxis(90f, transform.up);
+
                 }
             }
             else if (leftRayHit && leftHit.collider.tag == "torch" && leftTriggerPressed)

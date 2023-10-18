@@ -20,8 +20,12 @@ public class StartRoomKey : KeyObject
 	protected override void CrearDirection()
 	{
         if (Input.GetKeyDown(KeyCode.Space)) {
-            isCleard = true;
-            player.SetIsCanWalk(true) ;
+            SetStart();
         }
 	}
+    public void SetStart()
+	{
+        isCleard = true;
+        player.SetIsCanWalk(true);
+    }
 }
