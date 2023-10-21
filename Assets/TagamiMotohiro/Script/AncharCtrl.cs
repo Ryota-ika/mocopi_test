@@ -38,6 +38,10 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     List<Transform> startPoint;
     [SerializeField]
     LayerMask layer;
+    [Header("1Pか2Pか選ぶボタン")]
+    [SerializeField]
+    GameObject buttons;
+    int playerNun;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
     //自分のアバターの一時保存に使う
     GameObject myAvatar;
@@ -45,8 +49,18 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        
     }
+    public void selectPlayerNum(int selectNum)
+	{
+        playerNun = selectNum;
+        buttons.SetActive(false);
+        startConnection();
+	}
+    void startConnection()
+	{
+        PhotonNetwork.ConnectUsingSettings();
+	}
 	public override void OnConnectedToMaster()
 	{
         RoomOptions roomProps = new RoomOptions();
@@ -65,7 +79,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
 	{
         int posnum=0;
-        if (PhotonNetwork.LocalPlayer.ActorNumber==1) {
+        if (playerNun==1) {
             posnum = 0;
         }else
         {

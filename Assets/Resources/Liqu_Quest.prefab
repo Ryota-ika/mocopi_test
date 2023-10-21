@@ -2335,7 +2335,7 @@ MonoBehaviour:
       chestGoalWeight: 0
       chestClampWeight: 0.5
       rotateChestByHands: 1
-      bodyPosStiffness: 0.55
+      bodyPosStiffness: 0
       bodyRotStiffness: 0.1
       neckStiffness: 0.2
       moveBodyBackWhenCrouching: 0.5
