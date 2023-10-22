@@ -12,6 +12,8 @@ public class ChangeNight : MonoBehaviour
     float radius;
     [SerializeField]
     Transform player;
+    [SerializeField]
+    GameObject hummer;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class ChangeNight : MonoBehaviour
         if (Vector3.Distance(player.position,transform.position)<radius)
 		{
             ChangeSky();
+            hummer.SetActive(false);
 		}
     }
 	private void ChangeSky()

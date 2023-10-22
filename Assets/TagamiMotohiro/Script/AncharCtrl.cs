@@ -38,9 +38,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     List<Transform> startPoint;
     [SerializeField]
     LayerMask layer;
-    [Header("1Pか2Pか選ぶボタン")]
-    [SerializeField]
-    GameObject buttons;
     int playerNun;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
     //自分のアバターの一時保存に使う
@@ -49,16 +46,32 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
+        //接続する前に明示的に１p側か２p側か選択させるようにしました
+        StartCoroutine(selectPlayerNum());
+        Debug.Log("プレイヤー選択開始");
     }
-    public void selectPlayerNum(int selectNum)
+    IEnumerator selectPlayerNum()
 	{
-        playerNun = selectNum;
-        buttons.SetActive(false);
+        bool selected = false;
+        while (!selected)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                playerNun = 1;
+                selected = true;
+            }else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                playerNun = 2;
+                selected = true;
+            }
+            yield return null;
+        }
+        Debug.Log("プレイヤーが選択された");
         startConnection();
 	}
     void startConnection()
 	{
+        Debug.Log("接続開始");
         PhotonNetwork.ConnectUsingSettings();
 	}
 	public override void OnConnectedToMaster()
