@@ -13,7 +13,7 @@ public class DestroyWall : MonoBehaviour
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     [SerializeField]
-    bool isCanDestroy=true;
+    bool isCanDestroy = true;
     //public float minRequireForce = 50.0f; //ï«ÇâÛÇ∑ç≈í·å¿ÇÃóÕ
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
@@ -75,27 +75,24 @@ public class DestroyWall : MonoBehaviour
             item.isKinematic = false;
             item.constraints = FreezeCancellation();
         }
-        if (!mocopiPlayerWork.GetIsCanWalk())
-        {
-            naviTextVoiceCtrl.PlayTextVoice(7,7);
-            naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-
-        }
+        //mocopiPlayerWork.SetIsCanWalk(true);
+        //naviTextVoiceCtrl.PlayTextVoice(7,7);
+        //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         StartCoroutine(InvokeDestroy(3));
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
     //éwíËÇÃïbêîé©ï™ÇîjâÛÇ≈Ç´Ç»Ç≠Ç∑ÇÈ
     public IEnumerator bannedDestroy(int bannedTime)
-	{
+    {
         isCanDestroy = false;
         yield return new WaitForSeconds(bannedTime);
         isCanDestroy = true;
-	}
+    }
     public void SetIsCanblake(bool value)
-	{
+    {
         isCanDestroy = value;
-	}
+    }
     IEnumerator InvokeDestroy(float time)
     {
         yield return new WaitForSeconds(time);
@@ -113,12 +110,17 @@ public class DestroyWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position,naviTextVoiceCtrl.transform.position);
-        if (distance <= targetDistance && !hasTalkingCrackedWall)
+        if (mocopiPlayerWork.GetIsCanWalk())
         {
-            naviTextVoiceCtrl.PlayTextVoice(5,5);
-            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            hasTalkingCrackedWall = true;
+
+            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+            if (distance <= targetDistance && !hasTalkingCrackedWall)
+            {
+                //mocopiPlayerWork.SetIsCanWalk(true);
+                naviTextVoiceCtrl.PlayTextVoice(5, 5);
+                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+                hasTalkingCrackedWall = true;
+            }
         }
     }
 }
