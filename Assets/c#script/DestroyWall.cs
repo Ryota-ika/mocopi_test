@@ -9,7 +9,7 @@ public class DestroyWall : MonoBehaviour
     [SerializeField]
     private float maxDurability = 10.0f;  //�ǂ̍ő�ϋv�x
     [SerializeField]
-    private float currentDurability;�@�@//���݂̑ϋv�x
+    private float currentDurability;//���݂̑ϋv�x
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     [SerializeField]
