@@ -1,4 +1,4 @@
-//2023.10.13@ûü‹´—Á‘¾
+//2023.10.13ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,29 +7,31 @@ using UnityEngine;
 public class DestroyWall : MonoBehaviour
 {
     [SerializeField]
-    private float maxDurability = 10.0f;  //•Ç‚ÌÅ‘å‘Ï‹v“x
+    private float maxDurability = 10.0f;  //ï¿½Ç‚ÌÅ‘ï¿½Ï‹vï¿½x
     [SerializeField]
-    private float currentDurability;@@//Œ»İ‚Ì‘Ï‹v“x
+    private float currentDurability;ï¿½@ï¿½@//ï¿½ï¿½ï¿½İ‚Ì‘Ï‹vï¿½x
     [SerializeField] private GameObject Axe;
     public Rigidbody[] pieces;
     [SerializeField]
-    bool isCanDestroy=true;
-    //public float minRequireForce = 50.0f; //•Ç‚ğ‰ó‚·Å’áŒÀ‚Ì—Í
+    bool isCanDestroy = true;
+    //public float minRequireForce = 50.0f; //ï¿½Ç‚ï¿½ï¿½ó‚·Å’ï¿½ï¿½ï¿½Ì—ï¿½
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
     [SerializeField]
     private float targetDistance = 5f;
-    private bool hasTalkingCrackedWall = false;//‚Ğ‚ÑŠ„‚ê‚½•Ç‚Ì˜b‚ğ‚µ‚½‚©‚Ç‚¤‚©‚Ìƒtƒ‰ƒO
+    private bool hasTalkingCrackedWall = false;//ï¿½Ğ‚ÑŠï¿½ï¿½ê‚½ï¿½Ç‚Ì˜bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ìƒtï¿½ï¿½ï¿½O
     [SerializeField]
     AudioClip damageSE;
     [SerializeField]
     AudioClip breakSE;
     AudioSource myAS;
+    [SerializeField]
+    private MocopiPlayerWork mocopiPlayerWork;
     // Start is called before the first frame update
     void Start()
     {
         myAS = GetComponent<AudioSource>();
-        currentDurability = maxDurability;  //‰Šú‰»
+        currentDurability = maxDurability;  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     public void OnAxeHit(float hitSpeed)
@@ -64,7 +66,7 @@ public class DestroyWall : MonoBehaviour
     }
     void DestroyWallObject()
     {
-        //•Ç‚ğ‰ó‚·ˆ—iƒAƒjƒ[ƒVƒ‡ƒ“‚ÌÄ¶‚âƒ‚ƒfƒ‹‚Ì•ÏX
+        //ï¿½Ç‚ï¿½ï¿½ó‚·ï¿½ï¿½ï¿½ï¿½iï¿½Aï¿½jï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÌÄï¿½ï¿½âƒ‚ï¿½fï¿½ï¿½ï¿½Ì•ÏX
         transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         myAS.PlayOneShot(breakSE);
         foreach (Rigidbody item in pieces)
@@ -80,17 +82,17 @@ public class DestroyWall : MonoBehaviour
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
-    //w’è‚Ì•b”©•ª‚ğ”j‰ó‚Å‚«‚È‚­‚·‚é
+    //ï¿½wï¿½ï¿½Ì•bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½ï¿½Å‚ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½
     public IEnumerator bannedDestroy(int bannedTime)
-	{
+    {
         isCanDestroy = false;
         yield return new WaitForSeconds(bannedTime);
         isCanDestroy = true;
-	}
+    }
     public void SetIsCanblake(bool value)
-	{
+    {
         isCanDestroy = value;
-	}
+    }
     IEnumerator InvokeDestroy(float time)
     {
         yield return new WaitForSeconds(time);
@@ -108,14 +110,17 @@ public class DestroyWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (naviTextVoiceCtrl == null) { return; }
-        float distance = Vector3.Distance(transform.position,naviTextVoiceCtrl.transform.position);
-        if (distance <= targetDistance && !hasTalkingCrackedWall)
+        if (mocopiPlayerWork.GetIsCanWalk())
         {
-            hasTalkingCrackedWall = true;
-            naviTextVoiceCtrl.PlayTextVoice(5,5);
-            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            
+
+            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+            if (distance <= targetDistance && !hasTalkingCrackedWall)
+            {
+                //mocopiPlayerWork.SetIsCanWalk(true);
+                naviTextVoiceCtrl.PlayTextVoice(5, 5);
+                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+                hasTalkingCrackedWall = true;
+            }
         }
     }
 }
