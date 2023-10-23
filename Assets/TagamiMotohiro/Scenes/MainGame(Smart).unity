@@ -2099,7 +2099,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28014
+  m_Name: pb_Mesh386404
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4561,7 +4561,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29700
+  m_Name: pb_Mesh388228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5331,6 +5331,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 56016686ec7361c48a629e13e49ec555,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 56016686ec7361c48a629e13e49ec555,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 56016686ec7361c48a629e13e49ec555,
@@ -7052,7 +7057,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28694
+  m_Name: pb_Mesh387172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20865,7 +20870,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27938
+  m_Name: pb_Mesh386244
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31813,7 +31818,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27682
+  m_Name: pb_Mesh385980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -44610,7 +44615,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28350
+  m_Name: pb_Mesh386794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45792,7 +45797,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28610
+  m_Name: pb_Mesh387086
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54263,7 +54268,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27324
+  m_Name: pb_Mesh385600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54932,7 +54937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27856
+  m_Name: pb_Mesh386220
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -55359,7 +55364,7 @@ PrefabInstance:
     - target: {fileID: 2619920071507064010, guid: 3c3a2a674f31a574b9a61fa7ac24e178,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2619920071507064010, guid: 3c3a2a674f31a574b9a61fa7ac24e178,
         type: 3}
@@ -58613,8 +58618,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   naviTextVoiceCtrl: {fileID: 1454932033}
-  mocopiPlayerWork: {fileID: 0}
+  mocopiPlayerWork: {fileID: 1791971356}
   targetDistance: 1
+--- !u!114 &2014940225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014940217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6853c947dfd32b44bfdc767e4c216d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1791971356}
+  radius: 1
+  quizStone: {fileID: 0}
+  quizTorch: {fileID: 1490224729}
 --- !u!4 &2018302442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7577724172177542201, guid: 29bbd1fbe87d69741932f701bef897d5,
@@ -59867,8 +59888,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   naviTextVoiceCtrl: {fileID: 1454932033}
-  mocopiPlayerWork: {fileID: 0}
+  mocopiPlayerWork: {fileID: 1791971356}
   targetDistance: 1
+--- !u!114 &2065644455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065644447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6853c947dfd32b44bfdc767e4c216d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1791971356}
+  radius: 1
+  quizStone: {fileID: 0}
+  quizTorch: {fileID: 1490224729}
 --- !u!1001 &2067870511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62669,7 +62706,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29742
+  m_Name: pb_Mesh388114
   serializedVersion: 10
   m_SubMeshes: []
   m_Shapes:

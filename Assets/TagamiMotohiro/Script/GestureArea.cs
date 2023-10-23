@@ -58,6 +58,7 @@ public class GestureArea : MonoBehaviourPunCallbacks
                 yield return null;
 			}
 		}
+        Player.SetIsCanWalk(true);
         Debug.Log("クイズがクリアされた");
         collected = true;
     }

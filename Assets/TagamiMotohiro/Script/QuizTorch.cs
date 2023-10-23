@@ -49,6 +49,7 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     [PunRPC]
     void Clear()
     {
+        torch_list[collectNum].SetIsCleard();
         StartCoroutine(durationPlaySE(2,collectSE));
     }
     [PunRPC]
