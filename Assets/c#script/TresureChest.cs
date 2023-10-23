@@ -22,6 +22,8 @@ public class TresureChest : MonoBehaviour
 
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
+    [SerializeField]
+    private MocopiPlayerWork mocopiPlayerWork;
     private bool hasTalkingTresureChst = false;
     [SerializeField]
     private float targetDistance = 1f;
@@ -48,22 +50,26 @@ public class TresureChest : MonoBehaviour
         float delayTime = 3.0f;
         StartCoroutine(DelaydMethodCoroutine(delayTime));
         GetComponent<AudioSource>().Play();
-        naviTextVoiceCtrl.PlayTextVoice(8,8);
+        naviTextVoiceCtrl.PlayTextVoice(8, 8);
         StartCoroutine(naviTextVoiceCtrl.DelateText(5));
     }
     private void Update()
     {
-        if (Animated_Chest_01 != null)
+        if (mocopiPlayerWork.GetIsCanWalk())
         {
-            float distace = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distace <= targetDistance && !hasTalkingTresureChst)
+            if (Animated_Chest_01 != null)
             {
-                naviTextVoiceCtrl.PlayTextVoice(0, 0);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingTresureChst = true;
+                float distace = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distace <= targetDistance && !hasTalkingTresureChst)
+                {
+                    naviTextVoiceCtrl.PlayTextVoice(0, 0);
+                    StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+                    hasTalkingTresureChst = true;
+                }
             }
+
         }
-            
+
 
     }
 }
