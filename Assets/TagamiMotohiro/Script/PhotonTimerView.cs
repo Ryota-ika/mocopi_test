@@ -8,6 +8,10 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
     float timer;
     [SerializeField]
     TMPro.TextMeshProUGUI TimerText;
+    bool isTimerStart = false;
+    [SerializeField]
+    StartRoomKey startButton;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +20,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
     // Update is called once per frame
     void Update()
     {
+        if (!startButton.GetIsCleard()){ return; }
         timer -= Time.deltaTime;
         int minutes = Mathf.FloorToInt(timer / 60);
         int seconds = Mathf.FloorToInt(timer % 60);
@@ -31,7 +36,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
             stream.SendNext(timer);
         }
         else {
-            timer=(float)stream.ReceiveNext();
+            timer = (float)stream.ReceiveNext();
         }
 	}
 }

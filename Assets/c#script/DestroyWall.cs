@@ -112,7 +112,7 @@ public class DestroyWall : MonoBehaviour
     {
         if (mocopiPlayerWork.GetIsCanWalk())
         {
-
+            if (naviTextVoiceCtrl == null) { return; }
             float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
             if (distance <= targetDistance && !hasTalkingCrackedWall)
             {

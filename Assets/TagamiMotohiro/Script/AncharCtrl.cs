@@ -38,7 +38,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     List<Transform> startPoint;
     [SerializeField]
     LayerMask layer;
-    int playerNum;
+    static int playerNum;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
     //自分のアバターの一時保存に使う
     GameObject myAvatar;
@@ -80,18 +80,26 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Debug.Log("接続開始");
         PhotonNetwork.ConnectUsingSettings();
 	}
-    //マスターに接続されたら
-	public override void OnConnectedToMaster()
-	{
+    //部屋作成者は初期プロパティを設定
+	public override void OnCreatedRoom()
+	{ 
         RoomOptions roomProps = new RoomOptions();
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
+        ExitGames.Client.Photon.Hashtable roomInfo = new ExitGames.Client.Photon.Hashtable();
+        roomInfo.Add("1pStanby", false);
+        roomInfo.Add("2pStanby", false);
+        PhotonNetwork.CurrentRoom.SetCustomProperties(roomInfo);
+    }
+	//マスターに接続されたら
+	public override void OnConnectedToMaster()
+	{
         //プレイヤー番号をカスタムプロパティに設定
         ExitGames.Client.Photon.Hashtable playerCustomProps = new ExitGames.Client.Photon.Hashtable();
         playerCustomProps.Add("PlayerNum", playerNum);
         PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProps);
         //部屋に入室
-        PhotonNetwork.JoinOrCreateRoom("ROOM.", roomProps, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("ROOM.", new RoomOptions(), TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
@@ -142,6 +150,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	void Update()
     {
     }
+    //指定したプレイヤーのアンカーを抽出してキャリブレーション開始
     IEnumerator GetPlayerAnchar(int playerNum)
     {
         GameObject avatar = Instantiate(avatarList[(playerNum%2)], Vector3.zero, Quaternion.identity);
@@ -159,10 +168,10 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         }
         StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5]));
     }
+    //引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション
     IEnumerator StartCaliblation(GameObject avatar,Transform head,Transform body,Transform lefthand,Transform righthand,Transform leftFoot,Transform rightFoot)
     {
         //インスタンスが間に合うまで待機
-        bool isStart = false;
         yield return new WaitUntil(()=>avatar.GetComponent<VRIK>()!=null);
         VRIK ik = avatar.GetComponent<VRIK>();
         //ボタンを押したらキャリブレーション
@@ -195,4 +204,9 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Debug.Log((int)hostPlayer.CustomProperties["PlayerNum"]);
         return (int)hostPlayer.CustomProperties["PlayerNum"];
     }
+
+    public static int GetPlayeNum()
+	{
+        return playerNum;
+	}
 }
