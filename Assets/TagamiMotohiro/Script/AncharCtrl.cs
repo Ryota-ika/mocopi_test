@@ -38,6 +38,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     List<Transform> startPoint;
     [SerializeField]
     LayerMask layer;
+    static bool isConnected = false;
     static int playerNum;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
     //自分のアバターの一時保存に使う
@@ -80,17 +81,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Debug.Log("接続開始");
         PhotonNetwork.ConnectUsingSettings();
 	}
-    //部屋作成者は初期プロパティを設定
-	public override void OnCreatedRoom()
-	{ 
-        RoomOptions roomProps = new RoomOptions();
-        roomProps.MaxPlayers = 2;
-        roomProps.CleanupCacheOnLeave = true;
-        ExitGames.Client.Photon.Hashtable roomInfo = new ExitGames.Client.Photon.Hashtable();
-        roomInfo.Add("1pStanby", false);
-        roomInfo.Add("2pStanby", false);
-        PhotonNetwork.CurrentRoom.SetCustomProperties(roomInfo);
-    }
+    
 	//マスターに接続されたら
 	public override void OnConnectedToMaster()
 	{
@@ -109,8 +100,23 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         int playerNum = (int)newPlayer.CustomProperties["PlayerNum"];
         StartCoroutine(GetPlayerAnchar(playerNum));
     }
+    
+    //部屋作成者は初期プロパティを設定
+	public override void OnCreatedRoom()
+	{
+        isConnected = true;
+        RoomOptions roomProps = new RoomOptions();
+        roomProps.MaxPlayers = 2;
+        roomProps.CleanupCacheOnLeave = true;
+        ExitGames.Client.Photon.Hashtable roomInfo = new ExitGames.Client.Photon.Hashtable();
+        roomInfo.Add("1pStanby", false);
+        roomInfo.Add("2pStanby", false);
+        PhotonNetwork.CurrentRoom.SetCustomProperties(roomInfo);
+    }
+
 	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
 	{
+        isConnected = true;
         int posnum=0;
         if (playerNum==1) {
             posnum = 0;
@@ -205,8 +211,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         return (int)hostPlayer.CustomProperties["PlayerNum"];
     }
 
-    public static int GetPlayeNum()
-	{
-        return playerNum;
-	}
+    //以下プレイヤー情報のゲッター関数
+    public static bool GetisConnected(){ return isConnected; }
+    public static int GetPlayeNum(){ return playerNum; }
 }

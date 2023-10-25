@@ -32,18 +32,9 @@ public class StartRoomKey : KeyObject
 	protected override void CrearDirection()
 	{
         if (Input.GetKeyDown(KeyCode.Space))
-		{
-            var roomProps = new ExitGames.Client.Photon.Hashtable();
-            if (AncharCtrl.GetPlayeNum() == 1)
-			{
-                roomProps.Add("1pStanby",true);
-            }else
-			{
-                roomProps.Add("2pStanby", true);
-			}
-            Debug.Log("プロパティ変更");
-            PhotonNetwork.CurrentRoom.SetCustomProperties(roomProps);
-		}
+        {
+            SetStart();
+        }
         if (_1pStanby&&_2pStanby&&!stanbyOK)
 		{
             stanbyOK = true;
@@ -53,9 +44,17 @@ public class StartRoomKey : KeyObject
 	}
     public void SetStart()
 	{
-        isCleard = true;
-        player.SetIsCanWalk(true);
-
+        var roomProps = new ExitGames.Client.Photon.Hashtable();
+        if (AncharCtrl.GetPlayeNum() == 1)
+        {
+            roomProps.Add("1pStanby", true);
+        }
+        else
+        {
+            roomProps.Add("2pStanby", true);
+        }
+        Debug.Log("プロパティ変更");
+        PhotonNetwork.CurrentRoom.SetCustomProperties(roomProps);
     }
     IEnumerator StartCount()
 	{
@@ -67,7 +66,8 @@ public class StartRoomKey : KeyObject
             countDown-=1;
 		}
         Debug.Log("ドアが開く");
-        SetStart();
+        isCleard = true;
+        player.SetIsCanWalk(true);
 	}
     public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
     {
