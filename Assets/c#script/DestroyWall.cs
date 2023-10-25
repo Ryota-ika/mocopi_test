@@ -27,6 +27,7 @@ public class DestroyWall : MonoBehaviour
     AudioSource myAS;
     [SerializeField]
     private MocopiPlayerWork mocopiPlayerWork;
+    private bool hasTalkingDestroy = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,11 +75,15 @@ public class DestroyWall : MonoBehaviour
             item.freezeRotation = false;
             item.isKinematic = false;
             item.constraints = FreezeCancellation();
-        } 
+        }
         StartCoroutine(InvokeDestroy(3));
         if (naviTextVoiceCtrl == null) { return; }
-        naviTextVoiceCtrl.PlayTextVoice(7,7);
-        naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        if (!hasTalkingDestroy)
+        {
+            naviTextVoiceCtrl.PlayTextVoice(7, 7);
+            naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+            hasTalkingDestroy = true;
+        }
         //Axe.SetActive(false);
         //Destroy(Axe);
     }

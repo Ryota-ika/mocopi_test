@@ -8,6 +8,8 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
     float timer;
     [SerializeField]
     TMPro.TextMeshProUGUI TimerText;
+    [SerializeField]
+    private NaviTextVoiceCtrl naviTextVoiceCtrl;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
         TimerText.text = minutes.ToString("00")+(":")+seconds.ToString("00");
         if (timer<=0) {
             Debug.Log("ゲームオーバー");
+            naviTextVoiceCtrl.PlayTextVoice(10,10);
+            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         }
     }
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
