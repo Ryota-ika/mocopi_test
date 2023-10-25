@@ -30,6 +30,7 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
+        //たいまつの状態を監視し、クリアされているか確認
         for(int i=0; i<torch_list.Count; i++) {
             if (torch_list[i].GetIsCleard())
             {

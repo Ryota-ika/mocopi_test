@@ -12,6 +12,7 @@ public class TorchControll : KeyObject
     GameObject[] setActiveObject;
     [SerializeField]
     float colliderRange;
+    [SerializeField]
     bool isCanFire=true;
     [SerializeField]
     AudioSource myAS;

@@ -68,11 +68,12 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
             yield return null;
         }
         Debug.Log("プレイヤーが選択された");
-        startConnection();
+        
 	}
     public void SelectPlayerNum(int value)
 	{
         playerNum = value;
+        startConnection();
 	}
     void startConnection()
 	{
@@ -126,6 +127,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
             StartCoroutine(GetPlayerAnchar(GetHostPlayerNum()));
         }
     }
+    //部位アンカーを生成
     Transform AncharInstantiete(Transform anchar,GameObject instance)
     { 
         GameObject g=PhotonNetwork.Instantiate(instance.name,anchar.position,anchar.rotation);
@@ -189,7 +191,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
                 break;
             }
         }
-        //　ホストのプレイヤー番号の状態を取得
+        //　ホストのプレイヤー番号を取得
         Debug.Log((int)hostPlayer.CustomProperties["PlayerNum"]);
         return (int)hostPlayer.CustomProperties["PlayerNum"];
     }
