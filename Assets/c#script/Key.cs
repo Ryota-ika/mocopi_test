@@ -14,6 +14,8 @@ public class Key : MonoBehaviour
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
     [SerializeField]
+    private MocopiPlayerWork mocopiPlayerWork;
+    [SerializeField]
     private float targetDistace = 1f;
     private bool isNearTreasureChest = false;
 
@@ -27,7 +29,7 @@ public class Key : MonoBehaviour
     void Update()
     {
         //プレイヤーと宝箱の距離を計算
-        float distanceToTreasureChest = Vector3.Distance(transform.position,treasureChest.transform.position);
+        float distanceToTreasureChest = Vector3.Distance(transform.position, treasureChest.transform.position);
 
         //プレイヤーが宝箱に近づいた場合
         if (distanceToTreasureChest <= actionDistance)
@@ -43,13 +45,16 @@ public class Key : MonoBehaviour
                 //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); 
             }
         }
-        //鍵発見
-        float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-        if (distance <= targetDistace && !hasTalkingKey)
+        if (mocopiPlayerWork.GetIsCanWalk())
         {
-            naviTextVoiceCtrl.PlayTextVoice(1, 1);
-            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            hasTalkingKey = true;
+            //鍵発見
+            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+            if (distance <= targetDistace && !hasTalkingKey)
+            {
+                naviTextVoiceCtrl.PlayTextVoice(1, 1);
+                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+                hasTalkingKey = true;
+            }
         }
     }
 }

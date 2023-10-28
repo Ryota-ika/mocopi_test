@@ -12,6 +12,8 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
     [SerializeField]
     StartRoomKey startButton;
     
+    [SerializeField]
+    private NaviTextVoiceCtrl naviTextVoiceCtrl;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,9 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
         int seconds = Mathf.FloorToInt(timer % 60);
         TimerText.text = minutes.ToString("00")+(":")+seconds.ToString("00");
         if (timer<=0) {
-            Debug.Log("ゲームオーバー");
+            Debug.Log("繧ｲ繝ｼ繝繧ｪ繝ｼ繝舌�ｼ");
+            naviTextVoiceCtrl.PlayTextVoice(10,10);
+            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
         }
     }
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
