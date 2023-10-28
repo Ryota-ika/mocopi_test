@@ -87,7 +87,7 @@ public class DestroyWall : MonoBehaviour
         //Axe.SetActive(false);
         //Destroy(Axe);
     }
-    //�w��̕b��������j��ł��Ȃ�����
+
     public IEnumerator bannedDestroy(int bannedTime)
     {
         isCanDestroy = false;

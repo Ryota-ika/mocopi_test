@@ -8,10 +8,8 @@ public class StartRoomKey : KeyObject
 {
     [SerializeField]
     MocopiPlayerWork player;
-    [SerializeField]
-    bool _1pStanby=false;
-    [SerializeField]
-    bool _2pStanby=false;
+    static bool _1pStanby=false;
+    static bool _2pStanby=false;
     bool stanbyOK = false;
     [SerializeField]
     int countDown = 3;
@@ -40,6 +38,11 @@ public class StartRoomKey : KeyObject
             stanbyOK = true;
             StartCoroutine(StartCount());
 		}
+        if (Input.GetKeyDown(KeyCode.C))
+		{
+            stanbyOK = true;
+            StartCoroutine(StartCount());
+        }
         
 	}
     public void SetStart()
@@ -62,9 +65,14 @@ public class StartRoomKey : KeyObject
         while (countDown >= 0)
 		{
             countDownText.text = countDown.ToString();
+            if (countDown == 0)
+			{
+                countDownText.text = "START!";
+			}
             yield return new WaitForSeconds(1);
             countDown-=1;
 		}
+        countDownText.gameObject.SetActive(false);
         Debug.Log("ドアが開く");
         isCleard = true;
         player.SetIsCanWalk(true);
@@ -75,4 +83,16 @@ public class StartRoomKey : KeyObject
         _1pStanby = (bool)PhotonNetwork.CurrentRoom.CustomProperties["1pStanby"];
         _2pStanby = (bool)PhotonNetwork.CurrentRoom.CustomProperties["2pStanby"];
     }
+    public static bool GetPlayerStanby(int playerNum)
+	{
+        if (playerNum == 1)
+		{
+            return _1pStanby;
+		}else if (playerNum == 2)
+		{
+            return _2pStanby;
+		}
+        Debug.LogError("プレイヤー指定がなんか変です");
+        return false;
+	}
 }

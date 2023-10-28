@@ -53,7 +53,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     {
         //接続する前に明示的に１p側か２p側か選択させるようにしました
         StartCoroutine(InitPlayer());
-        Debug.Log("プレイヤー選択開始");
     }
     //プレイヤーがどちら側か選択
     IEnumerator InitPlayer()
@@ -72,7 +71,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
             }
             yield return null;
         }
-        Debug.Log("プレイヤーが選択された");
         
 	}
     public void SelectPlayerNum(int value)
@@ -131,7 +129,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         myMocopiAvatar.position = startPoint[posnum].position;
         navi.position = naviPos.position;
         //アンカー生成
-        Debug.Log(PhotonNetwork.CurrentRoom.MaxPlayers);
         Transform head = AncharInstantiete(_head, anchar);
         Transform body = AncharInstantiete(_body, anchar);
         Transform leftHand = AncharInstantiete(_leftHand, anchar);
@@ -143,7 +140,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot,KeyCode.F1));
         //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
         if (!PhotonNetwork.IsMasterClient) {
-            StartCoroutine(GetPlayerAnchar(GetHostPlayerNum()));
+            StartCoroutine(GetPlayerAnchar(PhotonNetwork.MasterClient.ActorNumber));
         }
     }
     //部位アンカーを生成
@@ -177,6 +174,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
                 anchar.Add(item.transform);
             }
         }
+        Debug.Log(anchar.Count);
         StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5],KeyCode.F2));
     }
     //引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション＆再キャリブレーション可能状態にする
@@ -215,7 +213,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
             }
         }
         //　ホストのプレイヤー番号を取得
-        Debug.Log((int)hostPlayer.CustomProperties["PlayerNum"]);
         return (int)hostPlayer.CustomProperties["PlayerNum"];
     }
 

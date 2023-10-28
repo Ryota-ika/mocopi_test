@@ -50,8 +50,8 @@ public class TresureChest : MonoBehaviour
         float delayTime = 3.0f;
         StartCoroutine(DelaydMethodCoroutine(delayTime));
         GetComponent<AudioSource>().Play();
-        naviTextVoiceCtrl.PlayTextVoice(8, 8);
-        StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+        //naviTextVoiceCtrl.PlayTextVoice(8, 8);
+        //StartCoroutine(naviTextVoiceCtrl.DelateText(5));
     }
     private void Update()
     {

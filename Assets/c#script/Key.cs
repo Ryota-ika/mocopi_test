@@ -41,8 +41,8 @@ public class Key : MonoBehaviour
                 pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
                 float delayTime = 3.0f;
-                //naviTextVoiceCtrl.PlayTextVoice(0,8);
-                //naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); 
+                naviTextVoiceCtrl.PlayTextVoice(8,8);
+                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); 
             }
         }
         if (mocopiPlayerWork.GetIsCanWalk())
