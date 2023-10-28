@@ -110,6 +110,11 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŠÔt•Ï”
 		while (t<stepLength&&!isCollisionWall)
 		{
+            if (!isCanWark)
+			{
+                isStepping = false;
+                yield break;
+			}
             transform.position+=(avatarfoward*stepSpeed)*Time.deltaTime;
 			//float stepDistance = Mathf.MoveTowards(0, distanceToTarget, Time.deltaTime * stepLength);
 			//Vector3 nowPos = Vector3.MoveTowards(transform.position, targetPoint, stepDistance * stepSpeed);

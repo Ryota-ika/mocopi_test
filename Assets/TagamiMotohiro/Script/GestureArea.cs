@@ -45,16 +45,19 @@ public class GestureArea : MonoBehaviourPunCallbacks
         if (quizStone != null)
         {
             quizStone.StartQuiz();
-            while (quizStone.isQuizCollected())
+            //チートコード　Cキーでクリア扱い
+            while (!quizStone.isQuizCollected())
             {
+                Player.transform.position = transform.position;
                 yield return null;
             }
         }
         if (quizTorch != null)
 		{
             quizTorch.StartQuiz();
-            while (quizTorch.getIsCleard())
+            while (!quizTorch.getIsCleard())
 			{
+                Player.transform.position = transform.position;
                 yield return null;
 			}
 		}

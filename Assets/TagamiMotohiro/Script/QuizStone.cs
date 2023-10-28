@@ -42,6 +42,10 @@ public class QuizStone : MonoBehaviourPunCallbacks
                 photonView.RPC(nameof(StopPlayer),RpcTarget.All,i);
 			}
 	    }
+        if (Input.GetKeyDown(KeyCode.D))
+		{
+            Destroy(wall[collectNum].gameObject);
+		}
     }
 	public void StartQuiz()
 	{
