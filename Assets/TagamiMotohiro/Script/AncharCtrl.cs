@@ -38,6 +38,10 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     List<Transform> startPoint;
     [SerializeField]
     LayerMask layer;
+    [SerializeField]
+    Transform naviPos;
+    [SerializeField]
+    Transform navi;
     static bool isConnected = false;
     static int playerNum;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
@@ -125,6 +129,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
             posnum = 1;
         }
         myMocopiAvatar.position = startPoint[posnum].position;
+        navi.position = naviPos.position;
         //アンカー生成
         Debug.Log(PhotonNetwork.CurrentRoom.MaxPlayers);
         Transform head = AncharInstantiete(_head, anchar);
@@ -135,7 +140,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Transform rightFoot = AncharInstantiete(_rightFoot, anchar);
         
         myAvatar=Instantiate(avatarList[posnum]);
-        StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot));
+        StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot,KeyCode.F1));
         //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
         if (!PhotonNetwork.IsMasterClient) {
             StartCoroutine(GetPlayerAnchar(GetHostPlayerNum()));
@@ -172,19 +177,22 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
                 anchar.Add(item.transform);
             }
         }
-        StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5]));
+        StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5],KeyCode.F2));
     }
-    //引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション
-    IEnumerator StartCaliblation(GameObject avatar,Transform head,Transform body,Transform lefthand,Transform righthand,Transform leftFoot,Transform rightFoot)
+    //引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション＆再キャリブレーション可能状態にする
+    IEnumerator StartCaliblation(GameObject avatar,Transform head,Transform body,Transform lefthand,Transform righthand,Transform leftFoot,Transform rightFoot,KeyCode key)
     {
         //インスタンスが間に合うまで待機
         yield return new WaitUntil(()=>avatar.GetComponent<VRIK>()!=null);
         VRIK ik = avatar.GetComponent<VRIK>();
         //ボタンを押したらキャリブレーション
-        while (!Input.GetKeyDown(KeyCode.C)) {
+        while (true) {
+            if (Input.GetKeyDown(key)){
+                VRIKCalibrator.Calibrate(ik, settings, head, body, lefthand, righthand, leftFoot, rightFoot);
+            }
             yield return null;
         }
-        VRIKCalibrator.Calibrate(ik,settings,head,body,lefthand,righthand,leftFoot,rightFoot);
+        
     }
 	private void OnApplicationQuit()
 	{
@@ -192,7 +200,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         PhotonNetwork.LeaveRoom();
 	}
     int GetHostPlayerNum()
-	{
+    {
         // ルーム内の全てのプレイヤーを取得
         Player[] players = PhotonNetwork.PlayerList;
 
