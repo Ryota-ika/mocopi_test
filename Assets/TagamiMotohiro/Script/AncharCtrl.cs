@@ -9,6 +9,8 @@ using System.Linq;
 public class AncharCtrl : MonoBehaviourPunCallbacks
     //アンカーだけ生成してアバターはオフラインで管理するやり方
 {
+    [SerializeField]
+    int buildNum;
     [Header("アンカー一覧")]
     [SerializeField]
     Transform _head;
@@ -60,15 +62,8 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         bool selected = false;
         while (!selected)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                SelectPlayerNum(1);
-                selected = true;
-            }else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                SelectPlayerNum(2);
-                selected = true;
-            }
+            SelectPlayerNum(buildNum);
+            selected = true;
             yield return null;
         }
         
@@ -99,7 +94,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	public override void OnPlayerEnteredRoom(Player newPlayer)
     //ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション
 	{
-        int playerNum = (int)newPlayer.CustomProperties["PlayerNum"];
+        int playerNum = newPlayer.ActorNumber;
         StartCoroutine(GetPlayerAnchar(playerNum));
     }
     
