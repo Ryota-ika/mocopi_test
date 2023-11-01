@@ -25,7 +25,7 @@ public class TorchControll : KeyObject
     }
 	protected override void CrearDirection()
 	{
-		if (!isCleard&&Vector3.Distance(transform.position,torch.position)<=colliderRange) {
+		if (!isCleard&&Vector3.Distance(transform.position,torch.position)<=colliderRange&&isCanFire) {
             foreach (GameObject item in setActiveObject)
             {
                 item.SetActive(true);
