@@ -2,6 +2,7 @@
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.AI;
 using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
@@ -85,9 +86,13 @@ public class DestroyWall : MonoBehaviour
         if (naviTextVoiceCtrl == null) { return; }
         if (!hasTalkingDestroy)
         {
-            naviTextVoiceCtrl.PlayTextVoice(7, 7);
-            naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            hasTalkingDestroy = true;
+            if (!naviTextVoiceCtrl.isTextPlaying)
+            {
+                //naviTextVoiceCtrl.PlayTextVoice(7, 7);
+                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(7, 7));
+                hasTalkingDestroy = true;
+            }
+
         }
         //Axe.SetActive(false);
         //Destroy(Axe);
@@ -123,20 +128,23 @@ public class DestroyWall : MonoBehaviour
         if (mocopiPlayerWork.GetIsCanWalk())
         {
             if (naviTextVoiceCtrl == null) { return; }
-            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distance <= wallAndNaviDistance && !hasTalkingCrackedWall)
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                //mocopiPlayerWork.SetIsCanWalk(true);
-                naviTextVoiceCtrl.PlayTextVoice(5, 5);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingCrackedWall = true;
-            }
-            float distance1 = Vector3.Distance(transform.position, axeController.transform.position);
-            if(distance1 <= wallAndHammerDistance && !hasTalkingHowToDestroy)
-            {
-                naviTextVoiceCtrl.PlayTextVoice(12,12);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingHowToDestroy = true;
+                float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distance <= wallAndNaviDistance && !hasTalkingCrackedWall)
+                {
+                    //mocopiPlayerWork.SetIsCanWalk(true);
+                    //naviTextVoiceCtrl.PlayTextVoice(5, 5);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(5, 5));
+                    hasTalkingCrackedWall = true;
+                }
+                float distance1 = Vector3.Distance(transform.position, axeController.transform.position);
+                if (distance1 <= wallAndHammerDistance && !hasTalkingHowToDestroy)
+                {
+                    //naviTextVoiceCtrl.PlayTextVoice(12,12);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(12, 12));
+                    hasTalkingHowToDestroy = true;
+                }
             }
         }
     }

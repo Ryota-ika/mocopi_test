@@ -22,13 +22,17 @@ public class TorchCtrl : MonoBehaviour
     {
         if (mocopiPlayerWork.GetIsCanWalk())
         {
-            //èºñæî≠å©
-            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distance <= targetDistance && !hasTalkingTorch)
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                naviTextVoiceCtrl.PlayTextVoice(2, 2);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingTorch = true;
+                //èºñæî≠å©
+                float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distance <= targetDistance && !hasTalkingTorch)
+                {
+                    //naviTextVoiceCtrl.PlayTextVoice(2, 2);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(2, 2));
+                    hasTalkingTorch = true;
+                }
+
             }
 
         }

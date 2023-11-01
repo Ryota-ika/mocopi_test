@@ -2591,6 +2591,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1619140108}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: axeController
+      value: 
+      objectReference: {fileID: 1619140109}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: maxDurability
       value: 5
       objectReference: {fileID: 0}
@@ -2605,6 +2609,10 @@ PrefabInstance:
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: pieces.Array.size
       value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: wallAndNaviDistance
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: pieces.Array.data[96]
@@ -4070,7 +4078,9 @@ MonoBehaviour:
   pieces: []
   isCanDestroy: 1
   naviTextVoiceCtrl: {fileID: 0}
-  targetDistance: 5
+  wallAndNaviDistance: 5
+  wallAndHammerDistance: 3
+  axeController: {fileID: 0}
   damageSE: {fileID: 0}
   breakSE: {fileID: 0}
   mocopiPlayerWork: {fileID: 0}
@@ -16922,6 +16932,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: axeController
+      value: 
+      objectReference: {fileID: 1483764258}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: maxDurability
       value: 5
       objectReference: {fileID: 0}
@@ -25205,6 +25219,10 @@ PrefabInstance:
       propertyPath: isCanDestroy
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: axeController
+      value: 
+      objectReference: {fileID: 1483764258}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: maxDurability
       value: 5
@@ -33639,6 +33657,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1483764257}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: axeController
+      value: 
+      objectReference: {fileID: 1483764258}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: maxDurability
       value: 5
       objectReference: {fileID: 0}
@@ -33657,6 +33679,10 @@ PrefabInstance:
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: pieces.Array.size
       value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: wallAndNaviDistance
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1237976945563109718, guid: a833525238ff43641adecba6d1e74821,
         type: 3}
@@ -39937,7 +39963,7 @@ PrefabInstance:
     - target: {fileID: 406371230575435780, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
       propertyPath: targetDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 406371230575435780, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
@@ -42154,11 +42180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
       propertyPath: voiceList.Array.size
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
       propertyPath: naviTextList.Array.size
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
       propertyPath: voiceList.Array.data[5]
@@ -42181,6 +42207,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 09e28bda19f6b6b4b9257d14d5edfb4c, type: 3}
     - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
+      propertyPath: voiceList.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09e28bda19f6b6b4b9257d14d5edfb4c, type: 3}
+    - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
+      propertyPath: voiceList.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 09e28bda19f6b6b4b9257d14d5edfb4c, type: 3}
+    - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
       propertyPath: naviTextList.Array.data[9]
       value: "\u8AAC\u660E\u304C\u66F8\u3044\u3066\u3042\u308B\u306D\uFF01\n\uFF11\u901A\u308A\u8AAD\u3093\u3067\u307F\u3088\u3046\uFF01"
       objectReference: {fileID: 0}
@@ -42191,6 +42225,14 @@ PrefabInstance:
     - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
       propertyPath: naviTextList.Array.data[11]
       value: "\u3084\u3063\u305F\u30FC\uFF01\u9593\u306B\u5408\u3063\u305F\u306D\uFF01\n\u3053\u306E\u4E16\u754C\u3092\u629C\u3051\u51FA\u3057\u305F\u3089\u30B9\u30BF\u3063\u30D5\u304B\u3089\u304A\u5B9D\u3092\u53D7\u3051\u53D6\u3063\u3066\u306D\uFF01"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
+      propertyPath: naviTextList.Array.data[12]
+      value: "\u3053\u306E\u30CF\u30F3\u30DE\u30FC\u3067\u529B\u3044\u3063\u3071\u3044\u53E9\u3051\u3070\u58CA\u308C\u305D\u3046\uFF01\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454932033, guid: cb50c1bf3becc4b4c87ac4a756e6f740, type: 3}
+      propertyPath: naviTextList.Array.data[13]
+      value: "\u5B9D\u7BB1\u306B\u9375\u3092\u8FD1\u3065\u3051\u3066\u307F\u3088\u3046\uFF01"
       objectReference: {fileID: 0}
     - target: {fileID: 14988385739427592, guid: cb50c1bf3becc4b4c87ac4a756e6f740,
         type: 3}
@@ -46001,6 +46043,10 @@ PrefabInstance:
       propertyPath: isCanDestroy
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: axeController
+      value: 
+      objectReference: {fileID: 1483764258}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: maxDurability
       value: 5
@@ -51122,6 +51168,11 @@ PrefabInstance:
       propertyPath: navi
       value: 
       objectReference: {fileID: 1024010883}
+    - target: {fileID: 406371230575435780, guid: d45ab43dfd6bd054e9453f2fa715d640,
+        type: 3}
+      propertyPath: targetDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 406371230575435780, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
       propertyPath: mocopiPlayerWork

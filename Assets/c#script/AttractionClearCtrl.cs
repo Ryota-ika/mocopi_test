@@ -12,18 +12,22 @@ public class AttractionClearCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position,naviTextVoiceCtrl.transform.position);
-        if (distance <= targetDistance && !hasTalkingClear)
+        if (!naviTextVoiceCtrl.isTextPlaying)
         {
-            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            naviTextVoiceCtrl.PlayTextVoice(11,11);
-            hasTalkingClear = true;
+            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+            if (distance <= targetDistance && !hasTalkingClear)
+            {
+                StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(11, 11));
+                //naviTextVoiceCtrl.PlayTextVoice(11,11);
+                hasTalkingClear = true;
+            }
+
         }
     }
 }

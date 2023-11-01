@@ -48,13 +48,14 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     private NaviAnimationCtrl naviAnimationCtrl;
 
     private float targetDistance = 1f;
-    private bool hasTalkingTresureChest = false; //宝箱の話をしたかどうかのフラグ
+    public bool isTextPlaying = false;
+    /*private bool hasTalkingTresureChest = false; //宝箱の話をしたかどうかのフラグ
     private bool hasTalkingKey = false; //鍵の話をしたかどうかのフラグ
     private bool hasTalkingTorch = false;//松明の話をしたかどうかのフラグ
     private bool hasTalkingCandlestick = false;//燭台の話をしたかどうかのフラグ
     private bool hasTalkingCave = false;//洞窟の話をしたかどうかのフラグ
     private bool hasTalkingCrackedWall = false;//ひび割れた壁の話をしたかどうかのフラグ
-    private bool hasTalkingGestureDiscovery = false;//ジェスチャー発見の話をしたかどうかのフラグ
+    private bool hasTalkingGestureDiscovery = false;//ジェスチャー発見の話をしたかどうかのフラグ*/
     // Start is called before the first frame update
     void Start()
     {
@@ -126,13 +127,13 @@ public class NaviTextVoiceCtrl : MonoBehaviour
                 StartCoroutine(DelateText(5));
                 hasTalkingCrackedWall = true;
             }
-        }*/
+        }
 
-        /*//ジェスチャー発見
+        //ジェスチャー発見
         float distance6 = Vector3.Distance(transform.position, gestureDiscovery.transform.position);
         if (distance6 <= targetDistance && !hasTalkingGestureDiscovery)
         {
-            PlayTextVoice(0,6);
+            PlayTextVoice(0, 6);
             //text.text = "よし！これで先に進めそう！";
             StartCoroutine(DelateText(5));
             hasTalkingGestureDiscovery = true;
@@ -145,16 +146,27 @@ public class NaviTextVoiceCtrl : MonoBehaviour
             //text.text = "よし！これで先に進めそう！";
             StartCoroutine(DelateText(5));
             hasTalkingGestureDiscovery = true;
-        }*/
-
+        }
+*/
     }
 
-    public IEnumerator DelateText(float time)
+    /*public IEnumerator DelateText(float time)
     {
         textObject.SetActive(true);
         yield return new WaitForSeconds(time);
         textObject.SetActive(false);
 
+    }*/
+    public IEnumerator WaitAndPlayTextVoice(int voicePatternNum, int textPatternNum)
+    {
+        isTextPlaying = true;
+        textObject.SetActive(true);
+        PlayTextVoice(voicePatternNum, textPatternNum);
+
+        yield return new WaitForSeconds(voiceList[voicePatternNum].length);
+
+        textObject.SetActive(false);
+        isTextPlaying = false;
     }
     public void PlayTextVoice(int voicePatternNum, int textPatternNum)//ボイスパターン一覧の中からボイスを取得して再生
     {
