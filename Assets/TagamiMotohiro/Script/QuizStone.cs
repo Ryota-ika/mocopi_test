@@ -37,6 +37,7 @@ public class QuizStone : MonoBehaviourPunCallbacks
 			}
             else
 			{
+                key[i].SetIsCleard();
                 Debug.Log("ïsê≥â(ä‚)");
                 objectNum = i;
                 photonView.RPC(nameof(StopPlayer),RpcTarget.All,i);
