@@ -33643,6 +33643,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
+      propertyPath: targetDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 346968481, guid: a833525238ff43641adecba6d1e74821, type: 3}
       propertyPath: mocopiPlayerWork
       value: 
       objectReference: {fileID: 1791971356}
@@ -38995,13 +38999,18 @@ PrefabInstance:
       objectReference: {fileID: 1982260960}
     - target: {fileID: 8387041244565197523, guid: 126d619cf4daa52469682f85c1378b4a,
         type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387041244565197523, guid: 126d619cf4daa52469682f85c1378b4a,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 278
+      value: 326
       objectReference: {fileID: 0}
     - target: {fileID: 8387041244565197523, guid: 126d619cf4daa52469682f85c1378b4a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 302
+      value: 299
       objectReference: {fileID: 0}
     - target: {fileID: 8737466924654117960, guid: 126d619cf4daa52469682f85c1378b4a,
         type: 3}
@@ -39925,6 +39934,11 @@ PrefabInstance:
       propertyPath: navi
       value: 
       objectReference: {fileID: 1024010883}
+    - target: {fileID: 406371230575435780, guid: d45ab43dfd6bd054e9453f2fa715d640,
+        type: 3}
+      propertyPath: targetDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 406371230575435780, guid: d45ab43dfd6bd054e9453f2fa715d640,
         type: 3}
       propertyPath: mocopiPlayerWork
