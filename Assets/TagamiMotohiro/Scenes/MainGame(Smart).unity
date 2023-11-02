@@ -57320,6 +57320,12 @@ PrefabInstance:
       propertyPath: naviTextVoiceCtrl
       value: 
       objectReference: {fileID: 1454932033}
+    - target: {fileID: 1249996166826005816, guid: f29a5b1d8765c074cb4c801c5991ee1a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d29dfd8cbf160c4a92484b9e015fbc9,
+        type: 3}
     - target: {fileID: 1249996168510995809, guid: f29a5b1d8765c074cb4c801c5991ee1a,
         type: 3}
       propertyPath: m_Name
@@ -65790,6 +65796,12 @@ PrefabInstance:
       propertyPath: naviTextVoiceCtrl
       value: 
       objectReference: {fileID: 1454932033}
+    - target: {fileID: 1249996166826005816, guid: f29a5b1d8765c074cb4c801c5991ee1a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d29dfd8cbf160c4a92484b9e015fbc9,
+        type: 3}
     - target: {fileID: 1249996168510995809, guid: f29a5b1d8765c074cb4c801c5991ee1a,
         type: 3}
       propertyPath: m_Name
