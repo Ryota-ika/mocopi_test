@@ -37,11 +37,16 @@ public class QuizStone : MonoBehaviourPunCallbacks
 			}
             else
 			{
+                key[i].SetIsCleard();
                 Debug.Log("ïsê≥â(ä‚)");
                 objectNum = i;
                 photonView.RPC(nameof(StopPlayer),RpcTarget.All,i);
 			}
 	    }
+        if (Input.GetKeyDown(KeyCode.B))
+		{
+            Destroy(wall[collectNum].gameObject);
+		}
     }
 	public void StartQuiz()
 	{

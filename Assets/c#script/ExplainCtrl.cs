@@ -8,7 +8,7 @@ public class ExplainCtrl : MonoBehaviour
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
     [SerializeField]
     private float targetDistance = 1.0f;
-    private bool hasTalkingExplain = false;
+    private bool hasTalkingExplation = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +19,11 @@ public class ExplainCtrl : MonoBehaviour
     void Update()
     {
         float distace = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-        if (distace <= targetDistance && !hasTalkingExplain)
+        if (distace <= targetDistance && !hasTalkingExplation)
         {
             naviTextVoiceCtrl.PlayTextVoice(9, 9);
             StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            hasTalkingExplain = true;
+            hasTalkingExplation = true;
         }
     }
 }

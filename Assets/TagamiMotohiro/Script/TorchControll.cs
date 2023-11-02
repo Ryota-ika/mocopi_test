@@ -25,7 +25,7 @@ public class TorchControll : KeyObject
     }
 	protected override void CrearDirection()
 	{
-		if (!isCleard&&Vector3.Distance(transform.position,torch.position)<=colliderRange) {
+		if (!isCleard&&Vector3.Distance(transform.position,torch.position)<=colliderRange&&isCanFire) {
             foreach (GameObject item in setActiveObject)
             {
                 item.SetActive(true);
@@ -43,7 +43,9 @@ public class TorchControll : KeyObject
     public IEnumerator BanedTorchFire(float banedTime)
 	{
         isCanFire = false;
+        Debug.Log(this.gameObject.name+"たいまつ点火不可");
         yield return new WaitForSeconds(banedTime);
+        Debug.Log("たいまつ点火可能");
         isCanFire = true;
 	}
     public void setIsCanFire(bool value)

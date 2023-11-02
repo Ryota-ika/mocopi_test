@@ -11,7 +11,7 @@ public class GestureArea : MonoBehaviourPunCallbacks
     [SerializeField]
     float radius;
     bool collected=false;
-
+    bool isQuizNow=false;
     [SerializeField]
     QuizStone quizStone;
     [SerializeField]
@@ -32,6 +32,11 @@ public class GestureArea : MonoBehaviourPunCallbacks
             photonView.RPC(nameof(StartGestureQuiz),RpcTarget.All);
             Player.SetIsCanWalk(false);
             Debug.Log("ジェスチャー待機状態に入った");
+            isQuizNow = true;
+        }
+        if (isQuizNow)
+		{
+            Player.transform.position = transform.position;
         }
     }
     [PunRPC]
@@ -45,7 +50,8 @@ public class GestureArea : MonoBehaviourPunCallbacks
         if (quizStone != null)
         {
             quizStone.StartQuiz();
-            while (quizStone.isQuizCollected())
+            //チートコード　Cキーでクリア扱い
+            while (!quizStone.isQuizCollected())
             {
                 yield return null;
             }
@@ -53,7 +59,7 @@ public class GestureArea : MonoBehaviourPunCallbacks
         if (quizTorch != null)
 		{
             quizTorch.StartQuiz();
-            while (quizTorch.getIsCleard())
+            while (!quizTorch.getIsCleard())
 			{
                 yield return null;
 			}
@@ -61,5 +67,6 @@ public class GestureArea : MonoBehaviourPunCallbacks
         Player.SetIsCanWalk(true);
         Debug.Log("クイズがクリアされた");
         collected = true;
+        isQuizNow = false;
     }
 }
