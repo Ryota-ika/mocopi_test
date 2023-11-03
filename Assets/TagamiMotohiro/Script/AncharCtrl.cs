@@ -135,7 +135,8 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Transform rightHand = AncharInstantiete(_rightHand, anchar);
         Transform leftFoot = AncharInstantiete(_leftFoot, anchar);
         Transform rightFoot = AncharInstantiete(_rightFoot, anchar);
-        
+
+        avatarList[posnum].layer = LayerMask.NameToLayer("Player");
         myAvatar=Instantiate(avatarList[posnum]);
         StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot,KeyCode.F1));
         //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
@@ -161,8 +162,9 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     //指定したプレイヤーのアンカーを抽出してキャリブレーション開始
     IEnumerator GetPlayerAnchar(int playerNum)
     {
+        
         GameObject avatar = Instantiate(avatarList[(playerNum%2)], Vector3.zero, Quaternion.identity);
-        avatar.layer = 1;
+        ChengeAbaterLayer(avatar, LayerMask.NameToLayer("Default"));
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Anchar"))
@@ -216,6 +218,15 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         return (int)hostPlayer.CustomProperties["PlayerNum"];
     }
 
+    //アバターのレイヤーを変更
+    void ChengeAbaterLayer(GameObject obj, LayerMask newLayer)
+    {
+        obj.layer = newLayer;
+        foreach (Transform child in obj.transform)
+        {
+            ChengeAbaterLayer(child.gameObject, newLayer);
+        }
+    }
     //以下プレイヤー情報のゲッター関数
     public static bool GetisConnected(){ return isConnected; }
     public static int GetPlayeNum(){ return playerNum; }
