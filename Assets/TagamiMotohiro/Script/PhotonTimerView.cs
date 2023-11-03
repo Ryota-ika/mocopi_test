@@ -27,7 +27,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks,IPunObservable
         int minutes = Mathf.FloorToInt(timer / 60);
         int seconds = Mathf.FloorToInt(timer % 60);
         TimerText.text = minutes.ToString("00")+(":")+seconds.ToString("00");
-        if (timer<=0) {
+        if (timer==0) {
             Debug.Log("ゲームオーバー");
             naviTextVoiceCtrl.PlayTextVoice(10,10);
             StartCoroutine(naviTextVoiceCtrl.DelateText(5));
