@@ -22,6 +22,8 @@ public class ClothControll : MonoBehaviour
     void Update()
     {
         Vector3 forward = transform.InverseTransformDirection(vector);
+        forward.y = 0;
+
         //‚±‚±‚É”CˆÓ‚Ìvector3‚ğ—pˆÓ‚µ‚Äforward‚É‚©‚¯‡‚í‚¹‚½‚¢‚Å‚·
         cloth.externalAcceleration = forward;
     }

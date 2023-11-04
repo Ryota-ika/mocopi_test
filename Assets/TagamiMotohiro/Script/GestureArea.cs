@@ -16,6 +16,10 @@ public class GestureArea : MonoBehaviourPunCallbacks
     QuizStone quizStone;
     [SerializeField]
     QuizTorch quizTorch;
+    [SerializeField]
+    TMPro.TextMeshProUGUI quizText;
+    [SerializeField]
+    string quizTextValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,7 @@ public class GestureArea : MonoBehaviourPunCallbacks
 	void StartGestureQuiz()
 	{
         StartCoroutine(CheckQuizCleard());
+        quizText.text = quizTextValue;
 	}
     //対応するクイズ用のスクリプトがクリア状態になっているか監視
     IEnumerator CheckQuizCleard()
