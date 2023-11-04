@@ -41,20 +41,24 @@ public class Key : MonoBehaviour
                 pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
                 float delayTime = 3.0f;
-                naviTextVoiceCtrl.PlayTextVoice(8,8);
-                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5)); 
+                //naviTextVoiceCtrl.PlayTextVoice(8,8);
+                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(8, 8));
             }
         }
         if (mocopiPlayerWork.GetIsCanWalk())
         {
-            //Œ®”­Œ©
-            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distance <= targetDistace && !hasTalkingKey)
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                naviTextVoiceCtrl.PlayTextVoice(1, 1);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingKey = true;
+                float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distance <= targetDistace && !hasTalkingKey)
+                {
+                    //naviTextVoiceCtrl.PlayTextVoice(1, 1);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(1, 1));
+                    hasTalkingKey = true;
+                }
             }
+            //Œ®”­Œ©
+
         }
     }
 }

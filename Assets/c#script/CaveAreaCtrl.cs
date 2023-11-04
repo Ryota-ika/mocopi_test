@@ -22,13 +22,17 @@ public class CaveAreaCtrl : MonoBehaviour
     {
         if (mocopiPlayerWork.GetIsCanWalk())
         {
-            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distance <= targetDistance && !hasTalkingCave)
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                naviTextVoiceCtrl.PlayTextVoice(4, 4);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingCave = true;
+                float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distance <= targetDistance && !hasTalkingCave)
+                {
+                    //naviTextVoiceCtrl.PlayTextVoice(4, 4);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(4, 4));
+                    hasTalkingCave = true;
+                }
             }
+
 
         }
     }

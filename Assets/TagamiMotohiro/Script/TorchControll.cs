@@ -43,9 +43,7 @@ public class TorchControll : KeyObject
     public IEnumerator BanedTorchFire(float banedTime)
 	{
         isCanFire = false;
-        Debug.Log(this.gameObject.name+"たいまつ点火不可");
         yield return new WaitForSeconds(banedTime);
-        Debug.Log("たいまつ点火可能");
         isCanFire = true;
 	}
     public void setIsCanFire(bool value)

@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class ClothControll : MonoBehaviour
 {
+    [SerializeField]
     Cloth cloth;
+    [SerializeField]
+    Vector3 vector;
+    [SerializeField]
+    float power;
+    [SerializeField]
+    Transform navi;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +21,8 @@ public class ClothControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = transform.forward;
-
+        Vector3 forward = transform.InverseTransformDirection(vector);
+        //Ç±Ç±Ç…îCà”ÇÃvector3Çópà”ÇµÇƒforwardÇ…Ç©ÇØçáÇÌÇπÇΩÇ¢Ç≈Ç∑
         cloth.externalAcceleration = forward;
     }
 }

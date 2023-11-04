@@ -22,7 +22,7 @@ public class ExplainCtrl : MonoBehaviour
         if (distace <= targetDistance && !hasTalkingExplation)
         {
             naviTextVoiceCtrl.PlayTextVoice(9, 9);
-            StartCoroutine(naviTextVoiceCtrl.DelateText(5));
+            StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(9,9));
             hasTalkingExplation = true;
         }
     }

@@ -22,14 +22,16 @@ public class GestureCtrl : MonoBehaviour
     {
         if (mocopiPlayerWork.GetIsCanWalk())
         {
-            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distance <= targetDistance && !hasTalkingGestureDiscovery)
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                naviTextVoiceCtrl.PlayTextVoice(6, 6);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingGestureDiscovery = true;
+                float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distance <= targetDistance && !hasTalkingGestureDiscovery)
+                {
+                    //naviTextVoiceCtrl.PlayTextVoice(6, 6);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(6, 6));
+                    hasTalkingGestureDiscovery = true;
+                }
             }
-
         }
     }
 }
