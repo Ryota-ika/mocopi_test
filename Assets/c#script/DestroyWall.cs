@@ -2,7 +2,6 @@
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.AI;
 using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
@@ -89,7 +88,7 @@ public class DestroyWall : MonoBehaviour
             if (!naviTextVoiceCtrl.isTextPlaying)
             {
                 //naviTextVoiceCtrl.PlayTextVoice(7, 7);
-                naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(7, 7));
+                StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(7, 7));
                 hasTalkingDestroy = true;
             }
 

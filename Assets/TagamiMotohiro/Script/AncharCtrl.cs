@@ -8,7 +8,7 @@ using System.Linq;
 
 public class AncharCtrl : MonoBehaviourPunCallbacks
     //アンカーだけ生成してアバターはオフラインで管理するやり方
-{
+{ 
     [SerializeField]
     int buildNum;
     [Header("アンカー一覧")]
@@ -50,11 +50,11 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     //自分のアバターの一時保存に使う
     GameObject myAvatar;
     Player[] players=new Player[2];
+   
     // Start is called before the first frame update
     void Start()
     {
-        //接続する前に明示的に１p側か２p側か選択させるようにしました
-        StartCoroutine(InitPlayer());
+        SelectPlayerNum(buildNum);
     }
     //プレイヤーがどちら側か選択
     IEnumerator InitPlayer()
@@ -62,8 +62,15 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         bool selected = false;
         while (!selected)
         {
-            SelectPlayerNum(buildNum);
-            selected = true;
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                SelectPlayerNum(1);
+                selected = true;
+            }else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                SelectPlayerNum(2);
+                selected = true;
+            }
             yield return null;
         }
         

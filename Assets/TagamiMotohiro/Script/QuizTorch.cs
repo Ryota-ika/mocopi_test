@@ -34,14 +34,18 @@ public class QuizTorch : MonoBehaviourPunCallbacks
         for(int i=0; i<torch_list.Count; i++) {
             if (torch_list[i].GetIsCleard())
             {
-                if (i == collectNum&&!isCleard)
+                if (i == collectNum && !isCleard)
                 {
                     photonView.RPC(nameof(Clear), RpcTarget.All);
                     isCleard = true;
-                }else if(!isPenaltyTime)
+                    Debug.Log(i+"‚½‚¢‚Ü‚Â³‰ð");
+                }
+                
+                if(i != collectNum && !isCleard)
 				{
-                    Debug.Log("•s³‰ð(‚½‚¢‚Ü‚Â)");
+                    Debug.Log(i + "‚½‚¢‚Ü‚Â•s³‰ð");
                     photonView.RPC(nameof(StopPlayer),RpcTarget.All);
+                    isCleard = true;
                     isPenaltyTime = true;
 				}
             }
