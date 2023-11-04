@@ -32663,7 +32663,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 911952967}
-  - component: {fileID: 911952965}
   - component: {fileID: 911952966}
   m_Layer: 6
   m_Name: Cube (12)
@@ -32672,14 +32671,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &911952965
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911952964}
-  m_Enabled: 1
 --- !u!20 &911952966
 Camera:
   m_ObjectHideFlags: 0
@@ -64069,7 +64060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b16a3d337aa5cc479f258e26adfbd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildNum: 2
+  buildNum: 1
   _head: {fileID: 435833798}
   _body: {fileID: 963469356}
   _rightHand: {fileID: 494183983}

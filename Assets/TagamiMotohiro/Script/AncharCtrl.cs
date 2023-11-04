@@ -164,8 +164,8 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     //指定したプレイヤーのアンカーを抽出してキャリブレーション開始
     IEnumerator GetPlayerAnchar(int playerNum)
     {
-        
-        GameObject avatar = Instantiate(avatarList[(playerNum%2)], Vector3.zero, Quaternion.identity);
+        Debug.Log((int)PhotonNetwork.PlayerList[playerNum - 1].CustomProperties["PlayerNum"]-1);
+        GameObject avatar = Instantiate(avatarList[(int)PhotonNetwork.PlayerList[playerNum - 1].CustomProperties["PlayerNum"] - 1], Vector3.zero, Quaternion.identity);
         ChengeAbaterLayer(avatar, LayerMask.NameToLayer("Default"));
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();
