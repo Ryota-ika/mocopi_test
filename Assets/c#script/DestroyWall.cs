@@ -18,7 +18,13 @@ public class DestroyWall : MonoBehaviour
     [SerializeField]
     private NaviTextVoiceCtrl naviTextVoiceCtrl;
     [SerializeField]
-    private float targetDistance = 5f;
+    private float wallAndNaviDistance = 5f;
+    [SerializeField]
+    private float wallAndHammerDistance = 3f;
+    [SerializeField]
+    private AxeController axeController;
+    private bool hasTalkingDestroy = false;
+    private bool hasTalkingHowToDestroy = false;
     private bool hasTalkingCrackedWall = false;//�Ђъ��ꂽ�ǂ̘b���������ǂ����̃t���O
     [SerializeField]
     AudioClip damageSE;
@@ -27,7 +33,6 @@ public class DestroyWall : MonoBehaviour
     AudioSource myAS;
     [SerializeField]
     private MocopiPlayerWork mocopiPlayerWork;
-    private bool hasTalkingDestroy = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,9 +85,13 @@ public class DestroyWall : MonoBehaviour
         if (naviTextVoiceCtrl == null) { return; }
         if (!hasTalkingDestroy)
         {
-            naviTextVoiceCtrl.PlayTextVoice(7, 7);
-            naviTextVoiceCtrl.StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-            hasTalkingDestroy = true;
+            if (!naviTextVoiceCtrl.isTextPlaying)
+            {
+                //naviTextVoiceCtrl.PlayTextVoice(7, 7);
+                StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(7, 7));
+                hasTalkingDestroy = true;
+            }
+
         }
         //Axe.SetActive(false);
         //Destroy(Axe);
@@ -118,13 +127,23 @@ public class DestroyWall : MonoBehaviour
         if (mocopiPlayerWork.GetIsCanWalk())
         {
             if (naviTextVoiceCtrl == null) { return; }
-            float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-            if (distance <= targetDistance && !hasTalkingCrackedWall)
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                //mocopiPlayerWork.SetIsCanWalk(true);
-                naviTextVoiceCtrl.PlayTextVoice(5, 5);
-                StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                hasTalkingCrackedWall = true;
+                float distance = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                if (distance <= wallAndNaviDistance && !hasTalkingCrackedWall)
+                {
+                    //mocopiPlayerWork.SetIsCanWalk(true);
+                    //naviTextVoiceCtrl.PlayTextVoice(5, 5);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(5, 5));
+                    hasTalkingCrackedWall = true;
+                }
+                float distance1 = Vector3.Distance(transform.position, axeController.transform.position);
+                if (distance1 <= wallAndHammerDistance && !hasTalkingHowToDestroy)
+                {
+                    //naviTextVoiceCtrl.PlayTextVoice(12,12);
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(12, 12));
+                    hasTalkingHowToDestroy = true;
+                }
             }
         }
     }

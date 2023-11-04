@@ -29,7 +29,7 @@ public class StartRoomKey : KeyObject
     }
 	protected override void CrearDirection()
 	{
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&&AncharCtrl.GetisConnected())
         {
             SetStart();
         }

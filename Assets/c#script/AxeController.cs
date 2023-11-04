@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AxeController : MonoBehaviour
 {
-    public float minRequiredSpeed = 2.0f;
+    [SerializeField] private float minRequiredSpeed = 2.0f;
     private Vector3 previousPosition;
     private float hitSpeed;
     

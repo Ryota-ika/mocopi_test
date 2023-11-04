@@ -57,16 +57,21 @@ public class TresureChest : MonoBehaviour
     {
         if (mocopiPlayerWork.GetIsCanWalk())
         {
-            if (Animated_Chest_01 != null)
+            Debug.Log(naviTextVoiceCtrl.isTextPlaying);
+            if (!naviTextVoiceCtrl.isTextPlaying)
             {
-                float distace = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
-                if (distace <= targetDistance && !hasTalkingTresureChst)
+                if (Animated_Chest_01 != null)
                 {
-                    naviTextVoiceCtrl.PlayTextVoice(0, 0);
-                    StartCoroutine(naviTextVoiceCtrl.DelateText(5));
-                    hasTalkingTresureChst = true;
+                    float distace = Vector3.Distance(transform.position, naviTextVoiceCtrl.transform.position);
+                    if (distace <= targetDistance && !hasTalkingTresureChst)
+                    {
+                        //naviTextVoiceCtrl.PlayTextVoice(0, 0);
+                        StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(0, 0));
+                        hasTalkingTresureChst = true;
+                    }
                 }
             }
+
 
         }
 
