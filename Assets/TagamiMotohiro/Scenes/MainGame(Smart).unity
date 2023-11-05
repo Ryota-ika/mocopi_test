@@ -34408,7 +34408,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 911952967}
-  - component: {fileID: 911952965}
   - component: {fileID: 911952966}
   m_Layer: 6
   m_Name: Cube (12)
@@ -34417,14 +34416,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &911952965
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911952964}
-  m_Enabled: 1
 --- !u!20 &911952966
 Camera:
   m_ObjectHideFlags: 0
