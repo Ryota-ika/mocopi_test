@@ -34,32 +34,35 @@ public class QuizTorch : MonoBehaviourPunCallbacks
         for(int i=0; i<torch_list.Count; i++) {
             if (torch_list[i].GetIsCleard())
             {
-                if (i == collectNum && !isCleard)
-                {
-                    photonView.RPC(nameof(Clear), RpcTarget.All);
-                    isCleard = true;
-                    Debug.Log(i+"‚½‚¢‚Ü‚Â³‰ð");
-                }
-                
-                if(i != collectNum && !isCleard)
+                if (i != collectNum && !isCleard)
 				{
                     Debug.Log(i + "‚½‚¢‚Ü‚Â•s³‰ð");
+                    torch_list[i].SetIsCleard();
                     photonView.RPC(nameof(StopPlayer),RpcTarget.All);
-                    isCleard = true;
                     isPenaltyTime = true;
+                    return;
 				}
+
+                if (i == collectNum && !isCleard)
+                {
+                    photonView.RPC(nameof(Clear), RpcTarget.All,i);
+                    isCleard = true;
+                    Debug.Log(i+"‚½‚¢‚Ü‚Â³‰ð");
+                    return;
+                }
             }
         }
     }
     [PunRPC]
-    void Clear()
+    void Clear(int collectnum)
     {
-        torch_list[collectNum].SetIsCleard();
+        torch_list[collectnum].SetIsCleard();
         StartCoroutine(durationPlaySE(2,collectSE));
     }
     [PunRPC]
     void StopPlayer()
     {
+
         StartCoroutine(durationPlaySE(2,unCollectSE));
         foreach (TorchControll torch in torch_list)
 		{

@@ -49,7 +49,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
     //自分のアバターの一時保存に使う
     GameObject myAvatar;
-    Player[] players=new Player[2];
    
     // Start is called before the first frame update
     void Start()

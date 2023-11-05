@@ -43,7 +43,7 @@ public class DestroyWall : MonoBehaviour
     public void OnAxeHit(float hitSpeed)
     {
         float damage = hitSpeed;
-        myAS.PlayOneShot(damageSE);
+       
         DecreaseDurability(damage);
     }
 
@@ -52,7 +52,7 @@ public class DestroyWall : MonoBehaviour
         if (!isCanDestroy) { return; }
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.LTouch));
         StartCoroutine(Vibrate(duration: 0.5f, controller: OVRInput.Controller.RTouch));
-
+        myAS.PlayOneShot(damageSE);
         Debug.Log(damage);
         currentDurability -= damage;
 

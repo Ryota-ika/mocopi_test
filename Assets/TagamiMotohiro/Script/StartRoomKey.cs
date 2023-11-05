@@ -7,6 +7,10 @@ using Photon.Realtime;
 public class StartRoomKey : KeyObject
 {
     [SerializeField]
+    AudioClip countDownSE;
+    [SerializeField]
+    AudioSource myAS;
+    [SerializeField]
     MocopiPlayerWork player;
     static bool _1pStanby=false;
     static bool _2pStanby=false;
@@ -61,6 +65,7 @@ public class StartRoomKey : KeyObject
     }
     IEnumerator StartCount()
 	{
+        myAS.PlayOneShot(countDownSE);
         countDownText.text = countDown.ToString();
         while (countDown >= 0)
 		{
