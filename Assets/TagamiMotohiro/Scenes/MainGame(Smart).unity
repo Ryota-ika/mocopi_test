@@ -77528,9 +77528,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6005745053545666474, guid: f7fc0875ec165e84d9fa59ea242505cd,
         type: 3}
+      propertyPath: voiceList.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b9edf2bab3e0c94dbb14aea2467f472, type: 3}
+    - target: {fileID: 6005745053545666474, guid: f7fc0875ec165e84d9fa59ea242505cd,
+        type: 3}
+      propertyPath: voiceList.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 401270582539d1948839391b870d5a75, type: 3}
+    - target: {fileID: 6005745053545666474, guid: f7fc0875ec165e84d9fa59ea242505cd,
+        type: 3}
+      propertyPath: voiceList.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: cf6e1d68a20c6dc4288f021cd31c6aa5, type: 3}
+    - target: {fileID: 6005745053545666474, guid: f7fc0875ec165e84d9fa59ea242505cd,
+        type: 3}
       propertyPath: voiceList.Array.data[12]
       value: 
-      objectReference: {fileID: 8300000, guid: 09e28bda19f6b6b4b9257d14d5edfb4c, type: 3}
+      objectReference: {fileID: 8300000, guid: 066f9d6c923b06b4d8a7947d5962c5e3, type: 3}
     - target: {fileID: 6005745053545666474, guid: f7fc0875ec165e84d9fa59ea242505cd,
         type: 3}
       propertyPath: naviTextList.Array.data[12]
