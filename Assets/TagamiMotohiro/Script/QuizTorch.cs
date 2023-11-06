@@ -38,7 +38,7 @@ public class QuizTorch : MonoBehaviourPunCallbacks
 				{
                     Debug.Log(i + "ÇΩÇ¢Ç‹Ç¬ïsê≥â");
                     torch_list[i].SetIsCleard();
-                    photonView.RPC(nameof(StopPlayer),RpcTarget.All);
+                    photonView.RPC(nameof(StopPlayer),RpcTarget.All,i);
                     isPenaltyTime = true;
                     return;
 				}
@@ -60,9 +60,9 @@ public class QuizTorch : MonoBehaviourPunCallbacks
         StartCoroutine(durationPlaySE(2,collectSE));
     }
     [PunRPC]
-    void StopPlayer()
+    void StopPlayer(int num)
     {
-
+        torch_list[num].SetIsCleard();
         StartCoroutine(durationPlaySE(2,unCollectSE));
         foreach (TorchControll torch in torch_list)
 		{
