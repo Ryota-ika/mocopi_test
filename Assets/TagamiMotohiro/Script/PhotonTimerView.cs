@@ -52,7 +52,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks, IPunObservable
             TimerText.text = minutes.ToString("00") + (":") + seconds.ToString("00");
             if (timer <= 0 && !isGameOver)
             {
-                TimerText.text = 0.ToString();
+                TimerText.gameObject.SetActive(false);
                 player.SetIsCanWalk(false);
                 Debug.Log("ゲームオーバー");
                 //naviTextVoiceCtrl.PlayTextVoice(10,10);
