@@ -1,6 +1,6 @@
 # mocopiVR
 
-mocopiとMetaQuestProを活用した脱出アトラクションです。
+mocopiとMetaQuestProを活用したオンライン型脱出アトラクションです。
 
 開発環境：
 Unity ver2021.2.11
