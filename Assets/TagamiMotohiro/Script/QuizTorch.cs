@@ -52,6 +52,12 @@ public class QuizTorch : MonoBehaviourPunCallbacks
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.T))
+		{
+            photonView.RPC(nameof(Clear), RpcTarget.All, 0);
+            isCleard = true;
+            return;
+        }
     }
     [PunRPC]
     void Clear(int collectnum)
