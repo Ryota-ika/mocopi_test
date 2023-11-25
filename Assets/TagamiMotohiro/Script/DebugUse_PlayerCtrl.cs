@@ -18,10 +18,21 @@ public class DebugUse_PlayerCtrl : MonoBehaviour
     {
         Move();
     }
-    [Conditional("UNITY_EDITOR")]
     void Move()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        float horizontalInput = 0;
+        float verticalInput = 0;
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+        }
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        {
+            verticalInput = Input.GetAxis("Vertical");
+        }
+        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput);
         Vector3 cameraFowerd = Camera.main.transform.forward;
         Vector3 cameraRight = Camera.main.transform.right;
         cameraFowerd.y = 0; // yŽ²‚ÌˆÚ“®‚Í–³Ž‹
