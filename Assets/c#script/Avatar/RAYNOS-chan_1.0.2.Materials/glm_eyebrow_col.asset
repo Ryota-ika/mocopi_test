@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a580130df05654d47ad046219f392732, type: 3}
+        m_Texture: {fileID: 2800000, guid: c9dc3f6c9f3cb064c9e4d0a4b42fe018, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineWidthTexture:
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadeTexture:
-        m_Texture: {fileID: 2800000, guid: f7d537ad2eb572e438aa219c5b3a63b7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 66726f25ad0beb54c9dc04adb9b9dd59, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadingGradeTexture:
