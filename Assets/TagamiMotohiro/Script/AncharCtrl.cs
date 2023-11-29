@@ -114,6 +114,8 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         ExitGames.Client.Photon.Hashtable roomInfo = new ExitGames.Client.Photon.Hashtable();
         roomInfo.Add("1pStanby", false);
         roomInfo.Add("2pStanby", false);
+        roomInfo.Add("isArea1Cleard", false);
+        roomInfo.Add("isArea2Cleard", false);
         PhotonNetwork.CurrentRoom.SetCustomProperties(roomInfo);
     }
 

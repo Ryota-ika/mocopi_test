@@ -85,7 +85,6 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     {
         lateFootPos = foot.position;
         float footvelocity = 0;
-        Debug.Log(logtext+"‘Ò‹@’†");
         while (!isStepping) {
 
             footvelocity = lateFootPos.y - foot.position.y;
@@ -99,7 +98,6 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         }
         workWeigting = true;
         isStepping = false;
-        Debug.Log(logtext + "Š®—¹"); 
     }
     IEnumerator Step()
     {
@@ -116,10 +114,6 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 yield break;
 			}
             transform.position+=(avatarfoward*stepSpeed)*Time.deltaTime;
-			//float stepDistance = Mathf.MoveTowards(0, distanceToTarget, Time.deltaTime * stepLength);
-			//Vector3 nowPos = Vector3.MoveTowards(transform.position, targetPoint, stepDistance * stepSpeed);
-			//stepPos.position = targetPoint;
-            //transform.position = nowPos;
 			t += Time.deltaTime;
 			yield return null;
 			
@@ -132,7 +126,6 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         //avatarƒIƒuƒWƒFƒNƒg‚Ì³–Ê
         if (Physics.SphereCast(transform.position+new Vector3(0,1.6f,0),0.15f,rayDirection,out hit,rayOfset,mask))
         {
-            Debug.Log(hit.collider.name);
             if (hit.collider.tag == "Wall")
             {
                 isCollisionWall = true;

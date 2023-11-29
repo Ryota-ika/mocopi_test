@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 public class QuizStone : MonoBehaviourPunCallbacks
 {
     [SerializeField]
@@ -77,4 +78,5 @@ public class QuizStone : MonoBehaviourPunCallbacks
 	{
         return key[collectNum].GetIsCleard();
 	}
+    
 }

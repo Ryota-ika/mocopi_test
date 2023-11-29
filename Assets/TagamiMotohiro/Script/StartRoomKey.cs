@@ -12,8 +12,8 @@ public class StartRoomKey : KeyObject
     AudioSource myAS;
     [SerializeField]
     MocopiPlayerWork player;
-    static bool _1pStanby=false;
-    static bool _2pStanby=false;
+    static bool _1pStanby = false;
+    static bool _2pStanby = false;
     bool stanbyOK = false;
     [SerializeField]
     int countDown = 3;
@@ -42,6 +42,7 @@ public class StartRoomKey : KeyObject
             stanbyOK = true;
             StartCoroutine(StartCount());
 		}
+        //プレイヤーがそろっていなくても強制開始
         if (Input.GetKeyDown(KeyCode.C))
 		{
             stanbyOK = true;
