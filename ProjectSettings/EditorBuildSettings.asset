@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/TagamiMotohiro/Scenes/ReceiverSample.unity
     guid: 3c9485e3231b8c5459aa7061370d1fb1
   - enabled: 0
-    path: Assets/TagamiMotohiro/Scenes/MainGame.unity
+    path: Assets/Scenes/MainGame.unity
     guid: ebf92f6ef6feb25438580bc8acfb382e
   - enabled: 0
     path: Assets/Plugins/RootMotion/FinalIK/_DEMOS/VRIK/VRIK Calibration (Mocap With
       Elbow Targets).unity
     guid: fff4c7d58b7625d4a8aa18aa0081d80b
   - enabled: 1
-    path: Assets/TagamiMotohiro/Scenes/MainGame(Smart).unity
+    path: Assets/Scenes/MainGame(Smart).unity
     guid: 11ce364b3d7bc0944a4461d0f584ee7e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d8985df728249094aa5c8a7d8dd99c69,
