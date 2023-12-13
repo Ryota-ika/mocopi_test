@@ -36,18 +36,17 @@ public class QuizTorch : MonoBehaviourPunCallbacks
             {
                 if (i != collectNum && !isCleard)
 				{
-                    Debug.Log(i + "ÇΩÇ¢Ç‹Ç¬ïsê≥â");
-                    torch_list[i].SetIsCleard();
-                    photonView.RPC(nameof(StopPlayer),RpcTarget.All,i);
+                    Debug.Log( i + "ÇΩÇ¢Ç‹Ç¬ïsê≥â" );
+                    photonView.RPC( nameof(StopPlayer), RpcTarget.All, i);
                     isPenaltyTime = true;
                     return;
 				}
 
                 if (i == collectNum && !isCleard)
                 {
-                    photonView.RPC(nameof(Clear), RpcTarget.All,i);
+                    photonView.RPC( nameof(Clear), RpcTarget.All, i);
                     isCleard = true;
-                    Debug.Log(i+"ÇΩÇ¢Ç‹Ç¬ê≥â");
+                    Debug.Log( i + "ÇΩÇ¢Ç‹Ç¬ê≥â" );
                     return;
                 }
             }
@@ -63,16 +62,16 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     void Clear(int collectnum)
     {
         torch_list[collectnum].SetIsCleard();
-        StartCoroutine(durationPlaySE(2,collectSE));
+        StartCoroutine(durationPlaySE(2, collectSE));
     }
     [PunRPC]
     void StopPlayer(int num)
     {
         torch_list[num].SetIsCleard();
-        StartCoroutine(durationPlaySE(2,unCollectSE));
+        StartCoroutine(durationPlaySE(2, unCollectSE));
         foreach (TorchControll torch in torch_list)
 		{
-            StartCoroutine(torch.BanedTorchFire(10f));
+            StartCoroutine( torch.BanedTorchFire(10f) );
 		}
     }
     IEnumerator durationPlaySE(float durationTime,AudioClip SE)

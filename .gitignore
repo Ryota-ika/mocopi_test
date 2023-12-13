@@ -116,3 +116,1481 @@ Assets/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/PP_Setting_Tower.asset
 Assets/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/PP_Setting_Tower.asset.meta
 Assets/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/DemoScene/OcclusionCullingData.asset
 Assets/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/DemoScene/OcclusionCullingData.asset.meta
+Assets/MeshDeleterWithTexture/CHANGELOG.md
+Assets/MeshDeleterWithTexture/CHANGELOG.md.meta
+Assets/MeshDeleterWithTexture/Editor.meta
+Assets/MeshDeleterWithTexture/LICENSE.txt
+Assets/MeshDeleterWithTexture/LICENSE.txt.meta
+Assets/MeshDeleterWithTexture/package.json
+Assets/MeshDeleterWithTexture/package.json.meta
+Assets/MeshDeleterWithTexture/README.md
+Assets/MeshDeleterWithTexture/README.md.meta
+Assets/MeshDeleterWithTexture/Tests.meta
+Assets/MeshDeleterWithTexture/Editor/Gatosyocora.MeshDeleterWithTexture.Editor.asmdef
+Assets/MeshDeleterWithTexture/Editor/Gatosyocora.MeshDeleterWithTexture.Editor.asmdef.meta
+Assets/MeshDeleterWithTexture/Editor/Models.meta
+Assets/MeshDeleterWithTexture/Editor/Resources.meta
+Assets/MeshDeleterWithTexture/Editor/Scripts.meta
+Assets/MeshDeleterWithTexture/Editor/Utilities.meta
+Assets/MeshDeleterWithTexture/Editor/Views.meta
+Assets/MeshDeleterWithTexture/Editor/Models/AssetRepository.cs
+Assets/MeshDeleterWithTexture/Editor/Models/AssetRepository.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/CanvasModel.cs
+Assets/MeshDeleterWithTexture/Editor/Models/CanvasModel.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/DrawType.cs
+Assets/MeshDeleterWithTexture/Editor/Models/DrawType.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/Language.cs
+Assets/MeshDeleterWithTexture/Editor/Models/Language.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/LanguagePack.cs
+Assets/MeshDeleterWithTexture/Editor/Models/LanguagePack.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/LocalizedText.cs
+Assets/MeshDeleterWithTexture/Editor/Models/LocalizedText.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/MaterialInfo.cs
+Assets/MeshDeleterWithTexture/Editor/Models/MaterialInfo.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/MeshDeleterWithTextureModel.cs
+Assets/MeshDeleterWithTexture/Editor/Models/MeshDeleterWithTextureModel.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Models/NotFoundVerticesException.cs
+Assets/MeshDeleterWithTexture/Editor/Models/NotFoundVerticesException.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Lang.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Shaders.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Textures.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/calculateSelectArea.compute
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/calculateSelectArea.compute.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/draw.cginc
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/draw.cginc.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/drawCanvas.compute
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/drawCanvas.compute.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/getUVMap.compute
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/ComputeShaders/getUVMap.compute.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Lang/EN.asset
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Lang/EN.asset.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Lang/JA.asset
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Lang/JA.asset.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Shaders/NegaPosi.shader
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Shaders/NegaPosi.shader.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Shaders/TextureEdit.shader
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Shaders/TextureEdit.shader.meta
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Textures/grid.png
+Assets/MeshDeleterWithTexture/Editor/Resources/MDwT/Textures/grid.png.meta
+Assets/MeshDeleterWithTexture/Editor/Scripts/DeleteMaskCanvas.cs
+Assets/MeshDeleterWithTexture/Editor/Scripts/DeleteMaskCanvas.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Scripts/MeshDeleter.cs
+Assets/MeshDeleterWithTexture/Editor/Scripts/MeshDeleter.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Scripts/SelectAreaCanvas.cs
+Assets/MeshDeleterWithTexture/Editor/Scripts/SelectAreaCanvas.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Scripts/UndoCanvas.cs
+Assets/MeshDeleterWithTexture/Editor/Scripts/UndoCanvas.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Scripts/UVMapCanvas.cs
+Assets/MeshDeleterWithTexture/Editor/Scripts/UVMapCanvas.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Utilities/RendererUtility.cs
+Assets/MeshDeleterWithTexture/Editor/Utilities/RendererUtility.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Utilities/StringUtility.cs
+Assets/MeshDeleterWithTexture/Editor/Utilities/StringUtility.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Utilities/TextureUtility.cs
+Assets/MeshDeleterWithTexture/Editor/Utilities/TextureUtility.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Views/CanvasView.cs
+Assets/MeshDeleterWithTexture/Editor/Views/CanvasView.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Views/GatoGUILayout.cs
+Assets/MeshDeleterWithTexture/Editor/Views/GatoGUILayout.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Views/MeshDeleterWithTexture.cs
+Assets/MeshDeleterWithTexture/Editor/Views/MeshDeleterWithTexture.cs.meta
+Assets/MeshDeleterWithTexture/Editor/Views/ToolView.cs
+Assets/MeshDeleterWithTexture/Editor/Views/ToolView.cs.meta
+Assets/MeshDeleterWithTexture/Tests/Editor.meta
+Assets/MeshDeleterWithTexture/Tests/Model.meta
+Assets/MeshDeleterWithTexture/Tests/Editor/Gatosyocora.MeshDeleterWithTexture.Editor.Tests.asmdef
+Assets/MeshDeleterWithTexture/Tests/Editor/Gatosyocora.MeshDeleterWithTexture.Editor.Tests.asmdef.meta
+Assets/MeshDeleterWithTexture/Tests/Editor/Utilities.meta
+Assets/MeshDeleterWithTexture/Tests/Editor/Utilities/RendererUtilityTest.cs
+Assets/MeshDeleterWithTexture/Tests/Editor/Utilities/RendererUtilityTest.cs.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/shapell.prefab
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/shapell.prefab.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/shapell_parts.prefab
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/shapell_parts.prefab.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/shapellscene.unity
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/shapellscene.unity.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Body_deleteMesh 1.asset
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Body_deleteMesh 1.asset.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Body_deleteMesh 2.asset
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Body_deleteMesh 2.asset.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Body_deleteMesh.asset
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Body_deleteMesh.asset.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/shapell.fbx
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/shapell.fbx.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/shapell_parts.fbx
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/shapell_parts.fbx.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 1.anim
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 1.anim.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 2.anim
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 2.anim.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 3.anim
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 3.anim.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 4.anim
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 4.anim.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 5.anim
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim 5.anim.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim.anim
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellAnim.anim.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellCustomOverride.overrideController
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/ShapellCustomOverride.overrideController.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/blazer.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/blazer.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/body.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/body.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/clothes.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/clothes.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/faceex01.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/faceex01.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/Hair.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/Hair.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_blazer.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_blazer.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_body.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_body.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_clothes.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_clothes.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_faceex01.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_faceex01.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_hair.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_hair.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_blazer.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_blazer.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_body.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_body.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_clothes.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_clothes.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_faceex01.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_faceex01.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_hair.mat
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/data/Materials/shapell_p_hair.mat.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_blazer.png
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_blazer.png.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_body.png
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_body.png.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_body_mask.png
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_body_mask.png.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_clothes.png
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_clothes.png.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_faceex01.png
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_faceex01.png.meta
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_hair.png
+Assets/MeshDeleterWithTexture/Tests/Model/Shapell/tex/shapell_hair.png.meta
+Assets/Allsky/_AllSky_Documentation.pdf
+Assets/Allsky/_AllSky_Documentation.pdf.meta
+Assets/Allsky/Above.meta
+Assets/Allsky/AllSkyDemoEnvironment.meta
+Assets/Allsky/Anime.meta
+Assets/Allsky/Mammatus.meta
+Assets/Allsky/Night Moon Rise.meta
+Assets/Allsky/Night Skyglow.meta
+Assets/Allsky/Overcast.meta
+Assets/Allsky/Sunless_Moonless.meta
+Assets/Allsky/Version 4.meta
+Assets/Allsky/Above/Above Day A.meta
+Assets/Allsky/Above/Above Day B.meta
+Assets/Allsky/Above/Above Day C.meta
+Assets/Allsky/Above/Above Night A.meta
+Assets/Allsky/Above/Above Night B.meta
+Assets/Allsky/Above/Above Sunset A.meta
+Assets/Allsky/Above/Above Sunset B.meta
+Assets/Allsky/Above/Above Sunset C.meta
+Assets/Allsky/Above/Above Day A/Above Day A 6sided.mat
+Assets/Allsky/Above/Above Day A/Above Day A 6sided.mat.meta
+Assets/Allsky/Above/Above Day A/Above Day A Equirect.mat
+Assets/Allsky/Above/Above Day A/Above Day A Equirect.mat.meta
+Assets/Allsky/Above/Above Day A/Above Day A Equirect.png
+Assets/Allsky/Above/Above Day A/Above Day A Equirect.png.meta
+Assets/Allsky/Above/Above Day A/Above Day A.unity
+Assets/Allsky/Above/Above Day A/Above Day A.unity.meta
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Day A/Above Day A_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Day A/Above Day ASettings.lighting
+Assets/Allsky/Above/Above Day A/Above Day ASettings.lighting.meta
+Assets/Allsky/Above/Above Day B/Above Day B 6sided.mat
+Assets/Allsky/Above/Above Day B/Above Day B 6sided.mat.meta
+Assets/Allsky/Above/Above Day B/Above Day B Equirect.mat
+Assets/Allsky/Above/Above Day B/Above Day B Equirect.mat.meta
+Assets/Allsky/Above/Above Day B/Above Day B Equirect.png
+Assets/Allsky/Above/Above Day B/Above Day B Equirect.png.meta
+Assets/Allsky/Above/Above Day B/Above Day B.unity
+Assets/Allsky/Above/Above Day B/Above Day B.unity.meta
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Day B/Above Day B_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Day B/Above Day BSettings.lighting
+Assets/Allsky/Above/Above Day B/Above Day BSettings.lighting.meta
+Assets/Allsky/Above/Above Day C/Above Day C 6Sided.mat
+Assets/Allsky/Above/Above Day C/Above Day C 6Sided.mat.meta
+Assets/Allsky/Above/Above Day C/Above Day C Equirect.mat
+Assets/Allsky/Above/Above Day C/Above Day C Equirect.mat.meta
+Assets/Allsky/Above/Above Day C/Above Day C Equirect.png
+Assets/Allsky/Above/Above Day C/Above Day C Equirect.png.meta
+Assets/Allsky/Above/Above Day C/Above Day C.unity
+Assets/Allsky/Above/Above Day C/Above Day C.unity.meta
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Day C/Above Day C_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Day C/Above Day CSettings.lighting
+Assets/Allsky/Above/Above Day C/Above Day CSettings.lighting.meta
+Assets/Allsky/Above/Above Night A/Above Night A 6Sided.mat
+Assets/Allsky/Above/Above Night A/Above Night A 6Sided.mat.meta
+Assets/Allsky/Above/Above Night A/Above Night A Equirect.mat
+Assets/Allsky/Above/Above Night A/Above Night A Equirect.mat.meta
+Assets/Allsky/Above/Above Night A/Above Night A Equirect.png
+Assets/Allsky/Above/Above Night A/Above Night A Equirect.png.meta
+Assets/Allsky/Above/Above Night A/Above Night A.unity
+Assets/Allsky/Above/Above Night A/Above Night A.unity.meta
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Night A/Above Night A_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Night A/Above Night ASettings.lighting
+Assets/Allsky/Above/Above Night A/Above Night ASettings.lighting.meta
+Assets/Allsky/Above/Above Night B/Above Night B Equirect.mat
+Assets/Allsky/Above/Above Night B/Above Night B Equirect.mat.meta
+Assets/Allsky/Above/Above Night B/Above Night B Equirect.png
+Assets/Allsky/Above/Above Night B/Above Night B Equirect.png.meta
+Assets/Allsky/Above/Above Night B/Above Night B.unity
+Assets/Allsky/Above/Above Night B/Above Night B.unity.meta
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Night B/Above Night B_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Night B/Above Night BSettings.lighting
+Assets/Allsky/Above/Above Night B/Above Night BSettings.lighting.meta
+Assets/Allsky/Above/Above Night B/Above Night C 6Sided.mat
+Assets/Allsky/Above/Above Night B/Above Night C 6Sided.mat.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A 6Sided.mat
+Assets/Allsky/Above/Above Sunset A/Above Sunset A 6Sided.mat.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A Equirect.mat
+Assets/Allsky/Above/Above Sunset A/Above Sunset A Equirect.mat.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A Equirect.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A Equirect.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A.unity
+Assets/Allsky/Above/Above Sunset A/Above Sunset A.unity.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Sunset A/Above Sunset A_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Sunset A/Above Sunset ASettings.lighting
+Assets/Allsky/Above/Above Sunset A/Above Sunset ASettings.lighting.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B .unity
+Assets/Allsky/Above/Above Sunset B/Above Sunset B .unity.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B 6Sided.mat
+Assets/Allsky/Above/Above Sunset B/Above Sunset B 6Sided.mat.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B Equirect.mat
+Assets/Allsky/Above/Above Sunset B/Above Sunset B Equirect.mat.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B Equirect.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B Equirect.png.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B Settings.lighting
+Assets/Allsky/Above/Above Sunset B/Above Sunset B Settings.lighting.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Sunset B/Above Sunset B_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C 6Sided.mat
+Assets/Allsky/Above/Above Sunset C/Above Sunset C 6Sided.mat.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C Equirect.mat
+Assets/Allsky/Above/Above Sunset C/Above Sunset C Equirect.mat.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C Equirect.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C Equirect.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C.unity
+Assets/Allsky/Above/Above Sunset C/Above Sunset C.unity.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_0_Front+Z.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_0_Front+Z.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_1_Back-Z.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_1_Back-Z.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_2_Left+X.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_2_Left+X.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_3_Right-X.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_3_Right-X.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_4_Up+Y.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_4_Up+Y.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_5_Down-Y.png
+Assets/Allsky/Above/Above Sunset C/Above Sunset C_Cam_5_Down-Y.png.meta
+Assets/Allsky/Above/Above Sunset C/Above Sunset CSettings.lighting
+Assets/Allsky/Above/Above Sunset C/Above Sunset CSettings.lighting.meta
+Assets/Allsky/AllSkyDemoEnvironment/AdditiveSprite.mat
+Assets/Allsky/AllSkyDemoEnvironment/AdditiveSprite.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment.fbx
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment.fbx.meta
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Center.fbx
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Center.fbx.meta
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Light.fbx
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Light.fbx.meta
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment02.fbx
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_Logo.png
+Assets/Allsky/AllSkyDemoEnvironment/AllSky_Logo.png.meta
+Assets/Allsky/AllSkyDemoEnvironment/AllSkyDemoEnvironment_Unity4.prefab
+Assets/Allsky/AllSkyDemoEnvironment/AllSkyDemoEnvironment_Unity4.prefab.meta
+Assets/Allsky/AllSkyDemoEnvironment/BlackTransparentGradient.png
+Assets/Allsky/AllSkyDemoEnvironment/BlackTransparentGradient.png.meta
+Assets/Allsky/AllSkyDemoEnvironment/HowToUpResSkies.png
+Assets/Allsky/AllSkyDemoEnvironment/HowToUpResSkies.png.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials.meta
+Assets/Allsky/AllSkyDemoEnvironment/Moon Glare.flare
+Assets/Allsky/AllSkyDemoEnvironment/Moon Glare.flare.meta
+Assets/Allsky/AllSkyDemoEnvironment/MoonGlow.prefab
+Assets/Allsky/AllSkyDemoEnvironment/MoonGlow.prefab.meta
+Assets/Allsky/AllSkyDemoEnvironment/Mountain Glare.flare
+Assets/Allsky/AllSkyDemoEnvironment/Mountain Glare.flare.meta
+Assets/Allsky/AllSkyDemoEnvironment/Sun Glare.flare
+Assets/Allsky/AllSkyDemoEnvironment/Sun Glare.flare.meta
+Assets/Allsky/AllSkyDemoEnvironment/SunGlare.psd
+Assets/Allsky/AllSkyDemoEnvironment/SunGlare.psd.meta
+Assets/Allsky/AllSkyDemoEnvironment/SunGlow.prefab
+Assets/Allsky/AllSkyDemoEnvironment/SunGlow.prefab.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/Landscape.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/Landscape.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/rock.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/rock.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/TreeLeaves.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/TreeLeaves.mat.meta
+Assets/Allsky/AllSkyDemoEnvironment/Materials/TreeTrunk.mat
+Assets/Allsky/AllSkyDemoEnvironment/Materials/TreeTrunk.mat.meta
+Assets/Allsky/Anime/Anime Day.meta
+Assets/Allsky/Anime/Anime Night.meta
+Assets/Allsky/Anime/Anime Sunset.meta
+Assets/Allsky/Anime/Anime Day/Anime Day 6Sided.mat
+Assets/Allsky/Anime/Anime Day/Anime Day 6Sided.mat.meta
+Assets/Allsky/Anime/Anime Day/Anime Day Equirect.mat
+Assets/Allsky/Anime/Anime Day/Anime Day Equirect.mat.meta
+Assets/Allsky/Anime/Anime Day/Anime Day Equirect.png
+Assets/Allsky/Anime/Anime Day/Anime Day Equirect.png.meta
+Assets/Allsky/Anime/Anime Day/Anime Day.unity
+Assets/Allsky/Anime/Anime Day/Anime Day.unity.meta
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_0_Front+Z.png
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_0_Front+Z.png.meta
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_1_Back-Z.png
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_1_Back-Z.png.meta
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_2_Left+X.png
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_2_Left+X.png.meta
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_3_Right-X.png
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_3_Right-X.png.meta
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_4_Up+Y.png
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_4_Up+Y.png.meta
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_5_Down-Y.png
+Assets/Allsky/Anime/Anime Day/Anime Day_Cam_5_Down-Y.png.meta
+Assets/Allsky/Anime/Anime Day/Anime DaySettings.lighting
+Assets/Allsky/Anime/Anime Day/Anime DaySettings.lighting.meta
+Assets/Allsky/Anime/Anime Night/Anime Night 6Sided.mat
+Assets/Allsky/Anime/Anime Night/Anime Night 6Sided.mat.meta
+Assets/Allsky/Anime/Anime Night/Anime Night Equirect.mat
+Assets/Allsky/Anime/Anime Night/Anime Night Equirect.mat.meta
+Assets/Allsky/Anime/Anime Night/Anime Night Equirect.png
+Assets/Allsky/Anime/Anime Night/Anime Night Equirect.png.meta
+Assets/Allsky/Anime/Anime Night/Anime Night Equirect.unity
+Assets/Allsky/Anime/Anime Night/Anime Night Equirect.unity.meta
+Assets/Allsky/Anime/Anime Night/Anime Night EquirectSettings.lighting
+Assets/Allsky/Anime/Anime Night/Anime Night EquirectSettings.lighting.meta
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_0_Front+Z.png
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_0_Front+Z.png.meta
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_1_Back-Z.png
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_1_Back-Z.png.meta
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_2_Left+X.png
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_2_Left+X.png.meta
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_3_Right-X.png
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_3_Right-X.png.meta
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_4_Up+Y.png
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_4_Up+Y.png.meta
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_5_Down-Y.png
+Assets/Allsky/Anime/Anime Night/Anime Night_Cam_5_Down-Y.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset 6Sided.mat
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset 6Sided.mat.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset Equirect.mat
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset Equirect.mat.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset Equirect.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset Equirect.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset.unity
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset.unity.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_0_Front+Z.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_0_Front+Z.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_1_Back-Z.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_1_Back-Z.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_2_Left+X.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_2_Left+X.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_3_Right-X.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_3_Right-X.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_4_Up+Y.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_4_Up+Y.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_5_Down-Y.png
+Assets/Allsky/Anime/Anime Sunset/Anime Sunset_Cam_5_Down-Y.png.meta
+Assets/Allsky/Anime/Anime Sunset/Anime SunsetSettings.lighting
+Assets/Allsky/Anime/Anime Sunset/Anime SunsetSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Cartoon_Airbrush_Day_NoSun Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Cartoon_Airbrush_Day_NoSun Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Cartoon_Airbrush_Day_NoSunSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Cartoon_Airbrush_Day_NoSunSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Airbrush Day NoSun/Sky_Cartoon_Airbrush_Day_NoSun_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky.mat
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky.mat.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky.unity
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSky.unity.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSkySettings.lighting
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Cartoon_FluffyBlueSkySettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky Equirect.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Sky_Cartoon_FluffyBlueSky_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_Nothing Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_Nothing Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_Nothing.mat
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_Nothing.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_Nothing.unity
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_Nothing.unity.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_NothingSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Day_BlueSky_NothingSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Equirect.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky Equirect.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky.mat
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky.unity
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky.unity.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSky_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSkySettings.lighting
+Assets/Allsky/Cartoon/Cartoon Base NightSky/Cartoon Base NightSkySettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave Equirect.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave.mat
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave.unity
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave.unity.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base Skywave_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base SkywaveSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Base Skywave/Cartoon Base SkywaveSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight Equirect.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight.mat
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight.mat.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight.unity
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight.unity.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base Twilight_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base TwilightSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Base Twilight/Cartoon Base TwilightSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOils.mat
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOils.mat.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOils.unity
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOils.unity.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOils_Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOils_Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOilsSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Cartoon_SunsetWildOilsSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Equirect.png
+Assets/Allsky/Cartoon/Cartoon Oils Sunset Wild/Sky_CartoonSunset2_Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/AllSky_CartoonBase_SunSetLightClouds Equirect.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/AllSky_CartoonBase_SunSetLightClouds Equirect.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds.mat
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds.mat.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds.unity
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightClouds.unity.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightCloudsSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Cartoon_SunSetLightCloudsSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Oils SunSetLightClouds/Sky_AllSky_CartoonSunSetLightClouds_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaBlueSky.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaBlueSky.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSun.mat
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSun.mat.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSun.unity
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSun.unity.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSun_Equirect.mat
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSun_Equirect.mat.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSunSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Cartoon_SegaPixelBlueSky_NoSunSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Materials.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Sky_Cartoon_SegaPixelBlueSky_NoSun_Cam_5_Down-Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Materials/Cartoon_SegaBlueSky.mat
+Assets/Allsky/Cartoon/Cartoon Pixel SegalBlueSky NoSun/Materials/Cartoon_SegaBlueSky.mat.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Cartoon_BlueSkyPainted_NoSun.mat
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Cartoon_BlueSkyPainted_NoSun.mat.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Cartoon_BlueSkyPainted_NoSun.unity
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Cartoon_BlueSkyPainted_NoSun.unity.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Cartoon_BlueSkyPainted_NoSunSettings.lighting
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Cartoon_BlueSkyPainted_NoSunSettings.lighting.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_0_Front+Z.png
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_0_Front+Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_1_Back-Z.png
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_1_Back-Z.png.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_2_Left+X.png
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_2_Left+X.png.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_3_Right-X.png
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_3_Right-X.png.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_4_Up+Y.png
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_4_Up+Y.png.meta
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_5_Down-Y.png
+Assets/Allsky/Cartoon/Cartoon Watercolour BlueSky NoSun/Sky_Cartoon_BlueSkyPainted_NoSun_Cam_5_Down-Y.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark 6Sided.mat
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark 6Sided.mat.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark Equirect.mat
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark Equirect.mat.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark Equirect.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark Equirect.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark.unity
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark.unity.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_0_Front+Z.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_0_Front+Z.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_1_Back-Z.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_1_Back-Z.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_2_Left+X.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_2_Left+X.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_3_Right-X.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_3_Right-X.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_4_Up+Y.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_4_Up+Y.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_5_Down-Y.png
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day Dark_Cam_5_Down-Y.png.meta
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day DarkSettings.lighting
+Assets/Allsky/Mammatus/Mammatus Day Dark/Mammatus Day DarkSettings.lighting.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A 6Sided.mat
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A 6Sided.mat.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A Equirect.mat
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A Equirect.mat.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A Equirect.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A Equirect.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A.unity
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A.unity.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_0_Front+Z.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_0_Front+Z.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_1_Back-Z.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_1_Back-Z.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_2_Left+X.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_2_Left+X.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_3_Right-X.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_3_Right-X.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_4_Up+Y.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_4_Up+Y.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_5_Down-Y.png
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset A_Cam_5_Down-Y.png.meta
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset ASettings.lighting
+Assets/Allsky/Mammatus/Mammatus Sunset A/Mammatus Sunset ASettings.lighting.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Materials.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear Equirect.mat
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear Equirect.mat.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear.mat
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear.mat.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear.unity
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise Clear.unity.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise ClearSettings.lighting
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Night Moon Rise ClearSettings.lighting.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_0_Front+Z.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_1_Back-Z.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_2_Left+X.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_3_Right-X.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_4_Up+Y.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_5_Down-Y.png
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Sky_Night Moon Rise Clear_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Materials/Sky_Night Moon Rise Clear_Cam_0_Front+Z.mat
+Assets/Allsky/Night Moon Rise/Night Moon Rise Clear/Materials/Sky_Night Moon Rise Clear_Cam_0_Front+Z.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal.mat
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal.unity
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow Autumunal.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow AutumunalSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Night Skyglow AutumunalSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow Autumunal/Sky_Night Skyglow Autumunal_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy.mat
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy.unity
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazy.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazySettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Night Skyglow clearhazySettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow clearhazy/Sky_Night Skyglow clearhazy_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle.mat
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle.unity
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyle.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyleSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Night Skyglow crepuscularstyleSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow crepuscularstyle/Sky_Night Skyglow crepuscularstyle_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh.mat
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh.unity
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichigh.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichighSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Night Skyglow epichighSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow epichigh/Sky_Night Skyglow epichigh_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh.mat
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh.unity
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghigh.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghighSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Night Skyglow foghighSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow foghigh/Sky_Night Skyglow foghigh_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy.mat
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy.unity
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavy.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavySettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Night Skyglow heavySettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow heavy/Sky_Night Skyglow heavy_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus.mat
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus.unity
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrus.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrusSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Night Skyglow highcoldcirrusSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow highcoldcirrus/Sky_Night Skyglow highcoldcirrus_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich.mat
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich.unity
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrich.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrichSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Night Skyglow horizonrichSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow horizonrich/Sky_Night Skyglow horizonrich_Cam_5_Down-Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast Equirect.mat
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast Equirect.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast.mat
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast.mat.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast.unity
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow Overcast.unity.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow OvercastSettings.lighting
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Night Skyglow OvercastSettings.lighting.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_0_Front+Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_0_Front+Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_1_Back-Z.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_1_Back-Z.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_2_Left+X.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_2_Left+X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_3_Right-X.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_3_Right-X.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_4_Up+Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_4_Up+Y.png.meta
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_5_Down-Y.png
+Assets/Allsky/Night Skyglow/Night Skyglow Overcast/Sky_Night Skyglow Overcast_Cam_5_Down-Y.png.meta
+Assets/Allsky/Overcast/Overcast High.meta
+Assets/Allsky/Overcast/Overcast Low.meta
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High Equirect.mat
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High Equirect.mat.meta
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High.mat
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High.mat.meta
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High.png
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High.png.meta
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High.unity
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_High.unity.meta
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_HighSettings.lighting
+Assets/Allsky/Overcast/Overcast High/AllSky_Overcast3_HighSettings.lighting.meta
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_0_Front+Z.png
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_0_Front+Z.png.meta
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_1_Back-Z.png
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_1_Back-Z.png.meta
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_2_Left+X.png
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_2_Left+X.png.meta
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_3_Right-X.png
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_3_Right-X.png.meta
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_4_Up+Y.png
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_4_Up+Y.png.meta
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_5_Down-Y.png
+Assets/Allsky/Overcast/Overcast High/Sky_AllSky_Overcast3_High_Cam_5_Down-Y.png.meta
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low Equirect.mat
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low Equirect.mat.meta
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low.mat
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low.mat.meta
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low.png
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low.png.meta
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low.unity
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_Low.unity.meta
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_LowSettings.lighting
+Assets/Allsky/Overcast/Overcast Low/AllSky_Overcast4_LowSettings.lighting.meta
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_0_Front+Z.png
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_0_Front+Z.png.meta
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_1_Back-Z.png
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_1_Back-Z.png.meta
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_2_Left+X.png
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_2_Left+X.png.meta
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_3_Right-X.png
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_3_Right-X.png.meta
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_4_Up+Y.png
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_4_Up+Y.png.meta
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_5_Down-Y.png
+Assets/Allsky/Overcast/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_5_Down-Y.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01 Equirect.mat
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01 Equirect.mat.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01.mat
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01.mat.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01.unity
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01.unity.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_0_Front+Z.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_0_Front+Z.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_1_Back-Z.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_1_Back-Z.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_2_Left+X.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_2_Left+X.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_3_Right-X.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_3_Right-X.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_4_Up+Y.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_4_Up+Y.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_5_Down-Y.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_Cam_5_Down-Y.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_flat.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01_flat.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01Settings.lighting
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_01/Moonless_NightSky_01Settings.lighting.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02 Equirect.mat
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02 Equirect.mat.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02.mat
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02.mat.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02.unity
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02.unity.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_0_Front+Z.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_0_Front+Z.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_1_Back-Z.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_1_Back-Z.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_2_Left+X.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_2_Left+X.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_3_Right-X.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_3_Right-X.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_4_Up+Y.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_4_Up+Y.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_5_Down-Y.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_Cam_5_Down-Y.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_flat.png
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02_flat.png.meta
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02Settings.lighting
+Assets/Allsky/Sunless_Moonless/Moonless_NightSky_02/Moonless_NightSky_02Settings.lighting.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01 Equirect.mat
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01 Equirect.mat.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01.mat
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01.mat.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01.unity
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01.unity.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_0_Front+Z.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_0_Front+Z.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_1_Back-Z.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_1_Back-Z.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_2_Left+X.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_2_Left+X.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_3_Right-X.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_3_Right-X.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_4_Up+Y.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_4_Up+Y.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_5_Down-Y.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_Cam_5_Down-Y.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_flat.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01_flat.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01Settings.lighting
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_01/Sunless_BlueSky_01Settings.lighting.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02 Equirect.mat
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02 Equirect.mat.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02.mat
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02.mat.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02.unity
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02.unity.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_0_Front+Z.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_0_Front+Z.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_1_Back-Z.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_1_Back-Z.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_2_Left+X.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_2_Left+X.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_3_Right-X.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_3_Right-X.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_4_Up+Y.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_4_Up+Y.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_5_Down-Y.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_Cam_5_Down-Y.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_flat.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02_flat.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02Settings.lighting
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_02/Sunless_BlueSky_02Settings.lighting.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03 Equirect.mat
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03 Equirect.mat.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03.mat
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03.mat.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03.unity
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03.unity.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_0_Front+Z.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_0_Front+Z.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_1_Back-Z.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_1_Back-Z.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_2_Left+X.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_2_Left+X.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_3_Right-X.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_3_Right-X.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_4_Up+Y.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_4_Up+Y.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_5_Down-Y.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_Cam_5_Down-Y.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_flat.png
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03_flat.png.meta
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03Settings.lighting
+Assets/Allsky/Sunless_Moonless/Sunless_BlueSky_03/Sunless_BlueSky_03Settings.lighting.meta
+Assets/Allsky/Version 4/Cold Clouds.meta
+Assets/Allsky/Version 4/Cold Night.meta
+Assets/Allsky/Version 4/Cold Sunset.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2.meta
+Assets/Allsky/Version 4/Deep Dusk.meta
+Assets/Allsky/Version 4/Deep Storm Sunset.meta
+Assets/Allsky/Version 4/Golden Sunset.meta
+Assets/Allsky/Version 4/Light Blue.meta
+Assets/Allsky/Version 4/Night MoonBurst.meta
+Assets/Allsky/Version 4/Optimistic Sunrise.meta
+Assets/Allsky/Version 4/Pink Sunset 2.meta
+Assets/Allsky/Version 4/Pink Sunset.meta
+Assets/Allsky/Version 4/Sun Glow.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds Equirect.mat
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds Equirect.mat.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds Equirect.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds Equirect.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds.mat
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds.mat.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds.unity
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds.unity.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Cold Clouds/Cold Clouds__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Cold Clouds/Cold CloudsSettings.lighting
+Assets/Allsky/Version 4/Cold Clouds/Cold CloudsSettings.lighting.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night Equirect.mat
+Assets/Allsky/Version 4/Cold Night/Cold Night Equirect.mat.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night Equirect.png
+Assets/Allsky/Version 4/Cold Night/Cold Night Equirect.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night.mat
+Assets/Allsky/Version 4/Cold Night/Cold Night.mat.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night.unity
+Assets/Allsky/Version 4/Cold Night/Cold Night.unity.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Cold Night/Cold Night__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Cold Night/Cold NightSettings.lighting
+Assets/Allsky/Version 4/Cold Night/Cold NightSettings.lighting.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset Equirect.mat
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset Equirect.mat.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset Equirect.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset Equirect.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset.mat
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset.mat.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset.unity
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset.unity.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Cold Sunset/Cold Sunset__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Cold Sunset/Cold SunsetSettings.lighting
+Assets/Allsky/Version 4/Cold Sunset/Cold SunsetSettings.lighting.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1 Equirect.mat
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1 Equirect.mat.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1.mat
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1.mat.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1.unity
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1.unity.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1Settings.lighting
+Assets/Allsky/Version 4/Cotton Clouds SunSet 1/Cotton Clouds SunSet 1Settings.lighting.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2  Equirect.mat
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2  Equirect.mat.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2  Equirect.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2  Equirect.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2.mat
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2.mat.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2.unity
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2.unity.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2Settings.lighting
+Assets/Allsky/Version 4/Cotton Clouds SunSet 2/Cotton Clouds SunSet 2Settings.lighting.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk Equirect.mat
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk Equirect.mat.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk Equirect.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk Equirect.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk.mat
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk.mat.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk.unity
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk.unity.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Deep Dusk/Deep Dusk__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Deep Dusk/Deep DuskSettings.lighting
+Assets/Allsky/Version 4/Deep Dusk/Deep DuskSettings.lighting.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm Sunset Equirect.mat
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm Sunset Equirect.mat.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm Sunset.mat
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm Sunset.mat.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm Sunset.unity
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm Sunset.unity.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm SunsetSettings.lighting
+Assets/Allsky/Version 4/Deep Storm Sunset/Deep Storm SunsetSettings.lighting.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Equirect.png
+Assets/Allsky/Version 4/Deep Storm Sunset/Sky_Deep Storm Sunset_Equirect.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Golden Sunset.mat
+Assets/Allsky/Version 4/Golden Sunset/Golden Sunset.mat.meta
+Assets/Allsky/Version 4/Golden Sunset/Golden Sunset.unity
+Assets/Allsky/Version 4/Golden Sunset/Golden Sunset.unity.meta
+Assets/Allsky/Version 4/Golden Sunset/Golden SunsetSettings.lighting
+Assets/Allsky/Version 4/Golden Sunset/Golden SunsetSettings.lighting.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Equicrect.mat
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Equicrect.mat.meta
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Equicrect.png
+Assets/Allsky/Version 4/Golden Sunset/Sky_Golden Sunset_Equicrect.png.meta
+Assets/Allsky/Version 4/Light Blue/Light Blue.mat
+Assets/Allsky/Version 4/Light Blue/Light Blue.mat.meta
+Assets/Allsky/Version 4/Light Blue/Light Blue.unity
+Assets/Allsky/Version 4/Light Blue/Light Blue.unity.meta
+Assets/Allsky/Version 4/Light Blue/Light BlueSettings.lighting
+Assets/Allsky/Version 4/Light Blue/Light BlueSettings.lighting.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Equirect.mat
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Equirect.mat.meta
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Equirect.png
+Assets/Allsky/Version 4/Light Blue/Sky_LightBlue_Equirect.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/AllSky_Night_MoonBurst Equirect.mat
+Assets/Allsky/Version 4/Night MoonBurst/AllSky_Night_MoonBurst Equirect.mat.meta
+Assets/Allsky/Version 4/Night MoonBurst/AllSky_Night_MoonBurst Equirect.png
+Assets/Allsky/Version 4/Night MoonBurst/AllSky_Night_MoonBurst Equirect.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst.mat
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst.mat.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst.unity
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst.unity.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon Burst_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon BurstSettings.lighting
+Assets/Allsky/Version 4/Night MoonBurst/Night Moon BurstSettings.lighting.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic Sunrise Equirect.mat
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic Sunrise Equirect.mat.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic Sunrise.mat
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic Sunrise.mat.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic Sunrise.unity
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic Sunrise.unity.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic SunriseSettings.lighting
+Assets/Allsky/Version 4/Optimistic Sunrise/Optimistic SunriseSettings.lighting.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimisticSunrise_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimistincSunrise_Equirect.png
+Assets/Allsky/Version 4/Optimistic Sunrise/Sky_OptimistincSunrise_Equirect.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Pink Sunset.mat
+Assets/Allsky/Version 4/Pink Sunset/Pink Sunset.mat.meta
+Assets/Allsky/Version 4/Pink Sunset/Pink Sunset.unity
+Assets/Allsky/Version 4/Pink Sunset/Pink Sunset.unity.meta
+Assets/Allsky/Version 4/Pink Sunset/Pink SunsetSettings.lighting
+Assets/Allsky/Version 4/Pink Sunset/Pink SunsetSettings.lighting.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Equirect.mat
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Equirect.mat.meta
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Equirect.png
+Assets/Allsky/Version 4/Pink Sunset/Sky_Pink Sunset_Equirect.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2 Equirect.mat
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2 Equirect.mat.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2.mat
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2.mat.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2.unity
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2.unity.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_2_Left+X.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_3_Right-X.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2__Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2Settings.lighting
+Assets/Allsky/Version 4/Pink Sunset 2/Pink Sunset 2Settings.lighting.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_0_Front+Z.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_0_Front+Z.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_1_Back-Z.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_1_Back-Z.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_2_Left+X.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_2_Left+X.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_3_Right-X.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_3_Right-X.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_4_Up+Y.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_4_Up+Y.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_5_Down-Y.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Cam_5_Down-Y.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Equirect.mat
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Equirect.mat.meta
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Equirect.png
+Assets/Allsky/Version 4/Sun Glow/Sky_Sun Glow_Equirect.png.meta
+Assets/Allsky/Version 4/Sun Glow/Sun Glow.mat
+Assets/Allsky/Version 4/Sun Glow/Sun Glow.mat.meta
+Assets/Allsky/Version 4/Sun Glow/Sun Glow.unity
+Assets/Allsky/Version 4/Sun Glow/Sun Glow.unity.meta
+Assets/Allsky/Version 4/Sun Glow/Sun GlowSettings.lighting
+Assets/Allsky/Version 4/Sun Glow/Sun GlowSettings.lighting.meta
