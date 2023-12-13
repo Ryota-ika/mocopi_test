@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 public class QuizTorch : MonoBehaviourPunCallbacks
-{
+{ 
+    const int TORCHS_NUM = 3;
     //田上　エリア２のたいまつを使う問題のスクリプト
     //note
     //QuizStoneとQuizTorchはいずれ統合させたい
+   
     [SerializeField]
     List<TorchControll> torch_list;
-    [SerializeField]
+	[SerializeField]
+	bool[] torchCleardList = new bool[TORCHS_NUM];
+	[SerializeField]
     int collectNum;
     [SerializeField]
     List<Animator> openDoor;
@@ -31,13 +35,15 @@ public class QuizTorch : MonoBehaviourPunCallbacks
     void Update()
     {
         //たいまつの状態を監視し、クリアされているか確認
-        for(int i=0; i<torch_list.Count; i++) {
+        for(int i=0; i<TORCHS_NUM; i++) {
             if (torch_list[i].GetIsCleard())
             {
-                if (i != collectNum && !isCleard)
+                if (i != collectNum && !isCleard && !torchCleardList[i])
 				{
                     Debug.Log( i + "たいまつ不正解" );
+
                     photonView.RPC( nameof(StopPlayer), RpcTarget.All, i);
+                    torchCleardList[i] = true;
                     isPenaltyTime = true;
                     return;
 				}
