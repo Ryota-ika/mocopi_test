@@ -27,6 +27,7 @@ public class TresureChest : MonoBehaviour
     private bool hasTalkingTresureChst = false;
     [SerializeField]
     private float targetDistance = 1f;
+    private PickUpAndRelease pickUpAndRelease;
 
     // Start is called before the first frame update
 
@@ -42,6 +43,7 @@ public class TresureChest : MonoBehaviour
 
         Destroy(Animated_Chest_01);
         Animated_Chest_01.SetActive(false);
+        pickUpAndRelease.grabbedObject = null;
     }
 
     public void OpenLid()
