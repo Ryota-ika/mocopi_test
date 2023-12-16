@@ -1,6 +1,7 @@
-//2023.8.9 髙橋涼太
+//2023.12.16 髙橋涼太
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class PickUpAndRelease : MonoBehaviour
@@ -16,7 +17,7 @@ public class PickUpAndRelease : MonoBehaviour
     public bool isBoxOpened = false;
     [Header("Rayが反応するレイヤー")]
     [SerializeField] LayerMask mask;
-    private GameObject grabbedObject = null;
+    public GameObject grabbedObject = null;
     private GameObject chestHinge;
     [SerializeField] private GameObject key;
     [SerializeField] private GameObject Animated_Chest_01;
@@ -24,6 +25,9 @@ public class PickUpAndRelease : MonoBehaviour
 
     [SerializeField] private bool leftTriggerReleased = true;
     [SerializeField] private bool rightTriggerReleased = true;
+
+    private bool leftTriggerPressed;
+    private bool rightTriggerPressed;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +48,25 @@ public class PickUpAndRelease : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        leftRayObject.SetVertexCount(2); //始点と終点設定
+        UpdateRay(leftHandAnchor,leftRayObject,ref leftTriggerPressed);
+        UpdateRay(rightHandAnchor,rightRayObject,ref rightTriggerPressed);
+
+        //宝箱が開いていない場合
+        if (!isBoxOpened)
+        {
+            //左手か右手でオブジェクトを掴む
+            TryGrabObject(leftHandAnchor,leftRayObject,leftTriggerPressed);
+            TryGrabObject(rightHandAnchor,rightRayObject,rightTriggerPressed);
+        }
+        else
+        {
+            //掴んだオブジェクトを処理
+            HandleGrabbedObject(leftHandAnchor,leftRayObject,ref leftTriggerPressed);
+            HandleGrabbedObject(rightHandAnchor,rightRayObject,ref rightTriggerPressed);
+        }
+
+        //リファクタリング前のコード
+        /*leftRayObject.SetVertexCount(2); //始点と終点設定
         leftRayObject.SetPosition(0, leftHandAnchor.transform.position); //0番目の頂点を左手コントローラの位置に設定
         //1番目の頂点を左手コントローラの位置から3m先に設定
         leftRayObject.SetPosition(1, leftHandAnchor.transform.position + leftHandAnchor.transform.forward * 3.0f);
@@ -138,6 +160,81 @@ public class PickUpAndRelease : MonoBehaviour
                 grabbedObject.transform.localPosition = Vector3.zero;
                 grabbedObject.transform.localRotation = Quaternion.identity;
             }
+        }*/
+        
+    }
+
+    //コントローラーのレイを更新する関数
+    void UpdateRay(GameObject handAnchor, LineRenderer rayObject, ref bool triggerPressed)
+    {
+        rayObject.SetVertexCount(2);
+        rayObject.SetPosition(0,handAnchor.transform.position);
+        rayObject.SetPosition(1, handAnchor.transform.position + handAnchor.transform.forward * 3.0f);
+        rayObject.SetWidth(0.01f,0.01f);
+        rayObject.material.color = Color.red;
+
+        Ray handRay = new Ray(handAnchor.transform.position,handAnchor.transform.forward);
+        RaycastHit hit;
+
+        bool rayHit = Physics.Raycast(handRay,out hit,3.0f);
+
+        //レイがオブジェクトにヒットしている場合、色を変更
+        if (rayHit && (hit.collider.tag == "Key" || hit.collider.tag == "Axe" || hit.collider.tag == "torch"))
+        {
+            rayObject.material.color = Color.blue;
+        }
+
+        //トリガーボタンが押されているか更新
+        triggerPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, handAnchor == leftHandAnchor ? OVRInput.Controller.LTouch : OVRInput.Controller.RTouch);
+    }
+
+    //オブジェクトを掴む処理を行う関数
+    void TryGrabObject(GameObject handAnchor,LineRenderer rayObject,bool triggerPressed)
+    {
+        Ray handRay = new Ray(handAnchor.transform.position,handAnchor.transform.forward);
+        RaycastHit hit;
+
+        //トリガーボタンが押されており、レイがオブジェクトにヒットしている場合
+        if (triggerPressed && Physics.Raycast(handRay,out hit,3.0f))
+        {
+            //オブジェクトがKeyである場合
+            if (hit.collider.tag == "Key")
+            {
+                //オブジェクトを掴む
+                grabbedObject = hit.collider.gameObject;
+                grabbedObject.transform.SetParent(handAnchor.transform,true);
+                grabbedObject.transform.localPosition = Vector3.zero;
+                grabbedObject.transform.localRotation = Quaternion.identity;
+            }
+        }
+    }
+
+    //掴んだオブジェクトを処理する関数
+    void HandleGrabbedObject(GameObject handAnchor, LineRenderer rayObject,ref bool triggerPressed)
+    {
+        Ray handRay = new Ray(handAnchor.transform.position, handAnchor.transform.forward);
+        RaycastHit hit;
+        //掴んでるオブジェクトが存在する場合
+        if (grabbedObject != null && grabbedObject.tag == "Key")
+        {
+            //掴んでるオブジェクトがKeyである場合
+            if (Physics.Raycast(handRay,out hit,3.0f) && hit.collider.tag == "Axe" && triggerPressed)
+            {
+                //オブジェクトを手に追従させる
+                grabbedObject = hit.collider.gameObject;
+                grabbedObject.transform.SetParent(handAnchor.transform,true);
+                grabbedObject.transform.localPosition = Vector3.zero;
+                grabbedObject.transform.localRotation = Quaternion.identity;
+            }
+        }
+        //レイがオブジェクトにヒットし、そのタグがtorchで、かつトリガーボタンが押されている場合
+        else if (Physics.Raycast(handRay,out hit,3.0f) && hit.collider.tag == "torch" && triggerPressed)
+        {
+            //オブジェクトを手に追従させ、回転
+            grabbedObject = hit.collider.gameObject;
+            grabbedObject.transform.SetParent(handAnchor.transform,true);
+            grabbedObject.transform.localPosition = Vector3.zero;
+            grabbedObject.transform.localRotation = Quaternion.identity;
         }
     }
 }
