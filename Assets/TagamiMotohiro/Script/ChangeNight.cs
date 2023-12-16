@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 洞窟突入と同時にフィールドを暗くする
 public class ChangeNight : MonoBehaviour
 {
     [SerializeField]
@@ -23,6 +24,7 @@ public class ChangeNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // このオブジェクトにプレイヤーが近づいたらフィールドを暗くする
         if (Vector3.Distance(player.position,transform.position)<radius)
 		{
             ChangeSky();

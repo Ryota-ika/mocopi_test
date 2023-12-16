@@ -35,6 +35,7 @@ public class DoorControll : MonoBehaviour//§ì’S“–@“cã
     }
     bool OpenDerection()
     {
+        // 
         bool result=true;
         if (keyObjects != null)
         {
