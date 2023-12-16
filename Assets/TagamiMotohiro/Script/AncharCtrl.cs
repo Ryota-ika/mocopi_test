@@ -6,6 +6,7 @@ using Photon.Realtime;
 using RootMotion.FinalIK;
 using System.Linq;
 
+// アンカー生成やアバターキャリブレーションに関するクラス
 public class AncharCtrl : MonoBehaviourPunCallbacks
     // アンカーだけ生成してアバターはオフラインで管理するやり方
 { 
@@ -111,8 +112,10 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         roomProps.MaxPlayers = 2;
         roomProps.CleanupCacheOnLeave = true;
         ExitGames.Client.Photon.Hashtable roomInfo = new ExitGames.Client.Photon.Hashtable();
+        // 各プレイヤーの準備状態
         roomInfo.Add("1pStanby", false);
         roomInfo.Add("2pStanby", false);
+        // 各エリアのクリア状況
         roomInfo.Add("isArea1Cleard", false);
         roomInfo.Add("isArea2Cleard", false);
         PhotonNetwork.CurrentRoom.SetCustomProperties(roomInfo);
@@ -129,7 +132,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         }
         myMocopiAvatar.position = startPoint[posnum].position;
         navi.position = naviPos.position;
-        // 5つのアンカー生成
+        // 6つのアンカー生成
         Transform head = AncharInstantiete(_head, anchar);
         Transform body = AncharInstantiete(_body, anchar);
         Transform leftHand = AncharInstantiete(_leftHand, anchar);
@@ -166,7 +169,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     {
         // プレイヤー番号に対応したアバターを生成
         GameObject avatar = Instantiate(avatarList[(int)PhotonNetwork.PlayerList[playerNum - 1].CustomProperties["PlayerNum"] - 1], Vector3.zero, Quaternion.identity);
-        // 
+        // レイヤーをプレイヤーが見ることができるものに変更
         ChengeAbaterLayer(avatar, LayerMask.NameToLayer("Default"));
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();

@@ -40,7 +40,6 @@ public class Key : MonoBehaviour
                 isNearTreasureChest = true;
                 pickUpAndRelease.isBoxOpened = true;
                 this.gameObject.SetActive(false);
-                float delayTime = 3.0f;
 				//naviTextVoiceCtrl.PlayTextVoice(8,8);
 				if (!naviTextVoiceCtrl.isTextPlaying)
 				{

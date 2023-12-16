@@ -8,6 +8,8 @@ public class DoorControll : MonoBehaviour//制作担当　田上
     [Header("ドアのアニメーター")]
     [SerializeField]
     Animator animator;
+    [Header("キーアイテム")]
+    // これがすべてクリアされればドアが開く
     [SerializeField]
     List<KeyObject> keyObjects = new List<KeyObject>();
     bool isOpen = false;
@@ -27,15 +29,16 @@ public class DoorControll : MonoBehaviour//制作担当　田上
     {
         if (OpenDerection()&& !isOpen)
         {
+            
             animator.SetTrigger("Open");
             isOpen = true;
             doorColider.enabled = false;
             myAS.PlayOneShot(doorOpenSE);
         }
     }
+    // キーとなるオブジェクトがすべてクリアされているか確認
     bool OpenDerection()
     {
-        // 
         bool result=true;
         if (keyObjects != null)
         {
