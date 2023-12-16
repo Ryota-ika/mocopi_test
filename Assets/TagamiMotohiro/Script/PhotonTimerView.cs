@@ -62,6 +62,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks, IPunObservable
 
         }
     }
+    // 時間を各ROM内で同期する
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (PhotonNetwork.IsMasterClient)

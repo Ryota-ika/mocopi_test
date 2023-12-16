@@ -7,7 +7,7 @@ using RootMotion.FinalIK;
 using System.Linq;
 
 public class AncharCtrl : MonoBehaviourPunCallbacks
-    //アンカーだけ生成してアバターはオフラインで管理するやり方
+    // アンカーだけ生成してアバターはオフラインで管理するやり方
 { 
     [SerializeField]
     int buildNum;
@@ -47,7 +47,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     static bool isConnected = false;
     static int playerNum;
     [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
-    //自分のアバターの一時保存に使う
+    // 自分のアバターの一時保存に使う
     GameObject myAvatar;
    
     // Start is called before the first frame update
@@ -55,7 +55,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     {
         SelectPlayerNum(buildNum);
     }
-    //プレイヤーがどちら側か選択
+    // プレイヤーがどちら側か選択
     IEnumerator InitPlayer()
 	{
         bool selected = false;
@@ -84,26 +84,26 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
 	}
     
-	//マスターに接続されたら
+	// マスターに接続されたら
 	public override void OnConnectedToMaster()
 	{
-        //プレイヤー番号をカスタムプロパティに設定
+        // プレイヤー番号をカスタムプロパティに設定
         ExitGames.Client.Photon.Hashtable playerCustomProps = new ExitGames.Client.Photon.Hashtable();
         playerCustomProps.Add("PlayerNum", playerNum);
         PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProps);
-        //部屋に入室
+        // 部屋に入室
         PhotonNetwork.JoinOrCreateRoom("ROOM.", new RoomOptions(), TypedLobby.Default);
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 30;
     }
 	public override void OnPlayerEnteredRoom(Player newPlayer)
-    //ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション
+    // ほかのプレイヤーが入ってきたらローカルにアバターを生成し、オンライン上に生成されてるアンカーをもとにキャリブレーション
 	{
         int playerNum = newPlayer.ActorNumber;
         StartCoroutine(GetPlayerAnchar(playerNum));
     }
     
-    //部屋作成者は初期プロパティを設定
+    // 部屋作成者は初期プロパティを設定
 	public override void OnCreatedRoom()
 	{
         isConnected = true;
@@ -118,19 +118,18 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         PhotonNetwork.CurrentRoom.SetCustomProperties(roomInfo);
     }
 
-	public override void OnJoinedRoom()//自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
+	public override void OnJoinedRoom()// 自分が部屋に入った時にアンカーをオンライン上に生成しアバターはローカル上に生成する
 	{
         isConnected = true;
-        int posnum=0;
-        if (playerNum==1) {
+        int posnum = 0;
+        if (playerNum == 1) {
             posnum = 0;
-        }else
-        {
+        } else {
             posnum = 1;
         }
         myMocopiAvatar.position = startPoint[posnum].position;
         navi.position = naviPos.position;
-        //アンカー生成
+        // 5つのアンカー生成
         Transform head = AncharInstantiete(_head, anchar);
         Transform body = AncharInstantiete(_body, anchar);
         Transform leftHand = AncharInstantiete(_leftHand, anchar);
@@ -139,14 +138,15 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         Transform rightFoot = AncharInstantiete(_rightFoot, anchar);
 
         avatarList[posnum].layer = LayerMask.NameToLayer("Player");
-        myAvatar=Instantiate(avatarList[posnum]);
+        myAvatar=Instantiate(avatarList[
+            posnum]);
         StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot,KeyCode.F1));
-        //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
+        // 自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
         if (!PhotonNetwork.IsMasterClient) {
             StartCoroutine(GetPlayerAnchar(PhotonNetwork.MasterClient.ActorNumber));
         }
     }
-    //部位アンカーを生成
+    // 部位アンカーを生成
     Transform AncharInstantiete(Transform anchar,GameObject instance)
     { 
         GameObject g=PhotonNetwork.Instantiate(instance.name,anchar.position,anchar.rotation);
@@ -161,16 +161,18 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	void Update()
     {
     }
-    //指定したプレイヤーのアンカーを抽出してキャリブレーション開始
+    // 指定したプレイヤーのアンカーを抽出してキャリブレーション開始
     IEnumerator GetPlayerAnchar(int playerNum)
     {
+        // プレイヤー番号に対応したアバターを生成
         GameObject avatar = Instantiate(avatarList[(int)PhotonNetwork.PlayerList[playerNum - 1].CustomProperties["PlayerNum"] - 1], Vector3.zero, Quaternion.identity);
+        // 
         ChengeAbaterLayer(avatar, LayerMask.NameToLayer("Default"));
         yield return new WaitForSeconds(2);
         List<Transform> anchar = new List<Transform>();
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Anchar"))
         {
-            //Ancharタグのオブジェクトの中から新しく入ったプレイヤーのアンカーを抽出
+            // Ancharタグのオブジェクトの中から新しく入ったプレイヤーのアンカーを抽出
             PhotonView view = item.GetComponent<PhotonView>();
             if (view != null && view.OwnerActorNr == playerNum)
             {
@@ -179,13 +181,13 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         }
         StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5],KeyCode.F2));
     }
-    //引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション＆再キャリブレーション可能状態にする
+    // 引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション＆再キャリブレーション可能状態にする
     IEnumerator StartCaliblation(GameObject avatar,Transform head,Transform body,Transform lefthand,Transform righthand,Transform leftFoot,Transform rightFoot,KeyCode key)
     {
-        //インスタンスが間に合うまで待機
+        // インスタンスが間に合うまで待機
         yield return new WaitUntil(()=>avatar.GetComponent<VRIK>()!=null);
         VRIK ik = avatar.GetComponent<VRIK>();
-        //ボタンを押したらキャリブレーション
+        // ボタンを押したらキャリブレーション
         while (true) {
             if (Input.GetKeyDown(key)){
                 VRIKCalibrator.Calibrate(ik, settings, head, body, lefthand, righthand, leftFoot, rightFoot);
@@ -217,7 +219,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         return (int)hostPlayer.CustomProperties["PlayerNum"];
     }
 
-    //アバターのレイヤーを変更
+    // アバターのレイヤーを変更
     void ChengeAbaterLayer(GameObject obj, LayerMask newLayer)
     {
         obj.layer = newLayer;
@@ -226,7 +228,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
             ChengeAbaterLayer(child.gameObject, newLayer);
         }
     }
-    //以下プレイヤー情報のゲッター関数
+    // 以下プレイヤー情報のゲッター関数
     public static bool GetisConnected(){ return isConnected; }
     public static int GetPlayeNum(){ return playerNum; }
 }

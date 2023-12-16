@@ -40,8 +40,6 @@ public class QuizTorch : MonoBehaviourPunCallbacks
             {
                 if (i != collectNum && !isCleard && !torchCleardList[i])
 				{
-                    Debug.Log( i + "たいまつ不正解" );
-
                     photonView.RPC( nameof(StopPlayer), RpcTarget.All, i);
                     torchCleardList[i] = true;
                     isPenaltyTime = true;
@@ -52,7 +50,6 @@ public class QuizTorch : MonoBehaviourPunCallbacks
                 {
                     photonView.RPC( nameof(Clear), RpcTarget.All, i);
                     isCleard = true;
-                    Debug.Log( i + "たいまつ正解" );
                     return;
                 }
             }
@@ -64,12 +61,14 @@ public class QuizTorch : MonoBehaviourPunCallbacks
             return;
         }
     }
+    // クリアさせる(RPCメソッド)
     [PunRPC]
     void Clear(int collectnum)
     {
         torch_list[collectnum].SetIsCleard();
         StartCoroutine(durationPlaySE(2, collectSE));
     }
+    // 不正解だった時の処理(RPCメソッド)
     [PunRPC]
     void StopPlayer(int num)
     {

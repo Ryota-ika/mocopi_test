@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+// プレイヤーの待機状態を監視するクラス
 public class StartRoomKey : KeyObject
 {
     [SerializeField]
@@ -33,10 +34,12 @@ public class StartRoomKey : KeyObject
     }
 	protected override void CrearDirection()
 	{
+        // Spaceキーで準備完了
         if (Input.GetKeyDown(KeyCode.Space)&&AncharCtrl.GetisConnected())
         {
             SetStart();
         }
+        // 1Pと2Pの準備状態がそろったらゲーム開始
         if (_1pStanby&&_2pStanby&&!stanbyOK)
 		{
             stanbyOK = true;
@@ -48,8 +51,8 @@ public class StartRoomKey : KeyObject
             stanbyOK = true;
             StartCoroutine(StartCount());
         }
-        
 	}
+    // 準備完了にする
     public void SetStart()
 	{
         var roomProps = new ExitGames.Client.Photon.Hashtable();
@@ -61,9 +64,9 @@ public class StartRoomKey : KeyObject
         {
             roomProps.Add("2pStanby", true);
         }
-        Debug.Log("プロパティ変更");
         PhotonNetwork.CurrentRoom.SetCustomProperties(roomProps);
     }
+    // ゲーム開始の処理
     IEnumerator StartCount()
 	{
         myAS.PlayOneShot(countDownSE);
@@ -79,16 +82,17 @@ public class StartRoomKey : KeyObject
             countDown-=1;
 		}
         countDownText.gameObject.SetActive(false);
-        Debug.Log("ドアが開く");
         isCleard = true;
         player.SetIsCanWalk(true);
 	}
+    // 相手プレイヤーの準備完了を検知してローカルに反映
     public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
     {
         Debug.Log("プロパティが変更された");
         _1pStanby = (bool)PhotonNetwork.CurrentRoom.CustomProperties["1pStanby"];
         _2pStanby = (bool)PhotonNetwork.CurrentRoom.CustomProperties["2pStanby"];
     }
+    //　各プレイヤーの準備状態を取得
     public static bool GetPlayerStanby(int playerNum)
 	{
         if (playerNum == 1)
@@ -98,7 +102,6 @@ public class StartRoomKey : KeyObject
 		{
             return _2pStanby;
 		}
-        Debug.LogError("プレイヤー指定がなんか変です");
         return false;
 	}
 }
