@@ -81,7 +81,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
 	}
     void startConnection()
 	{
-        Debug.Log("接続開始");
         PhotonNetwork.ConnectUsingSettings();
 	}
     
@@ -144,7 +143,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         StartCoroutine(StartCaliblation(myAvatar, head, body, leftHand, rightHand, leftFoot, rightFoot,KeyCode.F1));
         //自身が2人目以降のプレイヤーだった場合、1Pの情報を取得
         if (!PhotonNetwork.IsMasterClient) {
-            Debug.Log("1Pの情報を取得");
             StartCoroutine(GetPlayerAnchar(PhotonNetwork.MasterClient.ActorNumber));
         }
     }
@@ -166,11 +164,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     //指定したプレイヤーのアンカーを抽出してキャリブレーション開始
     IEnumerator GetPlayerAnchar(int playerNum)
     {
-        foreach (Player item in PhotonNetwork.PlayerList)
-		{
-            Debug.Log((int)item.CustomProperties["PlayerNum"] - 1);
-		}
-        Debug.Log((int)PhotonNetwork.PlayerList[playerNum - 1].CustomProperties["PlayerNum"]-1);
         GameObject avatar = Instantiate(avatarList[(int)PhotonNetwork.PlayerList[playerNum - 1].CustomProperties["PlayerNum"] - 1], Vector3.zero, Quaternion.identity);
         ChengeAbaterLayer(avatar, LayerMask.NameToLayer("Default"));
         yield return new WaitForSeconds(2);
@@ -184,7 +177,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
                 anchar.Add(item.transform);
             }
         }
-        Debug.Log(anchar.Count);
         StartCoroutine(StartCaliblation(avatar, anchar[0], anchar[1], anchar[2], anchar[3], anchar[4], anchar[5],KeyCode.F2));
     }
     //引数で受け取ったアバターとそれぞれのアンカーをキャリブレーション＆再キャリブレーション可能状態にする
@@ -204,7 +196,6 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
     }
 	private void OnApplicationQuit()
 	{
-        Debug.Log("プレイヤーが退室した");
         PhotonNetwork.LeaveRoom();
 	}
     int GetHostPlayerNum()
