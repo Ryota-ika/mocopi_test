@@ -1225,6 +1225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -6009,7 +6014,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55332
+  m_Name: pb_Mesh36170
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6338,6 +6343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -9158,7 +9168,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54170
+  m_Name: pb_Mesh34998
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12404,6 +12414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -12754,6 +12769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -15401,6 +15421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -19975,6 +20000,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -20755,7 +20785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52166
+  m_Name: pb_Mesh32994
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21012,7 +21042,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53622
+  m_Name: pb_Mesh34450
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24546,6 +24576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -27124,7 +27159,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53038
+  m_Name: pb_Mesh33868
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29047,7 +29082,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53216
+  m_Name: pb_Mesh34046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31171,7 +31206,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53900
+  m_Name: pb_Mesh34730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35018,6 +35053,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -35107,6 +35147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -37646,7 +37691,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52524
+  m_Name: pb_Mesh33354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38398,6 +38443,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -40537,6 +40587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -42163,7 +42218,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53368
+  m_Name: pb_Mesh34202
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42986,7 +43041,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53202
+  m_Name: pb_Mesh34032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46931,7 +46986,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55118
+  m_Name: pb_Mesh35956
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48035,7 +48090,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53944
+  m_Name: pb_Mesh34774
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51327,7 +51382,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52730
+  m_Name: pb_Mesh33560
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -56868,7 +56923,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53742
+  m_Name: pb_Mesh34572
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58149,7 +58204,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52920
+  m_Name: pb_Mesh33750
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58596,7 +58651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54084
+  m_Name: pb_Mesh34912
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -60104,6 +60159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -63757,7 +63817,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54414
+  m_Name: pb_Mesh35246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -64051,7 +64111,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54950
+  m_Name: pb_Mesh35788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -65120,6 +65180,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -65520,6 +65585,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -68294,7 +68364,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52328
+  m_Name: pb_Mesh33156
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -69444,6 +69514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gimmick_Torch (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
       propertyPath: torch
@@ -69464,7 +69539,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53016
+  m_Name: pb_Mesh33846
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -70417,6 +70492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gimmick_Torch (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 335247538947688784, guid: e1d0b69a131154b498ef88578adbca89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5451304280145388897, guid: e1d0b69a131154b498ef88578adbca89,
         type: 3}
@@ -71489,7 +71569,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53300
+  m_Name: pb_Mesh34132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74003,7 +74083,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52428
+  m_Name: pb_Mesh33258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75054,7 +75134,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53284
+  m_Name: pb_Mesh34116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75835,7 +75915,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52960
+  m_Name: pb_Mesh33790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75999,7 +76079,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh53056
+  m_Name: pb_Mesh33886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -76247,7 +76327,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54008
+  m_Name: pb_Mesh34838
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -78636,7 +78716,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52220
+  m_Name: pb_Mesh33048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
