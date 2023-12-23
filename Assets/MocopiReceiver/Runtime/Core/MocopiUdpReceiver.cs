@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
-
 namespace Mocopi.Receiver.Core
 {
     /// <summary>

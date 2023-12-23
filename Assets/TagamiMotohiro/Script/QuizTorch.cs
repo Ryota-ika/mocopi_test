@@ -93,7 +93,7 @@ public class QuizTorch : MonoBehaviourPunCallbacks
 		    }
 		}
 	}
-    public bool getIsCleard()
+    public bool GetIsCleard()
 	{
         return isCleard;
 	}
