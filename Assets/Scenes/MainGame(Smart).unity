@@ -47934,12 +47934,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 734351812}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1197336148 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9015312737638428246, guid: f7fc0875ec165e84d9fa59ea242505cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 6005745053545666517}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1198601612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57857,6 +57851,7 @@ MonoBehaviour:
   - {fileID: 1716897244}
   - {fileID: 1389938177}
   - {fileID: 890680414}
+  torchCleardList: 000000
   collectNum: 0
   openDoor:
   - {fileID: 1490224733}
@@ -79496,7 +79491,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootBone
       value: 
-      objectReference: {fileID: 1197336148}
+      objectReference: {fileID: 0}
     - target: {fileID: 2578901576012329255, guid: f7fc0875ec165e84d9fa59ea242505cd,
         type: 3}
       propertyPath: m_AABB.m_Extent.x
@@ -79719,8 +79714,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9015312737638428246, guid: f7fc0875ec165e84d9fa59ea242505cd,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312737638428246, guid: f7fc0875ec165e84d9fa59ea242505cd,
+        type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.199
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312737638428246, guid: f7fc0875ec165e84d9fa59ea242505cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.882
       objectReference: {fileID: 0}
     - target: {fileID: 9218817790900285893, guid: f7fc0875ec165e84d9fa59ea242505cd,
         type: 3}
