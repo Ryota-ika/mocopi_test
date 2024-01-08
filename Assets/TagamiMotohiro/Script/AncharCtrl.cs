@@ -192,7 +192,7 @@ public class AncharCtrl : MonoBehaviourPunCallbacks
         VRIK ik = avatar.GetComponent<VRIK>();
         // ボタンを押したらキャリブレーション
         while (true) {
-            if (Input.GetKeyDown(key)){
+            if (Input.GetKeyDown(key)||OVRInput.GetDown(OVRInput.RawButton.A)){
                 VRIKCalibrator.Calibrate(ik, settings, head, body, lefthand, righthand, leftFoot, rightFoot);
             }
             yield return null;

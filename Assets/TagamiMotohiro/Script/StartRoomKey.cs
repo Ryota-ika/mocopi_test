@@ -46,7 +46,7 @@ public class StartRoomKey : KeyObject
             StartCoroutine(StartCount());
 		}
         //プレイヤーがそろっていなくても強制開始
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C)||OVRInput.GetDown(OVRInput.RawButton.B))
 		{
             stanbyOK = true;
             StartCoroutine(StartCount());
