@@ -38,8 +38,6 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     [SerializeField]
     float footRiseThreshold;
     [SerializeField]
-    float footDescentThreshold;
-    [SerializeField]
     float footDescentMaxTime = 3;
     [Header("•às‰Â”\‚©‚Ç‚¤‚©")]
     [SerializeField]
@@ -100,6 +98,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         while (!isFootRaised){
             // ‘«‚Ìã¸‚ğŒ©‚é
             float footRise = Mathf.Abs(lateFootPos.y - foot.position.y);
+            // ‘«‚ªˆê’è—Êã¸‚µ‚½‚çŸ‚Öi‚Ş
             if (footRise >= footRiseThreshold)
 			{
                 isFootRaised = true;
@@ -111,11 +110,13 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         {
             if (Mathf.Abs(foot.position.y - originFootPos_Y) <= 0.01f)
 			{
-                //float stepPower = 
-                //StartCoroutine.S
-                //step();
-                //isStepping  = true;
+                StartCoroutine(Step(footDescentMaxTime - footDescentTime));
+				isStepping = true;
             }
+            if (footDescentTime > footDescentMaxTime)
+			{
+                isStepping = true;
+			}
             footDescentTime += Time.deltaTime;
         }
         workWeigting = true;
