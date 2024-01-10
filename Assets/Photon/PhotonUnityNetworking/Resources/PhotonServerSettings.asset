@@ -46,6 +46,7 @@ MonoBehaviour:
   - StartQuiz
   - Clear
   - StanbyPlayer
+  - GestureDisclosure
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
