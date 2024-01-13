@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/MocopiReceiver/Samples/ReceiverSample/Scenes/ReceiverSample.unity
     guid: a57f434f3ee95b948ab14a32ee534821
   - enabled: 0
-    path: Assets/TagamiMotohiro/Scenes/ReceiverSample.unity
-    guid: 3c9485e3231b8c5459aa7061370d1fb1
-  - enabled: 0
     path: Assets/Scenes/MainGame.unity
     guid: ebf92f6ef6feb25438580bc8acfb382e
   - enabled: 0
