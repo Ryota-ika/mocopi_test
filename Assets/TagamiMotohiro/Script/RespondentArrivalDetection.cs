@@ -13,7 +13,7 @@ public class RespondentArrivalDetection : MonoBehaviourPunCallbacks{
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(ArrivalDetection());
     }
 
     // Update is called once per frame
