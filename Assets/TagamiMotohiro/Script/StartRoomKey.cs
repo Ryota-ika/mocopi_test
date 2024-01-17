@@ -35,7 +35,7 @@ public class StartRoomKey : KeyObject
 	protected override void CrearDirection()
 	{
         // SpaceƒL[‚Å€”õŠ®—¹
-        if (Input.GetKeyDown(KeyCode.Space)&&AncharCtrl.GetisConnected())
+        if ((Input.GetKeyDown(KeyCode.Space)||OVRInput.GetDown(OVRInput.RawButton.X))&&AncharCtrl.GetisConnected())
         {
             SetStart();
         }
