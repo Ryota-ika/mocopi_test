@@ -101,6 +101,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
             // ‘«‚ªˆê’è—Êã¸‚µ‚½‚çŸ‚Öi‚Ş
             if (footRise >= footRiseThreshold)
 			{
+                Debug.Log(logtext + "‚Ìã¸‚ğŒŸ’m");
                 isFootRaised = true;
                 lateFootPos = foot.position;
 			}
@@ -108,22 +109,27 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         }
         while (!isStepping)
         {
-            if (Mathf.Abs(foot.position.y - originFootPos_Y) <= 0.01f)
+            Debug.Log(footDescentTime);
+            if (Mathf.Abs(foot.position.y - originFootPos_Y) <= 0.1f)
 			{
+                Debug.Log("•às”­‰Î");
                 StartCoroutine(Step(footDescentMaxTime - footDescentTime));
 				isStepping = true;
             }
             if (footDescentTime > footDescentMaxTime)
 			{
+                Debug.Log("•às‚ªƒLƒƒƒ“ƒZƒ‹‚³‚ê‚½");
                 isStepping = true;
 			}
             footDescentTime += Time.deltaTime;
+            yield return null;
         }
         workWeigting = true;
         isStepping = false;
     }
     IEnumerator Step(float stepSpeed)
     {
+        
         Vector3 avatarfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ğæ‚é
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ğ³‹K‰»
