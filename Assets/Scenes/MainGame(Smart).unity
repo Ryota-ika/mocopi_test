@@ -2236,7 +2236,7 @@ PrefabInstance:
     - target: {fileID: 1454151206149909732, guid: d4f583a22b785844e97c291b54878b0e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.855
+      value: 27.25
       objectReference: {fileID: 0}
     - target: {fileID: 1454151206149909732, guid: d4f583a22b785844e97c291b54878b0e,
         type: 3}
@@ -67739,9 +67739,10 @@ MonoBehaviour:
   myRigidBody: {fileID: 1791971355}
   rightFoot: {fileID: 269891370}
   leftFoot: {fileID: 1625905186}
-  stepLength: 0.2
-  stepSpeed: 7.5
-  stepThreshold: 0.03
+  stepTime: 0.2
+  stepSpeed: 10
+  footRiseThreshold: 0.1
+  footDescentMaxTime: 3
   isCanWark: 1
   rayOfset: 0.5
   lastEffectTime: 1
