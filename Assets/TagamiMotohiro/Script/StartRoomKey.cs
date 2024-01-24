@@ -21,10 +21,6 @@ public class StartRoomKey : KeyObject
     [SerializeField]
     TMPro.TextMeshProUGUI countDownText;
     // Start is called before the first frame update
-    void Start()
-    {
-        player.SetIsCanWalk(false);
-    }
 
     // Update is called once per frame
     void Update()

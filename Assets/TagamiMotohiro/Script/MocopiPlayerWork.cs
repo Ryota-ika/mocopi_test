@@ -26,15 +26,12 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     [Header("¶‘«")]
     [SerializeField]
     Transform leftFoot;
-    [Header("ˆê•à‚Ì‹——£")]
+    [Header("1ƒXƒeƒbƒv‚ ‚½‚è‚ÌŠÔ")]
     [SerializeField]
-    float stepLength;
+    float stepTime;
     [Header("•à‚­ƒXƒs[ƒh")]
     [SerializeField]
     float stepSpeed;
-    [Header("•à‚­”»’è‚Ìè‡’l")]
-    [SerializeField]
-    float stepThreshold;
     [SerializeField]
     float footRiseThreshold;
     [SerializeField]
@@ -94,6 +91,8 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         lateFootPos = foot.position;
         float originFootPos_Y = lateFootPos.y;
         float footDescentTime = 0;
+        // ‘«‚ğã‚°‚½Å‘å’l(ƒXƒeƒbƒvˆÚ“®—Ê”»’è—p)
+        float maxFootRize = 0;
         // ‘«‚ªã¸‚·‚é‚Ü‚Å”»’è‚ğæ‚é
         while (!isFootRaised){
             // ‘«‚Ìã¸‚ğŒ©‚é
@@ -103,17 +102,31 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
 			{
                 Debug.Log(logtext + "‚Ìã¸‚ğŒŸ’m");
                 isFootRaised = true;
-                lateFootPos = foot.position;
+                maxFootRize = footRise;
 			}
             yield return null;
         }
+        // ‘«‚ÌU‚è‰º‚ë‚µ‚ğ‚İ‚é
         while (!isStepping)
         {
-            Debug.Log(footDescentTime);
+            // ‘«ã‚°‚Ì—Ê‚ªU‚è‰º‚ë‚µ”»’è’†‚ÉXV‚³‚ê‚½ê‡
+            if (maxFootRize < Mathf.Abs(lateFootPos.y - foot.position.y)) 
+            {
+                // ”’lXV
+                maxFootRize = Mathf.Abs(lateFootPos.y - foot.position.y);
+            }
+            // ‘«‚ª’n–Ê‚É‚Â‚¢‚½‚ç
             if (Mathf.Abs(foot.position.y - originFootPos_Y) <= 0.1f)
 			{
-                Debug.Log("•às”­‰Î");
-                StartCoroutine(Step(footDescentMaxTime - footDescentTime));
+                // •às‚Ì‘¬“x‚ğ@1 + ( ‘«‚ğã‚°‚½‚‚³ ~ ‘«‚ğU‚è‰º‚ë‚·‚Ü‚Å‚Ì‘¬‚³ )@‚ÅŒvZ
+                // ‘«‚ğU‚è‰º‚ë‚·‚Ü‚Å‚Ì‘¬‚³‚ÌŒvZ®‚ÍˆÈ‰º
+                //
+                //      •às‘Ò‹@‚ÌÅ‘åŠÔ - ‘«‚ªU‚è‰º‚ë‚³‚ê‚é‚Ü‚Å‚ÌŠÔ
+                //
+                // stepSpeedƒvƒƒpƒeƒB‚ğg—p‚µ‚Ä”{—¦‚ğŠ|‚¯‚é‚±‚Æ‚à‰Â”\
+                float stepPower =  stepSpeed * (maxFootRize * (footDescentMaxTime - footDescentTime));
+                Debug.Log(stepPower);
+                StartCoroutine(Step(stepPower));
 				isStepping = true;
             }
             if (footDescentTime > footDescentMaxTime)
@@ -134,7 +147,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ğ³‹K‰»
         float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŠÔt•Ï”
-		while (t<stepLength&&!isCollisionWall)
+		while (t<stepTime&&!isCollisionWall)
 		{
             if (!isCanWark)
 			{
