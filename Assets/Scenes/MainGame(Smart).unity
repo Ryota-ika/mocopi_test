@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15880212, g: 0.31024778, b: 0.6256077, a: 1}
+  m_IndirectSpecularColor: {r: 0.15954816, g: 0.31097156, b: 0.6268657, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2689,6 +2689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169285881961745101, guid: 4f5679062df37624093e32781f8d3372,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509113746887659639, guid: 4f5679062df37624093e32781f8d3372,
         type: 3}
@@ -8746,7 +8751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231839244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.68, y: -59.2, z: -36.24}
+  m_LocalPosition: {x: -71.31, y: -59.2, z: -36.24}
   m_LocalScale: {x: 3.331688, y: 3.331688, z: 3.331688}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38589,7 +38594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966613098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -124.31, y: -64.93, z: -38.935}
+  m_LocalPosition: {x: -124.4, y: -64.93, z: -38.935}
   m_LocalScale: {x: 5.294803, y: 3.804831, z: 3.804831}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46096,6 +46101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7169285881961745101, guid: 4f5679062df37624093e32781f8d3372,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7509113746887659639, guid: 4f5679062df37624093e32781f8d3372,
         type: 3}
       propertyPath: m_RootOrder
@@ -50319,6 +50329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169285881961745101, guid: 4f5679062df37624093e32781f8d3372,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509113746887659639, guid: 4f5679062df37624093e32781f8d3372,
         type: 3}
@@ -72106,6 +72121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fence_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169285881961745101, guid: 4f5679062df37624093e32781f8d3372,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509113746887659639, guid: 4f5679062df37624093e32781f8d3372,
         type: 3}
