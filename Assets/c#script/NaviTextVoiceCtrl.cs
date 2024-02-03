@@ -19,7 +19,7 @@ public class NaviTextVoiceCtrl : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI text;
     [SerializeField]
-    private GameObject textObject;
+    public GameObject textObject;
     [Header("�󔠂̊W")]
     [SerializeField]
     private GameObject tresureChest;

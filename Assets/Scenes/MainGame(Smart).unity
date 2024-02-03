@@ -80681,6 +80681,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Navi
       objectReference: {fileID: 0}
+    - target: {fileID: 9218817790900285893, guid: f7fc0875ec165e84d9fa59ea242505cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7fc0875ec165e84d9fa59ea242505cd, type: 3}
 --- !u!1001 &6106747862677883673

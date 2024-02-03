@@ -112,6 +112,7 @@ public class DestroyWall : MonoBehaviour
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
         this.gameObject.SetActive(false);
+        naviTextVoiceCtrl.textObject.SetActive(false);
     }
     RigidbodyConstraints FreezeCancellation()
     {
