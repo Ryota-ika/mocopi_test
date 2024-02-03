@@ -20,13 +20,16 @@ public class StartRoomKey : KeyObject
     int countDown = 3;
     [SerializeField]
     TMPro.TextMeshProUGUI countDownText;
+    [SerializeField]
+    AudioSource BGM;
+    [SerializeField]
+    AudioClip inGameBGM;
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
         CrearDirection();
-        
     }
 	protected override void CrearDirection()
 	{
@@ -66,6 +69,7 @@ public class StartRoomKey : KeyObject
     IEnumerator StartCount()
 	{
         myAS.PlayOneShot(countDownSE);
+        BGM.Stop();
         countDownText.text = countDown.ToString();
         while (countDown >= 0)
 		{
@@ -78,6 +82,7 @@ public class StartRoomKey : KeyObject
             countDown-=1;
 		}
         countDownText.gameObject.SetActive(false);
+        BGM.PlayOneShot(inGameBGM);
         isCleard = true;
         player.SetIsCanWalk(true);
 	}
