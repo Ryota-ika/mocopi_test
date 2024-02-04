@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 public class PhotonTimerView : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField]
@@ -64,6 +65,7 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks, IPunObservable
                 //naviTextVoiceCtrl.PlayTextVoice(10,10);
                 isGameOver = true;
                 StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(10, 10));
+                SceneManager.LoadScene("GameOver");
             }
 
         }

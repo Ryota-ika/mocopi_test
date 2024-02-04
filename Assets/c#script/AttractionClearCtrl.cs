@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AttractionClearCtrl : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class AttractionClearCtrl : MonoBehaviour
                 StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(11, 11));
                 //naviTextVoiceCtrl.PlayTextVoice(11,11);
                 hasTalkingClear = true;
+                SceneManager.LoadScene("GameClear");
             }
 
         }
