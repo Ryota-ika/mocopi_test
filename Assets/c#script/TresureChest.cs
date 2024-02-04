@@ -59,6 +59,7 @@ public class TresureChest : MonoBehaviour
     {
         if (mocopiPlayerWork.GetIsCanWalk())
         {
+            Debug.Log(naviTextVoiceCtrl.isTextPlaying);
             if (!naviTextVoiceCtrl.isTextPlaying)
             {
                 if (Animated_Chest_01 != null)

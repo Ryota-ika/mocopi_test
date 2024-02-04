@@ -64,7 +64,7 @@ public class GestureArea : MonoBehaviourPunCallbacks
         if (quizTorch != null)
 		{
             quizTorch.StartQuiz();
-            while (!quizTorch.GetIsCleard())
+            while (!quizTorch.getIsCleard())
 			{
                 yield return null;
 			}
