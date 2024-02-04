@@ -35,18 +35,24 @@ public class PhotonTimerView : MonoBehaviourPunCallbacks, IPunObservable
         {
             if (timer <= 120 && !timeLateList[0])
             {
-                StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(13, 13));
+                if (naviTextVoiceCtrl != null) {
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(13, 13));
+                }
                 timeLateList[0] = true;
             }
             if (timer <= 60 && !timeLateList[1])
             {
                 TimerText.color = Color.red;
-                StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(14, 14));
+                if (naviTextVoiceCtrl != null){
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(14, 14));
+                }
                 timeLateList[1] = true;
             }
             if (timer <= 30 && !timeLateList[2])
             {
-                StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(15, 15));
+                if (naviTextVoiceCtrl != null){
+                    StartCoroutine(naviTextVoiceCtrl.WaitAndPlayTextVoice(15, 15));
+                }
                 timeLateList[2] = true;
             }
             TimerText.text = minutes.ToString("00") + (":") + seconds.ToString("00");
