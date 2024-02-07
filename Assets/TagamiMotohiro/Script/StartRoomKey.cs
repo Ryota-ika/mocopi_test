@@ -49,7 +49,7 @@ public class StartRoomKey : KeyObject
             StartCoroutine(StartCount());
 		}
         //プレイヤーがそろっていなくても強制開始
-        if (Input.GetKeyDown(KeyCode.C)||OVRInput.GetDown(OVRInput.RawButton.B))
+        if ((Input.GetKeyDown(KeyCode.C)||OVRInput.GetDown(OVRInput.RawButton.B))&&!stanbyOK)
 		{
             stanbyOK = true;
             StartCoroutine(StartCount());
@@ -86,7 +86,7 @@ public class StartRoomKey : KeyObject
             countDown-=1;
 		}
         countDownText.gameObject.SetActive(false);
-        BGM.PlayOneShot(inGameBGM);
+        BGM.Play();
         isCleard = true;
         player.SetIsCanWalk(true);
 	}
