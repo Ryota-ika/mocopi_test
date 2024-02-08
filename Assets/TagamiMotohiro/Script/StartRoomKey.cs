@@ -25,10 +25,6 @@ public class StartRoomKey : KeyObject
     [SerializeField]
     AudioClip inGameBGM;
     // Start is called before the first frame update
-    void Start()
-    {
-        player.SetIsCanWalk(false);
-    }
 
     // Update is called once per frame
     void Update()

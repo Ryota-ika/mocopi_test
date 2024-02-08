@@ -26,15 +26,16 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     [Header("¶‘«")]
     [SerializeField]
     Transform leftFoot;
-    [Header("ˆê•à‚Ì‹——£")]
+    [Header("1ƒXƒeƒbƒv‚ ‚½‚è‚ÌŠÔ")]
     [SerializeField]
-    float stepLength;
+    float stepTime;
     [Header("•à‚­ƒXƒs[ƒh")]
     [SerializeField]
     float stepSpeed;
-    [Header("•à‚­”»’è‚Ìè‡’l")]
     [SerializeField]
-    float stepThreshold;
+    float footRiseThreshold;
+    [SerializeField]
+    float footDescentMaxTime = 3;
     [Header("•às‰Â”\‚©‚Ç‚¤‚©")]
     [SerializeField]
     bool isCanWark=false;
@@ -64,9 +65,11 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
     // Update is called once per frame
     void Update()
     {
-		if (!isCanWark) { return; }//€”õŠ®—¹‚Ü‚Å‘Ò‚Â
+        //€”õŠ®—¹‚Ü‚Å‘Ò‚Â
+        if (!isCanWark) { return; }
+
+        //‰E‘«‚Æ¶‘«‚ÅŒğŒİ‚É‘«“¥‚İ‚ğŒŸ’m‚·‚éŠÖ”‚ğ‹N“®
         if (workWeigting||Input.GetKey(KeyCode.LeftShift)) {
-            //‰E‘«‚Æ¶‘«‚ÅŒğŒİ‚É‘«“¥‚İ‚ğŒŸ’m‚·‚éŠÖ”‚ğ‹N“®
             if (state == FootState.RIGHT)
             {
                 StartCoroutine(WorkControll(rightFoot, "‰E‘«"));
@@ -81,32 +84,70 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
         }
         CollisionDirection();
 	}
-    IEnumerator WorkControll(Transform foot,string logtext)//‘«‚Ì“®‚«‚ğŒ©‚Ä•à‚¢‚½‚©”»’è‚·‚é
+    //‘«‚Ì“®‚«‚ğŒ©‚Ä•à‚¢‚½‚©”»’è‚·‚é
+    IEnumerator WorkControll(Transform foot,string logtext)
     {
+        bool isFootRaised = false;
         lateFootPos = foot.position;
-        float footvelocity = 0;
-        while (!isStepping) {
-
-            footvelocity = lateFootPos.y - foot.position.y;
-            if (Mathf.Abs(footvelocity) > stepThreshold && !isStepping)
+        float originFootPos_Y = lateFootPos.y;
+        float footDescentTime = 0;
+        // ‘«‚ğã‚°‚½Å‘å’l(ƒXƒeƒbƒvˆÚ“®—Ê”»’è—p)
+        float maxFootRize = 0;
+        // ‘«‚ªã¸‚·‚é‚Ü‚Å”»’è‚ğæ‚é
+        while (!isFootRaised){
+            // ‘«‚Ìã¸‚ğŒ©‚é
+            float footRise = Mathf.Abs(lateFootPos.y - foot.position.y);
+            // ‘«‚ªˆê’è—Êã¸‚µ‚½‚çŸ‚Öi‚Ş
+            if (footRise >= footRiseThreshold)
+			{
+                Debug.Log(logtext + "‚Ìã¸‚ğŒŸ’m");
+                isFootRaised = true;
+                maxFootRize = footRise;
+			}
+            yield return null;
+        }
+        // ‘«‚ÌU‚è‰º‚ë‚µ‚ğ‚İ‚é
+        while (!isStepping)
+        {
+            // ‘«ã‚°‚Ì—Ê‚ªU‚è‰º‚ë‚µ”»’è’†‚ÉXV‚³‚ê‚½ê‡
+            if (maxFootRize < Mathf.Abs(lateFootPos.y - foot.position.y)) 
             {
-                isStepping = true;
-                StartCoroutine(Step());
+                // ”’lXV
+                maxFootRize = Mathf.Abs(lateFootPos.y - foot.position.y);
             }
-            lateFootPos = foot.position;
+            // ‘«‚ª’n–Ê‚É‚Â‚¢‚½‚ç
+            if (Mathf.Abs(foot.position.y - originFootPos_Y) <= 0.1f)
+			{
+                // •às‚Ì‘¬“x‚ğ@1 + ( ‘«‚ğã‚°‚½‚‚³ ~ ‘«‚ğU‚è‰º‚ë‚·‚Ü‚Å‚Ì‘¬‚³ )@‚ÅŒvZ
+                // ‘«‚ğU‚è‰º‚ë‚·‚Ü‚Å‚Ì‘¬‚³‚ÌŒvZ®‚ÍˆÈ‰º
+                //
+                //      •às‘Ò‹@‚ÌÅ‘åŠÔ - ‘«‚ªU‚è‰º‚ë‚³‚ê‚é‚Ü‚Å‚ÌŠÔ
+                //
+                // stepSpeedƒvƒƒpƒeƒB‚ğg—p‚µ‚Ä”{—¦‚ğŠ|‚¯‚é‚±‚Æ‚à‰Â”\
+                float stepPower =  stepSpeed * (maxFootRize * (footDescentMaxTime - footDescentTime));
+                Debug.Log(stepPower);
+                StartCoroutine(Step(stepPower));
+				isStepping = true;
+            }
+            if (footDescentTime > footDescentMaxTime)
+			{
+                Debug.Log("•às‚ªƒLƒƒƒ“ƒZƒ‹‚³‚ê‚½");
+                isStepping = true;
+			}
+            footDescentTime += Time.deltaTime;
             yield return null;
         }
         workWeigting = true;
         isStepping = false;
     }
-    IEnumerator Step()
+    IEnumerator Step(float stepSpeed)
     {
+        
         Vector3 avatarfoward = avater.forward;//ƒAƒoƒ^[‚Ì³–ÊƒxƒNƒgƒ‹‚ğæ‚é
         avatarfoward.y = 0;//ã‚Ös‚©‚È‚¢‚æ‚¤‚Éy‚Í0‚É
         avatarfoward = avatarfoward.normalized;//0‚É‚µ‚½’l‚ğ³‹K‰»
-        Vector3 targetPoint = transform.position+(avatarfoward*stepLength);
         float t = 0;//ƒXƒeƒbƒvŒo˜H•âŠ®—p‚ÌŠÔt•Ï”
-		while (t<stepLength&&!isCollisionWall)
+		while (t<stepTime&&!isCollisionWall)
 		{
             if (!isCanWark)
 			{
@@ -132,7 +173,8 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ğŒŸ’m‚µ‚Ä‘Oi‚·‚
                 Vector3 point = hit.point;
                 effectTime -= Time.deltaTime;
                 stepPos.position = hit.point;
-                if (effectTime<0) {//ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
+                if (effectTime<0) {
+                    //ƒGƒtƒFƒNƒg‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä
                     myAS.PlayOneShot(wallHitSE);
                     Instantiate(wallHitEffect, point, Quaternion.FromToRotation(Vector3.forward,hit.normal));
                     effectTime = lastEffectTime;
