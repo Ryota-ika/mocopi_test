@@ -97,6 +97,7 @@ public class MocopiPlayerWork : MonoBehaviour//‘«‚Ìƒ{[ƒ“‚Ìã‰º‚ðŒŸ’m‚µ‚Ä‘Oi‚·‚
         while (!isFootRaised){
             // ‘«‚Ìã¸‚ðŒ©‚é
             float footRise = Mathf.Abs(lateFootPos.y - foot.position.y);
+            Debug.Log(footRise);
             // ‘«‚ªˆê’è—Êã¸‚µ‚½‚çŽŸ‚Öi‚Þ
             if (footRise >= footRiseThreshold)
 			{
